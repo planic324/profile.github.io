@@ -11,4 +11,56 @@ a:hover{text-decoration:none}
 a:active,a:visited{color:#191919}
 button{cursor:pointer}
 button:active,button:focus{outline:0}
+.fp-watermark{display:none}
+.planic{display:block;position:relative;width:100%}
+.planic .header{display:block;position:absolute;width:100%;height:80px;background-color:#fff;z-index:10}
+.planic .header.v2{background-color:#000}
+.planic .header.v2 h1{color:#fff}
+.planic .header.v2 .global__menu--item>a{color:#fff}
+.planic .header.v2 .global__menu--item>a:hover{color:#fff}
+.planic .header.v2 .global__menu--item>a:hover:before{background-color:#fff}
+.planic .header__box{display:flex;justify-content:space-between;align-items:center;width:100%;max-width:1100px;height:90px;margin:0 auto}
+.planic .header__box h1{display:block;position:relative;font-size:28px;line-height:34px;font-weight:900;letter-spacing:-.7px;color:#000}
+.planic .header__box .global__menu{display:block;flex:1;position:relative}
+.planic .header__box .global__menu .btn__menu--mobile{display:none}
+.planic .header__box .global__menu .global__menuList{display:flex;justify-content:space-between}
+.planic .header__box .global__menu .global__menuList--item{position:relative;display:block}
+.planic .header__box .global__menu .global__menuList--item>a{position:relative;display:block;font-size:22px;line-height:28px;font-weight:500;color:#4a4a4a;text-decoration:none}
+.planic .header__box .global__menu .global__menuList--item>a:before{content:"";display:block;position:absolute;bottom:0;left:0;width:0;height:3px;background:0 0}
+.planic .header__box .global__menu .global__menuList--item>a:hover{color:#000}
+.planic .header__box .global__menu .global__menuList--item>a:hover:before{width:100%;background:#000;transition:width .25s cubic-bezier(.51,.18,0,.88) .1s}
+.planic .header__box .global__menu .global__menuList:after,.planic .header__box .global__menu .global__menuList:before{content:"";display:block}
+.planic .container{display:block;position:relative;height:100%}
+.planic .section{display:block;position:relative;height:100%;padding-top:80px;box-sizing:border-box}
+.planic .sec__main{display:block;background-color:#000}
+.planic .sec__main .mix_blend_mode{position:relative;display:block;width:100%;height:100%}
+.planic .sec__main .mix_blend_mode video{display:block;width:100%;height:100%;position:absolute;top:0;left:0;right:0;bottom:0;object-fit:cover}
+.planic .sec__main .mix_blend_mode .textWrap{display:block;position:relative;width:100%;height:100%;background-color:#000;color:#fff;mix-blend-mode:multiply;text-align:center;font-weight:900;box-sizing:border-box}
+.planic .sec__main .mix_blend_mode .textWrap .textBox{display:inline-block;vertical-align:top;padding:40px;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);border:10px solid #fff}
+.planic .sec__main .mix_blend_mode .textWrap .textBox__main{font-size:80px;line-height:1.2em}
+.planic .sec__main .mix_blend_mode .textWrap .textBox__sub{font-size:70px;line-height:1.2em}
+.planic .sec__intro{background:#fff}
+.planic .sec__intro .imgBox{position:absolute;top:50%;left:50%;transform:translateY(-50%);margin-left:-41.6667vw;display:flex;flex-wrap:wrap;width:41.6667vw;height:41.6667vw}
+.planic .sec__intro .imgBox .item{display:block;width:calc(50% - 20px);height:calc(50% - 20px);border-radius:50%;overflow:hidden;margin:10px}
+.planic .sec__intro .imgBox .item>img{display:block;position:relative;width:100%;height:100%;object-fit:cover}
+.planic .sec__intro .textBox{display:block;position:absolute;top:50%;left:50%;transform:translateY(-50%);margin-left:13vw}
+.planic .sec__intro .textBox .group{display:block;position:relative}
+.planic .sec__intro .textBox .group__Title{display:block;position:relative;margin-bottom:15px;font-size:24px;line-height:1.2em;font-weight:700;color:#000}
+.planic .sec__intro .textBox .group .groupList{display:block;position:relative;margin-top:10px}
+.planic .sec__intro .textBox .group .groupList__item{display:block;position:relative;font-size:20px;line-height:1.4em;padding-left:150px;box-sizing:border-box}
+.planic .sec__intro .textBox .group .groupList__item--date{display:block;position:absolute;top:0;left:0}
+.planic .sec__intro .textBox .group .groupList__item--main{font-weight:700}
+.planic .sec__intro .textBox .group .groupList__item--sub{font-size:16px;color:#4a4a4a}
+.planic .sec__intro .textBox .group .groupList__item+.groupList__item{margin-top:10px}
+.planic .sec__intro .textBox .group+.group{margin-top:20px}
+@media (max-width:750px){
+.planic .header{height:40px}
+.planic .header .header__box{height:40px}
+.planic .header .header__box h1{font-size:18px;line-height:1.3em}
+.planic .header .header__box .global__menu{display:block;position:absolute;top:50%;right:10px;margin-top:-10px;flex:none}
+.planic .header .header__box .global__menu .btn__menu--mobile{position:relative;display:block;width:20px;height:20px;background:red}
+.planic .header .header__box .global__menu .global__menuList{display:block;position:fixed;top:0;right:0;bottom:0;width:60%;background:#fff}
+.planic .header .header__box .global__menu .global__menuList--item{display:block;position:relative}
+.planic .header .header__box .global__menu .global__menuList--item>a{display:block;width:100%}
+}
 /*# sourceMappingURL=../maps/planic.css.map */

@@ -1,0 +1,249 @@
+.planic{
+    display: block;
+    position: relative;
+    width:100%;
+    // header 영역
+    .header{
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 80px;
+        background-color: #fff;
+        z-index: 10;
+        &.v2{
+            background-color: #000;
+            h1{
+                color: #fff;
+            }
+            .global__menu--item > a{
+                color: #fff;
+                &:hover{
+                    color: #fff;
+                }
+                &:hover:before{
+                    background-color: #fff;
+                }
+            }
+        }
+        &__box{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 1100px;
+            height: 90px;
+            margin: 0 auto;
+
+            h1{
+                display: block;
+                position: relative;
+                font-size: 28px;
+                line-height: 34px;
+                font-weight: 900;
+                letter-spacing: -0.7px;
+                color: #000;
+            }
+            .global__menu{
+                display: block;
+                flex: 1;
+                position: relative;
+                .btn__menu--mobile{
+                    display: none;
+                }
+                .global__menuList{
+                    display: flex;
+                    justify-content: space-between;
+                    &--item{
+                        position: relative;
+                        display: block;
+                        & > a{
+                            position: relative;
+                            display: block;
+                            font-size: 22px;
+                            line-height: 28px;
+                            font-weight: 500;
+                            color: #4a4a4a;
+                            text-decoration: none;
+                            &:before{
+                                content: '';
+                                display: block;
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                width: 0;
+                                height: 3px;
+                                background: transparent;
+                            }
+                            &:hover{
+                                color: #000;
+                                &:before{
+                                    width: 100%;
+                                    background: #000;
+                                    transition: width .25s cubic-bezier(0.51, 0.18, 0, 0.88) .1s
+                                } 
+                            }
+                        }
+                        
+                    }
+                    &:before,
+                    &:after{
+                        content: '';
+                        display: block;
+                    }
+                }
+                
+                
+            }
+        }
+    }
+
+    // section 영역
+    .container{
+        display: block;
+        position: relative;
+        height: 100%;
+    }
+    .section{
+        display: block;
+        position: relative;
+        height: 100%;
+        padding-top: 80px;
+        box-sizing: border-box;
+    }
+    .sec__main{
+        display: block;
+        background-color: #000;
+        .mix_blend_mode{
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+        .mix_blend_mode video{
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            object-fit: cover;
+        }
+        .mix_blend_mode .textWrap{
+            display: block;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            color: #fff;
+            mix-blend-mode: multiply;
+            text-align: center;
+            font-weight: 900;
+            
+            box-sizing: border-box;
+            .textBox{
+                display: inline-block;
+                vertical-align: top;
+                padding: 40px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border: 10px solid #fff;
+                &__main{
+                    font-size: 80px;
+                    line-height: 1.2em;
+                }
+                &__sub{
+                    font-size: 70px;
+                    line-height: 1.2em;
+                }
+            }
+            
+        }
+    }
+    .sec__intro{
+        background: #fff;
+        .imgBox{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateY(-50%);
+            margin-left: -41.6667vw;
+            display: flex;
+            flex-wrap: wrap;
+            width:  41.6667vw;
+            height: 41.6667vw;
+            .item{
+                display: block;
+                width: calc(50% - 20px);
+                height: calc(50% - 20px);
+                border-radius: 50%;
+                overflow: hidden;
+                margin: 10px;
+                & > img{
+                    display: block;
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+        .textBox{
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateY(-50%);
+            margin-left: 13vw;
+            .group{
+                display: block;
+                position: relative;
+                &__Title{
+                    display: block;
+                    position: relative;
+                    margin-bottom: 15px;
+                    font-size: 24px;
+                    line-height: 1.2em;
+                    font-weight: 700;
+                    color: #000;
+                }
+                .groupList{
+                    display: block;
+                    position: relative;
+                    margin-top: 10px;
+                    &__item{
+                        display: block;
+                        position: relative;
+                        font-size: 20px;
+                        line-height: 1.4em;
+                        padding-left: 150px;
+                        box-sizing: border-box;
+                        &--date{
+                            display: block;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                        }
+                        &--main{
+                            font-weight: 700;
+                        }
+                        &--sub{
+                            font-size: 16px;
+                            color: #4a4a4a;
+                        }
+                        & + .groupList__item{
+                            margin-top: 10px;
+                        }
+                    }
+                }
+                & + .group{
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+
+}

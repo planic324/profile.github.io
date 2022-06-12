@@ -1,13 +1,13 @@
 'use strict';
 var gulp = require('gulp');
-var gulpsass = require('gulp-sass');
+var gulpsass = require("gulp-sass")(require('sass'));
 var sourcemaps = require('gulp-sourcemaps');
 var cleancss = require('gulp-clean-css');
 var csslint = require('gulp-csslint');
 var htmlReporter = require('gulp-csslint-report');
 var replace = require('gulp-replace');
 var autoprefixer = require('gulp-autoprefixer');
-var through2 = require('through2');
+// var through2 = require('through2');
 
 // ★★★★ autoprefixer 옵션: 브라우저 버전 지정
 const apfBrwsowsers = [

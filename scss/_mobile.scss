@@ -1,0 +1,48 @@
+@media (max-width: 750px){
+    .planic{
+        .header{
+            height: 40px;
+            .header__box{
+                height: 40px;
+                h1{
+                    font-size: 18px;
+                    line-height: 1.3em;
+                }
+                .global__menu{
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    right: 10px;
+                    margin-top: -10px;
+                    flex: none;
+                    .btn__menu--mobile{
+                        position: relative;
+                        display: block;
+                        width: 20px;
+                        height: 20px;
+                        background: red;
+                    }
+                    .global__menuList{
+                        display: block;
+                        position: fixed;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        width: 60%;
+                        background: #fff;
+                        &--item{
+                            display: block;
+                            position: relative;
+                            & > a{
+                                display: block;
+                                width: 100%;
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+    
+}
