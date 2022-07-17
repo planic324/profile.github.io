@@ -41,14 +41,12 @@
 							<a href="#">Spec</a>
 						</div>
 						<div class="global__menuList--item">
-							<a href="#">Record</a>
+							<a href="#">History</a>
 						</div>
 						<div class="global__menuList--item">
 							<a href="#">Skill</a>
 						</div>
 					</div>
-					
-
 				</div>
 			</div>
 		</div>
@@ -65,7 +63,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="section sec__intro">
+			<div class="section sec__introduce">
 				<div class="imgBox">
 					<div class="item">
 						<img src="imgs/img_intro_01.jpg" alt="">
@@ -79,6 +77,33 @@
 					<div class="item">
 						<img src="imgs/img_intro_04.jpg" alt="">
 					</div>
+				</div>
+				<div class="textBox">
+					<div class="group">
+						<p class="group__Title">Introduce</p>
+						<ul class="groupList__basic">
+							<li>웹표준을 지향하는 <strong>6년차</strong> 퍼블리셔 노은찬 입니다 :)</li>
+							<li>퍼블리셔로서 서비스에 성능향상에 기어할 수 있는 방법을 모색하고<br>적용하는 것을 좋아합니다.</li>
+							<li>나만의 루틴을 만들고 지키는 것을 좋아합니다.</li>
+							<li>이야기 듣는 것을 좋아하고, 알고 있는 지식 공유를 좋아합니다.</li>
+							<li><strong>'건강한 몸에서 건강한 마음이 나온다'</strong> 라는 좌우명으로<br>업무능률 항상을 위해 항상 운동을 하고 있습니다.</li>
+						</ul>
+					</div>
+					
+				</div>
+			</div>
+			<div class="section sec__intro">
+				<div class="imgBox">
+					<div class="item">
+						<img src="imgs/img_incomms.svg" alt="">
+					</div>
+					<div class="item">
+						<img src="imgs/img_hanwha.png" alt="">
+					</div>
+					<div class="item">
+						<img src="imgs/img_douzone.svg" alt="">
+					</div>
+					
 				</div>
 				<div class="textBox">
 					<div class="group">
@@ -113,6 +138,127 @@
 					</div>
 				</div>
 			</div>
+			<div class="section sec_history">
+				<div class="historyWrap">
+					<div class="historyTab">
+						<button type="button" class="btn_tab">InComms</button>
+						<button type="button" class="btn_tab">한화호텔앤드리조트</button>
+						<button type="button" class="btn_tab">DOUZONE</button>
+					</div>
+					<div class="historyBox">
+						<div class="group">
+							<ul class="historyList">
+								<li class="item">
+									<strong class="service__title">
+										<img src="imgs/img_favicon_series.png" alt="" class="service__title--logo">
+										네이버 시리즈</strong>
+									<dl class="itemList">
+										<div class="dl_item">
+											<dt>URL</dt>
+											<dd><a href="https://series.naver.com/novel/home.series?isWebtoonAgreePopUp=true">바로가기</a></dd>
+										</div>
+										<div class="dl_item">
+											<dt>사용스킬</dt>
+											<dd>html, sass(gulp)</dd>
+										</div>
+										<div class="dl_item">
+											<dt>특이사항</dt>
+											<dd>
+												<span>결제 서비스를 개선 시점을 기점으로 scss를 통해 기존 코드 개선</span>
+												<span>
+													컨텐츠 우측상단 표기되는 라벨 아이콘 관리가 되지 않아, 동일성격의 다양한 이미지가 존재하였다.
+													그로인해 라벨에 관한 class 타입이 <strong>23개</strong>로 확인되었으며, 가장큰 문제는 개발자마다 다른 라벨을 적용하였다.
+													이를 총 <strong>10개</strong>로 통일화 개선을 진행하였으며, 시리즈를 관리하고 있는 개발자 및 기획자와 회의를 통해 통일화 작업을 진행하였다.
+												</span>
+												<span>
+													ie7을 대응하기 위해 border-radius 효과를 이미지를 이용하여 background로 border-radius를 그리고 있었다.
+													물론, 크로스브라우징을 위해 ie7도 다른 브라우저와 동일하게 노출되어야되지만, 이미지로 들어가는 요소가 많아지면서
+													모바일에서 필요없는 이미지 파일을 모두 불러오는 이슈가 생기게 되었다.
+													ie7수요를 파악 후, 기획자와 협의를 통해 기존에 이미지로 들어간 border-radius를 모두 css로만 제어하기로 진행 하였다.
+													그로인해 메인페이지에서 들어가는 고용량의 스프라이트 이미지(2000px x 5000px:사이즈)를 배제할 수 있었다.
+												</span>
+											</dd>
+										</div>
+									</dl>
+								</li>
+								<li class="item">
+									<strong class="service__title">
+										<img src="imgs/img_favicon_ncp.png" alt="" class="service__title--logo">
+										네이버 클라우드 플랫폼</strong>
+									<dl class="itemList">
+										<div class="dl_item">
+											<dt>URL</dt>
+											<dd><a href="https://navercloudcorp.com/">바로가기</a></dd>
+										</div>
+										<div class="dl_item">
+											<dt>사용스킬</dt>
+											<dd>html, sass(gulp)</dd>
+										</div>
+										<div class="dl_item">
+											<dt>특이사항</dt>
+											<dd>
+												<p>공공기관, 회원전용, 고객용 다양한 페이지를 git을 이용한 분산관리 작업진행</p>
+												<p>스프라이트 이미지 작업이 아닌, <a src="https://icomoon.io/" class="linkText">ico-moon</a>서비스를 이용해 서비스내 아이콘 작업</p>
+												<p></p>
+											</dd>
+										</div>
+									</dl>
+								</li>
+								<li class="item">
+									<strong class="service__title">
+										<img src="imgs/img_favicon_papago.png" alt="" class="service__title--logo">
+										파파고</strong>
+									<dl class="itemList">
+										<div class="dl_item">
+											<dt>URL</dt>
+											<dd><a href="https://papago.naver.com/">바로가기</a></dd>
+										</div>
+										<div class="dl_item">
+											<dt>개발환경</dt>
+											<dd>React</dd>
+										</div>
+										<div class="dl_item">
+											<dt>사용스킬</dt>
+											<dd>html, sass(gulp)</dd>
+										</div>
+										<div class="dl_item">
+											<dt>특이사항</dt>
+											<dd>
+												<p>React개발환경에서의 최초 작업 진행이었다.</p>
+												<p>나눔스퀘어에서 발생하는 공백이슈('뷁'과 같은 한글이 공백으로 표기되는 현상) 해결을 하였으며, 다국어 대응 작업도 함께 진행하였다.</p>
+												<p>React 개발환경에서 작업이 이뤄지기 때문에 Front-End 개발자의 환경을 동일하게 싱크하여 작업이 이뤄졌으며, 커밋오류가 나지 않는 것에 가장 유의하며 작업을 진행하였다.</p>
+											</dd>
+										</div>
+									</dl>
+								</li>
+								<li class="item">
+									<strong class="service__title">
+										<img src="imgs/img_favicon_move.png" alt="" class="service__title--logo">
+										네이버 영화(웹접근성)</strong>
+									<dl class="itemList">
+										<div class="dl_item">
+											<dt>URL</dt>
+											<dd><a href="https://movie.naver.com/">바로가기</a></dd>
+										</div>
+										<div class="dl_item">
+											<dt>사용스킬</dt>
+											<dd>html, css</dd>
+										</div>
+										<div class="dl_item">
+											<dt>특이사항</dt>
+											<dd>
+												<p>2018년 웹접근성 최하위 점수를 받은 서비스 개선작업 진행(38점)</p>
+												<p>네이버 영화 모든 페이지를 검수하여 널리에서 제공하는 웹접근성에 맞춰 전수 개선 작업진행</p>
+												<p>2019년 문법오류는 (100점)획득, 레이아웃으로 인한 오류를 제외한 나머지 모든 접근성 85점 이상 획득</p>
+											</dd>
+										</div>
+									</dl>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
         
         <div id="footer" class="footer">
@@ -133,6 +279,7 @@
 
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.9/fullpage.min.js"></script>
+<script src="js/slick/slick.min.js"></script>
 
 
 <!-- fullpage.js 영역 -->
@@ -145,6 +292,24 @@
 	});
 </script>
 <!-- //fullpage.js 영역 -->
+
+<!-- slick 적용 -->
+<script>
+	$('.historyList').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		// accessibility: true,
+		dots: false,
+		autoplay: true,
+		// autoplaySpeed: 2000,
+		// speed:500,
+		// infinite: true,
+		// cssEase: 'linear',
+		arrows: true,
+		variableWidth: true
+	});
+</script>
+<!-- //slick 적용 -->
 
 </body>
 </html>

@@ -39,11 +39,12 @@ button:active,button:focus{outline:0}
 .planic .sec__main .mix_blend_mode .textWrap .textBox{display:inline-block;vertical-align:top;padding:40px;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);border:10px solid #fff}
 .planic .sec__main .mix_blend_mode .textWrap .textBox__main{font-size:80px;line-height:1.2em}
 .planic .sec__main .mix_blend_mode .textWrap .textBox__sub{font-size:70px;line-height:1.2em}
-.planic .sec__intro{background:#fff}
-.planic .sec__intro .imgBox{position:absolute;top:50%;left:50%;transform:translateY(-50%);margin-left:-41.6667vw;display:flex;flex-wrap:wrap;width:41.6667vw;height:41.6667vw}
-.planic .sec__intro .imgBox .item{display:block;width:calc(50% - 20px);height:calc(50% - 20px);border-radius:50%;overflow:hidden;margin:10px}
-.planic .sec__intro .imgBox .item>img{display:block;position:relative;width:100%;height:100%;object-fit:cover}
-.planic .sec__intro .textBox{display:block;position:absolute;top:50%;left:50%;transform:translateY(-50%);margin-left:13vw}
+.planic .sec__intro{background:#fff;display:flex;justify-content:center;align-items:center}
+.planic .sec__intro .imgBox{display:block;position:relative;width:300px}
+.planic .sec__intro .imgBox .item{display:block;position:relative;width:100%;height:auto}
+.planic .sec__intro .imgBox .item>img{display:block;width:100%}
+.planic .sec__intro .imgBox .item+.item{margin-top:30px}
+.planic .sec__intro .textBox{display:block;position:relative;margin-left:13vw}
 .planic .sec__intro .textBox .group{display:block;position:relative}
 .planic .sec__intro .textBox .group__Title{display:block;position:relative;margin-bottom:15px;font-size:24px;line-height:1.2em;font-weight:700;color:#000}
 .planic .sec__intro .textBox .group .groupList{display:block;position:relative;margin-top:10px}
@@ -53,6 +54,48 @@ button:active,button:focus{outline:0}
 .planic .sec__intro .textBox .group .groupList__item--sub{font-size:16px;color:#4a4a4a}
 .planic .sec__intro .textBox .group .groupList__item+.groupList__item{margin-top:10px}
 .planic .sec__intro .textBox .group+.group{margin-top:20px}
+.planic .sec__introduce .groupList__basic{display:block;position:relative}
+.planic .sec__introduce .groupList__basic>li{position:relative;display:block;padding-left:10px;font-size:16px;line-height:1.4em;color:#4a4a4a}
+.planic .sec__introduce .groupList__basic>li+li{margin-top:10px}
+.planic .sec__introduce .groupList__basic>li:before{content:"-";display:block;position:absolute;top:0;left:0}
+.planic .sec__introduce .imgBox{position:absolute;top:50%;left:50%;transform:translateY(-50%);margin-left:-41.6667vw;display:flex;flex-wrap:wrap;width:31.6667vw;height:31.6667vw}
+.planic .sec__introduce .imgBox .item{display:block;width:calc(50% - 20px);height:calc(50% - 20px);border-radius:50%;overflow:hidden;margin:10px}
+.planic .sec__introduce .imgBox .item>img{display:block;position:relative;width:100%;height:100%;object-fit:cover}
+.planic .sec__introduce .textBox{display:block;position:absolute;top:50%;left:50%;transform:translateY(-50%);margin-left:13vw}
+.planic .sec__introduce .textBox .group{display:block;position:relative}
+.planic .sec__introduce .textBox .group__Title{display:block;position:relative;margin-bottom:15px;font-size:24px;line-height:1.2em;font-weight:700;color:#000}
+.planic .sec__introduce .textBox .group .groupList{display:block;position:relative;margin-top:10px}
+.planic .sec__introduce .textBox .group .groupList__item{display:block;position:relative;font-size:20px;line-height:1.4em;padding-left:150px;box-sizing:border-box}
+.planic .sec__introduce .textBox .group .groupList__item--date{display:block;position:absolute;top:0;left:0}
+.planic .sec__introduce .textBox .group .groupList__item--main{font-weight:700}
+.planic .sec__introduce .textBox .group .groupList__item--sub{font-size:16px;color:#4a4a4a}
+.planic .sec__introduce .textBox .group .groupList__item+.groupList__item{margin-top:10px}
+.planic .sec__introduce .textBox .group+.group{margin-top:20px}
+.planic .sec_history{display:flex;justify-content:center;align-items:center;position:relative}
+.planic .sec_history .historyWrap{display:block;width:70%;border:1px solid #4a4a4a;border-radius:20px;padding:30px 20px;box-sizing:border-box}
+.planic .sec_history .historyWrap .historyTab{display:flex;width:100%;padding-bottom:20px;border-bottom:2px solid #e1e1e1;margin-bottom:20px}
+.planic .sec_history .historyWrap .historyTab .btn_tab{display:block;font-size:20px;line-height:1.2px;color:#000;font-weight:900}
+.planic .sec_history .historyWrap .historyTab .btn_tab+.btn_tab{margin-left:15px}
+.planic .sec_history .historyWrap .historyTab .btn_tab:nth-child(1).select,.planic .sec_history .historyWrap .historyTab .btn_tab:nth-child(1):hover{color:#cd0000}
+.planic .sec_history .historyWrap .historyTab .btn_tab:nth-child(2).select,.planic .sec_history .historyWrap .historyTab .btn_tab:nth-child(2):hover{color:#f1592a}
+.planic .sec_history .historyWrap .historyTab .btn_tab:nth-child(3).select,.planic .sec_history .historyWrap .historyTab .btn_tab:nth-child(3):hover{color:#1c90fb}
+.planic .sec_history .historyWrap .historyBox{display:block;position:relative}
+.planic .sec_history .historyWrap .historyBox .group{display:block;max-height:500px}
+.planic .sec_history .historyWrap .historyBox .group .historyList{display:flex;position:relative;width:100%}
+.planic .sec_history .historyWrap .historyBox .group .historyList .item{display:block}
+.planic .sec_history .historyWrap .historyBox .group .historyList .item .service__title{display:block;font-size:24px;line-height:1.4em;font-weight:900}
+.planic .sec_history .historyWrap .historyBox .group .historyList .item .service__title--logo{display:inline-block;vertical-align:top;width:24px;height:auto;object-fit:cover;margin-top:2px}
+.planic .sec_history .historyWrap .historyBox .group .historyList .item .itemList{display:block;position:relative;margin-top:15px}
+.planic .sec_history .historyWrap .historyBox .group .historyList .item .itemList .dl_item{display:flex;font-size:16px;line-height:1.3em}
+.planic .sec_history .historyWrap .historyBox .group .historyList .item .itemList .dl_item+.dl_item{margin-top:10px}
+.planic .sec_history .historyWrap .historyBox .group .historyList .item .itemList .dl_item dt{display:block;width:120px;min-width:120px;font-weight:900;color:#000}
+.planic .sec_history .historyWrap .historyBox .group .historyList .item .itemList .dl_item dd{display:block;position:relative}
+.planic .sec_history .historyWrap .historyBox .group .historyList .item .itemList .dl_item dd a{font-weight:900}
+.planic .sec_history .historyWrap .historyBox .group .historyList .item .itemList .dl_item dd a:hover{text-decoration:underline}
+.planic .sec_history .historyWrap .historyBox .group .historyList .item .itemList .dl_item dd p,.planic .sec_history .historyWrap .historyBox .group .historyList .item .itemList .dl_item dd span{display:block;color:#4a4a4a;word-break:keep-all}
+.planic .sec_history .historyWrap .historyBox .group .historyList .item .itemList .dl_item dd p .linkText,.planic .sec_history .historyWrap .historyBox .group .historyList .item .itemList .dl_item dd span .linkText{color:#00e;cursor:pointer}
+.planic .sec_history .historyWrap .historyBox .group .historyList .item .itemList .dl_item dd p+span,.planic .sec_history .historyWrap .historyBox .group .historyList .item .itemList .dl_item dd span+span{margin-top:10px}
+.planic .sec_history .historyWrap .historyBox .group .historyList .item .itemList .dl_item dd p+p,.planic .sec_history .historyWrap .historyBox .group .historyList .item .itemList .dl_item dd span+p{margin-top:10px}
 @media (max-width:750px){
 .planic .header{height:40px}
 .planic .header .header__box{height:40px}
