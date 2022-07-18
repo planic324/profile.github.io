@@ -1,3 +1,90 @@
+.fp-viewing-main{
+    .planic{
+        .header{
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 80px;
+            background-color: #fff;
+            z-index: 10;
+            
+            &__box{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                max-width: 1100px;
+                height: 90px;
+                margin: 0 auto;
+    
+                h1{
+                    display: block;
+                    position: relative;
+                    font-size: 28px;
+                    line-height: 34px;
+                    font-weight: 900;
+                    letter-spacing: -0.7px;
+                    color: #000;
+                    a{
+                        color: #000;
+                    }
+                }
+                .global__menu{
+                    display: block;
+                    flex: 1;
+                    position: relative;
+                    .btn__menu--mobile{
+                        display: none;
+                    }
+                    .global__menuList{
+                        display: flex;
+                        justify-content: space-between;
+                        &--item{
+                            position: relative;
+                            display: block;
+                            & > a{
+                                position: relative;
+                                display: block;
+                                font-size: 22px;
+                                line-height: 28px;
+                                font-weight: 500;
+                                color: #4a4a4a;
+                                text-decoration: none;
+                                &:before{
+                                    content: '';
+                                    display: block;
+                                    position: absolute;
+                                    bottom: 0;
+                                    left: 0;
+                                    width: 0;
+                                    height: 3px;
+                                    background: transparent;
+                                }
+                                &:hover{
+                                    color: #000;
+                                    &:before{
+                                        width: 100%;
+                                        background: #000;
+                                        transition: width .25s cubic-bezier(0.51, 0.18, 0, 0.88) .1s
+                                    } 
+                                }
+                            }
+                            
+                        }
+                        &:before,
+                        &:after{
+                            content: '';
+                            display: block;
+                        }
+                    }
+                    
+                    
+                }
+            }
+        }
+    }
+    
+}
 .planic{
     display: block;
     position: relative;
@@ -8,23 +95,8 @@
         position: absolute;
         width: 100%;
         height: 80px;
-        background-color: #fff;
+        background-color: #000;
         z-index: 10;
-        &.v2{
-            background-color: #000;
-            h1{
-                color: #fff;
-            }
-            .global__menu--item > a{
-                color: #fff;
-                &:hover{
-                    color: #fff;
-                }
-                &:hover:before{
-                    background-color: #fff;
-                }
-            }
-        }
         &__box{
             display: flex;
             justify-content: space-between;
@@ -41,7 +113,10 @@
                 line-height: 34px;
                 font-weight: 900;
                 letter-spacing: -0.7px;
-                color: #000;
+                color: #fff;
+                a{
+                    color: #fff;
+                }
             }
             .global__menu{
                 display: block;
@@ -62,7 +137,7 @@
                             font-size: 22px;
                             line-height: 28px;
                             font-weight: 500;
-                            color: #4a4a4a;
+                            color: #fff;
                             text-decoration: none;
                             &:before{
                                 content: '';
@@ -75,10 +150,10 @@
                                 background: transparent;
                             }
                             &:hover{
-                                color: #000;
+                                color: #fff;
                                 &:before{
                                     width: 100%;
-                                    background: #000;
+                                    background: #fff;
                                     transition: width .25s cubic-bezier(0.51, 0.18, 0, 0.88) .1s
                                 } 
                             }
@@ -96,7 +171,7 @@
             }
         }
     }
-
+    
     // section 영역
     .container{
         display: block;
@@ -109,6 +184,10 @@
         height: 100%;
         padding-top: 80px;
         box-sizing: border-box;
+        background-color: #f0f2f7;
+        &:nth-child(odd){
+            background-color: #fff;
+        }
     }
     .sec__main{
         display: block;
@@ -150,7 +229,7 @@
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                border: 10px solid #fff;
+                border: 50px solid #fff;
                 &__main{
                     font-size: 80px;
                     line-height: 1.2em;
@@ -238,6 +317,9 @@
         }
     }
     .sec__introduce{
+        display: flex;
+        justify-content: center;
+        align-items: center;
         .groupList__basic{
             display: block;
             position: relative;
@@ -262,11 +344,8 @@
         }
         
         .imgBox{
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translateY(-50%);
-            margin-left: -41.6667vw;
+            position: relative;
+            display: block;
             display: flex;
             flex-wrap: wrap;
             width:  31.6667vw;
@@ -289,11 +368,8 @@
         }
         .textBox{
             display: block;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translateY(-50%);
-            margin-left: 13vw;
+            
+            margin-left: 150px;
             .group{
                 display: block;
                 position: relative;
@@ -340,19 +416,52 @@
                 }
             }
         }
+        .snsBox{
+            display: flex;
+            width: 200px;
+            margin: 30px auto 0;
+            justify-content: space-between;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            .sns{
+                display: block;
+                width: 60px;
+                height: 60px;
+                border: 1px solid #eaeaea;
+                border-radius: 50%;
+                background: #fff;
+            }
+            .email{
+                display: block;
+                margin-top: 20px;
+                width: 100%;
+                font-size: 16px;
+                letter-spacing: -0.65px;
+                color: #000;
+                text-align: center;
+                & > a{
+                    color: #000;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
     }
-    .sec_history{
+    .sec__history{
         display: flex;
         justify-content: center;
         align-items: center;
         position: relative;
         .historyWrap{
             display: block;
-            width: 70%;
-            border: 1px solid #4a4a4a;
+            width: 1100px;
+            
             border-radius: 20px;
             padding: 30px 20px;
             box-sizing: border-box;
+            box-shadow: 0 6px 8px 0 rgba(8, 25, 39, 0.06);
+            background-color: #fff;
             .historyTab{
                 display: flex;
                 width: 100%;
@@ -362,7 +471,7 @@
                 .btn_tab{
                     display: block;
                     font-size: 20px;
-                    line-height: 1.2px;
+                    line-height: 1.2em;
                     color: #000;
                     font-weight: 900;
                     & + .btn_tab{
@@ -385,16 +494,18 @@
             .historyBox{
                 display: block;
                 position: relative;
+                width: 100%;
                 .group{
                     display: block;
                     max-height: 500px;
                     .historyList{
-                        display: flex;
+                        display: block;
                         position: relative;
                         width: 100%;
                         .item{
                             display: block;
-                            
+                            position: relative;
+                            width: 1060px;
                             .service__title{
                                 display: block;
                                 font-size: 24px;
@@ -408,11 +519,18 @@
                                     object-fit: cover;
                                     margin-top: 2px;
                                 }
+                                &--link{
+                                    color: rgb(0, 0, 238);
+                                    &:hover{
+                                        text-decoration: underline;
+                                    }
+                                }
                             }
                             .itemList{
                                 display: block;
                                 position: relative;
                                 margin-top: 15px;
+                                min-height: 400px;
                                 .dl_item{
                                     display: flex;
                                     font-size: 16px;
@@ -456,6 +574,120 @@
                                 }
                             }
                         }
+                        .slick-list{
+                            display: block;
+                            position: relative;
+                            width: 100%;
+                            overflow: hidden;
+                            .slick-track{
+                                display: flex;
+                                
+                            }
+                            
+                        }
+                        .slick-arrow{
+                            display: block;
+                            position: absolute;
+                            top: 50%;
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 50%;
+                            background: #fff;
+                            margin-top: -20px;
+                            font-size: 0;
+                            line-height: 0;
+                            color: transparent;
+                            text-indent: -10000px;
+                            border: 1px solid #e1e1e1;
+                            background-color: #fff;
+                            &.slick-prev{
+                                left: -40px;
+                                &:before{
+                                    transform: rotate(180deg);
+                                    margin-left: -8px
+                                }    
+                            }
+                            &.slick-next{
+                                right: -40px;
+                            }
+                            &:before{
+                                content: '';
+                                display: block;
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                width: 12px;
+                                height: 22px;
+                                margin: -11px 0 0 -4px;
+                                background: url(https://static.wehago.com/imgs/common/sp_icon.png) -192px -488px;
+                            }
+                            &.slick-disabled{
+                                display:none !important;
+                            }
+                        }
+                        .slick-dots{
+                            display: block;
+                            position: absolute;
+                            bottom: -30px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            & > li{
+                                display: inline-block;
+                                vertical-align: top;
+                                width: 6px;
+                                height: 6px;
+                                margin: 0 5px;
+                                &.slick-active{
+                                    & > button{
+                                        background-color: #000;
+                                    }
+                                }
+                                & > button{
+                                    display: block;
+                                    font-size: 0;
+                                    color: transparent;
+                                    text-indent: -10000px;
+                                    width: 100%;
+                                    height: 100%;
+                                    border-radius: 50%;
+                                    background-color: rgba(0,0,0,0.3);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .sec__skills{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        .textBox{
+            display: block;
+            position: relative;
+            .group{
+                display: flex;
+                position: relative;
+                & + .group{
+                    margin-top: 30px;
+                }
+                &__Title{
+                    display: block;
+                    width: 150px;
+                    min-width: 150px;
+                    font-size: 30px;
+                    line-height: 1.3em;
+                    font-weight: 900;
+                }
+                .groupList{
+                    display: block;
+                    position: relative;
+                    li{
+                        display: block;
+                        font-size: 22px;
+                        line-height: 1.4em;
                     }
                 }
             }

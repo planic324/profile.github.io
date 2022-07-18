@@ -30,21 +30,25 @@
 		<!-- [D] header 배경색상 변경 v2 -->
         <div id="header" class="header">
 			<div class="header__box">
-				<h1>Publisher Planic</h1>
+				<h1 ><a href="#main" data-anchor="slide0">Publisher Planic</a></h1>
 				<div class="global__menu">
-					<button type="button" class="btn__menu--mobile"></button>
+					<button type="button" class="btn__menu--mobile">
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
 					<div class="global__menuList">
 						<div class="global__menuList--item">
-							<a href="#">Intro</a>
+							<a href="#introduce" data-anchor="slide1">Introduce</a>
 						</div>
 						<div class="global__menuList--item">
-							<a href="#">Spec</a>
+							<a href="#spec" data-anchor="slide2">Spec</a>
 						</div>
 						<div class="global__menuList--item">
-							<a href="#">History</a>
+							<a href="#history" data-anchor="slide3">History</a>
 						</div>
 						<div class="global__menuList--item">
-							<a href="#">Skill</a>
+							<a href="#skills">Skills</a>
 						</div>
 					</div>
 				</div>
@@ -53,7 +57,7 @@
 		<div id="fullpage" class="container">
 			<div class="section sec__main">
 				<div class="mix_blend_mode">
-					<video src="https://static.wehago.com/etc/vedio/demo_wehagot.mp4" autoplay loop muted></video>
+					<video src="video/main_video.mp4" autoplay loop muted></video>
 					<div class="textWrap">
 						<div class="textBox">
 							<p class="textBox__main">WEB PUBLISHER</p>
@@ -89,8 +93,20 @@
 							<li><strong>'건강한 몸에서 건강한 마음이 나온다'</strong> 라는 좌우명으로<br>업무능률 항상을 위해 항상 운동을 하고 있습니다.</li>
 						</ul>
 					</div>
-					
+					<div class="snsBox">
+						<a href="https://velog.io/@planic324" class="sns velog">
+							<svg width="60" height="60" viewBox="0 0 192 192" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M24 0H168C181.255 0 192 10.7451 192 24V168C192 181.255 181.255 192 168 192H24C10.7451 192 0 181.255 0 168V24C0 10.7451 10.7451 0 24 0ZM49 57.9199V65.48H67L80.6799 142.52L98.5 141.26C116.02 119.06 127.84 102.44 133.96 91.3999C140.2 80.24 143.32 70.9399 143.32 63.5C143.32 59.0601 142 55.7 139.36 53.4199C136.84 51.1399 133.66 50 129.82 50C122.62 50 116.62 53.0601 111.82 59.1799C116.5 62.3 119.68 64.8799 121.36 66.9199C123.16 68.8401 124.06 71.4199 124.06 74.6599C124.06 80.0601 122.44 86.1799 119.2 93.02C116.08 99.8601 112.66 105.92 108.94 111.2C106.54 114.56 103.48 118.7 99.76 123.62L88.0601 57.2C87.1001 52.3999 84.1001 50 79.0601 50C76.78 50 72.3999 50.96 65.9199 52.8799C59.4399 54.6799 53.8 56.3601 49 57.9199Z" fill="currentColor"></path></svg>
+						</a>
+						<a href="https://github.com/planic324" class="sns git">
+							<svg height="60" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="60" data-view-component="true" class="octicon octicon-mark-github v-align-middle">
+								<path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+							</svg>
+						</a>
+						<p class="email">Email:<a href="mailto:nong0324@naver.com">nong0324@naver.com</a></p>
+						
+					</div>
 				</div>
+				
 			</div>
 			<div class="section sec__intro">
 				<div class="imgBox">
@@ -127,7 +143,7 @@
 							<li class="groupList__item">
 								<p class="groupList__item--date">2019.8 - 2020.8</p>
 								<p class="groupList__item--main">한화호텔앤드리조트</p>
-								<p class="groupList__item--sub">경영지원팀 - 전산</p>
+								<p class="groupList__item--sub">경영지원(ESH 담당, ESH Portal 퍼블리싱 담당)</p>
 							</li>
 							<li class="groupList__item">
 								<p class="groupList__item--date">2020.8 - </p>
@@ -138,14 +154,14 @@
 					</div>
 				</div>
 			</div>
-			<div class="section sec_history">
+			<div class="section sec__history">
 				<div class="historyWrap">
 					<div class="historyTab">
-						<button type="button" class="btn_tab">InComms</button>
+						<button type="button" class="btn_tab select">InComms</button>
 						<button type="button" class="btn_tab">한화호텔앤드리조트</button>
 						<button type="button" class="btn_tab">DOUZONE</button>
 					</div>
-					<div class="historyBox">
+					<div class="historyBox incomms">
 						<div class="group">
 							<ul class="historyList">
 								<li class="item">
@@ -155,7 +171,7 @@
 									<dl class="itemList">
 										<div class="dl_item">
 											<dt>URL</dt>
-											<dd><a href="https://series.naver.com/novel/home.series?isWebtoonAgreePopUp=true">바로가기</a></dd>
+											<dd><a href="https://series.naver.com/novel/home.series?isWebtoonAgreePopUp=true" target="_blank">바로가기</a></dd>
 										</div>
 										<div class="dl_item">
 											<dt>사용스킬</dt>
@@ -188,7 +204,7 @@
 									<dl class="itemList">
 										<div class="dl_item">
 											<dt>URL</dt>
-											<dd><a href="https://navercloudcorp.com/">바로가기</a></dd>
+											<dd><a href="https://navercloudcorp.com/" target="_blank">바로가기</a></dd>
 										</div>
 										<div class="dl_item">
 											<dt>사용스킬</dt>
@@ -198,7 +214,7 @@
 											<dt>특이사항</dt>
 											<dd>
 												<p>공공기관, 회원전용, 고객용 다양한 페이지를 git을 이용한 분산관리 작업진행</p>
-												<p>스프라이트 이미지 작업이 아닌, <a src="https://icomoon.io/" class="linkText">ico-moon</a>서비스를 이용해 서비스내 아이콘 작업</p>
+												<p>스프라이트 이미지 작업이 아닌, <a href="https://icomoon.io/" class="linkText" target="_blank">ico-moon</a>서비스를 이용해 서비스내 아이콘 작업</p>
 												<p></p>
 											</dd>
 										</div>
@@ -211,7 +227,7 @@
 									<dl class="itemList">
 										<div class="dl_item">
 											<dt>URL</dt>
-											<dd><a href="https://papago.naver.com/">바로가기</a></dd>
+											<dd><a href="https://papago.naver.com/" class="linkText" target="_blank">바로가기</a></dd>
 										</div>
 										<div class="dl_item">
 											<dt>개발환경</dt>
@@ -238,7 +254,7 @@
 									<dl class="itemList">
 										<div class="dl_item">
 											<dt>URL</dt>
-											<dd><a href="https://movie.naver.com/">바로가기</a></dd>
+											<dd><a href="https://movie.naver.com/" target="_blank">바로가기</a></dd>
 										</div>
 										<div class="dl_item">
 											<dt>사용스킬</dt>
@@ -257,6 +273,205 @@
 							</ul>
 						</div>
 					</div>
+					<div class="historyBox hanwha">
+						<div class="group">
+							<ul class="historyList">
+								<li class="item">
+									<strong class="service__title">
+										<img src="imgs/img_favicon_hanwha.png" alt="" class="service__title--logo">
+										<a href="https://www.chemidream.com/2621" class="service__title--link" target="_blank">ESH</a> 사내 웹서비스 개발</strong>
+									<dl class="itemList">
+										<div class="dl_item">
+											<dt>URL</dt>
+											<dd>보안상의 URL 첨부 불가</dd>
+										</div>
+										<div class="dl_item">
+											<dt>개발환경</dt>
+											<dd>React</dd>
+										</div>
+										<div class="dl_item">
+											<dt>사용스킬</dt>
+											<dd>html, sass</dd>
+										</div>
+										<div class="dl_item">
+											<dt>경력사항</dt>
+											<dd>
+												<p>
+													산업재해, 식품위생 등과 같이 회사 내 ESH에 대한 중요도가 커지고 시점,
+													그룹마다 서로 다른 양식으로 가지고 있는 ESH 관리감독 프로그램을 그룹내 인트라로 관리감독을 하고 있었다.
+												</p>
+												<p>
+													ESH 담당자만 프로그램을 설치하여 관리를 하기 하기때문에 수시로 바뀌는 규정과 회사별 상이한 체크리스트로 체계적인 관리가 불가하였다.
+													이를 개선하기 위해 누가 쉽게 접속이 가능한 웹페이지를 오픈하는 프로젝트를 진행하였다.
+												</p>
+												<p>
+													특히 한화호텔앤리조트의 경우 식품 위생과 골프장에서 발생하는 농약 등 위험물질/환경오염물질을 관리감독 페이지를 중점적으로 제작하여,
+													다양한 체크리스트를 정리하여 담당자들에게 전달하고, 법적 내용이 변경되는 것들을 빠르게 전사에 공지할 수 있는 것을 목적을 두고 프로젝트가 진행되었다.
+													직원들은 위생상태 및 위험물질 관리를 본인의 스마트폰을 들고 언제든지 체크할 수 있게 되었다.
+													이러한 결과로 기존 그룹내 점검 시 평균 점수가 <strong>13.8점(한화화텔앤드리조트 기준)</strong> 향상 되었다.
+												</p>
+											</dd>
+										</div>
+									</dl>
+								</li>
+								
+								
+							</ul>
+						</div>
+					</div>
+					<div class="historyBox douzone">
+						<div class="group">
+							<ul class="historyList">
+								<li class="item">
+									<strong class="service__title">
+										<img src="imgs/img_favicon_wehago.png" alt="" class="service__title--logo">
+										WEHAGO 서비스 운영 및 리뉴얼</strong>
+									<dl class="itemList">
+										<div class="dl_item">
+											<dt>WEHAGO?</dt>
+											<dd>
+												<p>더존은 국내 1위 ERP, 그룹웨어 서비스를 가지고 있는 회사입니다.</p>
+												<p>2019년 ERP를 웹페이지화 프로젝트가 이뤄졌으며, 플랫폼명은 'WEHAGO'로 현재 WEHAGO 내에는 120여개 이상의 서비스를 제공하고 있습니다.</p>
+												<p>2019년도 최초 세팅이 React로 작업되었으며, 오픈 당시 10개 미만의 서비스가 현재는 120여개로 성장 하였습니다. </p>
+											</dd>
+										</div>
+										<div class="dl_item">
+											<dt>URL</dt>
+											<dd>
+												<p><a href="https://www.wehago.com/landing/ko/home/" class="linkText" target="_blank">바로가기</a></p>
+											</dd>
+										</div>
+										<div class="dl_item">
+											<dt>개발환경</dt>
+											<dd>React</dd>
+										</div>
+										<div class="dl_item">
+											<dt>사용스킬</dt>
+											<dd>html, sass(gulp)</dd>
+										</div>
+										<div class="dl_item">
+											<dt>경력사항</dt>
+											<dd>
+												<p>
+													신규 서비스 개발 <strong>8건</strong><br>
+													리뉴얼 서비스 개발 <strong>10건</strong>
+												</p>
+												<p>React 컴포넌트 퍼블리싱</p>
+											</dd>
+										</div>
+									</dl>
+								</li>
+								<li class="item">
+									<strong class="service__title">
+										<img src="imgs/img_favicon_wehago.png" alt="" class="service__title--logo">
+										DOCC(병원관제플랫폼)</strong>
+									<dl class="itemList">
+										<div class="dl_item">
+											<dt>DOCC</dt>
+											<dd>
+												<p>병원에서 발생되는 이슈를 한눈에 확인할 수 있는 플랫폼관리자</p>
+												<p>일, 주, 월, 분기별 운영현황과 병상관리 및 채혈관리 등 다양한 운영현황을 확인 할 수 있다.</p>
+												<p>의사들이 손쉽게 확인할 수 있도록 패드와, 관제센터에서 사용하는 고비율(32:9) 이상의 해상도 크로스브라우징이 매우 중요한 관건이었다.</p>
+											</dd>
+										</div>
+										<div class="dl_item">
+											<dt>URL</dt>
+											<dd>
+												<p>보안상 이슈로 링크불가</p>
+											</dd>
+										</div>
+										<div class="dl_item">
+											<dt>개발환경</dt>
+											<dd>React</dd>
+										</div>
+										<div class="dl_item">
+											<dt>사용스킬</dt>
+											<dd>html, sass(gulp)</dd>
+										</div>
+										<div class="dl_item">
+											<dt>특이사항</dt>
+											<dd>
+												<p>클라이언트(병원)측의 요청에 해상도 변경이 이뤄지면서, 최초 작업물에서 저해상도, 고해상도를 모두 대응하는 작업이었다.</p>
+												<p>관제센터와 같이 대형모니터가 있는 환경에서는 px단위가 아닌 vw단위를 사용하여 대응 하였으며,<br>해상도마다 레이아웃이 변경이 될 수 있도록 gird를 사용하여 반응형 작업을 진행하였다.</p>
+											</dd>
+										</div>
+									</dl>
+								</li>
+								<li class="item">
+									<strong class="service__title">
+										<img src="imgs/img_favicon_wehago.png" alt="" class="service__title--logo">
+										랜딩 페이지</strong>
+									<dl class="itemList">
+										<div class="dl_item">
+											<dt>랜딩 페이지</dt>
+											<dd>
+												<p>페이지를 접속한 고객이 서비스에 대한 간단한 내용을 확인할 수 있는 인스턴트 페이지</p>
+											</dd>
+										</div>
+										<div class="dl_item">
+											<dt>URL</dt>
+											<dd>
+												<p>
+													<a href="https://www.wehago.com/landing/ko/home/" target="" class="linkText">WEHAGO</a>
+												</p>
+												<p>
+													<a href="https://infra.wehagov.com/landingvinfra/ko/home/" target="" class="linkText">WEHAGO V Infra</a>
+												</p>
+											</dd>
+										</div>
+										<div class="dl_item">
+											<dt>개발환경</dt>
+											<dd>React</dd>
+										</div>
+										<div class="dl_item">
+											<dt>사용스킬</dt>
+											<dd>html, css</dd>
+										</div>
+										<div class="dl_item">
+											<dt>특이사항</dt>
+											<dd>
+												<p>WEHAGO 페이지 내에서 가장 화려한 페이지로 css3의 다양한 기술들을 적용을 하고 시도해보는 페이지이다.</p>
+												<p>특히, 이전 회사에서 최대한 정적인 페이지 광범위 크로스브라우징으로 인한 사용하지 못했던 css 속성들을 사용하였다.</p>
+												<p>animaition, transform를 활용하여, 최소한의 javascrip로 작업이 진행 되었다.</p>
+											</dd>
+										</div>
+									</dl>
+								</li>
+								
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="section sec__skills">
+				
+				<div class="textBox">
+					<div class="group">
+						<p class="group__Title">Language</p>
+						<ul class="groupList">
+							<li>HTML</li>
+							<li>CSS</li>
+							<li>SASS</li>
+						</ul>
+					</div>
+					<div class="group">
+						<p class="group__Title">SCM</p>
+						<ul class="groupList">
+							<li>Git</li>
+							<li>SVN</li>
+						</ul>
+					</div>
+					<div class="group">
+						<p class="group__Title">Cross Browsing</p>
+						<ul class="groupList">
+							<li>ie7 ~ ie11, Edge</li>
+							<li>Chrome</li>
+							<li>Firefox</li>
+							<li>Safari</li>
+							<li>Mobile device</li>
+						</ul>
+					</div>
+					
 				</div>
 			</div>
 		</div>
@@ -264,9 +479,9 @@
         <div id="footer" class="footer">
 			<div class="in_box">
 				<div class="link_box">
-					<a href="#">이용약관</a>
-					<a href="#"><strong>개인정보처리방침</strong></a>
-					<a href="#">고객센터</a>
+					<a href="#">git</a>
+					<a href="#">velog</a>
+					<a href="#">Email</a>
 				</div>
 				<div class="copylight_box">
 					<p>Copyright © <a href="http://www.douzone.com" target="_blank">DOUZONE BIZON.</a> All rights reserved.</p>
@@ -289,9 +504,40 @@
 		autoScrolling:true,
 		scrollHorizontally: true,
 		fadingEffect: true,
+		anchors:['main', 'introduce', 'spec', 'history', 'skills'],
 	});
 </script>
 <!-- //fullpage.js 영역 -->
+
+<!-- history 영역 -->
+<script>
+	$(".historyWrap .historyBox").hide();
+	$(".historyWrap .incomms").show();
+	
+
+	$(".historyTab .btn_tab").click(function(e) {
+
+	var i = $(this).index();
+	// 탭 영역 인터랙션
+	$(".historyTab .btn_tab").removeClass("select");
+	$(this).toggleClass("select");
+	// 클릭 후 리스트 삭제
+	$(".historyWrap .historyBox").hide();
+	// click list show
+	switch (i) {
+		case 0:
+			$(".incomms").show();
+			break;
+		case 1:
+			$(".hanwha").show();
+			break;
+		case 2:
+			$(".douzone").show();
+			break;
+		}
+	});
+</script>
+<!-- //history 영역 -->
 
 <!-- slick 적용 -->
 <script>
@@ -299,17 +545,58 @@
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		// accessibility: true,
-		dots: false,
-		autoplay: true,
-		// autoplaySpeed: 2000,
-		// speed:500,
-		// infinite: true,
+		dots: true,
+		// autoplay: true,
+		// autoplaySpeed: 5000,
+		// speed: 500,
+		infinite: false,
 		// cssEase: 'linear',
 		arrows: true,
 		variableWidth: true
 	});
 </script>
 <!-- //slick 적용 -->
+
+<!-- 헤더 색상 변경 -->
+<script>
+	$(window).scroll(function() {
+		var scroll = $(window).scrollTop();
+		//console.log(scroll);
+		if (scroll >= 80) {
+			//console.log('a');
+			$(".header").addClass("v2");
+		} else {
+			//console.log('a');
+			$(".header").removeClass("v2");
+		}
+	});
+</script>
+<!-- //헤더 색상 변경 -->
+
+<!-- mobile menu -->
+<script>
+	$(window).ready(function(){
+		$(".global__menu .btn__menu--mobile").click(function(){
+			$(this).parents(".global__menu").toggleClass("open")
+		});
+		$(".global__menuList--item a").click(function(){
+			$(this).parents(".global__menu").removeClass("open")
+		});
+	})
+</script>
+<!-- //mobile menu -->
+
+<!-- slick 너비값 계산 -->
+<script>
+	$(document).ready(function() {
+		var slick_boxWidth = $(".slick-list").outerWidth();
+		$('.slick-slide').width(slick_boxWidth + 'px');
+	});
+</script>
+<!-- slick 너비값 계산 -->
+
+
+
 
 </body>
 </html>

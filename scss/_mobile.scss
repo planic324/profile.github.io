@@ -1,7 +1,18 @@
 @media (max-width: 750px){
-    .planic{
+.fp-viewing-main{
+    .planic .header{
+        height: 40px;
+        background-color: #fff;
+        .global__menu .btn__menu--mobile span{
+            background-color: #000 !important;
+        }
+    }
+}
+.planic{
         .header{
             height: 40px;
+            padding: 0 20px; 
+            box-sizing: border-box;
             .header__box{
                 height: 40px;
                 h1{
@@ -17,32 +28,187 @@
                     flex: none;
                     .btn__menu--mobile{
                         position: relative;
-                        display: block;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
                         width: 20px;
                         height: 20px;
-                        background: red;
+                        z-index: 10;
+                        span{
+                            display: block;
+                            width: 100%;
+                            height: 3px;
+                            background: #fff;
+                            border-radius: 6px;
+                            margin: 1px 0;
+                        }
                     }
                     .global__menuList{
                         display: block;
                         position: fixed;
                         top: 0;
-                        right: 0;
+                        right: -60%;
                         bottom: 0;
                         width: 60%;
                         background: #fff;
+                        padding: 40px 0;
+                        box-sizing: border-box;
+                        border-left: 1px solid #e1e1e1;
                         &--item{
                             display: block;
                             position: relative;
+                            padding: 10px 20px;
+                            & + .global__menuList--item{
+                                border-top: 1px solid #e1e1e1;
+                            }
                             & > a{
                                 display: block;
                                 width: 100%;
+                                font-size: 18px;
+                                line-height: 1.3em;
+                                color: #4a4a4a;
                             }
                         }
                     }
+                    &.open{
+                        .btn__menu--mobile{
+                            position: relative;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            width: 20px;
+                            height: 20px;
+                            z-index: 10;
+                            
+                            span{
+                                position: absolute;
+                                display: block;
+                                top: 8px;
+                                left: 0;
+                                width: 100%;
+                                height: 3px;
+                                background: #000;
+                                border-radius: 6px;
+                                &:nth-child(1){
+                                    transform: rotate(45deg);
+                                }
+                                &:nth-child(2){
+                                    transform: rotate(135deg);
+                                }
+                                &:last-child{
+                                    display: none;
+                                }
+                            }
+
+                        }
+                        .global__menuList{
+                            right: 0;
+                        }
+                    }
+                }
+
+            }
+        }
+        .section{
+            padding-top: 40px;
+        }
+        .sec__main{
+            .mix_blend_mode .textWrap .textBox{
+                max-width: 90%;
+                &__main{
+                    font-size: 7vw;
+                }
+                &__sub{
+                    font-size: 7.2vw;
+                }
+            }
+        }
+        .sec__introduce{
+            flex-direction: column;
+            padding: 40px 20px;
+            box-sizing: border-box;
+            .imgBox{
+                width: 100%;
+                margin: 0 auto;
+                align-items: center;
+                .item{
+                    width: 70px;
+                    height: 70px;
+                    margin: 5px;
 
                 }
+            }
+            .textBox{
+                margin: 0;
+                li{
+                    font-size: 14px;
+                }
+            }
+        }
+        .sec__intro{
+            padding: 40px 20px;
+            box-sizing: border-box;
+            .imgBox{
+                display: none;
+            }
+            .textBox{
+                margin: 0;
+            }
+        }
+        .sec__history{
+            padding: 40px 20px 20px;
+            box-sizing: border-box;
+            .historyWrap{
+                display: block;
+                height: 100%;
+                width: 100%;
+                padding: 20px;
+                .historyTab{
+                    justify-content: space-between;
+                    margin-bottom: 10px;
+                    padding-bottom: 10px;
+                    .btn_tab{
+                        font-size: 13px;
+                    }
+                }
+                .historyBox .group .historyList .item{
+                    display: flex;
+                    flex-direction: column;
+                    .service__title{
+                        font-size: 18px;
+                        > img{
+                            width: 18px;
+                        }
+                    }
+                    .itemList{
+                        display: flex;
+                        flex-direction: column;
+                        flex: 1;
+                        overflow: auto;
+                        margin-top: 10px;
+                        .dl_item{
+                            display: block;
+                            & + .dl_item{
+                                margin-top: 5px;
+                            }
+                            dt{
+                                display: block;
+                                font-size: 14px;
+                            }
+                            dd{
+                                font-size: 12px;
+                                letter-spacing: -0.65px;
+                                span + span{
+                                    margin-top: 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+
             }
         }
     }
     
 }
+
