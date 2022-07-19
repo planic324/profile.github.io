@@ -39,8 +39,8 @@ button:active,button:focus{outline:0}
 .planic .header__box .global__menu .global__menuList--item>a:hover:before{width:100%;background:#fff;transition:width .25s cubic-bezier(.51,.18,0,.88) .1s}
 .planic .header__box .global__menu .global__menuList:after,.planic .header__box .global__menu .global__menuList:before{content:"";display:block}
 .planic .container{display:block;position:relative;height:100%}
-.planic .section{display:block;position:relative;height:100%;padding-top:80px;box-sizing:border-box;background-color:#f0f2f7}
-.planic .section:nth-child(odd){background-color:#fff}
+.planic .section{display:block;position:relative;height:100%;padding-top:80px;box-sizing:border-box;background-color:#fff}
+.planic .section:nth-child(odd){background-color:#f0f2f7}
 .planic .sec__main{display:block;background-color:#000}
 .planic .sec__main .mix_blend_mode{position:relative;display:block;width:100%;height:100%}
 .planic .sec__main .mix_blend_mode video{display:block;width:100%;height:100%;position:absolute;top:0;left:0;right:0;bottom:0;object-fit:cover}
@@ -163,8 +163,8 @@ button:active,button:focus{outline:0}
 .planic .sec__intro{padding:40px 20px;box-sizing:border-box}
 .planic .sec__intro .imgBox{display:none}
 .planic .sec__intro .textBox{margin:0}
-.planic .sec__history{padding:40px 20px 20px;box-sizing:border-box}
-.planic .sec__history .historyWrap{display:block;height:100%;width:100%;padding:20px}
+.planic .sec__history{padding:40px 0 0;box-sizing:border-box}
+.planic .sec__history .historyWrap{display:block;height:100%;width:100%;padding:20px;border:0}
 .planic .sec__history .historyWrap .historyTab{justify-content:space-between;margin-bottom:10px;padding-bottom:10px}
 .planic .sec__history .historyWrap .historyTab .btn_tab{font-size:13px}
 .planic .sec__history .historyWrap .historyBox .group .historyList .item{display:flex;flex-direction:column}
