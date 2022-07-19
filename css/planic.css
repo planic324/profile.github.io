@@ -164,20 +164,20 @@ button:active,button:focus{outline:0}
 .planic .sec__intro .imgBox{display:none}
 .planic .sec__intro .textBox{margin:0}
 .planic .sec__history{padding:40px 0 0;box-sizing:border-box}
-.planic .sec__history .historyWzrap{display:block;height:100%;width:100%;padding:20px;border:0}
-.planic .sec__history .historyWzrap .historyTab{justify-content:space-between;margin-bottom:10px;padding-bottom:10px}
-.planic .sec__history .historyWzrap .historyTab .btn_tab{font-size:13px}
-.planic .sec__history .historyWzrap .historyBox .group .historyList .item{display:flex;flex-direction:column}
-.planic .sec__history .historyWzrap .historyBox .group .historyList .item .service__title{font-size:18px}
-.planic .sec__history .historyWzrap .historyBox .group .historyList .item .service__title>img{width:18px}
-.planic .sec__history .historyWzrap .historyBox .group .historyList .item .itemList{display:flex;flex-direction:column;flex:1;overflow:auto;margin-top:10px}
-.planic .sec__history .historyWzrap .historyBox .group .historyList .item .itemList .dl_item{display:block}
-.planic .sec__history .historyWzrap .historyBox .group .historyList .item .itemList .dl_item+.dl_item{margin-top:5px}
-.planic .sec__history .historyWzrap .historyBox .group .historyList .item .itemList .dl_item dt{display:block;font-size:14px}
-.planic .sec__history .historyWzrap .historyBox .group .historyList .item .itemList .dl_item dd{font-size:12px;letter-spacing:-.65px}
-.planic .sec__history .historyWzrap .historyBox .group .historyList .item .itemList .dl_item dd span+span{margin-top:5px}
-.planic .sec__history .historyWzrap .historyBox .group .historyList .slick-arrow{border:0;background:0 0}
-.planic .sec__history .historyWzrap .historyBox .group .historyList .slick-arrow.slick-next{right:0}
-.planic .sec__history .historyWzrap .historyBox .group .historyList .slick-arrow.slick-prev{left:0}
+.planic .sec__history .historyWrap{display:block;height:100%;width:100%;padding:20px;border:0}
+.planic .sec__history .historyWrap .historyTab{justify-content:space-between;margin-bottom:10px;padding-bottom:10px}
+.planic .sec__history .historyWrap .historyTab .btn_tab{font-size:13px}
+.planic .sec__history .historyWrap .historyBox .group .historyList .item{display:flex;flex-direction:column}
+.planic .sec__history .historyWrap .historyBox .group .historyList .item .service__title{font-size:18px}
+.planic .sec__history .historyWrap .historyBox .group .historyList .item .service__title>img{width:18px}
+.planic .sec__history .historyWrap .historyBox .group .historyList .item .itemList{display:flex;flex-direction:column;flex:1;overflow:auto;margin-top:10px}
+.planic .sec__history .historyWrap .historyBox .group .historyList .item .itemList .dl_item{display:block}
+.planic .sec__history .historyWrap .historyBox .group .historyList .item .itemList .dl_item+.dl_item{margin-top:5px}
+.planic .sec__history .historyWrap .historyBox .group .historyList .item .itemList .dl_item dt{display:block;font-size:14px}
+.planic .sec__history .historyWrap .historyBox .group .historyList .item .itemList .dl_item dd{font-size:12px;letter-spacing:-.65px}
+.planic .sec__history .historyWrap .historyBox .group .historyList .item .itemList .dl_item dd span+span{margin-top:5px}
+.planic .sec__history .historyWrap .historyBox .group .historyList .slick-arrow{border:0;background:0 0}
+.planic .sec__history .historyWrap .historyBox .group .historyList .slick-arrow.slick-next{right:-20px}
+.planic .sec__history .historyWrap .historyBox .group .historyList .slick-arrow.slick-prev{left:-20px}
 }
 /*# sourceMappingURL=../maps/planic.css.map */
