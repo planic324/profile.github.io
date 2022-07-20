@@ -141,7 +141,7 @@ button:active,button:focus{outline:0}
 .planic .header .header__box .global__menu{display:block;position:absolute;top:50%;right:10px;margin-top:-10px;flex:none}
 .planic .header .header__box .global__menu .btn__menu--mobile{position:relative;display:flex;flex-direction:column;justify-content:space-between;width:20px;height:20px;z-index:10}
 .planic .header .header__box .global__menu .btn__menu--mobile span{display:block;width:100%;height:3px;background:#fff;border-radius:6px;margin:1px 0}
-.planic .header .header__box .global__menu .global__menuList{display:block;position:fixed;top:0;right:-60%;bottom:0;width:60%;background:#fff;padding:40px 0;box-sizing:border-box;border-left:1px solid #e1e1e1}
+.planic .header .header__box .global__menu .global__menuList{display:block;position:fixed;top:0;transform:translateX(15%);transition:transform .3s linear;bottom:0;width:60%;background:#fff;padding:40px 0;box-sizing:border-box;border-left:1px solid #e1e1e1}
 .planic .header .header__box .global__menu .global__menuList--item{display:block;position:relative;padding:10px 20px}
 .planic .header .header__box .global__menu .global__menuList--item+.global__menuList--item{border-top:1px solid #e1e1e1}
 .planic .header .header__box .global__menu .global__menuList--item>a{display:block;width:100%;font-size:18px;line-height:1.3em;color:#4a4a4a}
@@ -150,7 +150,7 @@ button:active,button:focus{outline:0}
 .planic .header .header__box .global__menu.open .btn__menu--mobile span:nth-child(1){transform:rotate(45deg)}
 .planic .header .header__box .global__menu.open .btn__menu--mobile span:nth-child(2){transform:rotate(135deg)}
 .planic .header .header__box .global__menu.open .btn__menu--mobile span:last-child{display:none}
-.planic .header .header__box .global__menu.open .global__menuList{right:0}
+.planic .header .header__box .global__menu.open .global__menuList{transform:translateX(-85%);transition:transform .3s linear}
 .planic .section{padding-top:40px}
 .planic .sec__main .mix_blend_mode .textWrap .textBox{max-width:90%}
 .planic .sec__main .mix_blend_mode .textWrap .textBox__main{font-size:7vw}

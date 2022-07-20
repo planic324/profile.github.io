@@ -47,7 +47,8 @@
                         display: block;
                         position: fixed;
                         top: 0;
-                        right: -60%;
+                        transform: translateX(15%);
+                        transition: transform 300ms linear;
                         bottom: 0;
                         width: 60%;
                         background: #fff;
@@ -102,7 +103,8 @@
 
                         }
                         .global__menuList{
-                            right: 0;
+                            transform: translateX(-85%);
+                            transition: transform 300ms linear;
                         }
                     }
                 }
