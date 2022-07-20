@@ -174,50 +174,69 @@
                         font-size: 13px;
                     }
                 }
-                .historyBox .group .historyList .item{
-                    display: flex;
-                    flex-direction: column;
-                    .service__title{
-                        font-size: 18px;
-                        > img{
-                            width: 18px;
-                        }
-                    }
-                    .itemList{
-                        display: flex;
-                        flex-direction: column;
-                        flex: 1;
-                        overflow: auto;
-                        margin-top: 10px;
-                        .dl_item{
-                            display: block;
-                            & + .dl_item{
-                                margin-top: 5px;
-                            }
-                            dt{
-                                display: block;
-                                font-size: 14px;
-                            }
-                            dd{
-                                font-size: 12px;
-                                letter-spacing: -0.65px;
-                                span + span{
-                                    margin-top: 5px;
+                .historyBox{
+                    height: calc(100% - 40px);
+                    .group{
+                        height: 100%;
+                        max-height: 100%;
+                        .historyList{
+                            height: 100%;
+                            .item{
+                                display: flex;
+                                flex-direction: column;
+                                .service__title{
+                                    font-size: 18px;
+                                    > img{
+                                        width: 18px;
+                                    }
+                                }
+                                .itemList{
+                                    display: flex;
+                                    flex-direction: column;
+                                    flex: 1;
+                                    overflow: auto;
+                                    margin-top: 10px;
+                                    .dl_item{
+                                        display: block;
+                                        & + .dl_item{
+                                            margin-top: 5px;
+                                        }
+                                        dt{
+                                            display: block;
+                                            font-size: 14px;
+                                        }
+                                        dd{
+                                            font-size: 12px;
+                                            letter-spacing: -0.65px;
+                                            span + span{
+                                                margin-top: 5px;
+                                            }
+                                        }
+                                    }
                                 }
                             }
+                            .slick-list{
+                                height: 100%;
+                            }
+                            .slick-arrow{
+                                border: 0;
+                                background: none;
+                            }                
+                            .slick-arrow.slick-next{
+                                right: -25px;
+                            }
+                            .slick-arrow.slick-prev{
+                                left: -25px;
+                            }
+                            .slick-dots{
+                                bottom: 0;
+                            }
                         }
+                        
                     }
+                    
                 }
-                .historyBox .group .historyList .slick-arrow{
-                    border: 0;
-                    background: none;
-                }                
-                .historyBox .group .historyList .slick-arrow.slick-next{
-                    right: -20px;
-                }
-                .historyBox .group .historyList .slick-arrow.slick-prev{
-                    left: -20px;
-                }
+                
 
             }
 

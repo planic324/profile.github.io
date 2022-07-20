@@ -167,6 +167,9 @@ button:active,button:focus{outline:0}
 .planic .sec__history .historyWrap{display:block;height:100%;width:100%;padding:20px;border:0}
 .planic .sec__history .historyWrap .historyTab{justify-content:space-between;margin-bottom:10px;padding-bottom:10px}
 .planic .sec__history .historyWrap .historyTab .btn_tab{font-size:13px}
+.planic .sec__history .historyWrap .historyBox{height:calc(100% - 40px)}
+.planic .sec__history .historyWrap .historyBox .group{height:100%;max-height:100%}
+.planic .sec__history .historyWrap .historyBox .group .historyList{height:100%}
 .planic .sec__history .historyWrap .historyBox .group .historyList .item{display:flex;flex-direction:column}
 .planic .sec__history .historyWrap .historyBox .group .historyList .item .service__title{font-size:18px}
 .planic .sec__history .historyWrap .historyBox .group .historyList .item .service__title>img{width:18px}
@@ -176,8 +179,10 @@ button:active,button:focus{outline:0}
 .planic .sec__history .historyWrap .historyBox .group .historyList .item .itemList .dl_item dt{display:block;font-size:14px}
 .planic .sec__history .historyWrap .historyBox .group .historyList .item .itemList .dl_item dd{font-size:12px;letter-spacing:-.65px}
 .planic .sec__history .historyWrap .historyBox .group .historyList .item .itemList .dl_item dd span+span{margin-top:5px}
+.planic .sec__history .historyWrap .historyBox .group .historyList .slick-list{height:100%}
 .planic .sec__history .historyWrap .historyBox .group .historyList .slick-arrow{border:0;background:0 0}
-.planic .sec__history .historyWrap .historyBox .group .historyList .slick-arrow.slick-next{right:-20px}
-.planic .sec__history .historyWrap .historyBox .group .historyList .slick-arrow.slick-prev{left:-20px}
+.planic .sec__history .historyWrap .historyBox .group .historyList .slick-arrow.slick-next{right:-25px}
+.planic .sec__history .historyWrap .historyBox .group .historyList .slick-arrow.slick-prev{left:-25px}
+.planic .sec__history .historyWrap .historyBox .group .historyList .slick-dots{bottom:0}
 }
 /*# sourceMappingURL=../maps/planic.css.map */
