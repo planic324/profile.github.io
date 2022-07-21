@@ -1,3 +1,7 @@
+@font-face{font-family:nanum_square_round;src:local("NanumSquareRoundOTFL"),url(../font/nanum-square-round/NanumSquareRoundOTFL.otf) format("otf"),url(../font/nanum-square-round/NanumSquareRoundL.ttf) format("truetype");font-weight:100;font-display:fallback}
+@font-face{font-family:nanum_square_round;src:local("NanumSquareRoundOTFR"),url(../font/nanum-square-round/NanumSquareRoundOTFR.otf) format("otf"),url(../font/nanum-square-round/NanumSquareRoundR.ttf) format("truetype");font-weight:400;font-display:fallback}
+@font-face{font-family:nanum_square_round;src:local("NanumSquareRoundOTFEB"),url(../font/nanum-square-round/NanumSquareRoundOTFEB.otf) format("otf"),url(../font/nanum-square-round/NanumSquareRoundB.ttf) format("truetype");font-weight:700;font-display:fallback}
+body,body *{font-family:nanum_square_round}
 body,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,img,input,legend,li,ol,p,select,table,td,textarea,th,ul{margin:0;padding:0}
 body{background-color:#fff;-webkit-text-size-adjust:none}
 fieldset,img{border:0;vertical-align:top}
@@ -58,7 +62,7 @@ button:active,button:focus{outline:0}
 .planic .sec__intro .textBox .group__Title{display:block;position:relative;margin-bottom:15px;font-size:24px;line-height:1.2em;font-weight:700;color:#000}
 .planic .sec__intro .textBox .group .groupList{display:block;position:relative;margin-top:10px}
 .planic .sec__intro .textBox .group .groupList__item{display:block;position:relative;font-size:20px;line-height:1.4em;padding-left:150px;box-sizing:border-box}
-.planic .sec__intro .textBox .group .groupList__item--date{display:block;position:absolute;top:0;left:0}
+.planic .sec__intro .textBox .group .groupList__item--date{display:block;position:absolute;top:0;left:0;letter-spacing:-.65px}
 .planic .sec__intro .textBox .group .groupList__item--main{font-weight:700}
 .planic .sec__intro .textBox .group .groupList__item--sub{font-size:16px;color:#4a4a4a}
 .planic .sec__intro .textBox .group .groupList__item+.groupList__item{margin-top:10px}
@@ -125,6 +129,18 @@ button:active,button:focus{outline:0}
 .planic .sec__history .historyWrap .historyBox .group .historyList .slick-dots>li{display:inline-block;vertical-align:top;width:6px;height:6px;margin:0 5px}
 .planic .sec__history .historyWrap .historyBox .group .historyList .slick-dots>li.slick-active>button{background-color:#000}
 .planic .sec__history .historyWrap .historyBox .group .historyList .slick-dots>li>button{display:block;font-size:0;color:transparent;text-indent:-10000px;width:100%;height:100%;border-radius:50%;background-color:rgba(0,0,0,.3)}
+.planic .sec__history .historyWrap .view__box{display:block;position:absolute;top:0;left:0;width:100%;height:100%}
+.planic .sec__history .historyWrap .view__box--btn{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);display:block;font-size:24px;line-height:38px;padding:4px 16px 2px;border-radius:30px;min-width:200px;background-color:rgba(0,0,0,.6);color:#fff;font-weight:700}
+.planic .sec__history .historyWrap .view__box--btn2{display:none;width:30px;height:30px;position:absolute;top:20px;right:30px;transform:translateX(0);background:0 0;z-index:100}
+.planic .sec__history .historyWrap .view__box--btn2:before{content:"";display:block;width:16px;height:16px;position:absolute;top:50%;left:50%;margin:-8px 0 0 -8px;background:url(https://static.wehago.com/imgs/common/sp_icon.png) no-repeat -242px -440px}
+.planic .sec__history .historyWrap .view__box.active .view__box--btn{display:none}
+.planic .sec__history .historyWrap .view__box.active .view__box--btn2{display:block}
+.planic .sec__history .historyWrap .view__box.active+.viewList{display:block}
+.planic .sec__history .historyWrap .viewList{display:none;position:absolute;top:0;right:0;bottom:0;left:0;background-color:rgba(0,0,0,.8);border-radius:12px;padding:20px;box-sizing:border-box;overflow-y:auto}
+.planic .sec__history .historyWrap .viewList__item{display:block}
+.planic .sec__history .historyWrap .viewList__item--title{display:block;font-size:20px;line-height:24px;font-weight:700;color:#fff}
+.planic .sec__history .historyWrap .viewList__item--img{display:block;width:100%;height:auto}
+.planic .sec__history .historyWrap .viewList__item--img img{display:block;width:60%;margin:0 auto}
 .planic .sec__skills{display:flex;justify-content:center;align-items:center;position:relative}
 .planic .sec__skills .textBox{display:block;position:relative}
 .planic .sec__skills .textBox .group{display:flex;position:relative}
@@ -156,7 +172,7 @@ button:active,button:focus{outline:0}
 .planic .sec__main .mix_blend_mode .textWrap .textBox__main{font-size:7vw}
 .planic .sec__main .mix_blend_mode .textWrap .textBox__sub{font-size:7.2vw}
 .planic .sec__introduce{flex-direction:column;padding:40px 20px;box-sizing:border-box}
-.planic .sec__introduce .imgBox{width:100%;margin:0 auto;align-items:center}
+.planic .sec__introduce .imgBox{width:100%;margin:0 auto;align-items:center;justify-content:center}
 .planic .sec__introduce .imgBox .item{width:70px;height:70px;margin:5px}
 .planic .sec__introduce .textBox{margin:0}
 .planic .sec__introduce .textBox li{font-size:14px}

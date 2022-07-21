@@ -79,7 +79,30 @@ $(document).ready(function(){
 		$(".global__menuList--item a").click(function(){
 			$(this).parents(".global__menu").removeClass("open")
 		});
+		$(".view__box .view__box--btn").click(function(){
+			$(this).parents(".view__box").addClass("active");
+		});
+		$(".view__box .view__box--btn2").click(function(){
+			$(this).parents(".view__box").removeClass("active");
+		});
 	})
+
+	// 스크롤 막기
+	$('.view__box--btn').click(function(){
+		// $('.view__box').stop().fadeIn();
+		// $('body').addClass('fixed');
+		$('body').on('scroll touchmove mousewheel', function(event) {
+		event.preventDefault();
+		event.stopPropagation();
+		return false;
+		});
+		});
+		 
+		$('.view__box .view__box--btn2').click(function(){
+		// $('.view__box').stop().fadeOut();
+		// $('body').removeClass('fixed');
+		$('body').off('scroll touchmove mousewheel');
+	});
 
 
 	// end
