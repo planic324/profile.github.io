@@ -24,6 +24,12 @@
 
 <!-- index css -->
 <link rel="stylesheet" type="text/css" href="css/planic.css">
+
+<!-- 스크립트 로딩 영역 -->
+<script src="js/jquery/jquery-latest.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.9/fullpage.min.js"></script>
+<script src="js/slick/slick.min.js"></script>
+<script src="js/planic.js"></script>
 </head>
 <body>
     <div id="wrap" class="planic">
@@ -479,112 +485,7 @@
         
     </div>
 
-<!-- 스크립트 로딩 영역 -->
-<script src="js/jquery/jquery-latest.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.9/fullpage.min.js"></script>
-<script src="js/slick/slick.min.js"></script>
 
-
-<!-- fullpage.js 영역 -->
-<script>
-	new fullpage('#fullpage', {
-		//options here
-		autoScrolling:true,
-		scrollHorizontally: true,
-		fadingEffect: true,
-		anchors:['main', 'introduce', 'spec', 'history', 'skills'],
-	});
-</script>
-<!-- //fullpage.js 영역 -->
-
-<!-- history 영역 -->
-<script>
-	$(".historyWrap .historyBox").hide();
-	$(".historyWrap .incomms").show();
-	
-
-	$(".historyTab .btn_tab").click(function(e) {
-
-	var i = $(this).index();
-	// 탭 영역 인터랙션
-	$(".historyTab .btn_tab").removeClass("select");
-	$(this).toggleClass("select");
-	// 클릭 후 리스트 삭제
-	$(".historyWrap .historyBox").hide();
-	// click list show
-	switch (i) {
-		case 0:
-			$(".incomms").show();
-			break;
-		case 1:
-			$(".hanwha").show();
-			break;
-		case 2:
-			$(".douzone").show();
-			break;
-		}
-	});
-</script>
-<!-- //history 영역 -->
-
-<!-- slick 적용 -->
-<script>
-	$('.historyList').slick({
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		// accessibility: true,
-		dots: true,
-		// autoplay: true,
-		// autoplaySpeed: 5000,
-		// speed: 500,
-		infinite: false,
-		// cssEase: 'linear',
-		arrows: true,
-		variableWidth: true
-	});
-</script>
-<!-- //slick 적용 -->
-
-<!-- 헤더 색상 변경 -->
-<script>
-	$(window).scroll(function() {
-		var scroll = $(window).scrollTop();
-		//console.log(scroll);
-		if (scroll >= 80) {
-			//console.log('a');
-			$(".header").addClass("v2");
-		} else {
-			//console.log('a');
-			$(".header").removeClass("v2");
-		}
-	});
-</script>
-<!-- //헤더 색상 변경 -->
-
-<!-- mobile menu -->
-<script>
-	$(window).ready(function(){
-		$(".global__menu .btn__menu--mobile").click(function(){
-			$(this).parents(".global__menu").toggleClass("open")
-		});
-
-
-		
-		$(".global__menuList--item a").click(function(){
-			$(this).parents(".global__menu").removeClass("open")
-		});
-	})
-</script>
-<!-- //mobile menu -->
-
-<!-- slick 너비값 계산 -->
-<script>
-	$(document).ready(function() {
-		var slick_boxWidth = $(".slick-list").outerWidth();
-		$('.slick-slide').width(slick_boxWidth + 'px');
-	});
-</script>
-<!-- slick 너비값 계산 -->
 
 
 
