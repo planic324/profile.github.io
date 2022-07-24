@@ -165,12 +165,14 @@
                 display: block;
                 height: 100%;
                 width: 100%;
-                padding: 20px;
+                padding: 20px 0;
+                box-sizing: border-box;
                 border: 0;
                 .historyTab{
                     justify-content: space-between;
                     margin-bottom: 10px;
-                    padding-bottom: 10px;
+                    padding: 0 20px 10px 20px;
+                    box-sizing: border-box;
                     .btn_tab{
                         font-size: 13px;
                     }
@@ -185,18 +187,27 @@
                             .item{
                                 display: flex;
                                 flex-direction: column;
+                                box-sizing: border-box;
+                                padding: 0;
                                 .service__title{
                                     font-size: 18px;
+                                    padding: 0 20px;
+                                    box-sizing: border-box;
                                     > img{
                                         width: 18px;
                                     }
                                 }
                                 .itemList{
+                                    position: relative;
                                     display: flex;
                                     flex-direction: column;
                                     flex: 1;
+                                    width: 100%;
                                     overflow: auto;
                                     margin-top: 10px;
+                                    padding: 0 20px;
+                                    box-sizing: border-box;
+                                    z-index: 10;
                                     .dl_item{
                                         display: block;
                                         & + .dl_item{
@@ -215,6 +226,54 @@
                                         }
                                     }
                                 }
+                                .view__box--btn{
+                                    display:block;
+                                    position: absolute;
+                                    bottom: 30px;
+                                    left: 50%;
+                                    margin-left: -75px;
+                                    font-size: 18px;
+                                    font-weight: 900;
+                                    line-height: 34px;
+                                    background: rgba(0,0,0,0.8);
+                                    border-radius: 16px;
+                                    min-width: 150px;
+                                    color: #fff;
+                                    z-index: 100;
+                                   
+                                    &.active{
+                                        text-decoration: none;
+                                        width: 20px;
+                                        min-width: 20px;
+                                        height: 20px;
+                                        border-radius: 0;
+                                        top: 10px;
+                                        left: auto;
+                                        right: 20px;
+                                        background: none;
+                                        font-size: 0;
+                                        line-height: 0;
+                                        color: transparent;
+                                        text-indent: -10000px;
+                                        &:before{
+                                            content: '';
+                                            display: block;
+                                            width: 12px;
+                                            height: 12px;
+                                            position: absolute;
+                                            top: 50%;
+                                            left: 50%;
+                                            margin: -6px 0 0 -6px;
+                                            background: url(https://static.wehago.com/imgs/common/sp_icon.png) no-repeat -175px -259px / 500px 1000px;                                            
+                                        }
+                                        & + .viewList{
+                                            display: block;
+                                            z-index: 10;
+                                        }
+                                    }
+
+                                }
+
                             }
                             .slick-list{
                                 height: 100%;
@@ -236,6 +295,30 @@
                         
                     }
                     
+                }
+                
+                .viewList{
+                    display: none;
+                    position: absolute;
+                    width: auto;
+                    top: 0;
+                    left: 10px;
+                    right: 10px;
+                    bottom: 0;
+                    background-color: rgba(0,0,0,0.8);
+                    border-radius: 16px;
+                    padding: 30px 0;
+                    &__item{
+                        display: block;
+                        width: calc(100% - 40px);
+                        margin: 0 auto;
+                        &:nth-child(odd){
+                            transform: translateY(0);
+                        }
+                        &--title{
+                            color: #fff;
+                        }
+                    }
                 }
                 
 

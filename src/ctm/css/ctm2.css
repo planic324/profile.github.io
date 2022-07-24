@@ -1,0 +1,113 @@
+@charset "utf-8";
+
+.result_group {
+    padding: 0 20px;
+}
+.result_group .result_message {
+    margin-top: 24px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #a5a5a5;
+    line-height: 17px;
+    letter-spacing: -0.18px;
+    text-align: center;
+}
+.result_bx {
+    margin-top: 25px;
+}
+.result_bx .result_bx_title {
+    position: relative;
+    font-size: 13px;
+    font-weight: 900;
+    color: #212121;
+}
+.result_bx .ico_result_info {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-left: 4px;
+    background: url(https://static.wehago.com/imgs/ctm/sp_ctm.png) no-repeat 0 -105px / 250px 500px;
+    vertical-align: top;
+}
+.result_bx .line_bx {
+    margin-top: 8px;
+    padding: 24px 20px;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    background-color: #fff;
+}
+.result_bx .line_bx .bx_definition {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: 16px;
+}
+.result_bx .line_bx .bx_definition:first-child {
+    margin-top: 0;
+}
+.result_bx .line_bx .line_bx_definition dt {
+    min-width: 100px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #a5a5a5;
+}
+.result_bx .line_bx .line_bx_definition dd {
+    margin-left: auto;
+    font-size: 14px;
+    font-weight: bold;
+    color: #212121;
+    letter-spacing: -0.21px;
+    text-align: right;
+}
+.result_bx .line_bx .line_bx_definition .text_refund {
+    font-weight: 900;
+    color: #1fc47c;
+}
+.result_bx .line_bx .line_bx_definition .text_payment {
+    font-weight: 900;
+    color: #fc5356;
+}
+.prediction_tax .yearend_resultwrap .alignbox {
+    width: auto;
+}
+.tablist_bx {
+    padding: 0 20px;
+    border-bottom: 1px solid #efefef;
+}
+.tablist_bx ul {
+    display: flex;
+}
+.tablist_bx ul li {
+    position: relative;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+.tablist_bx li a {
+    display: block;
+    min-width: 83px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #a5a5a5;
+    letter-spacing: -0.21px;
+    text-decoration: none;
+    line-height: 38px;
+    text-align: center;
+}
+.tablist_bx li.selected a {
+    font-weight: 900;
+    color: #127eff;
+}
+.tablist_bx li.selected a::after {
+    display: block;
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #127eff;
+}

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>연말정산</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi">
+<link rel="stylesheet" type="text/css" href="css/ctm.css">
+</head>
+<body>
+<div id="wrap">
+	<div class="header">
+		<h1 class="ellipsis">연말정산자료입력</h1>
+		<button type="button" class="btn_prev"><span class="blind">이전</span></button>
+		<div class="btnbox">
+			<button type="button" class="btn_menu"><span class="blind">메뉴</span></button>
+		</div>
+	</div>
+	<div class="container footer_btn">
+		<div class="content">
+			<ul class="steplist">
+				<!-- [D] 완료시 class="check" 추가해주세요. -->
+				<!-- [D] 현재 위치해있는 페이지는 class="ing" 추가해주세요. -->
+				<li class="check">
+					<a href="#" role="button">
+						<div class="icon_bx">
+							<div class="icon_in">
+								<i class="ico_01"></i>
+							</div>
+						</div>
+						<div class="icon_text">부양가족</div>
+					</a>
+				</li>
+				<li class="check">
+					<a href="#" role="button">
+						<div class="icon_bx">
+							<div class="icon_in">
+								<i class="ico_02"></i>
+							</div>
+						</div>
+						<div class="icon_text">국세청자료</div>
+					</a>
+				</li>
+				<li class="check">
+					<a href="#" role="button">
+						<div class="icon_bx">
+							<div class="icon_in">
+								<i class="ico_03"></i>
+							</div>
+						</div>
+						<div class="icon_text">공제자료</div>
+					</a>
+				</li>
+				<li class="ing">
+					<a href="#" role="button">
+						<div class="icon_bx">
+							<div class="icon_in">
+								<i class="ico_04"></i>
+							</div>
+						</div>
+						<div class="icon_text">예상세액</div>
+					</a>
+				</li>
+			</ul>
+			<div class="prediction_tax">
+				<div class="yearend_resultwrap">
+					<div class="conbox">
+						<div class="alignbox">
+							<h3><em>연말정산 예상세액 결과</em>입니다.</h3>
+							<p class="desctext">차감징수세액이 마이너스(-)가 기록되면 세금을 돌려받고,<br>플러스(+)면 납부할 세액이 있는거에요!</p>
+						</div>
+						<div class="money_info">
+							<h4 class="money_info_text"><em>1,714,020원을 환금 받을 것</em>으로 예상됩니다.</h4>
+							<p>연말정산 실제 차감징수액은 3월 10일 후에 발급되는<br>근로소득원천징수영수증에서 확인할 수 있으며,<br>입력한 공제항목의 공제요건에 따라 예상 결과와<br>다를 수 있습니다.</p>
+						</div>
+					</div>
+				</div>
+				<div class="result_group">
+					<div class="result_bx">
+						<h2 class="result_bx_title">차감징수세액<button type="button" class="ico_result_info"></button></h2>
+						<div class="line_bx">
+							<dl class="line_bx_definition">
+								<div class="bx_definition">
+									<dt>소득세</dt>
+									<dd>1,558,200원</dd>
+								</div>
+								<div class="bx_definition">
+									<dt>지방소득세</dt>
+									<dd>155,820원</dd>
+								</div>
+								<div class="bx_definition">
+									<dt class="text_refund">합계</dt>
+									<dd class="text_refund">(-)1,714,020원</dd>
+								</div>
+							</dl>
+						</div>
+					</div>
+					<div class="result_bx">
+						<h2 class="result_bx_title">결정세액<button type="button" class="ico_result_info"></button></h2>
+						<div class="line_bx">
+							<dl class="line_bx_definition">
+								<div class="bx_definition">
+									<dt>소득세</dt>
+									<dd>37,700원</dd>
+								</div>
+								<div class="bx_definition">
+									<dt>지방소득세</dt>
+									<dd>3,770원</dd>
+								</div>
+								<div class="bx_definition">
+									<dt>농어촌 특별세</dt>
+									<dd>0원</dd>
+								</div>
+							</dl>
+						</div>
+					</div>
+					<div class="result_bx">
+						<h2 class="result_bx_title">기납부세액<button type="button" class="ico_result_info"></button></h2>
+						<div class="line_bx">
+							<dl class="line_bx_definition">
+								<div class="bx_definition">
+									<dt>소득세</dt>
+									<dd>1,520,500원</dd>
+								</div>
+								<div class="bx_definition">
+									<dt>지방소득세</dt>
+									<dd>152,050원</dd>
+								</div>
+								<div class="bx_definition">
+									<dt>농어촌 특별세</dt>
+									<dd>0원</dd>
+								</div>
+							</dl>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer_button_box">
+            <button type="button" class="btn_footer bg_blue">상세내역 확인</button>
+        </div>
+	</div>
+</div>
+<!-- [D] 마크업 테스트용 입니다. 개발 시 삭제해주세요. -->
+<script src="../js/jquery-latest.min.js"></script>
+<script>
+	$(function() {
+		$(".container").scroll(function () {
+			var scrollTop = $(this).scrollTop();
+			console.log(scrollTop);
+
+			if (scrollTop != 0) {
+				$(".header").addClass('b_shadow');
+			} else {
+				$(".header").removeClass('b_shadow');
+			}
+		})
+	});
+</script>
+</body>
+</html>

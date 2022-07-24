@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta id="viewport" name="viewport" content="width=1280">
+    <title>관리자 페이지 : 커뮤니티</title>
+    <link rel="stylesheet" type="text/css" href="/css/nanumsquare.css"> <link rel="stylesheet" type="text/css" href="../common/css/common.css"> <link rel="stylesheet" type="text/css" href="../lux/css/lux.css"> <link rel="stylesheet" type="text/css" href="css/cmt.css"> <link rel="stylesheet" type="text/css" href="../selene/css/selene.css"> <link rel="stylesheet" type="text/css" href="../diana/css/diana.css">
+</head>
+
+<body>
+    <link rel="stylesheet" type="text/css" href="/css/nanumsquare.css"> <link rel="stylesheet" type="text/css" href="../common/css/common.css"> <link rel="stylesheet" type="text/css" href="../lux/css/lux.css"> <link rel="stylesheet" type="text/css" href="css/cmt.css"> <link rel="stylesheet" type="text/css" href="../selene/css/selene.css"> <link rel="stylesheet" type="text/css" href="../diana/css/diana.css">
+    <div class="snbnext">
+        <div class="container">
+            <div class="containerin">
+                <div class="content">
+                    <div class="cmt admin dz_font">
+                        <!-- title 영역 -->
+                        <div class="admin_title">
+                            <h2>커뮤니티 관리</h2>
+                        </div>
+                        <!-- //title 영역 -->
+
+                        <!-- snb 영역 -->
+                        <div class="admin_snb">
+                            <!-- 최상단 영역 -->
+                            <div class="admin_snb_top">
+                                <button type="button" class="btn_admin_home">관리자 홈</button>
+                            </div>
+                            <!-- //최상단 영역 -->
+
+                            <!-- 리스트 영역 -->
+                            <ul class="admin_snb_list">
+
+                                <li class="active">
+                                    <button type="button" class="section_title type_content">커뮤니티 관리</button>
+                                    <ul class="category_list">
+                                        <li class="active"><a href="#" class="category">기본정보</a></li>
+                                        <li><a href="#" class="category">가입설정</a></li>
+                                    </ul>
+                                </li>
+                                <li class="type_none_arrow">
+                                    <button type="button" class="section_title type_folder">메뉴관리</button>
+                                </li>
+                                <li class="">
+                                    <button type="button" class="section_title type_check">콘텐츠 관리</button>
+                                    <ul class="category_list">
+                                        <li class=""><a href="#" class="category">게시글 관리</a></li>
+                                        <li><a href="#" class="category">댓글 관리</a></li>
+                                        <li><a href="#" class="category">금칙어 관리</a></li>
+                                    </ul>
+                                </li>
+                                <li class="">
+                                    <button type="button" class="section_title type_member">맴버 관리</button>
+                                    <ul class="category_list">
+                                        <li class=""><a href="#" class="category">전체맴버</a></li>
+                                        <li><a href="#" class="category">게시판관리자</a></li>
+                                        <li><a href="#" class="category">활동중지/강제탈퇴</a></li>
+                                        <li><a href="#" class="category">등급관리</a></li>
+                                    </ul>
+                                </li>
+                                <li class="">
+                                    <button type="button" class="section_title type_operation">커뮤니티 운영</button>
+                                    <ul class="category_list">
+                                        <li class=""><a href="#" class="category">메일/쪽지 보내기</a></li>
+                                        <li><a href="#" class="category">통계</a></li>
+                                    </ul>
+                                </li>
+                                <li class="">
+                                    <button type="button" class="section_title type_deco">꾸미기</button>
+                                    <ul class="category_list">
+                                        <li class=""><a href="#" class="category">대문 꾸미기</a></li>
+                                        <li><a href="#" class="category">홈 꾸미기</a></li>
+                                        <li><a href="#" class="category">스킨</a></li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+                            <!-- //리스트 영역 -->
+                        </div>
+                        <!-- //snb 영역 -->
+
+                        <!-- content 영역 -->
+                        <div class="admin_content">
+                            <h3>메일/쪽지 보내기</h3>
+                            <div class="LD_tabs d_smallv1">
+                                <ul class="LDtabs_list">
+                                    <!-- [D] 선택된 메뉴는 .selected 추가 -->
+                                    <li class="selected">
+                                        <button type="button" class="LDtabs_item">메일</button>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="LDtabs_item">쪽지</button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="section type_box">
+                                <h4 class="info_title">메일 보내기</h4>
+                                <span class="line"></span>
+                                <ul class="text_list">
+                                    <li class="type_gray">커뮤니티 멤버수가 많을 경우 전체 메일 발송에 시간이 소요될 수 있습니다.</li>
+                                    <li class="type_gray">멤버들의 이용환경 등에 따라 (스팸메일 등록 등) 전체메일이 전달되지 않을 수 있습니다.</li>
+                                    <li>전체멤버 메일 방송을 일 1회로 제한됩니다.</li>
+                                </ul>
+                            </div>
+                            <div class="section type_table">
+                                <div class="sort_box" style="text-align:left;">
+                                    <button type="button" class="admin_btn c_navi">메일보내기</button>
+                                    <div class="LD_input searchbox" style="width:180px;float:right;">
+                                        <input type="text" class="textinput" placeholder="게시글을 검색하세요.">
+                                        <button type="button" class="LD_input_searchbtn"><span class="blind">검색</span></button>
+                                    </div>
+                                </div>
+                                <div class="table_area">
+                                    <div class="common_boxtbl style_basic">
+                                        <div class="list_header clearfix">
+                                            <div class="col1">보낸사람</div>
+                                            <div class="col2">받는사람</div>
+                                            <div class="col3">제목</div>
+                                            <div class="col4">보낸시간</div>
+                                        </div>
+                                        <div class="list_body">
+                                            <div class="row">
+                                                <div class="col1">
+                                                    <p class="ellipsis">
+                                                        <strong>최민식</strong><span class="type_bar">커뮤니티관리자</span>
+                                                    </p>
+                                                </div>
+                                                <div class="col2">
+                                                    <p class="ellipsis">
+                                                        <strong>전체멤버</strong>
+                                                    </p>
+                                                </div>
+                                                <div class="col3">
+                                                    <p class="ellipsis">
+                                                        <span>커뮤니티 개선 작업이 완료되었습니다.</span>
+                                                    </p>
+                                                </div>
+                                                <div class="col4">
+                                                    <p class="ellipsis">
+                                                        <span>2020.12.31&nbsp;&nbsp;13:20</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col1">
+                                                    <p class="ellipsis">
+                                                        <strong>최민식</strong><span class="type_bar">커뮤니티관리자</span>
+                                                    </p>
+                                                </div>
+                                                <div class="col2">
+                                                    <p class="ellipsis">
+                                                        <strong>전체멤버</strong>
+                                                    </p>
+                                                </div>
+                                                <div class="col3">
+                                                    <p class="ellipsis">
+                                                        <span>커뮤니티 개선 작업이 완료되었습니다.</span>
+                                                    </p>
+                                                </div>
+                                                <div class="col4">
+                                                    <p class="ellipsis">
+                                                        <span>2020.12.31&nbsp;&nbsp;13:20</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col1">
+                                                    <p class="ellipsis">
+                                                        <strong>최민식</strong><span class="type_bar">커뮤니티관리자</span>
+                                                    </p>
+                                                </div>
+                                                <div class="col2">
+                                                    <p class="ellipsis">
+                                                        <strong>전체멤버</strong>
+                                                    </p>
+                                                </div>
+                                                <div class="col3">
+                                                    <p class="ellipsis">
+                                                        <span>커뮤니티 개선 작업이 완료되었습니다.</span>
+                                                    </p>
+                                                </div>
+                                                <div class="col4">
+                                                    <p class="ellipsis">
+                                                        <span>2020.12.31&nbsp;&nbsp;13:20</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col1">
+                                                    <p class="ellipsis">
+                                                        <strong>최민식</strong><span class="type_bar">커뮤니티관리자</span>
+                                                    </p>
+                                                </div>
+                                                <div class="col2">
+                                                    <p class="ellipsis">
+                                                        <strong>전체멤버</strong>
+                                                    </p>
+                                                </div>
+                                                <div class="col3">
+                                                    <p class="ellipsis">
+                                                        <span>커뮤니티 개선 작업이 완료되었습니다.</span>
+                                                    </p>
+                                                </div>
+                                                <div class="col4">
+                                                    <p class="ellipsis">
+                                                        <span>2020.12.31&nbsp;&nbsp;13:20</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //content 영역 -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/jquery-latest.min.js"></script>
+    <script src="../js/jquery.include.js"></script>
+    <script type="text/javascript">
+        // 마크업 테스트용
+        $(function() {
+            // 서브해더 마우스오버 이벤트
+            $('.tabs_wrap>li').hover(function(e) {
+                $(this).toggleClass('open');
+                e.preventDefault();
+            });
+            // snb 아코디언 영역
+            $('.admin_snb_list .section_title').click(function(e) {
+                $(this).parents('li').toggleClass('active');
+            });
+        });
+        // 검색영역 펼치기/접기
+        $('.dynamic_searchbox .begin_schbtn, .dynamic_searchbox .delbtn').click(function() {
+            $(this).parents('.dynamic_searchbox').toggleClass('open');
+        })
+
+        // 검색영역 셀렉트박스
+        $('.dynamic_searchbox .selbtn').click(function() {
+            $(this).parents('.selectbox').toggleClass('open');
+        })
+    </script>
+</body>
+
+</html>

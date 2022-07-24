@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta id="viewport" name="viewport" content="width=1280">
+    <title>관리자 페이지 : 커뮤니티</title>
+    <link rel="stylesheet" type="text/css" href="/css/nanumsquare.css"> <link rel="stylesheet" type="text/css" href="../common/css/common.css"> <link rel="stylesheet" type="text/css" href="../lux/css/lux.css"> <link rel="stylesheet" type="text/css" href="css/cmt.css"> <link rel="stylesheet" type="text/css" href="../selene/css/selene.css"> <link rel="stylesheet" type="text/css" href="../diana/css/diana.css">
+</head>
+
+<body>
+    <link rel="stylesheet" type="text/css" href="/css/nanumsquare.css"> <link rel="stylesheet" type="text/css" href="../common/css/common.css"> <link rel="stylesheet" type="text/css" href="../lux/css/lux.css"> <link rel="stylesheet" type="text/css" href="css/cmt.css"> <link rel="stylesheet" type="text/css" href="../selene/css/selene.css"> <link rel="stylesheet" type="text/css" href="../diana/css/diana.css">
+    <div class="snbnext">
+        <div class="container">
+            <div class="containerin">
+                <div class="content">
+                    <div class="cmt admin dz_font">
+                        <!-- title 영역 -->
+                        <div class="admin_title">
+                            <h2>커뮤니티 관리</h2>
+                        </div>
+                        <!-- //title 영역 -->
+
+                        <!-- snb 영역 -->
+                        <div class="admin_snb">
+                            <!-- 최상단 영역 -->
+                            <div class="admin_snb_top">
+                                <button type="button" class="btn_admin_home">관리자 홈</button>
+                            </div>
+                            <!-- //최상단 영역 -->
+
+                            <!-- 리스트 영역 -->
+                            <ul class="admin_snb_list">
+
+                                <li class="active">
+                                    <button type="button" class="section_title type_content">커뮤니티 관리</button>
+                                    <ul class="category_list">
+                                        <li class="active"><a href="#" class="category">기본정보</a></li>
+                                        <li><a href="#" class="category">가입설정</a></li>
+                                    </ul>
+                                </li>
+                                <li class="type_none_arrow">
+                                    <button type="button" class="section_title type_folder">메뉴관리</button>
+                                </li>
+                                <li class="">
+                                    <button type="button" class="section_title type_check">콘텐츠 관리</button>
+                                    <ul class="category_list">
+                                        <li class=""><a href="#" class="category">게시글 관리</a></li>
+                                        <li><a href="#" class="category">댓글 관리</a></li>
+                                        <li><a href="#" class="category">금칙어 관리</a></li>
+                                    </ul>
+                                </li>
+                                <li class="">
+                                    <button type="button" class="section_title type_member">맴버 관리</button>
+                                    <ul class="category_list">
+                                        <li class=""><a href="#" class="category">전체맴버</a></li>
+                                        <li><a href="#" class="category">게시판관리자</a></li>
+                                        <li><a href="#" class="category">활동중지/강제탈퇴</a></li>
+                                        <li><a href="#" class="category">등급관리</a></li>
+                                    </ul>
+                                </li>
+                                <li class="">
+                                    <button type="button" class="section_title type_operation">커뮤니티 운영</button>
+                                    <ul class="category_list">
+                                        <li class=""><a href="#" class="category">메일/쪽지 보내기</a></li>
+                                        <li><a href="#" class="category">통계</a></li>
+                                    </ul>
+                                </li>
+                                <li class="">
+                                    <button type="button" class="section_title type_deco">꾸미기</button>
+                                    <ul class="category_list">
+                                        <li class=""><a href="#" class="category">대문 꾸미기</a></li>
+                                        <li><a href="#" class="category">홈 꾸미기</a></li>
+                                        <li><a href="#" class="category">스킨</a></li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+                            <!-- //리스트 영역 -->
+                        </div>
+                        <!-- //snb 영역 -->
+
+                        <!-- content 영역 -->
+                        <div class="admin_content">
+                            <h3>구독 설정</h3>
+                            <div class="section type_form">
+
+                                <div class="inner_box">
+                                    <p class="element_title">
+                                        <strong>
+                                            구독신청
+                                            <span class="essential">*<em class="blind">필수</em></span>
+                                        </strong>
+                                    </p>
+                                    <div class="element_content">
+                                        <div class="radio_box">
+                                            <div class="LD_formbtn">
+                                                <label>
+                                                    <input class="LDinput" type="radio" name="test_radio">
+                                                    <span class="icon"></span>
+                                                    <span class="label_text">구독신청 받기</span>
+                                                </label>
+                                            </div>
+                                            <div class="LD_formbtn" style="margin-left: 14px;">
+                                                <label>
+                                                    <input class="LDinput" type="radio" name="test_radio">
+                                                    <span class="icon"></span>
+                                                    <span class="label_text">바로 구독</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="inner_box">
+                                    <p class="element_title">
+                                        <strong>
+                                            구독안내
+                                            <span class="essential">*<em class="blind">필수</em></span>
+                                        </strong>
+                                    </p>
+                                    <div class="element_content">
+                                        <div class="LUX_basic_textarea">
+                                            <!-- 입력창에 포커스 - inpbx class="on" 추가  -->
+                                             <div class="inpbx">
+                                                 <p class="placeholder">구독안내 정보를 입력하세요.</p>
+                                                 <!-- 행간과 textarea padding 값 변경 가능-->
+                                                 <textarea id="undefined-HintText1" rows="5" cols="1" class="field_inp" style="width:100%;height:100px">                                                 </textarea>
+                                             </div>
+                                        </div>
+                                        <div class="sub_text_box">
+                                            <span class="sub_text color_gray fltrgt">입력된 구독안내가 없는 경우 해당 정보는 표현되지 않습니다.<em>(0/100)</em></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="inner_box">
+                                    <p class="element_title">
+                                        <strong>
+                                            구독질문
+                                            <span class="essential">*<em class="blind">필수</em></span>
+                                        </strong>
+                                    </p>
+                                    <div class="element_content">
+                                        <div class="radio_box">
+                                            <div class="LD_formbtn">
+                                                <label>
+                                                    <input class="LDinput" type="radio" name="test_radio">
+                                                    <span class="icon"></span>
+                                                    <span class="label_text">가입질문 사용</span>
+                                                </label>
+                                            </div>
+                                            <div class="LD_formbtn" style="margin-left: 14px;">
+                                                <label>
+                                                    <input class="LDinput" type="radio" name="test_radio">
+                                                    <span class="icon"></span>
+                                                    <span class="label_text">가입질문 미사용</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <dl class="status_list">
+                                            <div>
+                                                <dt>
+                                                    <div class="LD_select" style="width:100%;">
+                                                        <button type="button" class="selected_item">객관식(단일)</button>
+                                                        <div class="LD_select_resultbox">
+                                                            <ul>
+                                                                <!-- [D] 선택했을때 .selected 추가 -->
+                                                                <li class="selected">
+                                                                    <button type="button" class="resultitem">명칭</button>
+                                                                </li>
+                                                                <li>
+                                                                    <button type="button" class="resultitem">명칭명칭명칭명칭명칭명칭명칭명칭명칭명칭명칭</button>
+                                                                </li>
+                                                                <li>
+                                                                    <button type="button" class="resultitem">명칭</button>
+                                                                </li>
+                                                                <li>
+                                                                    <button type="button" class="resultitem">명칭</button>
+                                                                </li>
+                                                                <li>
+                                                                    <button type="button" class="resultitem">명칭</button>
+                                                                </li>
+                                                                <li>
+                                                                    <button type="button" class="resultitem">명칭</button>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </dt>
+                                                <dd>
+                                                    <div class="in_box">
+                                                        <div class="input_box">
+                                                            <input type="text" value="" placeholder="입력하세요.">
+                                                        </div>
+                                                        <div class="btn_box">
+                                                            <button type="button" class="btn_status type_del"></button>
+                                                        </div>
+                                                        <div class="btn_box">
+                                                            <button type="button" class="btn_status type_add"></button>
+                                                        </div>
+                                                    </div>
+                                                </dd>
+                                            </div>
+                                            <div>
+                                                <dt>
+                                                    <div class="LD_select" style="width:100%;">
+                                                        <button type="button" class="selected_item">객관식(단일)</button>
+                                                        <div class="LD_select_resultbox">
+                                                            <ul>
+                                                                <!-- [D] 선택했을때 .selected 추가 -->
+                                                                <li class="selected">
+                                                                    <button type="button" class="resultitem">명칭</button>
+                                                                </li>
+                                                                <li>
+                                                                    <button type="button" class="resultitem">명칭명칭명칭명칭명칭명칭명칭명칭명칭명칭명칭</button>
+                                                                </li>
+                                                                <li>
+                                                                    <button type="button" class="resultitem">명칭</button>
+                                                                </li>
+                                                                <li>
+                                                                    <button type="button" class="resultitem">명칭</button>
+                                                                </li>
+                                                                <li>
+                                                                    <button type="button" class="resultitem">명칭</button>
+                                                                </li>
+                                                                <li>
+                                                                    <button type="button" class="resultitem">명칭</button>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </dt>
+                                                <dd>
+                                                    <div class="in_box">
+                                                        <div class="input_box">
+                                                            <input type="text" value="" placeholder="입력하세요.">
+                                                        </div>
+                                                        <div class="btn_box">
+                                                            <button type="button" class="btn_status type_del"></button>
+                                                        </div>
+                                                        <div class="btn_box">
+                                                            <button type="button" class="btn_status type_add"></button>
+                                                        </div>
+                                                    </div>
+                                                </dd>
+                                            </div>
+                                            <div>
+                                                <dt>
+                                                    <div class="LD_select" style="width:100%;">
+                                                        <button type="button" class="selected_item">객관식(단일)</button>
+                                                        <div class="LD_select_resultbox">
+                                                            <ul>
+                                                                <!-- [D] 선택했을때 .selected 추가 -->
+                                                                <li class="selected">
+                                                                    <button type="button" class="resultitem">명칭</button>
+                                                                </li>
+                                                                <li>
+                                                                    <button type="button" class="resultitem">명칭명칭명칭명칭명칭명칭명칭명칭명칭명칭명칭</button>
+                                                                </li>
+                                                                <li>
+                                                                    <button type="button" class="resultitem">명칭</button>
+                                                                </li>
+                                                                <li>
+                                                                    <button type="button" class="resultitem">명칭</button>
+                                                                </li>
+                                                                <li>
+                                                                    <button type="button" class="resultitem">명칭</button>
+                                                                </li>
+                                                                <li>
+                                                                    <button type="button" class="resultitem">명칭</button>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </dt>
+                                                <dd>
+                                                    <div class="in_box">
+                                                        <div class="input_box">
+                                                            <input type="text" value="" placeholder="입력하세요.">
+                                                        </div>
+                                                        <div class="btn_box">
+                                                            <button type="button" class="btn_status type_del"></button>
+                                                        </div>
+                                                        <div class="btn_box">
+                                                            <button type="button" class="btn_status type_add"></button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="in_box">
+                                                        <div class="input_box">
+                                                            <input type="text" value="" placeholder="입력하세요.">
+                                                        </div>
+                                                        <div class="btn_box">
+                                                            <button type="button" class="btn_status type_minus"></button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="in_box">
+                                                        <div class="input_box">
+                                                            <input type="text" value="" placeholder="입력하세요.">
+                                                        </div>
+                                                        <div class="btn_box">
+                                                            <button type="button" class="btn_status type_minus"></button>
+                                                        </div>
+                                                    </div>
+                                                </dd>
+
+                                            </div>
+
+                                        </dl>
+                                        <div class="sub_text_box">
+                                            <span class="sub_text color_gray fltrgt">객관식 보기는 최대 5건까지 등록가능합니다.<em>(0/100)</em></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="inner_box">
+                                    <p class="element_title">
+                                        <strong>
+                                            구독 시 등급
+                                            <span class="essential">*<em class="blind">필수</em></span>
+                                        </strong>
+                                    </p>
+                                    <div class="element_content">
+
+                                        <div class="LD_select" style="width:200px;">
+                                            <button type="button" class="selected_item">준회원</button>
+                                            <div class="LD_select_resultbox">
+                                                <ul>
+                                                    <!-- [D] 선택했을때 .selected 추가 -->
+                                                    <li class="selected">
+                                                        <button type="button" class="resultitem">명칭</button>
+                                                    </li>
+                                                    <li>
+                                                        <button type="button" class="resultitem">명칭명칭명칭명칭명칭명칭명칭명칭명칭명칭명칭</button>
+                                                    </li>
+                                                    <li>
+                                                        <button type="button" class="resultitem">명칭</button>
+                                                    </li>
+                                                    <li>
+                                                        <button type="button" class="resultitem">명칭</button>
+                                                    </li>
+                                                    <li>
+                                                        <button type="button" class="resultitem">명칭</button>
+                                                    </li>
+                                                    <li>
+                                                        <button type="button" class="resultitem">명칭</button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="sub_text_box">
+                                            <span class="sub_text color_gray">커뮤니티 구독 시 자동부여될 멤버등급을 선택합니다.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section txtcnt">
+                                <button type="button" class="LD_btn c_blue">저장하기</button>
+                            </div>
+
+
+
+                        </div>
+                        <!-- //content 영역 -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/jquery-latest.min.js"></script>
+    <script src="../js/jquery.include.js"></script>
+    <script src="../js/slick.min.js"></script>
+    <script type="text/javascript">
+        // 마크업 테스트용
+        $(function() {
+            // 서브해더 마우스오버 이벤트
+            $('.tabs_wrap>li').hover(function(e) {
+                $(this).toggleClass('open');
+                e.preventDefault();
+            });
+            // snb 아코디언 영역
+            $('.admin_snb_list .section_title').click(function(e) {
+                $(this).parents('li').toggleClass('active');
+            });
+        });
+        // 검색영역 펼치기/접기
+        $('.dynamic_searchbox .begin_schbtn, .dynamic_searchbox .delbtn').click(function() {
+            $(this).parents('.dynamic_searchbox').toggleClass('open');
+        })
+
+        // 검색영역 셀렉트박스
+        $('.dynamic_searchbox .selbtn').click(function() {
+            $(this).parents('.selectbox').toggleClass('open');
+        })
+
+        //슬릭 영역
+        $('.img_slick_box').slick();
+    </script>
+</body>
+
+</html>

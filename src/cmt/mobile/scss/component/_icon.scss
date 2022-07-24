@@ -1,0 +1,345 @@
+.icon{
+    display: inline-block;
+    vertical-align: top;
+    font-size: 0;
+    line-height: 0;
+    background: url(/imgs/cmt/mobile/sp_mo_cmt.png) no-repeat;
+    background-size: 400px 500px;
+    &.common{
+        &.link{
+            width: 12px;
+            height: 12px;
+            background-position: 0 -58px;
+        }
+        &.gray_link{
+            width: 12px;
+            height: 12px;
+            background-position: -102px -58px;
+        }
+        &.depth{
+            width: 14px;
+            height: 14px;
+            background-position: -226px -75px;
+        }
+        &.arrow{
+            width: 18px;
+            height: 18px;
+            background-position: -203px -75px;
+        }
+        &.search{
+            width: 24px;
+            height: 24px;
+            background-position: -303px -75px;
+        }
+        &.bookmark{
+            width: 21px;
+            height: 21px;
+            background-position: 0 -104px;
+        }
+        &.bookmark_active{
+            width: 21px;
+            height: 21px;
+            background-position: -26px -104px;
+        }
+        &.leader{
+            width: 32px;
+            height: 32px;
+            background-position: 0 -133px;
+        }
+        &.crown{
+            width: 14px;
+            height: 14px;
+            background-position: -356px -75px;
+        }
+        &.user{
+            width: 14px;
+            height: 14px;
+            background-position: -375px -75px;
+        }
+        &.btn_play{
+            width: 16px;
+            height: 16px;
+            background-position: -61px -133px;
+        }
+        &.btn_more{
+            width: 24px;
+            height: 24px;
+            background-position: -143px -104px;
+        }
+        &.blue_check{
+            width: 18px;
+            height: 18px;
+            background-position: -34px -185px;
+        }
+        &.white_check{
+            width: 12px;
+            height: 12px;
+            background-position: -68px -58px;
+        }
+        &.white_back{
+            width: 12px;
+            height: 12px;
+            background-position: -119px -58px;
+        }
+        &.set{
+            width: 18px;
+            height: 18px;
+            background-position: -339px -133px;
+        }
+        &.best{
+            width: 18px;
+            height: 18px;
+            background-position: -362px -133px;
+        }
+        &.small_bottom_arrow{
+            width: 12px;
+            height: 12px;
+            background-position: -85px -58px;
+        }
+        &.login_user{
+            width: 24px;
+            height: 24px;
+            background-position: -121px -156px;
+        }
+        &.picture{
+            width: 18px;
+            height: 18px;
+            background-position: -190px -157px;
+        }
+    }
+    &.exit{
+        &.basic{
+            width: 24px;
+            height: 24px;
+            background-position: -274px -75px;
+        }
+        &.circle{
+            width: 24px;
+            height: 24px;
+            background-position: -245px -75px;
+        }
+        &.small{
+            width: 18px;
+            height: 18px;
+            background-position: -332px -75px;
+        }
+    }
+    &.header{
+        width: 24px;
+        height: 24px;
+        &.search{
+            background-position: 0 0;
+            &.type_white{
+                background-position: 0 -29px;
+            }
+        }
+        &.write{
+            background-position: -29px 0;
+            &.type_white{
+                background-position: -29px -29px;
+            }
+        }
+        &.menu{
+            background-position: -58px 0;
+            &.type_white{
+                background-position: -58px -29px;
+            }
+        }
+        &.back{
+            background-position: -87px 0;
+            &.type_white{
+                background-position: -87px -29px;
+            }
+        }
+    }
+    &.rank{
+        width: 38px;
+        height: 41px;
+        &.green{
+            background-position: -116px 0;
+        }
+        &.blue{
+            background-position: -159px 0;
+        }
+        &.purple{
+            background-position: -202px 0;
+        }
+        &.blue.small{
+            width: 30px;
+            height: 32px;
+            background-position: -155px -157px;
+        }
+    }
+    &.rnb{
+        width: 32px;
+        height: 32px;
+        &.link_home{
+            background-position: -245px 0;
+        }
+        &.link_feed{
+            background-position: -282px 0;
+        }
+        &.link_community{
+            background-position: -319px 0;
+        }
+        &.link_expert{
+            background-position: -356px 0;
+        }
+    }
+    &.category{
+        width: 24px;
+        height: 24px;
+        &.home{
+            background-position: 0 -75px;
+        }
+        &.folder{
+            background-position: -145px -75px;
+        }
+        &.folder_active{
+            background-position: -174px -75px;
+        }
+        &.folder2{
+            background-position: -29px -75px;
+        }
+        &.folder3{
+            background-position: -58px -75px;
+        }
+        &.folder4{
+            background-position: -87px -75px;
+        }
+        &.folder5{
+            background-position: -116px -75px;
+        }
+    }
+    &.board{
+        width: 24px;
+        height: 24px;
+        &.view{
+            background-position: -58px -104px;
+        }
+        &.like{
+            background-position: -87px -104px;
+        }
+        &.like_active{
+            background-position: -172px -104px;
+        }
+        &.comment{
+            background-position: -118px -104px;
+        }
+    }
+    &.s_board{
+        width: 18px;
+        height: 18px;
+        &.view{
+            background-position: -85px -133px;
+        }
+        &.like{
+            background-position: -108px -133px;
+        }
+        &.comment{
+            background-position: -131px -133px;
+        }
+        &.gray_view{
+            background-position: -217px -157px;
+        }
+        &.gray_like{
+            background-position: -240px -157px;
+        }
+        &.gray_comment{
+            background-position: -263px -157px;
+        }
+    }
+    &.feed{
+        width: 18px;
+        height: 18px;
+        &.btn_file{
+            background-position: -154px -133px;
+        }
+        &.btn_storge{
+            background-position: -177px -133px;
+        }
+        &.btn_img{
+            background-position: -200px -133px;
+        }
+        &.btn_video{
+            background-position: -223px -133px;
+        }
+        &.btn_cloud{
+            background-position: -247px -133px;
+        }
+    }
+    &.badge{
+        width: 24px;
+        height: 24px;
+        &.color_sky{
+            background-position: -201px -104px;
+        }
+        &.color_blue{
+            background-position: -230px -104px;
+        }
+        &.color_purple{
+            background-position: -259px -104px;
+        }
+    }
+    &.sand{
+        width: 24px;
+        height: 24px;
+        &.message{
+            background-position: -288px -104px;
+        }
+        &.talk{
+            background-position: -317px -104px;
+        }
+        &.mail{
+            background-position: -346px -104px;
+        }
+    }
+    &.company{
+        width: 12px;
+        height: 12px;
+        &.phone{
+            background-position: -17px -58px;
+        }
+        &.address{
+            background-position: -34px -58px;
+        }
+        &.homepage{
+            background-position: -51px -58px;
+        }
+    }
+    &.company_menu{
+        width: 24px;
+        height: 24px;
+        &.bookmark{
+            background-position: -34px -156px;
+        }
+        &.bookmark_active{
+            background-position: -375px -104px;
+        }
+        &.client{
+            background-position: -63px -156px;
+        }
+        &.share{
+            background-position: -92px -156px;
+        }
+        &.symbol_white{
+            background-position: 0 -168px;
+        }
+        &.symbol_black{
+            background-position: 0 -197px;
+        }
+    }
+    &.transport{
+        width: 18px;
+        height: 18px;
+        &.car{
+            background-position: -270px -133px;
+        }
+        &.subway{
+            background-position: -293px -133px;
+        }
+        &.bus{
+            background-position: -316px -133px;
+        }
+    }
+}

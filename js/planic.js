@@ -82,11 +82,8 @@ $(document).ready(function(){
 		$(".global__menuList--item a").click(function(){
 			$(this).parents(".global__menu").removeClass("open")
 		});
-		$(".view__box .view__box--btn").click(function(){
-			$(this).parents(".view__box").addClass("active");
-		});
-		$(".view__box .view__box--btn2").click(function(){
-			$(this).parents(".view__box").removeClass("active");
+		$(".view__box--btn").click(function(){
+			$(this).toggleClass("active");
 		});
 	})
 

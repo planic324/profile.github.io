@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>연말정산</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi">
+<link rel="stylesheet" type="text/css" href="css/ctm.css">
+</head>
+<body>
+<div id="wrap" class="dz_font"></div>
+<div class="dimmed" style="display: block;"></div>
+<div class="select_toast active">
+	<h2 class="toast_title">타이틀 영역</h2>
+	<div class="toast_text_wrap">
+        <p class="toast_text_empty">선택가능한 부양가족 리스트가 존재하지 않습니다.</p>
+        <br>
+        <dl class="toast_definition_list">
+            <div class="item">
+                <dt>일반보장성보험료</dt>
+                <dd>
+                    기본공제 대상자를 피보험자로 하는 보장성보험(장애인 전용<br>
+                    보장성 보험 제외) 의 보험료를 근로자가 납입한 경우 납입액의<br>
+                    12%를 세액공제(연 100만원 한도)
+                </dd>
+            </div>
+        </dl>
+    </div>
+    
+</div>
+<div class="markup" style="position: absolute;top: 20px;right: 20px;z-index: 30;">
+	<button type="button" id="markup_dim_test" style="padding: 10px;background-color: #000;color: #fff;border: 0;appearance: none;">증빙자료 추가 Toast</button>
+</div>
+<!-- [D] 마크업 테스트용 입니다. 개발 시 삭제해주세요. -->
+<script src="../js/jquery-latest.min.js"></script>
+<script>
+	var dimButton = document.querySelector('#markup_dim_test');
+	var toastBox = document.querySelector('.select_toast');
+	var dimmBox = document.querySelector('.dimmed');
+	var bodyBox = document.querySelector('body');
+    var btnFull = document.querySelector('btn_view_full');
+
+	dimButton.addEventListener('click', function(){
+		if(dimmBox.style.display === "none" || dimmBox.style.display === "" ) {
+			dimmBox.style.display = 'block';
+			toastBox.classList.add('active');
+			bodyBox.style.overflow = 'hidden';
+		} else {
+			dimmBox.style.display = 'none';
+			toastBox.classList.remove('active');
+			bodyBox.style.overflow = '';
+		}
+	})
+    $(function(){
+        //full view
+        $('.select_toast .btn_view_full').click(function() {
+            $(this).parent().toggleClass('full');
+        })
+    });
+</script>
+</body>
+</html>

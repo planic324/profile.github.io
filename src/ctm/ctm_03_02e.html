@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>연말정산</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi">
+<link rel="stylesheet" type="text/css" href="https://static.wehago.com/css/nanumsquare.css">
+<link rel="stylesheet" type="text/css" href="css/ctm.css">
+</head>
+<body>
+<div id="wrap">
+	<div class="header">
+		<h1 class="ellipsis">연말정산자료입력</h1>
+		<button type="button" class="btn_prev"><span class="blind">이전</span></button>
+		<div class="btnbox">
+			<button type="button" class="btn_menu"><span class="blind">메뉴</span></button>
+		</div>
+	</div>
+	<div class="container footer_btn">
+		<div class="section sec_detail_info type_empty v_renew">
+            <div class="section_content">
+                <div class="sec_detail_topbox">
+                    <div class="total_wrap">
+                        <div class="section_title">
+                            <p class="text">보험료 합계<button type="button" class="ico_info"><span class="blind">도움말</span></button></p>
+                            <button type="button" class="btn_title"><span class="ico clip"></span>증빙</button>
+                        </div>
+                        <dl class="total_box">
+                            <div class="item_bar"></div>
+                            <!--
+                                icon1 : 의료비
+                                icon2 : 기부금
+                                icon3 : 주택자금차입
+                                icon4 : 보험료
+                            -->
+                            <div class="item type_main icon1">
+                                <dt>실손의료보험금 합계</dt>
+                                <dd>4,000,000원</dd>
+                            </div>
+                            <div class="item">
+                                <dt>일반보장성보험</dt>
+                                <dd>3,500,000원</dd>
+                            </div>
+                            <div class="item">
+                                <dt>본인.장애인.65세이상<br>건강보험산정특례자</dt>
+                                <dd>3,500,000원</dd>
+                            </div>
+                            <div class="item_bar"></div>
+                            <div class="item type_main icon2">
+                                <dt>기부금 합계</dt>
+                                <dd>4,000,000원</dd>
+                            </div>
+                            <div class="item type_main icon3">
+                                <dt>주택자금차입 합계</dt>
+                                <dd>4,000,000원</dd>
+                            </div>
+                            <div class="item type_main icon4">
+                                <dt>보험료 합계</dt>
+                                <dd>4,000,000원</dd>
+                            </div>
+                            <div class="item type_main noicon">
+                                <dt>아이콘 없는경우</dt>
+                                <dd>4,000,000원</dd>
+                            </div>
+                            <div class="item type_notice">
+                                <dt><span class="blind">중요</span></dt>
+                                <dd>실손의료보험금으로 보전받은 의료비는 세액공제 대상이 아닙니다</dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div class="section_content empty_box">
+                <div class="empty_area">
+                    <img src="/imgs/ctm/empty_file.png" alt="">
+                    <p>조회할 자료가 없습니다.</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer_button_box">
+            <button type="button" class="btn_footer bg_blue">자료입력</button>
+        </div>
+	</div>
+</div>
+<!-- [D] 마크업 테스트용 입니다. 개발 시 삭제해주세요. -->
+<script src="../js/jquery-latest.min.js"></script>
+<script type="text/javascript" src="../js/slick.min.js"></script>
+<script>
+    $(function(){
+       // 아코디언 여/닫
+       $('.accodion_title .btn_accodion').click(function() {
+           $(this).parents('.accodion_box').toggleClass('open');
+       })
+
+       //라디오 버튼
+       $('.inpbx_inner_btn .btn_radio').click(function() {
+           $(this).toggleClass('check');
+       })
+
+       // 헤더 보더
+       $('.container').scroll(function(){
+           var sTop = $('.container').scrollTop();
+           if(sTop != 0){
+               $('.header').addClass('b_shadow');
+             } else {
+               $('.header').removeClass('b_shadow');
+              }
+       });
+   });
+</script>
+</body>
+</html>

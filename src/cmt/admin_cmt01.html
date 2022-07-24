@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta id="viewport" name="viewport" content="width=1280">
+    <title>관리자 페이지 : 커뮤니티</title>
+    <link rel="stylesheet" type="text/css" href="/css/nanumsquare.css"> <link rel="stylesheet" type="text/css" href="../common/css/common.css"> <link rel="stylesheet" type="text/css" href="../lux/css/lux.css"> <link rel="stylesheet" type="text/css" href="css/cmt.css"> <link rel="stylesheet" type="text/css" href="../selene/css/selene.css"> <link rel="stylesheet" type="text/css" href="../diana/css/diana.css">
+</head>
+
+<body>
+    <link rel="stylesheet" type="text/css" href="/css/nanumsquare.css"> <link rel="stylesheet" type="text/css" href="../common/css/common.css"> <link rel="stylesheet" type="text/css" href="../lux/css/lux.css"> <link rel="stylesheet" type="text/css" href="css/cmt.css"> <link rel="stylesheet" type="text/css" href="../selene/css/selene.css"> <link rel="stylesheet" type="text/css" href="../diana/css/diana.css">
+    <div class="snbnext">
+        <div class="container">
+            <div class="containerin">
+                <div class="content">
+                    <div class="cmt admin dz_font">
+                        <!-- title 영역 -->
+                        <div class="admin_title">
+                            <h2>커뮤니티 관리</h2>
+                        </div>
+                        <!-- //title 영역 -->
+
+                        <!-- snb 영역 -->
+                        <div class="admin_snb">
+                            <!-- 최상단 영역 -->
+                            <div class="admin_snb_top">
+                                <button type="button" class="btn_admin_home">관리자 홈</button>
+                            </div>
+                            <!-- //최상단 영역 -->
+
+                            <!-- 리스트 영역 -->
+                            <ul class="admin_snb_list">
+
+                                <li class="active">
+                                    <button type="button" class="section_title type_content">커뮤니티 관리</button>
+                                    <ul class="category_list">
+                                        <li class="active"><a href="#" class="category">기본정보</a></li>
+                                        <li><a href="#" class="category">가입설정</a></li>
+                                    </ul>
+                                </li>
+                                <li class="type_none_arrow">
+                                    <button type="button" class="section_title type_folder">메뉴관리</button>
+                                </li>
+                                <li class="">
+                                    <button type="button" class="section_title type_check">콘텐츠 관리</button>
+                                    <ul class="category_list">
+                                        <li class=""><a href="#" class="category">게시글 관리</a></li>
+                                        <li><a href="#" class="category">댓글 관리</a></li>
+                                        <li><a href="#" class="category">금칙어 관리</a></li>
+                                    </ul>
+                                </li>
+                                <li class="">
+                                    <button type="button" class="section_title type_member">맴버 관리</button>
+                                    <ul class="category_list">
+                                        <li class=""><a href="#" class="category">전체맴버</a></li>
+                                        <li><a href="#" class="category">게시판관리자</a></li>
+                                        <li><a href="#" class="category">활동중지/강제탈퇴</a></li>
+                                        <li><a href="#" class="category">등급관리</a></li>
+                                    </ul>
+                                </li>
+                                <li class="">
+                                    <button type="button" class="section_title type_operation">커뮤니티 운영</button>
+                                    <ul class="category_list">
+                                        <li class=""><a href="#" class="category">메일/쪽지 보내기</a></li>
+                                        <li><a href="#" class="category">통계</a></li>
+                                    </ul>
+                                </li>
+                                <li class="">
+                                    <button type="button" class="section_title type_deco">꾸미기</button>
+                                    <ul class="category_list">
+                                        <li class=""><a href="#" class="category">대문 꾸미기</a></li>
+                                        <li><a href="#" class="category">홈 꾸미기</a></li>
+                                        <li><a href="#" class="category">스킨</a></li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+                            <!-- //리스트 영역 -->
+                        </div>
+                        <!-- //snb 영역 -->
+
+                        <!-- content 영역 -->
+                        <div class="admin_content">
+                            <h3>금칙어 설정</h3>
+                            <div class="section type_box">
+                                <h4 class="info_title">금칙어 설정이란?</h4>
+                                <p class="info_notice">
+                                    우리 커뮤니티의 금칙어를 설정하면, <strong>금칙어로 지정된 단어가 포함된 게시글을 자동으로 차단</strong>합니다.<br>
+                                    차단된 게시글은 아래 리스트를 통해 확인할 수 있으며, <strong>100일이 지나면 영구삭제</strong>돼 복구가 불가합니다.
+                                </p>
+                                <div class="list_area">
+                                    <ul class="list_box">
+                                        <li>
+                                            <div class="LD_tag error_tag hasdel">
+                                                <span class="tag_name">금칙어태그</span>
+                                                <button type="button" class="tag_delbtn"><span class="blind">삭제</span></button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="LD_tag error_tag hasdel">
+                                                <span class="tag_name">금칙어태그</span>
+                                                <button type="button" class="tag_delbtn"><span class="blind">삭제</span></button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="LD_tag error_tag hasdel">
+                                                <span class="tag_name">금칙어태그</span>
+                                                <button type="button" class="tag_delbtn"><span class="blind">삭제</span></button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="LD_tag error_tag hasdel">
+                                                <span class="tag_name">금칙어태그</span>
+                                                <button type="button" class="tag_delbtn"><span class="blind">삭제</span></button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="LD_tag error_tag hasdel">
+                                                <span class="tag_name">금칙어태그</span>
+                                                <button type="button" class="tag_delbtn"><span class="blind">삭제</span></button>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+                                    <input type="text" class="type_none_style" value="" placeholder="금칙어로 지정한 단어를 입력하세요. (최대 20개까지 등록 가능)">
+                                </div>
+                            </div>
+                            <div class="section type_table">
+                                <div class="sort_box" style="text-align:right;">
+                                    <div class="LD_select" style="width:180px;">
+                                        <button type="button" class="selected_item">게시판전체 (30)</button>
+                                    </div>
+                                    <div class="LD_input d_searchbox" style="width:180px;">
+                                        <input type="text" class="textinput" placeholder="게시글을 검색하세요.">
+                                        <button type="button" class="LD_input_searchbtn"><span class="blind">검색</span></button>
+                                    </div>
+                                </div>
+                                <div class="table_area">
+                                    <div class="common_boxtbl style_basic">
+                                        <div class="list_header clearfix">
+                                            <div class="col1" style="flex:0.5">&nbsp;</div>
+                                            <div class="col2">등록게시판</div>
+                                            <div class="col3">타입</div>
+                                            <div class="col4" style="flex:3">제목</div>
+                                            <div class="col5">글쓴이</div>
+                                            <div class="col6">작성일</div>
+                                            <div class="col7">조회수</div>
+                                            <div class="col8">좋아요수</div>
+                                            <div class="col9">댓글수</div>
+                                        </div>
+                                        <div class="list_body">
+                                            <div class="row">
+                                                <div class="col1" style="flex:0.5">
+                                                    <div class="LD_formbtn">
+                                                        <label>
+                                                            <input class="LDinput" type="checkbox" name="test_checkbox">
+                                                            <span class="icon"></span>
+                                                            <span class="label_text"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col2">
+                                                    <p class="ellipsis">자유게시판</p>
+                                                </div>
+                                                <div class="col3">
+                                                    <p class="ellipsis">텍스트</p>
+                                                </div>
+                                                <div class="col4" style="flex:3">
+                                                    <p class="ellipsis">동해물과 백두산이 마르고 닳도록 하느님이 보우하사</p>
+                                                </div>
+                                                <div class="col5">
+                                                    <p class="ellipsis">김더존(douzone123)</p>
+                                                </div>
+                                                <div class="col6">
+                                                    <p class="ellipsis">2020.12.12</p>
+                                                </div>
+                                                <div class="col7">
+                                                    <p class="ellipsis">111,111,111</p>
+                                                </div>
+                                                <div class="col8">
+                                                    <p class="ellipsis">111,111</p>
+                                                </div>
+                                                <div class="col9">
+                                                    <p class="ellipsis">111</p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col1" style="flex:0.5">
+                                                    <div class="LD_formbtn">
+                                                        <label>
+                                                            <input class="LDinput" type="checkbox" name="test_checkbox">
+                                                            <span class="icon"></span>
+                                                            <span class="label_text"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col2">
+                                                    <p class="ellipsis">자유게시판</p>
+                                                </div>
+                                                <div class="col3">
+                                                    <p class="ellipsis">텍스트</p>
+                                                </div>
+                                                <div class="col4" style="flex:3">
+                                                    <p class="ellipsis">동해물과 백두산이 마르고 닳도록 하느님이 보우하사</p>
+                                                </div>
+                                                <div class="col5">
+                                                    <p class="ellipsis">김더존(douzone123)</p>
+                                                </div>
+                                                <div class="col6">
+                                                    <p class="ellipsis">2020.12.12</p>
+                                                </div>
+                                                <div class="col7">
+                                                    <p class="ellipsis">111,111,111</p>
+                                                </div>
+                                                <div class="col8">
+                                                    <p class="ellipsis">111,111</p>
+                                                </div>
+                                                <div class="col9">
+                                                    <p class="ellipsis">111</p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col1" style="flex:0.5">
+                                                    <div class="LD_formbtn">
+                                                        <label>
+                                                            <input class="LDinput" type="checkbox" name="test_checkbox">
+                                                            <span class="icon"></span>
+                                                            <span class="label_text"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col2">
+                                                    <p class="ellipsis">자유게시판</p>
+                                                </div>
+                                                <div class="col3">
+                                                    <p class="ellipsis">텍스트</p>
+                                                </div>
+                                                <div class="col4" style="flex:3">
+                                                    <p class="ellipsis">동해물과 백두산이 마르고 닳도록 하느님이 보우하사</p>
+                                                </div>
+                                                <div class="col5">
+                                                    <p class="ellipsis">김더존(douzone123)</p>
+                                                </div>
+                                                <div class="col6">
+                                                    <p class="ellipsis">2020.12.12</p>
+                                                </div>
+                                                <div class="col7">
+                                                    <p class="ellipsis">111,111,111</p>
+                                                </div>
+                                                <div class="col8">
+                                                    <p class="ellipsis">111,111</p>
+                                                </div>
+                                                <div class="col9">
+                                                    <p class="ellipsis">111</p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col1" style="flex:0.5">
+                                                    <div class="LD_formbtn">
+                                                        <label>
+                                                            <input class="LDinput" type="checkbox" name="test_checkbox">
+                                                            <span class="icon"></span>
+                                                            <span class="label_text"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col2">
+                                                    <p class="ellipsis">자유게시판</p>
+                                                </div>
+                                                <div class="col3">
+                                                    <p class="ellipsis">텍스트</p>
+                                                </div>
+                                                <div class="col4" style="flex:3">
+                                                    <p class="ellipsis">동해물과 백두산이 마르고 닳도록 하느님이 보우하사</p>
+                                                </div>
+                                                <div class="col5">
+                                                    <p class="ellipsis">김더존(douzone123)</p>
+                                                </div>
+                                                <div class="col6">
+                                                    <p class="ellipsis">2020.12.12</p>
+                                                </div>
+                                                <div class="col7">
+                                                    <p class="ellipsis">111,111,111</p>
+                                                </div>
+                                                <div class="col8">
+                                                    <p class="ellipsis">111,111</p>
+                                                </div>
+                                                <div class="col9">
+                                                    <p class="ellipsis">111</p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col1" style="flex:0.5">
+                                                    <div class="LD_formbtn">
+                                                        <label>
+                                                            <input class="LDinput" type="checkbox" name="test_checkbox">
+                                                            <span class="icon"></span>
+                                                            <span class="label_text"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col2">
+                                                    <p class="ellipsis">자유게시판</p>
+                                                </div>
+                                                <div class="col3">
+                                                    <p class="ellipsis">텍스트</p>
+                                                </div>
+                                                <div class="col4" style="flex:3">
+                                                    <p class="ellipsis">동해물과 백두산이 마르고 닳도록 하느님이 보우하사</p>
+                                                </div>
+                                                <div class="col5">
+                                                    <p class="ellipsis">김더존(douzone123)</p>
+                                                </div>
+                                                <div class="col6">
+                                                    <p class="ellipsis">2020.12.12</p>
+                                                </div>
+                                                <div class="col7">
+                                                    <p class="ellipsis">111,111,111</p>
+                                                </div>
+                                                <div class="col8">
+                                                    <p class="ellipsis">111,111</p>
+                                                </div>
+                                                <div class="col9">
+                                                    <p class="ellipsis">111</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- [D] 검색결과가 없는 경우 노출 부탁 드립니다 -->
+                                        <div class="list_body">
+                                            <div class="empty_area" style="margin:200px 0 30px">
+                                                <span class="ico bg"><img src="https://static.wehago.com/imgs/common/ico_nodata66.png" alt="" style="margin-top:14px"></span>
+                                                <p class="empty_txt v2">
+                                                    금칙어를 통해 차단된<br>
+                                                    게시글이 존재하지 않습니다.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //content 영역 -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/jquery-latest.min.js"></script>
+    <script src="../js/jquery.include.js"></script>
+    <script type="text/javascript">
+        // 마크업 테스트용
+        $(function() {
+            // 서브해더 마우스오버 이벤트
+            $('.tabs_wrap>li').hover(function(e) {
+                $(this).toggleClass('open');
+                e.preventDefault();
+            });
+            // snb 아코디언 영역
+            $('.admin_snb_list .section_title').click(function(e) {
+                $(this).parents('li').toggleClass('active');
+            });
+        });
+        // 검색영역 펼치기/접기
+        $('.dynamic_searchbox .begin_schbtn, .dynamic_searchbox .delbtn').click(function() {
+            $(this).parents('.dynamic_searchbox').toggleClass('open');
+        })
+
+        // 검색영역 셀렉트박스
+        $('.dynamic_searchbox .selbtn').click(function() {
+            $(this).parents('.selectbox').toggleClass('open');
+        })
+    </script>
+</body>
+
+</html>

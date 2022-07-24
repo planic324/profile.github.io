@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>연말정산</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi">
+<link rel="stylesheet" type="text/css" href="css/ctm.css">
+</head>
+<body>
+<div id="wrap" class="dz_font">
+	<div class="header">
+		<h1 class="ellipsis">연말정산 결과조회</h1>
+		<button type="button" class="btn_prev"><span class="blind">이전</span></button>
+		<div class="btnbox">
+			<button type="button" class="btn_menu"><span class="blind">메뉴</span></button>
+		</div>
+	</div>
+	<div class="container footer_btn">
+		<div class="yearend_resultwrap">
+			<div class="topbox">
+				<button type="button" class="btn_calprev"><span class="blind">이전</span></button><!--
+				--><div class="tit_text">
+					<h2>2021 연말정산</h2><button type="button" class="btn_cal"><span class="blind">연도선택</span></button>
+				</div><button type="button" class="btn_calnext disabled"><span class="blind">다음</span></button>
+			</div>
+			<div class="conbox">
+				<div class="alignbox">
+					<h3><em>2021년 연말정산 결과</em>입니다.</h3>
+					<p class="desctext">차감징수세액에 마이너스(-)가 기록되면 세금을 돌려받고,<br>플러스(+)면 납부할 세금이 있는거에요!</p>
+				</div>
+				<div class="money_info">
+					<h4 class="money_info_text">김더존님은 <em>1,714,020원을 환급 받습니다.</em></h4>
+					<p>근로소득원천징수영수증 & 소득공제신고서로<br>연말정산 결과내역을 확인하세요!</p>
+				</div>
+			</div>
+			<div class="details_box">
+				<div class="details_section">
+					<h3>근로소득원천징수영수증 확인</h3>
+					<div class="inbox type_bill">
+						<div class="fileitem">
+							<img src="https://static.wehago.com/imgs/common/icon_file/24x24/ico_pdf_24.png" alt="pdf_24">
+						</div>
+						<dl>
+							<dt>2021년 연말정산</dt>
+							<dd>근로소득원천징수영수증<span class="label">N</span></dd>
+						</dl>
+					</div>
+				</div>
+				<div class="details_section">
+					<h3>3개년도 세액 납부(환급) 현황</h3>
+					<div class="inbox type_chart">
+						<div class="chart_label">
+							<span class="label red">납부액</span><span class="label green">환급액</span>
+						</div>
+						<ul class="chartlist">
+							<li class="green">
+								<strong class="year_text">2021</strong>
+								<div class="line" style="width:100%">
+									<span class="label_text">(-) 1,714,020원</span>
+								</div>
+							</li>
+							<li class="red">
+								<strong class="year_text">2020</strong>
+								<div class="line" style="width:60%">
+									<span class="label_text">1,714,020원</span>
+								</div>
+							</li>
+							<!-- [D] 세액값이 그래프를 넘칠경우 .overtext 추가 -->
+							<li class="green overtext">
+								<strong class="year_text">2019</strong>
+								<div class="line" style="width:10%">
+									<span class="label_text">(-) 1,714,020원</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer_button_box">
+            <button type="button" class="btn_footer bg_blue">상세내역 확인</button>
+        </div>
+	</div>
+</div>
+<!-- [D] 마크업 테스트용 입니다. 개발 시 삭제해주세요. -->
+<script src="../js/jquery-latest.min.js"></script>
+<script>
+	$(function(){
+		// 헤더 보더
+		$('.container').scroll(function(){
+			var sTop = $('.container').scrollTop();
+			console.log($('.container').scrollTop());
+			if(sTop != 0){
+				$('.header').addClass('b_shadow');
+			} else {
+				$('.header').removeClass('b_shadow');
+			}
+		}); 
+	});
+</script>
+</body>
+</html>

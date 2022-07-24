@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>연말정산</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi">
+<link rel="stylesheet" type="text/css" href="css/ctm.css">
+</head>
+<body style="overflow:hidden">
+<div id="wrap" class="dz_font"></div>
+<div class="dimmed" style="display:block"></div>
+<div class="select_toast active">
+	<h2 class="toast_title">증빙자료 추가</h2>
+	<ul class="toast_list">
+		<li>
+			<button type="button" class="list_item"><i class="icon_album"></i>앨범</button>
+		</li>
+		<li>
+			<button type="button" class="list_item"><i class="icon_camera"></i>카메라</button>
+		</li>
+		<li>
+			<button type="button" class="list_item"><i class="icon_file"></i>파일</button>
+		</li>
+	</ul>
+</div>
+<div class="markup" style="position: absolute;top: 20px;right: 20px;z-index: 30;">
+	<button type="button" id="markup_dim_test" style="padding: 10px;background-color: #000;color: #fff;border: 0;appearance: none;">토스트팝업 열기/닫기</button>
+</div>
+<!-- [D] 마크업 테스트용 입니다. 개발 시 삭제해주세요. -->
+<!-- <script src="../../js/jquery-latest.min.js"></script> -->
+<script>
+	var dimButton = document.querySelector('#markup_dim_test');
+	var toastBox = document.querySelector('.select_toast');
+	var dimmBox = document.querySelector('.dimmed');
+	var bodyBox = document.querySelector('body');
+
+	dimButton.addEventListener('click', function(){
+		if(dimmBox.style.display === "none" || dimmBox.style.display === "" ) {
+			dimmBox.style.display = 'block';
+			toastBox.classList.add('active');
+			bodyBox.style.overflow = 'hidden';
+		} else {
+			dimmBox.style.display = 'none';
+			toastBox.classList.remove('active');
+			bodyBox.style.overflow = '';
+		}
+	})
+</script>
+</body>
+</html>

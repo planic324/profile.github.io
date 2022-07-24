@@ -1,0 +1,12 @@
+.slick-slider{
+    display: block;
+    transform: translateX(20px);
+    .slick-track{
+        display: flex;
+    }
+}
+.img_list_box .slick-slider{
+    transform: translateX(0);
+    overflow: hidden;
+    height: 180px;
+}

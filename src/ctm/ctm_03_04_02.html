@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>연말정산</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi">
+<link rel="stylesheet" type="text/css" href="https://static.wehago.com/css/nanumsquare.css">
+<link rel="stylesheet" type="text/css" href="css/ctm.css">
+</head>
+<body>
+<div id="wrap">
+	<div class="header">
+		<h1 class="ellipsis">보험료 수정</h1>
+		<button type="button" class="btn_close"><span class="blind">이전</span></button>
+		<div class="btnbox">
+			<button type="button" class="btn_info"><span class="blind">메뉴</span></button>
+		</div>
+	</div>
+	<div class="container footer_btn">
+		<div class="section sec_detail_info">
+            <div class="section_title v2">
+                <p class="text">
+                    <strong>보험료 기타자료</strong>를<br>
+                    입력하세요.
+                </p>
+                <p class="sub_text">
+                    보험료 추가에 필요한 정보를 모두 입력해주세요.<br>
+                    기타자료 추가 시 에는 증빙자료를 추가해야 합니다.
+                </p>
+            </div>
+            <div class="section_content">
+                <div class="form_box">
+                    <div class="form_title">
+                        <p class="ess">보험료구분</p>
+                    </div>
+                    <div class="form_content">
+                        <div class="btn_popup_box">
+                            <button type="button" class="btn_popup">
+                                선택해주세요.
+                                <span class="arrow"></span>
+                            </button>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="form_box">
+                    <div class="form_title">
+                        <p class="ess">성명</p>
+                    </div>
+                    <div class="form_content">
+                        <div class="ctm_inpbx_text">
+                            <input type="text" placeholder="선택해주세요.">
+                            <div class="inpbx_inner_btn">
+                                <button type="button" class="btn_arrow"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form_box">
+                    <div class="form_title">
+                        <p class="ess">금액</p>
+                    </div>
+                    <div class="form_content">
+                        <div class="ctm_inpbx_text">
+                            <input type="text" placeholder="입력해주세요.">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+	</div>
+    <div class="footer_button_box">
+        <button type="button" class="btn_footer bg_blue">저장</button>
+    </div>
+</div>
+<!-- [D] 마크업 테스트용 입니다. 개발 시 삭제해주세요. -->
+<script src="../js/jquery-latest.min.js"></script>
+<script type="text/javascript" src="../js/slick.min.js"></script>
+<script>
+    $(function(){
+       // 아코디언 여/닫
+       $('.accodion_title .btn_accodion').click(function() {
+           $(this).parents('.accodion_box').toggleClass('open');
+       })
+
+       //라디오 버튼
+       $('.inpbx_inner_btn .btn_radio').click(function() {
+           $(this).toggleClass('check');
+       })
+
+       // 헤더 보더
+       $('.container').scroll(function(){
+           var sTop = $('.container').scrollTop();
+           if(sTop != 0){
+               $('.header').addClass('b_shadow');
+             } else {
+               $('.header').removeClass('b_shadow');
+              }
+       });
+   });
+</script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>연말정산</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi">
+<link rel="stylesheet" type="text/css" href="css/ctm.css">
+</head>
+<body>
+<div id="wrap" class="dz_font">
+	<div class="header">
+		<h1 class="ellipsis">연말정산</h1>
+		<button type="button" class="btn_prev"><span class="blind">이전</span></button>
+		<div class="btnbox">
+			<button type="button" class="btn_modify"><span class="blind">수정</span></button><button type="button" class="btn_menu"><span class="blind">메뉴</span></button>
+		</div>
+	</div>
+	<!-- [D] 스크롤될때 .b_shadow 추가 -->
+	<div class="container">
+		<div class="mainwrap">
+			<div class="bannerbox">
+				<div class="inbox">
+					<h2>2021년 연말정산</h2>
+					<p><em>2021년 귀속 연말정산 대상자</em> 입니다.<br>연말정산자료 입력을 진행해주세요.</p>
+					<dl>
+						<dt>연말정산 자료입력기간</dt>
+						<dd>2021.02.10 ~ 2021.02.15</dd>
+					</dl>
+					<button type="button" class="yearend_inputbtn"><span class="sp_ctm ico_pen"></span><span class="sp_ctm ico_inq"></span>연말정산자료입력</button>
+				</div>
+			</div>
+			<div class="main_section">
+				<h2 class="section_title">2021년 연말정산 진행 상태</h2>
+				<ul class="yearend_progress clearfix">
+					<!-- [D] 지나간 상태 .check 추가 
+						 [D] 진행중/완료 .ing 추가 -->
+					<li class="ing"><span class="ico1"></span>미작성</li>
+					<li><span class="ico2"></span>작성중</li>
+					<li><span class="ico3"></span>작성완료</li>
+					<li><span class="ico4"></span>마감완료</li>
+				</ul>
+				<ul class="yearend_progress clearfix">
+					<li class="check"><span class="ico1"></span>미작성</li>
+					<li class="ing"><span class="ico2"></span>작성중</li>
+					<li><span class="ico3"></span>작성완료</li>
+					<li><span class="ico4"></span>마감완료</li>
+				</ul>
+				<ul class="yearend_progress clearfix">
+					<li class="check"><span class="ico1"></span>미작성</li>
+					<li class="check"><span class="ico2"></span>작성중</li>
+					<li class="ing"><span class="ico3"></span>작성완료</li>
+					<li><span class="ico4"></span>마감완료</li>
+				</ul>
+				<ul class="yearend_progress clearfix">
+					<li class="check"><span class="ico1"></span>미작성</li>
+					<li class="check"><span class="ico2"></span>작성중</li>
+					<li class="check"><span class="ico3"></span>작성완료</li>
+					<li class="ing"><span class="ico4"></span>마감완료</li>
+				</ul>
+			</div>
+			<div class="main_section">
+				<h2 class="section_title">항목별 바로가기</h2>
+				<ul class="yearend_itemlist clearfix">
+					<li>
+						<a href="#" class="itemlnk ico7">
+							<strong>소득(급여)명세조회</strong>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="itemlnk ico1">
+							<strong>부양가족정보</strong>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="itemlnk ico2">
+							<strong>국세청PDF업로드</strong>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="itemlnk ico3">
+							<strong>공제자료조회/수정</strong>
+						</a>
+					</li>
+					<!-- <li>
+						<a href="#" class="itemlnk ico4">
+							<strong>종전근무지조회</strong>
+						</a>
+					</li> -->
+					<li>
+						<a href="#" class="itemlnk ico5">
+							<strong>예상세액조회</strong>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="itemlnk ico6">
+							<strong>연말정산결과조회</strong>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- [D] 마크업 테스트용 입니다. 개발 시 삭제해주세요. -->
+<script src="../js/jquery-latest.min.js"></script>
+<script>
+	$(function(){
+		// 헤더 보더
+		$('.container').scroll(function(){
+			var sTop = $('.container').scrollTop();
+			console.log($('.container').scrollTop());
+			if(sTop != 0){
+				$('.header').addClass('b_shadow');
+			} else {
+				$('.header').removeClass('b_shadow');
+			}
+		}); 
+	});
+</script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>연말정산</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi">
+<link rel="stylesheet" type="text/css" href="css/ctm.css">
+<link rel="stylesheet" type="text/css" href="../js/swiper-bundle.min.css">
+</head>
+<body>
+<div id="wrap">
+	<div class="header">
+		<h1 class="ellipsis">모바일 국세청 PDF 내려받기 방법</h1>
+		<button type="button" class="btn_close"><span class="blind">닫기</span></button>
+	</div>
+	<div class="container footer_btn">
+		<div class="content_wrap data_upload type_swiper">
+			<!-- slick slide area -->
+			<div class="tax_process_slide">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<div class="item_box">
+							<div class="content_title_box">
+								<h2 class="title"><strong>모바일 앱(손택스)</strong>를 통한<br>PDF 자료내려받기</h2>
+								<p class="sub_desc">[손택스 바로가기] 기능을 실행하여<br>손택스(모바일 홈택스 앱)를 설치하고 실행해주세요.</p>
+							</div>
+							<div class="img_box">
+								<img src="/imgs/ctm/tax_process_01.png" alt="">
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="item_box">
+							<div class="content_title_box">
+								<h2 class="title"><strong>연말정산 서비스</strong> 조회</h2>
+								<p class="sub_desc">조회발급 > 연말정산서비스 ><br>근로자 소득 세액공제 자료조회를 선택합니다.</p>
+							</div>
+							<div class="img_box">
+								<img src="/imgs/ctm/tax_process_02.png" alt="">
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="item_box">
+							<div class="content_title_box">
+								<h2 class="title"><strong>사용자 인증</strong></h2>
+								<p class="sub_desc">공동(금융)인증서를 통해 사용자인증 후<br>자료조회를 조회 할 수 있습니다.</p>
+							</div>
+							<div class="img_box">
+								<img src="/imgs/ctm/tax_process_03.png" alt="">
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="item_box">
+							<div class="content_title_box">
+								<h2 class="title"><strong>회원가입</strong></h2>
+								<p class="sub_desc">비회원인 경우에는<br>회원가입 후 공동(금융)인증서를 등록해야합니다.<br>회원가입 후 공동(금융)인증서를 등록하여 자료를 조회합니다.</p>
+							</div>
+							<div class="img_box">
+								<img src="/imgs/ctm/tax_process_04.png" alt="">
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="item_box">
+							<div class="content_title_box">
+								<h2 class="title"><strong>소득·세액 공제</strong> 자료조회</h2>
+								<p class="sub_desc">공제 항목의 [조회]를 클릭하여 공제 금액을 확인합니다.<br>부양가족의 자료가 포함되어야 한다면<br>조회발급 > 연말정산서비스 > 제공동의 신청/취소를 통하여<br>제공동의 신청 후다시 소득·세액공제 자료를 조회하시기 바랍니다.</p>
+							</div>
+							<div class="img_box">
+								<img src="/imgs/ctm/tax_process_05.png" alt="">
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="item_box">
+							<div class="content_title_box">
+								<h2 class="title"><strong>PDF 자료</strong> 내려받기</h2>
+								<p class="sub_desc">일괄 내려받기 체크 항목 확인 후 ‘문서 암호설정’을 하지않고<br>개인정보는 ‘공개’ 로 설정 후 내려받기를 실행합니다.<br>내려 받은 파일은 내장메모리 > Download 폴더에 자동 저장됩니다.<br>그 후 ‘국세청PDF업로드’ 버튼을 클릭하여 PDF변환을 진행합니다.</p>
+							</div>
+							<div class="img_box">
+								<img src="/imgs/ctm/tax_process_06.png" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+			<!-- //slick slide area -->
+			<div class="footer_button_box">
+				<button type="button" class="btn_footer bg_blue">손택스 바로가기</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- [D] 마크업 테스트용 입니다. 개발 시 삭제해주세요. -->
+<script src="../js/jquery-latest.min.js"></script>
+<script type="text/javascript" src="../js/swiper-bundle.min.js"></script>
+<!-- <script type="text/javascript" src="../js/slick.min.js"></script> -->
+<!-- <script>
+	$(function(){
+		$('.tax_process_slide').slick({
+			dots: true,
+			infinite: false,
+			speed: 300,
+			slidesToShow: 1,
+			adaptiveHeight: true,
+			draggable: true,
+			arrows: false
+		});
+	});
+</script> -->
+<script src="../js/jquery-latest.min.js"></script>
+<script>
+		$(function() {
+		$(".container").scroll(function () {
+			var scrollTop = $(this).scrollTop();
+			console.log(scrollTop);
+
+			if (scrollTop != 0) {
+				$(".header").addClass('b_shadow');
+			} else {
+				$(".header").removeClass('b_shadow');
+			}
+		})
+	});
+
+	const swiper = new Swiper('.tax_process_slide', {
+		pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+		allowTouchMove: true,
+	});
+</script>
+</body>
+</html>

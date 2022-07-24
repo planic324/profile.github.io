@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>연말정산</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi">
+<link rel="stylesheet" type="text/css" href="css/ctm.css">
+</head>
+<body>
+<div id="wrap">
+	<div class="header">
+		<h1 class="ellipsis">연말정산자료입력</h1>
+		<button type="button" class="btn_prev"><span class="blind">이전</span></button>
+		<div class="btnbox">
+			<button type="button" class="btn_menu"><span class="blind">메뉴</span></button>
+		</div>
+	</div>
+	<div class="container footer_btn">
+		<ul class="steplist">
+			<!-- [D] 완료시 class="check" 추가해주세요. -->
+			<!-- [D] 현재 위치해있는 페이지는 class="ing" 추가해주세요. -->
+			<li class="check">
+				<a href="#" role="button">
+					<div class="icon_bx">
+						<div class="icon_in">
+							<i class="ico_01"></i>
+						</div>
+					</div>
+					<div class="icon_text">부양가족</div>
+				</a>
+			</li>
+			<li class="check">
+				<a href="#" role="button">
+					<div class="icon_bx">
+						<div class="icon_in">
+							<i class="ico_02"></i>
+						</div>
+					</div>
+					<div class="icon_text">국세청자료</div>
+				</a>
+			</li>
+			<li class="ing">
+				<a href="#" role="button">
+					<div class="icon_bx">
+						<div class="icon_in">
+							<i class="ico_03"></i>
+						</div>
+					</div>
+					<div class="icon_text">공제자료</div>
+				</a>
+			</li>
+			<li>
+				<a href="#" role="button">
+					<div class="icon_bx">
+						<div class="icon_in">
+							<i class="ico_04"></i>
+						</div>
+					</div>
+					<div class="icon_text">예상세액</div>
+				</a>
+			</li>
+		</ul>
+		<div class="content_wrap data_upload">
+			<div class="content_title_box">
+				<h2 class="title"><strong>국세청 PDF 파일</strong>을<br>업로드 해주세요.</h2>
+				<p class="sub_desc">국세청PDF파일 업로드 시 자동으로 공제금액이 반영됩니다.</p>
+			</div>
+			<div class="empty_area">
+				<div class="empty_box">
+					<img src="/imgs/ctm/empty_upload.png" alt="">
+				</div>
+			</div>
+			<button type="button" class="button_primary"><span class="sp_ctm icon_download"></span>국세청PDF파일 업로드</button>
+			<div class="round_line_box">
+				<h3 class="title">국세청 PDF 파일은 어떻게 다운로드 받나요?</h3>
+				<p class="desc">국세청 손택스 앱 또는 국세청 홈택스<br>
+					(www.hometax.go.kr) 사이트에 접속하여<br>
+					조회발급 > 근로자 소득·세액공제 자료 조회를 통해<br>
+					PDF파일을 내려받습니다.</p>
+				<div class="button_box">
+					<button type="button" class="button_round blue">모바일 국세청 PDF 내려받기<span class="sp_ctm icon_arrow"></span></button>
+				</div>
+			</div>
+			<div class="link_area">
+				<a href="#" class="basic_link">손택스 앱이 설치되어있나요?</a>
+			</div>
+            <div class="footer_button_box">
+                <button type="button" class="btn_footer bg_gray">이전</button>
+                <button type="button" class="btn_footer bg_blue">다음</button>
+            </div>
+		</div>
+	</div>
+</div>
+<!-- [D] 마크업 테스트용 입니다. 개발 시 삭제해주세요. -->
+<script src="../js/jquery-latest.min.js"></script>
+<script>
+	$(function() {
+		$(".container").scroll(function () {
+			var scrollTop = $(this).scrollTop();
+			console.log(scrollTop);
+
+			if (scrollTop != 0) {
+				$(".header").addClass('b_shadow');
+			} else {
+				$(".header").removeClass('b_shadow');
+			}
+		})
+	});
+</script>
+</body>
+</html>

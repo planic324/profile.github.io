@@ -1,0 +1,24 @@
+@import "./common/_variables.scss";
+
+@mixin background($width, $height, $xpos, $ypos) {
+    background-image: url($imgurl);
+    width: $width;
+    height: $height;
+    background-position: $xpos/2 $ypos/2;
+    background-size: 100px 100px;
+    -webkit-background-size: 100px 100px;
+}
+@mixin clearfix {
+    &::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+@mixin ellipsis($line: 1) {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $line;
+}

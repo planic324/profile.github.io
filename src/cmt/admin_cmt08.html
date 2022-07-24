@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta id="viewport" name="viewport" content="width=1280">
+    <title>관리자 페이지 : 커뮤니티</title>
+    <link rel="stylesheet" type="text/css" href="/css/nanumsquare.css"> <link rel="stylesheet" type="text/css" href="../common/css/common.css"> <link rel="stylesheet" type="text/css" href="../lux/css/lux.css"> <link rel="stylesheet" type="text/css" href="css/cmt.css"> <link rel="stylesheet" type="text/css" href="../selene/css/selene.css"> <link rel="stylesheet" type="text/css" href="../diana/css/diana.css">
+</head>
+
+<body>
+    <link rel="stylesheet" type="text/css" href="/css/nanumsquare.css"> <link rel="stylesheet" type="text/css" href="../common/css/common.css"> <link rel="stylesheet" type="text/css" href="../lux/css/lux.css"> <link rel="stylesheet" type="text/css" href="css/cmt.css"> <link rel="stylesheet" type="text/css" href="../selene/css/selene.css"> <link rel="stylesheet" type="text/css" href="../diana/css/diana.css">
+    <div class="snbnext">
+        <div class="container">
+            <div class="containerin">
+                <div class="content">
+                    <div class="cmt admin dz_font">
+                        <!-- title 영역 -->
+                        <div class="admin_title">
+                            <h2>커뮤니티 관리</h2>
+                        </div>
+                        <!-- //title 영역 -->
+
+                        <!-- snb 영역 -->
+                        <div class="admin_snb">
+                            <!-- 최상단 영역 -->
+                            <div class="admin_snb_top">
+                                <button type="button" class="btn_admin_home">관리자 홈</button>
+                            </div>
+                            <!-- //최상단 영역 -->
+
+                            <!-- 리스트 영역 -->
+                            <ul class="admin_snb_list">
+
+                                <li class="active">
+                                    <button type="button" class="section_title type_content">커뮤니티 관리</button>
+                                    <ul class="category_list">
+                                        <li class="active"><a href="#" class="category">기본정보</a></li>
+                                        <li><a href="#" class="category">가입설정</a></li>
+                                    </ul>
+                                </li>
+                                <li class="type_none_arrow">
+                                    <button type="button" class="section_title type_folder">메뉴관리</button>
+                                </li>
+                                <li class="">
+                                    <button type="button" class="section_title type_check">콘텐츠 관리</button>
+                                    <ul class="category_list">
+                                        <li class=""><a href="#" class="category">게시글 관리</a></li>
+                                        <li><a href="#" class="category">댓글 관리</a></li>
+                                        <li><a href="#" class="category">금칙어 관리</a></li>
+                                    </ul>
+                                </li>
+                                <li class="">
+                                    <button type="button" class="section_title type_member">맴버 관리</button>
+                                    <ul class="category_list">
+                                        <li class=""><a href="#" class="category">전체맴버</a></li>
+                                        <li><a href="#" class="category">게시판관리자</a></li>
+                                        <li><a href="#" class="category">활동중지/강제탈퇴</a></li>
+                                        <li><a href="#" class="category">등급관리</a></li>
+                                    </ul>
+                                </li>
+                                <li class="">
+                                    <button type="button" class="section_title type_operation">커뮤니티 운영</button>
+                                    <ul class="category_list">
+                                        <li class=""><a href="#" class="category">메일/쪽지 보내기</a></li>
+                                        <li><a href="#" class="category">통계</a></li>
+                                    </ul>
+                                </li>
+                                <li class="">
+                                    <button type="button" class="section_title type_deco">꾸미기</button>
+                                    <ul class="category_list">
+                                        <li class=""><a href="#" class="category">대문 꾸미기</a></li>
+                                        <li><a href="#" class="category">홈 꾸미기</a></li>
+                                        <li><a href="#" class="category">스킨</a></li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+                            <!-- //리스트 영역 -->
+                        </div>
+                        <!-- //snb 영역 -->
+
+                        <!-- content 영역 -->
+                        <div class="admin_content type_division">
+                            <div class="division_right">
+                                <div class="core_box">
+                                    <h3>메인 꾸미기</h3>
+                                    <div class="section type_title">
+                                        <strong>마우스를 드래그하여 원하는 위치로 이동할 수 있습니다. (회색: 이동불가)</strong>
+                                    </div>
+                                    <div class="section type_edit">
+                                        <div class="dummy_box">
+                                            <div class="in_box type_title">
+                                                <strong>타이틀</strong>
+                                                <p>커뮤니티의 대표 이미지, 명칭정보가 표현됩니다.</p>
+                                            </div>
+                                        </div>
+                                        <div class="dummy_box">
+                                            <div class="in_box type_title">
+                                                <strong>상단 메뉴바</strong>
+                                                <p>커뮤니티 상단의 메뉴바 표현 영역입니다.</p>
+                                                <div class="select_color">
+                                                    <div class="LD_select open">
+                                                        <button type="button" class="selected_item">
+                                                            <span class="box_color type_blue"></span>
+                                                        </button>
+                                                        <div class="LD_select_resultbox">
+                                                            <ul>
+                                                                <!-- [D] 선택했을때 .selected 추가 -->
+                                                                <li class="selected">
+                                                                    <button type="button" class="resultitem"><span class="box_color type_blue"></span></button>
+                                                                </li>
+                                                                <li class="">
+                                                                    <button type="button" class="resultitem"><span class="box_color type_black"></span></button>
+                                                                </li>
+                                                                <li class="">
+                                                                    <button type="button" class="resultitem"><span class="box_color type_white"></span></button>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="dummy_box type_half">
+                                            <div class="half_box">
+                                                <div class="in_box type_login">
+                                                    <strong>로그인 정보</strong>
+                                                    <p>구독자 정보 표현 영역입니다.</p>
+                                                </div>
+                                                <div class="in_box type_cafe">
+                                                    <strong>카페 정보</strong>
+                                                    <p>카페 정보 표현 영역입니다.</p>
+                                                </div>
+                                                <div class="in_box type_search">
+                                                    <strong>검색</strong>
+                                                    <p>커뮤니티 게시글 검색영역입니다.</p>
+                                                    <div class="radio_box">
+                                                        <div class="LD_formbtn">
+                                                            <label>
+                                                                <input class="LDinput" type="radio" name="test_radio">
+                                                                <span class="icon"></span>
+                                                                <span class="label_text">메뉴영역</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="LD_formbtn">
+                                                            <label>
+                                                                <input class="LDinput" type="radio" name="test_radio">
+                                                                <span class="icon"></span>
+                                                                <span class="label_text">메인영역</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="in_box type_menu">
+                                                    <strong>메뉴</strong>
+                                                    <p>카페 정보 표현 영역입니다.</p>
+                                                </div>
+                                            </div>
+                                            <div class="half_box type_merge">
+                                                <div class="in_box type_gate">
+                                                    <strong>대문</strong>
+                                                    <p>
+                                                        커뮤니티 상단에 표현되는 영역입니다.<br>
+                                                        대문 꾸미기를 통해 다양한 정보를 추가할 수 있습니다.
+                                                    </p>
+                                                    <button type="button" class="btn_del_box"><span class="blind">삭제</span></button>
+                                                    <button type="button" class="btn_decoration"><span>대문 꾸미기</span></button>
+                                                </div>
+                                                <div class="in_box type_search">
+                                                    <strong>검색</strong>
+                                                    <p>
+                                                        커뮤니티 게시글 검색 영역입니다.
+                                                    </p>
+                                                    <div class="radio_box">
+                                                        <div class="LD_formbtn">
+                                                            <label>
+                                                                <input class="LDinput" type="radio" name="test_radio">
+                                                                <span class="icon"></span>
+                                                                <span class="label_text">메뉴영역</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="LD_formbtn">
+                                                            <label>
+                                                                <input class="LDinput" type="radio" name="test_radio">
+                                                                <span class="icon"></span>
+                                                                <span class="label_text">메인영역</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="in_box type_content">
+                                                    <strong>콘텐츠 영역</strong>
+                                                    <p>
+                                                        우측 콘텐츠를 선택해 메인에 포함된 콘텐츠를 관리합니다.<br>
+                                                        드래그 앤 드랍으로 위치 변경이 가능합니다.
+                                                    </p>
+                                                    <ul class="content_list">
+                                                        <li class="active">
+                                                            <a href="#" role="button">
+                                                                <span>신규 게시글</span>
+                                                                <div class="radio_box">
+                                                                    <div class="LD_formbtn">
+                                                                        <label>
+                                                                            <input class="LDinput" type="radio" name="test_radio">
+                                                                            <span class="icon"></span>
+                                                                            <span class="label_text">카드형</span>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="LD_formbtn">
+                                                                        <label>
+                                                                            <input class="LDinput" type="radio" name="test_radio">
+                                                                            <span class="icon"></span>
+                                                                            <span class="label_text">리스트형</span>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                                <button type="button" class="btn_del">
+                                                                    <span class="blind">삭제</span>
+                                                                </button>
+                                                            </a>
+                                                        </li>
+                                                        <li class="active moveitem" style="top: 120px;">
+                                                            <a href="#" role="button">
+                                                                <span>신규 게시글</span>
+                                                                <div class="radio_box">
+                                                                    <div class="LD_formbtn">
+                                                                        <label>
+                                                                            <input class="LDinput" type="radio" name="test_radio">
+                                                                            <span class="icon"></span>
+                                                                            <span class="label_text">카드형</span>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="LD_formbtn">
+                                                                        <label>
+                                                                            <input class="LDinput" type="radio" name="test_radio">
+                                                                            <span class="icon"></span>
+                                                                            <span class="label_text">리스트형</span>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                                <button type="button" class="btn_del">
+                                                                    <span class="blind">삭제</span>
+                                                                </button>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#" role="button">
+                                                                <span>조회수 게시글</span>
+                                                                <div class="radio_box">
+                                                                    <div class="LD_formbtn">
+                                                                        <label>
+                                                                            <input class="LDinput" type="radio" name="test_radio">
+                                                                            <span class="icon"></span>
+                                                                            <span class="label_text">카드형</span>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="LD_formbtn">
+                                                                        <label>
+                                                                            <input class="LDinput" type="radio" name="test_radio">
+                                                                            <span class="icon"></span>
+                                                                            <span class="label_text">리스트형</span>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                                <button type="button" class="btn_del">
+                                                                    <span class="blind">삭제</span>
+                                                                </button>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#" role="button">
+                                                                <span>조회수 게시글</span>
+                                                                <div class="radio_box">
+                                                                    <div class="LD_formbtn">
+                                                                        <label>
+                                                                            <input class="LDinput" type="radio" name="test_radio">
+                                                                            <span class="icon"></span>
+                                                                            <span class="label_text">카드형</span>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="LD_formbtn">
+                                                                        <label>
+                                                                            <input class="LDinput" type="radio" name="test_radio">
+                                                                            <span class="icon"></span>
+                                                                            <span class="label_text">리스트형</span>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                                <button type="button" class="btn_del">
+                                                                    <span class="blind">삭제</span>
+                                                                </button>
+                                                            </a>
+                                                        </li>
+                                                        <li class="line">&nbsp;</li>
+                                                        <li>
+                                                            <a href="#" role="button">
+                                                                <span>조회수 게시글</span>
+                                                                <div class="radio_box">
+                                                                    <div class="LD_formbtn">
+                                                                        <label>
+                                                                            <input class="LDinput" type="radio" name="test_radio">
+                                                                            <span class="icon"></span>
+                                                                            <span class="label_text">카드형</span>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="LD_formbtn">
+                                                                        <label>
+                                                                            <input class="LDinput" type="radio" name="test_radio">
+                                                                            <span class="icon"></span>
+                                                                            <span class="label_text">리스트형</span>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                                <button type="button" class="btn_del">
+                                                                    <span class="blind">삭제</span>
+                                                                </button>
+                                                            </a>
+                                                        </li>
+
+
+                                                    </ul>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="right_box">
+                                    <h3>콘텐츠 선택</h3>
+                                    <div class="section type_right_box">
+                                        <ul class="content_list">
+                                            <li>
+                                                <a href="#">
+                                                    <button type="button" class="btn_check"><span class="blind">체크</span></button>
+                                                    <div class="content_info">
+                                                        <strong>대문</strong>
+                                                        <p>
+                                                            커뮤니티 메인 상단에 표현되는<br>
+                                                            대문영역을 통해 다양한 정보 표현
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="select">
+                                                <a href="#">
+                                                    <button type="button" class="btn_check"><span class="blind">체크</span></button>
+                                                    <div class="content_info">
+                                                        <strong>공지 게시글</strong>
+                                                        <p>
+                                                            공지로 등록된 게시글 정보를<br>
+                                                            확인할 수 있는 위젯
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <button type="button" class="btn_check"><span class="blind">체크</span></button>
+                                                    <div class="content_info">
+                                                        <strong>신규 게시글</strong>
+                                                        <p>
+                                                            최신 등록 게시글 정보를<br>
+                                                            확인할 수 있는 위젯
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <button type="button" class="btn_check"><span class="blind">체크</span></button>
+                                                    <div class="content_info">
+                                                        <strong>신규 게시글</strong>
+                                                        <p>
+                                                            최신 등록 게시글 정보를<br>
+                                                            확인할 수 있는 위젯
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <button type="button" class="btn_check"><span class="blind">체크</span></button>
+                                                    <div class="content_info">
+                                                        <strong>신규 게시글</strong>
+                                                        <p>
+                                                            최신 등록 게시글 정보를<br>
+                                                            확인할 수 있는 위젯
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //content 영역 -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/jquery-latest.min.js"></script>
+    <script src="../js/jquery.include.js"></script>
+    <script src="../js/slick.min.js"></script>
+    <script type="text/javascript">
+        // 마크업 테스트용
+        $(function() {
+            // 서브해더 마우스오버 이벤트
+            $('.tabs_wrap>li').hover(function(e) {
+                $(this).toggleClass('open');
+                e.preventDefault();
+            });
+            // snb 아코디언 영역
+            $('.admin_snb_list .section_title').click(function(e) {
+                $(this).parents('li').toggleClass('active');
+            });
+        });
+        // 검색영역 펼치기/접기
+        $('.dynamic_searchbox .begin_schbtn, .dynamic_searchbox .delbtn').click(function() {
+            $(this).parents('.dynamic_searchbox').toggleClass('open');
+        })
+
+        // 검색영역 셀렉트박스
+        $('.dynamic_searchbox .selbtn').click(function() {
+            $(this).parents('.selectbox').toggleClass('open');
+        })
+
+        //슬릭 영역
+        $('.img_slick_box').slick();
+    </script>
+</body>
+
+</html>

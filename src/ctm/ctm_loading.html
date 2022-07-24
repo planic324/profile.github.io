@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>연말정산</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi">
+<link rel="stylesheet" type="text/css" href="https://static.wehago.com/css/nanumsquare.css">
+<link rel="stylesheet" type="text/css" href="css/ctm.css">
+</head>
+<body>
+<div id="wrap">
+    <!-- [D] 딤드/로딩 텍스트 영역 활성화 .active 추가 -->
+    <div class="ctm_dim active">
+        <div class="dim_alert_box ">
+            <div class="LS_spinner2">
+                <div class="loading"></div>  
+            </div>
+            <div class="text">파일 다운로드 중입니다.<br>잠시만 기다려주세요.</div>
+        </div>
+    </div>
+</div>
+<!-- [D] 마크업 테스트용 입니다. 개발 시 삭제해주세요. -->
+<script src="../js/jquery-latest.min.js"></script>
+<script>
+	$(function(){
+		// 헤더 보더
+		$('.container').scroll(function(){
+			var sTop = $('.container').scrollTop();
+			console.log($('.container').scrollTop());
+			if(sTop != 0){
+				$('.header').addClass('b_shadow');
+			} else {
+				$('.header').removeClass('b_shadow');
+			}
+		}); 
+
+
+	});
+</script>
+</body>
+</html>

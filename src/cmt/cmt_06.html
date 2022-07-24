@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta id="viewport" name="viewport" content="width=1280">
+    <title>커뮤니티</title>
+    <link rel="stylesheet" type="text/css" href="/css/nanumsquare.css"> <link rel="stylesheet" type="text/css" href="../common/css/common.css"> <link rel="stylesheet" type="text/css" href="../lux/css/lux.css"> <link rel="stylesheet" type="text/css" href="css/cmt.css"> <link rel="stylesheet" type="text/css" href="../selene/css/selene.css"> <link rel="stylesheet" type="text/css" href="../diana/css/diana.css">
+    <!-- css 충돌방지용 추가 -->
+    <link rel="stylesheet" type="text/css" href="/css/svc/cmt_admin.css">
+    <!-- css //충돌방지용 추가 -->
+</head>
+
+<body>
+    <link rel="stylesheet" type="text/css" href="/css/nanumsquare.css"> <link rel="stylesheet" type="text/css" href="../common/css/common.css"> <link rel="stylesheet" type="text/css" href="../lux/css/lux.css"> <link rel="stylesheet" type="text/css" href="css/cmt.css"> <link rel="stylesheet" type="text/css" href="../selene/css/selene.css"> <link rel="stylesheet" type="text/css" href="../diana/css/diana.css">
+    <div class="snbnext">
+        <div class="container">
+            <div class="containerin">
+                <div class="content">
+                    <div class="cmt admin dz_font">
+                        <!-- title 영역 -->
+                        <div class="admin_title">
+                            <h2>WE 커뮤니티</h2>
+                        </div>
+                        <!-- //title 영역 -->
+
+                        <!-- content 영역 -->
+                        <!-- [D] 풀 사이즈 컨텐츠 : cmt_fullsize -->
+                        <!-- [D] 가운데 정렬 : type_content_mid -->
+                        <div class="admin_content type_content_mid">
+                            <h3>커뮤니티 만들기</h3>
+                            <div class="section type_form">
+                                <div class="inner_box">
+                                    <p class="element_title">
+                                        <strong>커뮤니티 이름 <span class="essential">*<em class="blind">필수</em></span></strong>
+                                    </p>
+                                    <div class="element_content type_text">
+                                        <div class="input_box">
+                                            <input type="text" value="" placeholder="커뮤니티 이름을 입력하세요.">
+                                        </div>
+                                        <div class="sub_text_box">
+                                            <span class="sub_text color_gray fltlft">한글, 영문, 숫자, 기호만 입력하세요. <em>(0/60)</em></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="inner_box">
+                                    <p class="element_title">
+                                        <strong>주소<span class="essential">*<em class="blind">필수</em></span></strong>
+                                    </p>
+                                    <div class="element_content type_url">
+                                        <div class="clearfix">
+                                            <p class="text fltlft">https://community.wehago.com/</p>
+                                            <div class="input_box fltlft">
+                                                <input type="text" value="" placeholder="설정할 커뮤니티에 주소를 입력하세요.">
+                                            </div>
+                                        </div>
+                                        <div class="sub_text_box">
+                                            <span class="sub_text color_gray">영문, 하이픈(-), 마침표(.) 사용이 가능합니다. <em>(0/20)</em></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="inner_box">
+                                    <p class="element_title">
+                                        <strong>
+                                            공개여부
+                                            <span class="essential">*<em class="blind">필수</em></span>
+                                        </strong>
+                                    </p>
+                                    <div class="element_content">
+                                        <div class="radio_box">
+                                            <div class="LD_formbtn">
+                                                <label>
+                                                    <input class="LDinput" type="radio" name="test_radio">
+                                                    <span class="icon"></span>
+                                                    <span class="label_text">공개</span>
+                                                </label>
+                                            </div>
+                                            <div class="LD_formbtn" style="margin-left: 14px;">
+                                                <label>
+                                                    <input class="LDinput" type="radio" name="test_radio">
+                                                    <span class="icon"></span>
+                                                    <span class="label_text">비공개</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="sub_text_box">
+                                            <span class="sub_text color_gray">커뮤니티 검색 및 카페랭킹 산정 대상에 포함여부를 설정합니다.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="inner_box">
+                                    <p class="element_title">
+                                        <strong>
+                                            구독방식
+                                            <span class="essential">*<em class="blind">필수</em></span>
+                                        </strong>
+                                    </p>
+                                    <div class="element_content">
+                                        <div class="radio_box">
+                                            <div class="LD_formbtn">
+                                                <label>
+                                                    <input class="LDinput" type="radio" name="test_radio">
+                                                    <span class="icon"></span>
+                                                    <span class="label_text">바로 구독</span>
+                                                </label>
+                                            </div>
+                                            <div class="LD_formbtn" style="margin-left: 14px;">
+                                                <label>
+                                                    <input class="LDinput" type="radio" name="test_radio">
+                                                    <span class="icon"></span>
+                                                    <span class="label_text">운영자 승인 후 구독</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="sub_text_box">
+                                            <span class="sub_text color_gray">사용자들이 커뮤니티를 구독(멤버로 가입)하는 방식을 설정합니다.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="inner_box">
+                                    <p class="element_title">
+                                        <strong>
+                                            맴버 공개여부
+                                            <span class="essential">*<em class="blind">필수</em></span>
+                                        </strong>
+                                    </p>
+                                    <div class="element_content">
+                                        <div class="radio_box">
+                                            <div class="LD_formbtn">
+                                                <label>
+                                                    <input class="LDinput" type="radio" name="test_radio">
+                                                    <span class="icon"></span>
+                                                    <span class="label_text">공개</span>
+                                                </label>
+                                            </div>
+                                            <div class="LD_formbtn" style="margin-left: 14px;">
+                                                <label>
+                                                    <input class="LDinput" type="radio" name="test_radio">
+                                                    <span class="icon"></span>
+                                                    <span class="label_text">가입한 멤버만 공개</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="inner_box">
+                                    <p class="element_title">
+                                        <strong>
+                                            카테고리
+                                            <span class="essential">*<em class="blind">필수</em></span>
+                                        </strong>
+                                    </p>
+                                    <div class="element_content">
+                                        <div class="category_box type_half">
+                                            <div class="half_box">
+                                                <div class="LD_select" style="width:100%;">
+                                                    <button type="button" class="selected_item">대분류를 선택하세요</button>
+                                                    <div class="LD_select_resultbox">
+                                                        <ul>
+                                                            <!-- [D] 선택했을때 .selected 추가 -->
+                                                            <li class="selected">
+                                                                <button type="button" class="resultitem">명칭</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="resultitem">명칭명칭명칭명칭명칭명칭명칭명칭명칭명칭명칭</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="resultitem">명칭</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="resultitem">명칭</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="resultitem">명칭</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="resultitem">명칭</button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="half_box">
+                                                <div class="LD_select" style="width:100%;">
+                                                    <button type="button" class="selected_item">소분류를 선택하세요.</button>
+                                                    <div class="LD_select_resultbox">
+                                                        <ul>
+                                                            <!-- [D] 선택했을때 .selected 추가 -->
+                                                            <li class="selected">
+                                                                <button type="button" class="resultitem">명칭</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="resultitem">명칭명칭명칭명칭명칭명칭명칭명칭명칭명칭명칭</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="resultitem">명칭</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="resultitem">명칭</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="resultitem">명칭</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="resultitem">명칭</button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="inner_box">
+                                    <p class="element_title">
+                                        <strong>
+                                            소개글
+                                            <span class="essential">*<em class="blind">필수</em></span>
+                                        </strong>
+                                    </p>
+                                    <div class="element_content type_text">
+                                        <div class="input_box">
+                                            <input type="text" value="" placeholder="소개글을 입력하세요.">
+                                        </div>
+                                        <div class="sub_text_box">
+                                            <span class="sub_text color_gray fltlft">커뮤니티 소개에 사용될 대표 소개문구를 입력하세요.  <em>(0/30)</em></span>
+                                        </div>
+                                    </div>
+                                    <div class="element_content">
+                                        <div class="LUX_basic_textarea">
+                                            <!-- 입력창에 포커스 - inpbx class="on" 추가  -->
+                                             <div class="inpbx">
+                                                 <p class="placeholder">게시판 이름을 입력하세요.</p>
+                                                 <!-- 행간과 textarea padding 값 변경 가능-->
+                                                 <textarea id="undefined-HintText1" rows="5" cols="1" class="field_inp" style="width:100%;height:100px">                                                 </textarea>
+                                             </div>
+                                        </div>
+                                        <div class="sub_text_box">
+                                            <span class="sub_text color_gray">커뮤니티 메인, 검색결과 등 커뮤니티 리스트에 반영될 소개글을 입력하세요.<em>(0/100)</em></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="inner_box">
+                                    <p class="element_title">
+                                        <strong>커뮤니티 검색어</strong>
+                                    </p>
+                                    <div class="element_content">
+                                        <div class="list_area">
+                                            <ul class="list_box">
+                                                <li>
+                                                    <div class="LD_tag hasdel ">
+                                                        <span class="tag_name">태그</span>
+                                                        <button type="button" class="tag_delbtn"><span class="blind">삭제</span></button>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="LD_tag hasdel ">
+                                                        <span class="tag_name">태그</span>
+                                                        <button type="button" class="tag_delbtn"><span class="blind">삭제</span></button>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="LD_tag hasdel ">
+                                                        <span class="tag_name">태그</span>
+                                                        <button type="button" class="tag_delbtn"><span class="blind">삭제</span></button>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="LD_tag hasdel ">
+                                                        <span class="tag_name">태그</span>
+                                                        <button type="button" class="tag_delbtn"><span class="blind">삭제</span></button>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="LD_tag hasdel ">
+                                                        <span class="tag_name">태그태그태그</span>
+                                                        <button type="button" class="tag_delbtn"><span class="blind">삭제</span></button>
+                                                    </div>
+                                                </li>
+
+                                            </ul>
+                                            <input type="text" class="type_none_style" value="" placeholder="태그명을 입력하세요.">
+                                        </div>
+                                        <div class="sub_text_box">
+                                            <span class="sub_text color_gray">커뮤니티를 검색할 때 사용할 키워드를 등록하세요. (최대 10개의 키워드 동록이 가능합니다.)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="inner_box">
+                                    <p class="element_title">
+                                        <strong>대표 이미지</strong>
+                                    </p>
+                                    <div class="element_content">
+                                        <div class="element_sub_title">
+                                            <span>커뮤니티 대표 이미지</span>
+                                            <span class="color_gray">(150px * 150px/10MB 미만)</span>
+                                        </div>
+                                        <div class="LUX_filezone type2">
+                                            <div class="file_bx">
+                                                <!-- [D] 기본 상태 -->
+                                                <div class="default">
+                                                    <p>
+                                                        <span class="sp_lux" style="width:41px;height:46px;vertical-align:middle;background-position:-311px -663px"></span>
+                                                        <span class="txt">
+                                                            이미지 파일을 여기로 드래그 하거나,<br>
+                                                            파일찾기/스토리지에서 찾기를 눌러 첨부하세요.
+                                                        </span>
+                                                    </p>
+                                                </div>
+                                                <!-- //[D] 기본 상태 -->
+                                            </div>
+                                            <div class="file_btnbx">
+                                                <button type="button" class="LUX_basic_btn Default basic"><span class="sp_lux" style="width:11px;height:12px;padding-right:3px;vertical-align:middle;background-position:-232px -544px"></span><span style="vertical-align:middle;">로컬파일업로드</span></button>
+                                                <button type="button" class="LUX_basic_btn Default basic" style="margin-left:-1px"><span class="sp_lux" style="width:17px;height:12px;padding-right:3px;vertical-align:middle;background-position:-253px -544px"></span><span style="vertical-align:middle;">스토리지파일선택</span></button>
+                                            </div>
+                                        </div>
+                                        <div class="sub_text_box">
+                                            <span class="sub_text color_gray">커뮤니티 메인 상단 및 커뮤니티를 대표하여 사용될 이미지를 등록하세요.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="inner_box">
+                                    <p class="element_title">
+                                        <strong>스킨</strong>
+                                    </p>
+                                    <div class="element_content">
+                                        <div class="skin_box">
+                                            <div class="img_box">
+                                                <img src="https://via.placeholder.com/278x160/ff0000" alt="">
+                                                <button type="button">스킨 변경하기</button>
+                                                <div class="dim"></div>
+                                            </div>
+                                            <div class="text_box">
+                                                <strong>회사게시판</strong>
+                                                <ul class="tag_list">
+                                                    <li>#기본형</li>
+                                                    <li>#반응형</li>
+                                                    <li>#위젯지원</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="sub_text_box">
+                                            <span class="sub_text color_gray">원하는 스타일의 커뮤니티 스킨을 선택하세요. (선택한 스킨은 추후 커뮤니티관리를 통해 수정 가능합니다.)</span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section type_agree">
+                                <ul class="select_list">
+                                    <li class="select">
+                                        <a href="#" class="btn_agree">
+                                            <span class="btn_check"></span>
+                                            <strong>WEHAGO 커뮤니티 운영자의 개인정보보호 의무에 대해 확인하였으며 동의합니다.</strong>
+                                        </a>
+                                        <a href="#" class="link_sub_title">
+                                            <span>개인정보보호 의무 확인하기</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="btn_agree">
+                                            <span class="btn_check"></span>
+                                            <strong>WEHAGO 커뮤니티 서비스 약관을 확인하고 동의합니다.</strong>
+                                        </a>
+                                        <a href="#" class="link_sub_title">
+                                            <span>WEHAGO 커뮤니티 서비스 이용약관 확인하기</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="section txtcnt">
+                                <button type="button" class="LD_btn" style="margin-right:4px">취소</button><button type="button" class="LD_btn disabled2" style="margin-right:4px" disabled="">커뮤니티 만들기</button><button type="button" class="LD_btn c_blue">커뮤니티 만들기</button>
+                            </div>
+
+                        </div>
+                        <!-- //content 영역 -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/jquery-latest.min.js"></script>
+    <script src="../js/jquery.include.js"></script>
+    <script src="../js/slick.min.js"></script>
+    <script type="text/javascript">
+        // 마크업 테스트용
+        $(function() {
+
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta id="viewport" name="viewport" content="width=1280">
+<title>커뮤니티</title>
+<link rel="stylesheet" type="text/css" href="/css/nanumsquare.css">
+<link rel="stylesheet" type="text/css" href="../common/css/common.css">
+<link rel="stylesheet" type="text/css" href="../lux/css/lux.css">
+<link rel="stylesheet" type="text/css" href="css/cmt.css">
+<link rel="stylesheet" type="text/css" href="../selene/css/selene.css">
+<link rel="stylesheet" type="text/css" href="../diana/css/diana.css">
+</head>
+<body>
+    
+    <div class="snbnext">
+        <div class="container">
+            <div class="containerin">
+                <div class="content">
+                    <div class="cmt dzt_font">
+                        <div class="LS_subheader see_thru">
+                            <div class="subheader_centerwrap">
+                                <a href="#"><h1 class="sub_tit">WE커뮤니티</h1></a>
+                                <div class="sub_menu">
+                                    <div class="order_btn">
+                                        <button type="button">
+                                            <span class="sp_selene">메뉴</span>
+                                        </button>
+                                    </div>
+                                    <ul class="tabs_wrap">
+                                        <!-- [D] li 테그에 hover, focus 되면 li에 open 클래스 추가 -->
+                                        <li class="no_depth open">
+                                            <a href="#">홈</a>
+                                        </li>
+                                        <li class="no_depth">
+                                            <a href="#">피드</a>
+                                        </li>
+                                        <li class="no_depth">
+                                            <a href="#">커뮤니티</a>
+                                        </li>
+                                        <li class="no_depth">
+                                            <a href="#">전문가</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mainbg v_search">
+                            <div class="mainbox">
+                                <h1>새로운 소통의 시작, WE커뮤니티</h1>    
+                                <!-- [D] 검색하기 버튼 눌렀을때 .open 추가 -->
+                                <div class="dynamic_searchbox open">
+                                    <button type="button" class="begin_schbtn"><span class="blind">검색하기</span></button>
+                                    <div class="inputbox">
+                                        <input type="input" title="검색어 입력" placeholder="검색어를 입력하세요">
+                                        <button type="button" class="delbtn"><span class="blind">검색어 삭제</span></button>
+                                    </div>
+                                    <!-- [D] .selbtn 클릭시 open 추가 -->
+                                    <div class="selectbox">
+                                        <button type="button" class="selbtn">커뮤니티</button>
+                                        <ul class="sellist">
+                                            <li>
+                                                <button type="button" class="listitem">전체</button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="listitem">커뮤니티</button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="listitem">게시글</button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="listitem">전문가</button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="con_search">
+                            <div class="LD_tabs">
+                                <ul class="LDtabs_list">
+                                    <!-- [D] 선택된 메뉴는 .selected 추가 -->
+                                    <li>
+                                        <button type="button" class="LDtabs_item">전체</button>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="LDtabs_item">커뮤니티</button>
+                                    </li>
+                                    <li class="selected">
+                                        <button type="button" class="LDtabs_item">게시글</button>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="LDtabs_item">전문가</button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="board_wrap has_details">
+                                <div class="sch_details_box">
+                                    <h4>상세검색</h4>
+                                    <div class="filterbox">
+                                        <div class="filter_sec">
+                                            <strong>정렬</strong>
+                                            <div class="btnlist">
+                                                <button type="button" class="LD_btn s_medium">정확도</button>
+                                                <button type="button" class="LD_btn s_medium selected">최신</button>
+                                            </div>
+                                        </div>
+                                        <div class="filter_sec">
+                                            <strong>정렬</strong>
+                                            <div class="btnlist">
+                                                <button type="button" class="LD_btn s_medium">전체</button>
+                                                <button type="button" class="LD_btn s_medium selected">1년</button>
+                                                <button type="button" class="LD_btn s_medium">6개월</button>
+                                                <button type="button" class="LD_btn s_medium">1개월</button>
+                                                <button type="button" class="LD_btn s_medium">1일</button>
+                                                <button type="button" class="LD_btn s_medium">사용자지정</button>
+                                            </div>
+                                            <div class="callist">
+                                                <!-- [D] datepicker 컴포넌트 -->
+                                                <div class="LD_datepicker">
+                                                    <div class="inputbox">
+                                                        <!-- [D] 선택된 날짜에 .selected 추가 -->
+                                                        <span class="date selected">2021</span><span class="date">02</span><span class="date">02</span>
+                                                        <button type="button" class="calendar_btn"><span class="blind">캘린더 열기</span></button>
+                                                    </div>
+                                                </div><span class="LD_datepicker_calendardash">~</span><div class="LD_datepicker" style="width:164px">
+                                                    <div class="inputbox">
+                                                        <!-- [D] 선택된 날짜에 .selected 추가 -->
+                                                        <span class="date selected">2021</span><span class="date">02</span><span class="date">02</span>
+                                                        <button type="button" class="calendar_btn"><span class="blind">캘린더 열기</span></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="filter_sec">
+                                            <strong>대상</strong>
+                                            <div class="btnlist">
+                                                <button type="button" class="LD_btn s_medium">제목+본문</button>
+                                                <button type="button" class="LD_btn s_medium selected">제목</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sec_bdrecently">
+                                    <div class="titlebox">
+                                        <h3>게시글 <em>100</em></h3>
+                                    </div>
+                                    <div class="listbox">
+                                        <ul class="basiclist clearfix search_board">
+                                            <li>
+                                                <a href="#" class="listitem">
+                                                    <div class="thumimg" style="background-image:url(https://static.wehago.com/imgs/dummy/@main_bg_test_06.png)"><span class="blind">썸네일 이미지</span></div>
+                                                    <dl>
+                                                        <div class="writer">
+                                                            <dt class="blind">작성자</dt><dd class="ellipsis writer_name">디자인프레스</dd><dt class="blind">작성일</dt><dd class="writer_date">2020.12.31 13:00</dd>
+                                                        </div>
+                                                        <div>
+                                                            <dt class="blind">제목</dt>
+                                                            <dd class="name ellipsis">FLO 개취의 음악스트리밍 플로 이벤트 십분활용하기! FLO 개취의 음악스트리밍 플로 이벤트 십분활용하기!FLO 개취의 음악스트리밍 플로 이벤트 십분활용하기!FLO 개취의 음악스트리밍 플로 이벤트 십분활용하기!FLO 개취의 음악스트리밍 플로 이벤트 십분활용하기!FLO 개취의 음악스트리밍 플로 이벤트 십분활용하기!FLO 개취의 음악스트리밍 플로 이벤트 십분활용하기!FLO 개취의 음악스트리밍 플로 이벤트 십분활용하기!FLO 개취의 음악스트리밍 플로 이벤트 십분활용하기!</dd>
+                                                        </div>
+                                                        <div>
+                                                            <dt class="blind">내용</dt>
+                                                            <dd class="desc ellipsis">컴퓨터를 하다보면 사용하는 프로그램 하단에 바로가기 아이콘을 만들어놓고 사용을 합니다. 그런데 아이콘을 너무 만들어 놓다보면 표시줄컴퓨터를 하다보면 사용하는 프로그램 하단에 바로가기 아이콘을 만들어놓고 사용을 합니다. 그런데 아이콘을 너무 만들어 놓다보면 표시줄컴퓨터를 하다보면 사용하는 프로그램 하단에 바로가기 아이콘을 만들어놓고 사용을 합니다. 그런데 아이콘을 너무 만들어 놓다보면 표시줄</dd>
+                                                        </div>
+                                                        <div class="count ellipsis">
+                                                            <dt>조회수</dt><dd>111</dd><dt>좋아요</dt><dd>999,999</dd><dt>댓글</dt><dd>30</dd>
+                                                        </div>
+                                                    </dl>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="listitem">
+                                                    <div class="thumimg" style="background-image:url(https://static.wehago.com/imgs/dummy/@main_bg_test_06.png)"><span class="blind">썸네일 이미지</span></div>
+                                                    <dl>
+                                                        <div class="writer">
+                                                            <dt class="blind">작성자</dt><dd class="ellipsis writer_name">디자인프레스</dd><dt class="blind">작성일</dt><dd class="writer_date">2020.12.31 13:00</dd>
+                                                        </div>
+                                                        <div>
+                                                            <dt class="blind">제목</dt>
+                                                            <dd class="name ellipsis">FLO 개취의 음악스트리밍 플로 이벤트 십분활용하기!</dd>
+                                                        </div>
+                                                        <div>
+                                                            <dt class="blind">내용</dt>
+                                                            <dd class="desc ellipsis">컴퓨터를 하다보면 사용하는 프로그램 하단에 바로가기 아이콘을 만들어놓고 사용을 합니다.</dd>
+                                                        </div>
+                                                        <div class="count ellipsis">
+                                                            <dt>조회수</dt><dd>111</dd><dt>좋아요</dt><dd>999,999</dd><dt>댓글</dt><dd>30</dd>
+                                                        </div>
+                                                    </dl>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <!-- [D] 썸네일 없을경우 .no_thum 추가 -->
+                                                <a href="#" class="listitem no_thum">
+                                                    <dl>
+                                                        <div class="writer">
+                                                            <dt class="blind">작성자</dt><dd class="ellipsis writer_name">디자인프레스</dd><dt class="blind">작성일</dt><dd class="writer_date">2020.12.31 13:00</dd>
+                                                        </div>
+                                                        <div>
+                                                            <dt class="blind">제목</dt>
+                                                            <dd class="name ellipsis">FLO 개취의 음악스트리밍 플로 이벤트 십분활용하기!</dd>
+                                                        </div>
+                                                        <div>
+                                                            <dt class="blind">내용</dt>
+                                                            <dd class="desc ellipsis">컴퓨터를 하다보면 사용하는 프로그램 하단에 바로가기 아이콘을 만들어놓고 사용을 합니다.</dd>
+                                                        </div>
+                                                        <div class="count ellipsis">
+                                                            <dt>조회수</dt><dd>111</dd><dt>좋아요</dt><dd>999,999</dd><dt>댓글</dt><dd>30</dd>
+                                                        </div>
+                                                    </dl>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="../js/jquery-latest.min.js"></script>
+<script src="../js/jquery.include.js"></script>
+<script type="text/javascript">
+// 마크업 테스트용
+    $(function(){
+        // 서브해더 마우스오버 이벤트 
+        $('.tabs_wrap>li').hover(function(e) {
+            $(this).toggleClass('open');
+            e.preventDefault();
+        });
+    });
+    // 검색영역 펼치기/접기
+    $('.dynamic_searchbox .begin_schbtn, .dynamic_searchbox .delbtn').click(function() {
+        $(this).parents('.dynamic_searchbox').toggleClass('open');
+    })
+
+    // 검색영역 셀렉트박스
+    $('.dynamic_searchbox .selbtn').click(function() {
+        $(this).parents('.selectbox').toggleClass('open');
+    })
+</script>
+</body>
+</html>

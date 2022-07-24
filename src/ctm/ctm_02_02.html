@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>연말정산</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi">
+<link rel="stylesheet" type="text/css" href="https://static.wehago.com/css/nanumsquare.css">
+<link rel="stylesheet" type="text/css" href="css/ctm.css">
+</head>
+<body>
+<div id="wrap">
+	<div class="header">
+		<h1 class="ellipsis">종전(납세)근무지 상세조회</h1>
+		<button type="button" class="btn_close"><span class="blind">이전</span></button>
+	</div>
+	<div class="container">
+		<div class="content_wrap previous_co detail">
+			<div class="top_info_zone">
+				<div class="info_box">
+					<div class="title_box">
+						<div class="title">
+							<span class="label_border white">종전</span>
+							주식회사 더존상사
+						</div>
+					</div>
+					<dl class="info_list">
+						<div class="row">
+							<dt>사업자번호</dt>
+							<dd>123-12-12345</dd>
+						</div>
+						<div class="row">
+							<dt>근무기간</dt>
+							<dd>2021.01.01 ~ 2021.03.20</dd>
+						</div>
+						<div class="row">
+							<dt>감면기간</dt>
+							<dd>2021.01.01 ~ 2021.03.20</dd>
+						</div>
+                        <!-- [D] 상단 border 추가 .type_boder -->
+                        <div class="row type_border">
+							<dt>감면기간</dt>
+							<dd>2021.01.01 ~ 2021.03.20</dd>
+						</div>
+                        <div class="row">
+							<dt>감면기간</dt>
+							<dd>2021.01.01 ~ 2021.03.20</dd>
+						</div>
+                        <div class="row">
+							<dt>감면기간</dt>
+							<dd>2021.01.01 ~ 2021.03.20</dd>
+						</div>
+					</dl>
+				</div>
+			</div>
+            <div class="section">
+                <div class="group">
+                    <div class="group_title v2">
+                        <p>소득내역</p>
+                    </div>
+                    <div class="yearend_resultwrap">
+                        <div class="topbox">
+                            <button type="button" class="btn_calprev"><span class="blind">이전</span></button><!--
+                            --><div class="tit_text">
+                                <h2>2021 연말정산</h2><button type="button" class="btn_cal"><span class="blind">연도선택</span></button>
+                            </div><button type="button" class="btn_calnext"><span class="blind">다음</span></button>
+                        </div>
+                    </div>
+                    <div class="group_content">
+                        <div class="accodion_box">
+                            <div class="accodion_title">
+                                <div class="user_info_box">
+                                    <p class="name">급여계</p>
+                                </div>
+                                <div class="cont_box">
+                                    <p class="cont"><em>999,999,999</em>원</p>
+                                </div>
+                                <button type="button" class="btn_accodion"></button>
+                            </div>
+                            <div class="accodion_content">
+                                <dl class="submit_list">
+                                    <div class="item">
+                                        <dt>일반보장성보험</dt>
+                                        <dd><em>3,500,000</em>원</dd>
+                                    </div>
+                                    <div class="item">
+                                        <dt>장애인보장성보험</dt>
+                                        <dd><em>500,000</em>원</dd>
+                                    </div>
+                                    
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="accodion_box">
+                            <div class="accodion_title">
+                                <div class="user_info_box">
+                                    <p class="name">비과세계</p>
+                                </div>
+                                <div class="cont_box">
+                                    <p class="cont"><em>999,999,999</em>원</p>
+                                </div>
+                                <button type="button" class="btn_accodion"></button>
+                            </div>
+                            <div class="accodion_content">
+                                <dl class="submit_list">
+                                    <div class="item">
+                                        <dt>일반보장성보험</dt>
+                                        <dd><em>3,500,000</em>원</dd>
+                                    </div>
+                                    <div class="item">
+                                        <dt>장애인보장성보험</dt>
+                                        <dd><em>500,000</em>원</dd>
+                                    </div>
+                                    
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="accodion_box">
+                            <div class="accodion_title">
+                                <div class="user_info_box">
+                                    <p class="name">비과세계</p>
+                                </div>
+                                <div class="cont_box gray">
+                                    <p class="cont"><em>0</em>원</p>
+                                </div>
+                                <button type="button" class="btn_accodion"></button>
+                            </div>
+                            <div class="accodion_content">
+                                <dl class="submit_list">
+                                    <div class="item">
+                                        <dt>일반보장성보험</dt>
+                                        <dd><em>3,500,000</em>원</dd>
+                                    </div>
+                                    <div class="item">
+                                        <dt>장애인보장성보험</dt>
+                                        <dd><em>500,000</em>원</dd>
+                                    </div>
+                                    
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+		</div>
+	</div>
+</div>
+<!-- [D] 마크업 테스트용 입니다. 개발 시 삭제해주세요. -->
+<script src="../js/jquery-latest.min.js"></script>
+<script type="text/javascript" src="../js/slick.min.js"></script>
+<script>
+     $(function(){
+        // 아코디언 여/닫
+        $('.accodion_title .btn_accodion').click(function() {
+            $(this).parents('.accodion_box').toggleClass('open');
+        })
+
+        //라디오 버튼
+        $('.inpbx_inner_btn .btn_radio').click(function() {
+            $(this).toggleClass('check');
+        })
+    });
+</script>
+</body>
+</html>

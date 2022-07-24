@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>연말정산</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi">
+<link rel="stylesheet" type="text/css" href="https://static.wehago.com/css/nanumsquare.css">
+<link rel="stylesheet" type="text/css" href="css/ctm.css">
+</head>
+<body>
+<div id="wrap">
+	<div class="header">
+		<button type="button" class="btn_close"><span class="blind">닫기</span></button>
+		<div class="btnbox">
+			<button type="button" class="btn_info"><span class="blind">도움말</span></button>
+		</div>
+	</div>
+	<div class="container footer_btn">
+		<div class="section sec_detail_info">
+            <div class="section_title v2">
+                <p class="text">
+                    <strong>기타공제에 대한 증빙</strong>을<br>
+                    <strong>추가</strong> 해주세요.
+                </p>
+                <p class="sub_text">
+                    기타공제는 직접입력을 지원하지 않습니다.
+                </p>
+            </div>
+            <div class="section_content">
+                <div class="group">
+                    <div class="group_title">
+                        <p>우리사주출연금</p>
+                    </div>
+                    <div class="group_content">
+                        <ul class="etc_file_list type_del">
+                            <li>
+                                <div class="ico_box">
+                                    <img src="https://static.wehago.com/imgs/common/icon_file/24x24/ico_pdf_24.png" alt="pdf_24">
+                                </div>
+                                <p class="file_name">김더존_주민등록표.pdf</p>
+                                <button type="button" class="btn_etc_file"></button>
+                            </li>
+                            <li>
+                                <div class="ico_box">
+                                    <img src="https://static.wehago.com/imgs/common/icon_file/24x24/ico_img_24.png" alt="img_24">
+                                </div>
+                                <p class="file_name">김더존_주민등록표김더존_주민등록표김더존_주민등록표.pdf</p>
+                                <button type="button" class="btn_etc_file"></button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="group">
+                    <div class="group_title">
+                        <p>외국납부세액</p>
+                    </div>
+                    <div class="group_content">
+                        <ul class="etc_file_list type_del">
+                            <li>
+                                <div class="ico_box">
+                                    <img src="https://static.wehago.com/imgs/common/icon_file/24x24/ico_pdf_24.png" alt="pdf_24">
+                                </div>
+                                <p class="file_name">김더존_주민등록표.pdf</p>
+                                <button type="button" class="btn_etc_file"></button>
+                            </li>
+                            <li>
+                                <div class="ico_box">
+                                    <img src="https://static.wehago.com/imgs/common/icon_file/24x24/ico_img_24.png" alt="img_24">
+                                </div>
+                                <p class="file_name">김더존_주민등록표김더존_주민등록표김더존_주민등록표.pdf</p>
+                                <button type="button" class="btn_etc_file"></button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="group">
+                    <div class="group_title">
+                        <p>중소기업창업투자조합</p>
+                    </div>
+                    <div class="group_content">
+                        <ul class="etc_file_list type_del">
+                            <li>
+                                <div class="ico_box">
+                                    <img src="https://static.wehago.com/imgs/common/icon_file/24x24/ico_pdf_24.png" alt="pdf_24">
+                                </div>
+                                <p class="file_name">김더존_주민등록표.pdf</p>
+                                <button type="button" class="btn_etc_file"></button>
+                            </li>
+                            <li>
+                                <div class="ico_box">
+                                    <img src="https://static.wehago.com/imgs/common/icon_file/24x24/ico_img_24.png" alt="img_24">
+                                </div>
+                                <p class="file_name">김더존_주민등록표김더존_주민등록표김더존_주민등록표.pdf</p>
+                                <button type="button" class="btn_etc_file"></button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <button type="button" class="ctm_btn_basic large blue" style="margin-top: 8px;"><span class="ctm_btn_ico plus"></span>기타공제 증빙추가</button>
+            </div>
+
+        </div>
+        <div class="footer_button_box">
+            <button type="button" class="btn_footer bg_blue">저장</button>
+        </div>
+	</div>
+</div>
+<!-- [D] 마크업 테스트용 입니다. 개발 시 삭제해주세요. -->
+<script src="../js/jquery-latest.min.js"></script>
+<script type="text/javascript" src="../js/slick.min.js"></script>
+<script>
+    $(function(){
+       // 아코디언 여/닫
+       $('.accodion_title .btn_accodion').click(function() {
+           $(this).parents('.accodion_box').toggleClass('open');
+       })
+
+       //라디오 버튼
+       $('.inpbx_inner_btn .btn_radio').click(function() {
+           $(this).toggleClass('check');
+       })
+
+       // 헤더 보더
+       $('.container').scroll(function(){
+           var sTop = $('.container').scrollTop();
+           if(sTop != 0){
+               $('.header').addClass('b_shadow');
+             } else {
+               $('.header').removeClass('b_shadow');
+              }
+       });
+   });
+</script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>연말정산</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi">
+<link rel="stylesheet" type="text/css" href="https://static.wehago.com/css/nanumsquare.css">
+<link rel="stylesheet" type="text/css" href="css/ctm.css">
+</head>
+<body>
+<div id="wrap">
+	<div class="header">
+		<h1 class="ellipsis">보험료 수정</h1>
+		<button type="button" class="btn_prev"><span class="blind">이전</span></button>
+		<div class="btnbox">
+			<button type="button" class="btn_info"><span class="blind">메뉴</span></button>
+		</div>
+	</div>
+	<div class="container footer_btn">
+        <div class="result_group">
+            <div class="result_bx">
+                <div class="line_bx">
+                    <dl class="line_bx_definition">
+                        <div class="bx_definition">
+                            <dt>성명</dt>
+                            <dd>김더존</dd>
+                        </div>
+                        <div class="bx_definition">
+                            <dt>보험료구분</dt>
+                            <dd>보장성보험료</dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </div>
+		<div class="section sec_detail_info">
+            
+            <div class="form_box">
+                <div class="form_title">
+                    <p>기본 텍스트</p>
+                </div>
+                <div class="form_content">
+                    <div class="ctm_inpbx_text">
+                        <input type="text" placeholder="입력하세요." value="500,000">
+                    </div>
+                </div>
+            </div>
+            <div class="form_box">
+                <div class="form_title">
+                    <p>잘못된 형식이 들어간 경우</p>
+                </div>
+                <!-- [D] 가이드 텍스트 노출 .guide_text -->
+                <div class="form_content guide_text">
+                    <div class="ctm_inpbx_text">
+                        <input type="text" placeholder="입력하세요." value="500,000">
+                    </div>
+                    <div class="error_box">
+                        <p>올바른 주민등록번호 형식이 아닙니다.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="form_box">
+                <div class="form_title">
+                    <p class="ess">필수사항 텍스트</p>
+                </div>
+                <div class="form_content">
+                    <div class="ctm_inpbx_text">
+                        <input type="text" placeholder="입력하세요." value="500,000">
+                    </div>
+                </div>
+            </div>
+            <div class="form_box">
+                <div class="form_title">
+                    <p class="ess">설명이 있는 경우</p>
+                </div>
+                <div class="form_content">
+                    <div class="ctm_inpbx_text">
+                        <input type="text" placeholder="입력하세요." value="500,000">
+                    </div>
+                    <div class="form_info">
+                        <p class="form_info_text">
+                            거주자가 소기업·소상공인 공제에 가입하여 해당 과세기간에 납부하는 공제부금  
+                        </p>
+                        <ul class="form_info_list">
+                            <li>2016년 이후 가입한 법인의 대표자인 경우에는 총급여 7천만원 이하인 자만 공제 가능 </li>
+                            <li>노란우산공제는 소상공인인 사업자와 소기업에 해당하는 법인 대표자가 가입 가능</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="form_box">
+                <!-- [D] 타이틀에서 바로 선택 UI .v2 추가 -->
+                <div class="form_title v2">
+                    <p>여/부 결정 텍스트</p>
+                    <div class="ctm_inpbx_text">
+                        <div class="inpbx_inner_btn">
+                            <button type="button" class="btn_switch">여</button>
+                            <button type="button" class="btn_switch check">부</button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="form_box">
+                <!-- [D] 타이틀에서 바로 선택 UI .v2 추가 -->
+                <div class="form_title v2">
+                    <p>글자가 길어지는 경우 샘플 글자가 길어지는 경우 샘플 글자가 길어지는 경우 샘플</p>
+                    <div class="ctm_inpbx_text">
+                        <div class="inpbx_inner_btn">
+                            <button type="button" class="btn_switch">여</button>
+                            <button type="button" class="btn_switch check">부</button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="footer_button_box">
+            <button type="button" class="btn_footer bg_blue">저장</button>
+        </div>
+	</div>
+</div>
+<!-- [D] 마크업 테스트용 입니다. 개발 시 삭제해주세요. -->
+<script src="../js/jquery-latest.min.js"></script>
+<script type="text/javascript" src="../js/slick.min.js"></script>
+<script>
+    $(function(){
+       // 아코디언 여/닫
+       $('.accodion_title .btn_accodion').click(function() {
+           $(this).parents('.accodion_box').toggleClass('open');
+       })
+
+       //라디오 버튼
+       $('.inpbx_inner_btn .btn_radio').click(function() {
+           $(this).toggleClass('check');
+       })
+
+       // 헤더 보더
+       $('.container').scroll(function(){
+           var sTop = $('.container').scrollTop();
+           if(sTop != 0){
+               $('.header').addClass('b_shadow');
+             } else {
+               $('.header').removeClass('b_shadow');
+              }
+       });
+   });
+</script>
+</body>
+</html>

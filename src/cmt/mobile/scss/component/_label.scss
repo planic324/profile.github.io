@@ -1,0 +1,30 @@
+.basic_label{
+    display: inline-block;
+    vertical-align: top;
+    font-size: 11px;
+    line-height: 14px;
+    padding: 3px 6px 2px;
+    border-radius: 5px;
+    &.color_blue{
+        background-color: #e3edff;
+        color: #1345a5;
+    }
+    &.color_purple{
+        background-color: #e9e3ff;
+        color: #7d39c1
+    }
+    &.color_green{
+        background-color: #dfedf0;
+        color: #1b6d91
+    }
+}
+.notice_label{
+    display: inline-block;
+    vertical-align: top;
+    font-size: 11px;
+    line-height: 14px;
+    padding: 3px 6px 2px;
+    background-color: #fcf0f0;
+    color: #e85252;
+    border-radius: 5px;
+}

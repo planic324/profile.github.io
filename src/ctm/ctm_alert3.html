@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>연말정산</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi">
+<link rel="stylesheet" type="text/css" href="css/ctm.css">
+</head>
+<body>
+<div id="wrap">
+    <button type="button" class="btn_show" style="position: absolute;top:30px;right:30px;">Show Snackbar</button>
+	<!-- [D] 스낵바 노출시 .active 추가 -->
+    <div class="ctm_snackbar active">
+        
+        <p class="text"><span class="ico_alert"></span>생체정보가 등록되었습니다.</p>
+    </div>
+</div>
+<!-- [D] 마크업 테스트용 입니다. 개발 시 삭제해주세요. -->
+<script src="../js/jquery-latest.min.js"></script>
+<script type="text/javascript" src="../js/slick.min.js"></script>
+<script>
+    $(function(){
+       // 아코디언 여/닫
+       $('.btn_show').click(function() {
+           $('.ctm_snackbar').toggleClass('active');
+       })
+
+   });
+</script>
+</body>
+</html>

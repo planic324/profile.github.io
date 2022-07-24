@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>연말정산</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi">
+<link rel="stylesheet" type="text/css" href="css/ctm.css">
+</head>
+<body>
+<div id="wrap" class="dz_font"></div>
+<div class="dimmed" style="display: block;"></div>
+<div class="select_toast active ">
+    <!-- [D] .btn_view_full 드래그/클릭시 .select_toast 에 .full 추가 -->
+    <button type="button" class="btn_view_full"><span class="blind">펼치보기</span></button>
+	<h2 class="toast_title">연말정산 결과조회</h2>
+	<ul class="toast_list v2">
+		<li>
+			<button type="button" class="list_item">2021년</button>
+		</li>
+		<li>
+			<!-- [D] 선택시 class="selected" 추가 -->
+			<button type="button" class="list_item selected">2020년</button>
+		</li>
+		<li>
+			<button type="button" class="list_item">2019년</button>
+		</li>
+	</ul>
+    <div class="toast_dialog_btn_box">
+        <button type="button" class="ctm_btn_dialog">적용</button>
+    </div>
+</div>
+<div class="markup" style="position: absolute;top: 20px;right: 20px;z-index: 30;">
+	<button type="button" id="markup_dim_test" style="padding: 10px;background-color: #000;color: #fff;border: 0;appearance: none;">토스트팝업 열기/닫기</button>
+</div>
+<!-- [D] 마크업 테스트용 입니다. 개발 시 삭제해주세요. -->
+<script src="../js/jquery-latest.min.js"></script>
+<script>
+	var dimButton = document.querySelector('#markup_dim_test');
+	var toastBox = document.querySelector('.select_toast');
+	var dimmBox = document.querySelector('.dimmed');
+	var bodyBox = document.querySelector('body');
+    var btnFull = document.querySelector('btn_view_full');
+
+	dimButton.addEventListener('click', function(){
+		if(dimmBox.style.display === "none" || dimmBox.style.display === "" ) {
+			dimmBox.style.display = 'block';
+			toastBox.classList.add('active');
+			bodyBox.style.overflow = 'hidden';
+		} else {
+			dimmBox.style.display = 'none';
+			toastBox.classList.remove('active');
+			bodyBox.style.overflow = '';
+		}
+	})
+    $(function(){
+        //full view
+        $('.select_toast .btn_view_full').click(function() {
+            $(this).parent().toggleClass('full');
+        })
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>연말정산</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi">
+<link rel="stylesheet" type="text/css" href="css/ctm.css">
+</head>
+<body>
+<div id="wrap" class="dz_font"></div>
+<div class="dimmed" style="display: block;"></div>
+<div class="select_toast active ">
+	<div class="date_topbox">
+		<div class="lbtnbox">
+			<!-- [D] 비활성화시 .disabled 추가 -->
+			<button type="button" class="btn_prev2 disabled"><span class="blind">이전 연도</span></button><button type="button" class="btn_prev"><span class="blind">이전 달</span></button>
+		</div><strong class="date_text">2021.10</strong><!--
+		--><div class="rbtnbox">
+			<button type="button" class="btn_next"><span class="blind">다음 달</span></button><button type="button" class="btn_next2"><span class="blind">다음 연도</span></button>
+		</div>
+	</div>
+	<!-- [D] 한달 6주로 표현되야 할 경우 class="length_row_6" 추가해주세요. -->
+	<div class="calendar_wrap">
+		<div class="toprow">
+			<span class="date">일</span><span class="date">월</span><span class="date">화</span><span class="date">수</span><span class="date">목</span><span class="date">금</span><span class="date">토</span>
+		</div>
+		<!-- [D] .row 밑에 .date 7개가 항상 있어야됩니다.
+			 [D] 선택된건 date.select
+			 [D] 오늘날짜는 date.today 추가 -->
+		<div class="row">
+			<div class="date"><span></span></div>
+			<div class="date"><span></span></div>
+			<div class="date"><span></span></div>
+			<div class="date"><span></span></div>
+			<div class="date"><span></span></div>
+			<button type="button" class="date"><span>1</span></buttton>
+			<button class="date"><span>2</span></button>
+		</div>
+		<div class="row">
+			<button class="date"><span>3</span></button>
+			<button class="date"><span>4</span></button>
+			<button class="date"><span>5</span></button>
+			<button class="date"><span>6</span></button>
+			<button class="date"><span>7</span></button>
+			<button class="date"><span>8</span></button>
+			<button class="date"><span>9</span></button>
+		</div>
+		<div class="row">
+			<button class="date"><span>10</span></button>
+			<button class="date"><span>11</span></button>
+			<button class="date"><span>12</span></button>
+			<button class="date"><span>13</span></button>
+			<button class="date"><span>14</span></button>
+			<button class="date"><span>15</span></button>
+			<button class="date"><span>16</span></button>
+		</div>
+		<div class="row">
+			<button class="date"><span>17</span></button>
+			<button class="date select"><span>18</span></button>
+			<button class="date"><span>19</span></button>
+			<button class="date today"><span>20</span></button>
+			<button class="date"><span>21</span></button>
+			<button class="date"><span>22</span></button>
+			<button class="date"><span>23</span></button>
+		</div>
+		<div class="row">
+			<button class="date"><span>24</span></button>
+			<button class="date"><span>25</span></button>
+			<button class="date"><span>26</span></button>
+			<button class="date"><span>27</span></button>
+			<button class="date"><span>28</span></button>
+			<button class="date"><span>29</span></button>
+			<button class="date"><span>30</span></button>
+		</div>
+	</div>
+    <div class="toast_dialog_btn_box">
+        <button type="button" class="ctm_btn_dialog">적용</button>
+    </div>
+</div>
+<div class="markup" style="position: absolute;top: 20px;right: 20px;z-index: 30;">
+	<button type="button" id="markup_dim_test" style="padding: 10px;background-color: #000;color: #fff;border: 0;appearance: none;">토스트팝업 열기/닫기</button>
+</div>
+<!-- [D] 마크업 테스트용 입니다. 개발 시 삭제해주세요. -->
+<script src="../js/jquery-latest.min.js"></script>
+<script>
+	var dimButton = document.querySelector('#markup_dim_test');
+	var toastBox = document.querySelector('.select_toast');
+	var dimmBox = document.querySelector('.dimmed');
+	var bodyBox = document.querySelector('body');
+    var btnFull = document.querySelector('btn_view_full');
+
+	dimButton.addEventListener('click', function(){
+		if(dimmBox.style.display === "none" || dimmBox.style.display === "" ) {
+			dimmBox.style.display = 'block';
+			toastBox.classList.add('active');
+			bodyBox.style.overflow = 'hidden';
+		} else {
+			dimmBox.style.display = 'none';
+			toastBox.classList.remove('active');
+			bodyBox.style.overflow = '';
+		}
+	})
+    $(function(){
+        //full view
+        $('.select_toast .btn_view_full').click(function() {
+            $(this).parent().toggleClass('full');
+        })
+    });
+
+	const calWrap = document.querySelector('.calendar_wrap');
+	const lowLength = [...document.querySelectorAll('.calendar_wrap .row')];
+
+	document.addEventListener('DOMContentLoaded', function() {
+		if(lowLength.length === 6) {
+			calWrap.classList.add('length_row_6')
+		} else {
+			calWrap.classList.remove('length_row_6');
+		}
+		console.log(lowLength);
+	});
+</script>
+</body>
+</html>

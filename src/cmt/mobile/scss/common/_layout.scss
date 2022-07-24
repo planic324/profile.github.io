@@ -1,0 +1,38 @@
+html{
+    
+    body{
+        
+        #wrap{
+            
+            .header + .container{
+                padding-bottom: 46px;
+            }
+            .container{
+                height: 100%;
+                .content{
+                    overflow: hidden;
+                    height: 100%;
+                    width: 100%;
+                    -webkit-overflow-scrolling: touch;
+                    position: relative;
+                    box-sizing: border-box;
+                }
+            }
+        }
+    }
+}
+
+.in_box{
+    padding: 0 20px;
+    box-sizing: border-box;
+    &.type_border{
+        border-top: 1px solid #e5e6e8;
+    }
+    &.hold_bottom{
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: #fff;
+    }
+}
