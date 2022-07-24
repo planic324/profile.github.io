@@ -1,0 +1,39 @@
+    <div class="horizon_header wehago_header">
+        <div class="main_title">
+            <h1><a href="#"><img src="https://static.wehago.com/imgs/common/wehago_b.svg" width="109" height="22" alt="WEHAGO"></a></h1>
+        </div>
+        <div class="btn_wrap">
+            <button type="button" class="LUX_basic_btn SAOverDefault basic"><span>로그인</span></button>
+            <button type="button" class="LUX_basic_btn SAOverDefault basic"><span>회원가입</span></button>
+        </div>
+    </div>
+    <script>
+        var titleCheck = document.title;
+        console.log(titleCheck);
+        if(titleCheck == '메인화면-헤더영역') {
+            console.log('check');
+            $('.gnb_popover_new_help .gnb_pop_scale').css('display','block');
+            $('.gnb_popover_new_space .gnb_pop_scale').css('display','block');
+            $('.LS_roundpop').css('display','block');
+
+            $('.btn_new_space').click(function() {
+                $(this).parent().parent().children('.gnb_pop_scale').toggle();
+            });
+
+            $('.ls_roundselect_btn').click(function() {
+                $(this).parent().children('.LS_roundpop').toggle();
+            });
+        }
+        else {
+            $(".gnb_popover").click(function() {
+                if($(this).children('.gnb_pop_scale').css('display') !='block') {
+                    $(".gnb_popover .gnb_pop_scale").css("display","none");
+                    $(this).children('.gnb_pop_scale').css("display","block");
+                }
+                else {
+                    $(this).children('.gnb_pop_scale').css("display","none");
+                }
+            });
+        }
+        
+    </script>

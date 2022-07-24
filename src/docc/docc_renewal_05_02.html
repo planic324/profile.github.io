@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DOCC</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/css/nanumsquare.css">
+<link rel="stylesheet" type="text/css" href="css/docc2.css">
+<!-- 마크업 확인용 Include -->
+<script src="includeHTML.js"></script>
+<!-- //마크업 확인용 Include -->
+</head>
+<body>
+    <!-- [D] 지표 페이지이며, SNB 간소화버전인 경우 class="reduction" 추가해주세요. -->
+    <div class="docc renew reduction">
+        <div id="header" class="header" include-html="docc_include_header.html"></div>
+        <div class="container">
+            <div class="banner">
+                <div class="banner_title">
+                    <h2>DOCC</h2>
+                </div>
+                <div class="banner_content">
+                    <div class="left_bx">
+                        <div class="banner_bi">
+                            <span class="blind">DOCC - DATA BASED OPERATION AND COMMUNICATION CENTER</span>
+                        </div>
+                        <p class="banner_bi_text">축적된 병원의 실시간 데이터를 중심으로 현장 이슈 모니터링 및 소통 가능한 서비스</p>
+                    </div>
+                    <div class="right_bx">
+                        <div class="search_bx">
+                            <input type="text" placeholder="검색어를 입력하세요">
+                            <button type="button" class="icon_search"><span class="blind">검색 버튼</span></button>
+                            <button type="button" class="icon_delete"><span class="blind">검색 내용 삭제</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="snb">
+                    <ul class="snb_bx">
+                        <!-- [D] 클릭시 li class="active" 추가해주세요. -->
+                        <li class="active">
+                            <a href="#" class="list_icon home"><i class="icon_bx"></i><span>홈</span></a>
+                        </li>
+                        <li>
+                            <a href="#" class="list_icon pan"><i class="icon_bx"></i><span>PAN</span></a>
+                        </li>
+                        <li>
+                            <a href="#" class="list_icon fav"><i class="icon_bx"></i><span>즐겨찾기</span></a>
+                        </li>
+                        <li>
+                            <a href="#" class="list_icon recent"><i class="icon_bx"></i><span>최근항목</span></a>
+                        </li>
+                        <li>
+                            <a href="#" class="list_icon setting"><i class="icon_bx"></i><span>설정</span></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="division_bx">
+                    <div class="indicator_bx">
+                        <div class="multiple_bx">
+                            <div class="flow_title">
+                                <a href="#" class="indicator_title">운영지표</a>
+                                <span class="flow_arrow"></span>
+                                <!-- [D] 현재 위치해있는 네비게이션에 class="active" 추가 -->
+                                <a href="#" class="indicator_title active">CT운영현황</a>
+                            </div>
+                            <div class="button_item">
+                                <!-- [D] 클릭시 innerHTML 변경
+                                    <em class="text_blue">ON</em>
+                                    <em class="text_gray">OFF</em>
+                                -->
+                                <button type="button" class="button_default">드릴다운 <em class="text_gray">OFF</em></button>
+                                <span class="dash"></span>
+                                <button type="button" class="button_default" id="zoom"><i class="icon_zoom"></i>확대</button>
+                                <div class="common_component_select open">
+                                    <!-- [D] .selected_item 클릭시 .common_component_select에 .open 추가 -->
+                                    <button type="button" class="selected_item"><span class="color_label" style="background:#000;"></span>블랙테마</button>
+                                    <div class="common_component_select_resultbox">
+                                        <ul>
+                                            <!-- [D] 선택했을때 .selected 추가 -->
+                                            <li class="selected">
+                                                <button type="button" class="resultitem"><span class="color_label" style="background:#2843c1;"></span>블루테마</button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="resultitem"><span class="color_label" style="background:#000;"></span>블랙테마</button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pan_bx">
+                            <!-- panBX에서 확대 누를 경우 class="type_pan" 삭제해주세요. -->
+                            <div class="docc type_treatment type_pan">
+                                <div class="zoom_bx">
+                                    <button type="button" class="button_fold"><span class="blind">확대모드 헤더 열기</span></button>
+                                    <div class="tool_bx">
+                                        <div class="tool_division">
+                                            <div class="flow_title">
+                                                <a href="#">운영지표</a>
+                                                <span class="dash"></span>
+                                                <!-- [D] 현재 위치하고 있는 페이지 네비게이션 표기 class="active" 추가해주세요. -->
+                                                <a href="#" class="active">CT운영현황</a>
+                                            </div>
+                                            <div class="button_item">
+                                                <button type="button" class="button_default">드릴다운 <em class="text_blue">ON</em></button>
+                                                <span class="dash"></span>
+                                                <button type="button" class="button_default" id="zoomout"><i class="icon_zoomout"></i>축소</button>
+                                                <div class="common_component_select open">
+                                                    <!-- [D] .selected_item 클릭시 .common_component_select에 .open 추가 -->
+                                                    <button type="button" class="selected_item"><span class="color_label" style="background:#000;"></span>블랙테마</button>
+                                                    <div class="common_component_select_resultbox">
+                                                        <ul>
+                                                            <!-- [D] 선택했을때 .selected 추가 -->
+                                                            <li class="selected">
+                                                                <button type="button" class="resultitem"><span class="color_label" style="background:#2843c1;"></span>블루테마</button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="resultitem"><span class="color_label" style="background:#000;"></span>블랙테마</button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="button_close"><span class="blind">헤더 닫기</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="docc_header">
+                                    <h1>외래 진료현황<span class="time">2021-11-26 16:10:08</span></h1>
+                                </div>
+                                <div class="docc_content">
+                                    <div class="section_ui_wrap section_surgery">
+                                        <!-- 외래 진료현황 Start -->
+                                        <div class="division_bx">
+                                            <div class="ui_box_left">
+                                                <h2 class="section_title">외래 진행현황</h2>
+                                                <div class="rect_gather">
+                                                    <div class="bx_rect">
+                                                        <h3 class="bx_rect_title">환자현황</h3>
+                                                        <div class="bx_percent_data">
+                                                            <span class="percent_start">0%</span>
+                                                            <div class="percent_data">
+                                                                <!-- [D] 퍼센트에 맞추어 width 값과 <span class="percent_text">47%</span> 텍스트도 width 값과 같이 변경해주세요. -->
+                                                                <div class="percent_bar" style="width: 47%">
+                                                                    <span class="percent_text">47%</span>
+                                                                </div>
+                                                            </div>
+                                                            <span class="percent_end">100%</span>
+                                                        </div>
+                                                        <div class="bx_vertical type_multiple">
+                                                            <div class="bx_list_number">
+                                                                <dl class="bx_people">
+                                                                    <div class="bx_people_def">
+                                                                        <dt>외래환자</dt>
+                                                                        <dd><span class="num">99,999</span>명</dd>
+                                                                    </div>
+                                                                    <div class="bx_people_def small">
+                                                                        <dt>신환</dt>
+                                                                        <dd><span class="num">99,999</span>명</dd>
+                                                                    </div>
+                                                                </dl>
+                                                                <dl class="bx_people">
+                                                                    <div class="bx_people_def">
+                                                                        <dt>예약환자</dt>
+                                                                        <dd><span class="num">99,999</span>명</dd>
+                                                                    </div>
+                                                                    <div class="bx_people_def small">
+                                                                        <dt>신환</dt>
+                                                                        <dd><span class="num">99,999</span>명</dd>
+                                                                    </div>
+                                                                </dl>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="bx_rect">
+                                                        <h3 class="bx_rect_title">유닛현황</h3>
+                                                        <div class="bx_vertical">
+                                                            <div class="bx_list_number">
+                                                                <dl class="bx_people">
+                                                                    <div class="bx_people_def">
+                                                                        <dt>진료유닛</dt>
+                                                                        <dd><span class="num">99,999</span>개</dd>
+                                                                    </div>
+                                                                    <div class="bx_people_def small">
+                                                                        <dt>휴진유닛</dt>
+                                                                        <dd><span class="num">99,999</span>개</dd>
+                                                                    </div>
+                                                                </dl>
+                                                            </div>
+                                                            <div class="bx_donut_graph">
+                                                                <!-- 원 그래프 영역입니다. -->
+                                                                <!-- style 값 삭제해주세요. -->
+                                                                <div class="donut_graph" style="background-color: gray;border-radius: 100%;"></div>
+                                                                <div class="donut_graph" style="background-color: gray;border-radius: 100%;"></div>
+                                                                <div class="donut_graph" style="background-color: gray;border-radius: 100%;"></div>
+                                                                <!-- //원 그래프 영역입니다. -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="bx_rect">
+                                                        <h3 class="bx_rect_title">진료실 사용현황</h3>
+                                                        <div class="bx_vertical">
+                                                            <div class="bx_list_number">
+                                                                <dl class="bx_people">
+                                                                    <div class="bx_people_def">
+                                                                        <dt>진료실 사용</dt>
+                                                                        <dd><span class="num">99,999</span>개</dd>
+                                                                    </div>
+                                                                    <div class="bx_people_def small">
+                                                                        <dt>진료실 미사용</dt>
+                                                                        <dd><span class="num">99,999</span>개</dd>
+                                                                    </div>
+                                                                </dl>
+                                                            </div>
+                                                            <div class="bx_donut_graph">
+                                                                <!-- 원 그래프 영역입니다. -->
+                                                                <!-- style 값 삭제해주세요. -->
+                                                                <div class="donut_graph" style="background-color: gray;border-radius: 100%;"></div>
+                                                                <div class="donut_graph" style="background-color: gray;border-radius: 100%;"></div>
+                                                                <div class="donut_graph" style="background-color: gray;border-radius: 100%;"></div>
+                                                                <!-- //원 그래프 영역입니다. -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="ui_box_right">
+                                                <h2 class="section_title">Zone별 현황</h2>
+                                                <div class="bx_zone">
+                                                    <div class="bx_table">
+                                                        <div class="bx_table_header">
+                                                            <div class="cell_th"></div>
+                                                            <div class="cell_th">본관</div>
+                                                            <div class="cell_th">암병원</div>
+                                                            <div class="cell_th">별관</div>
+                                                        </div>
+                                                        <div class="bx_table_body">
+                                                            <div class="bx_table_inner">
+                                                                <div class="cell_td">5F</div>
+                                                                <div class="cell_td"></div>
+                                                                <div class="cell_td"></div>
+                                                                <div class="cell_td">
+                                                                    <div class="cell_multiple">
+                                                                        <div class="cell_multiple_inner">
+                                                                        <!--
+                                                                            [D] 본관 : blue, 암병원 : orange, 별관 : green
+                                                                            암병원 내에 본관 방사선종양학과가 있을 수 있으므로 bx_info 개별로 클래스 지정
+                                                                        -->
+                                                                            <div class="bx_info green">
+                                                                                <div class="bx_left">
+                                                                                    <strong class="bx_info_title">비뇨기학과</strong>
+                                                                                    <dl class="bx_left_info">
+                                                                                        <dt>진료환자</dt>
+                                                                                        <dd>60<em>/999</em></dd>
+                                                                                    </dl>
+                                                                                </div>
+                                                                                <div class="bx_right">
+                                                                                    <dl>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="info_title">대기</dt>
+                                                                                            <dd>9,999</dd>
+                                                                                        </div>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="icon_type_01"></dt>
+                                                                                            <dd>9,999</dd>
+                                                                                        </div>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="icon_type_02"></dt>
+                                                                                            <dd>6/99</dd>
+                                                                                        </div>
+                                                                                    </dl>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="bx_info green">
+                                                                                <div class="bx_left">
+                                                                                    <strong class="bx_info_title">정신건강의학과</strong>
+                                                                                    <dl class="bx_left_info">
+                                                                                        <dt>진료환자</dt>
+                                                                                        <dd>60<em>/120</em></dd>
+                                                                                    </dl>
+                                                                                </div>
+                                                                                <div class="bx_right">
+                                                                                    <dl>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="info_title">대기</dt>
+                                                                                            <dd>10</dd>
+                                                                                        </div>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="icon_type_01"></dt>
+                                                                                            <dd>6</dd>
+                                                                                        </div>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="icon_type_02"></dt>
+                                                                                            <dd>6/10</dd>
+                                                                                        </div>
+                                                                                    </dl>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="bx_table_inner">
+                                                                <div class="cell_td">4F</div>
+                                                                <div class="cell_td">
+                                                                    <div class="cell_multiple">
+                                                                        <div class="cell_multiple_inner">
+                                                                        <!--
+                                                                            [D] 본관 : blue, 암병원 : orange, 별관 : green
+                                                                            암병원 내에 본관 방사선종양학과가 있을 수 있으므로 bx_info 개별로 클래스 지정
+                                                                        -->
+                                                                            <div class="bx_info blue">
+                                                                                <div class="bx_left">
+                                                                                    <strong class="bx_info_title">소화기센터</strong>
+                                                                                    <dl class="bx_left_info">
+                                                                                        <dt>진료환자</dt>
+                                                                                        <dd>110<em>/120</em></dd>
+                                                                                    </dl>
+                                                                                </div>
+                                                                                <div class="bx_right">
+                                                                                    <dl>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="info_title">대기</dt>
+                                                                                            <dd>9,999</dd>
+                                                                                        </div>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="icon_type_01"></dt>
+                                                                                            <dd>9,999</dd>
+                                                                                        </div>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="icon_type_02"></dt>
+                                                                                            <dd>6/99</dd>
+                                                                                        </div>
+                                                                                    </dl>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!-- [D] Cell에 한개만 있을 경우에도 아래 구조 추가. 구조상 가능한지 검토해주세요. -->
+                                                                            <div class="bx_info blue type_none"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="cell_td"></div>
+                                                                <div class="cell_td">
+                                                                    <div class="cell_multiple">
+                                                                        <div class="cell_multiple_inner">
+                                                                        <!--
+                                                                            [D] 본관 : blue, 암병원 : orange, 별관 : green
+                                                                            암병원 내에 본관 방사선종양학과가 있을 수 있으므로 bx_info 개별로 클래스 지정
+                                                                        -->
+                                                                            <div class="bx_info type_none"></div>
+                                                                            <div class="bx_info green">
+                                                                                <div class="bx_left">
+                                                                                    <strong class="bx_info_title">피부과</strong>
+                                                                                    <dl class="bx_left_info">
+                                                                                        <dt>진료환자</dt>
+                                                                                        <dd>60<em>/120</em></dd>
+                                                                                    </dl>
+                                                                                </div>
+                                                                                <div class="bx_right">
+                                                                                    <dl>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="info_title">대기</dt>
+                                                                                            <dd>10</dd>
+                                                                                        </div>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="icon_type_01"></dt>
+                                                                                            <dd>6</dd>
+                                                                                        </div>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="icon_type_02"></dt>
+                                                                                            <dd>6/10</dd>
+                                                                                        </div>
+                                                                                    </dl>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="bx_table_inner">
+                                                                <div class="cell_td">3F</div>
+                                                                <div class="cell_td">
+                                                                    <div class="cell_multiple">
+                                                                        <div class="cell_multiple_inner">
+                                                                            <div class="bx_info blue">
+                                                                                <div class="bx_left">
+                                                                                    <strong class="bx_info_title">산부인과</strong>
+                                                                                    <dl class="bx_left_info">
+                                                                                        <dt>진료환자</dt>
+                                                                                        <dd>90<em>/120</em></dd>
+                                                                                    </dl>
+                                                                                </div>
+                                                                                <div class="bx_right">
+                                                                                    <dl>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="info_title">대기</dt>
+                                                                                            <dd>10</dd>
+                                                                                        </div>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="icon_type_01"></dt>
+                                                                                            <dd>6</dd>
+                                                                                        </div>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="icon_type_02"></dt>
+                                                                                            <dd>6/10</dd>
+                                                                                        </div>
+                                                                                    </dl>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="bx_info blue">
+                                                                                <div class="bx_left">
+                                                                                    <strong class="bx_info_title">장기이식센터</strong>
+                                                                                    <dl class="bx_left_info">
+                                                                                        <dt>진료환자</dt>
+                                                                                        <dd>90<em>/120</em></dd>
+                                                                                    </dl>
+                                                                                </div>
+                                                                                <div class="bx_right">
+                                                                                    <dl>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="info_title">대기</dt>
+                                                                                            <dd>10</dd>
+                                                                                        </div>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="icon_type_01"></dt>
+                                                                                            <dd>6</dd>
+                                                                                        </div>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="icon_type_02"></dt>
+                                                                                            <dd>6/10</dd>
+                                                                                        </div>
+                                                                                    </dl>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="cell_td"></div>
+                                                                <div class="cell_td"></div>
+                                                            </div>
+                                                            <div class="bx_table_inner">
+                                                                <div class="cell_td">2F</div>
+                                                                <div class="cell_td">
+                                                                    <div class="cell_multiple align_right">
+                                                                        <div class="cell_multiple_inner">
+                                                                            <div class="bx_info blue">
+                                                                                <div class="bx_left">
+                                                                                    <strong class="bx_info_title">심장뇌혈관병원</strong>
+                                                                                    <dl class="bx_left_info">
+                                                                                        <dt>진료환자</dt>
+                                                                                        <dd>90<em>/120</em></dd>
+                                                                                    </dl>
+                                                                                </div>
+                                                                                <div class="bx_right">
+                                                                                    <dl>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="info_title">대기</dt>
+                                                                                            <dd>10</dd>
+                                                                                        </div>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="icon_type_01"></dt>
+                                                                                            <dd>6</dd>
+                                                                                        </div>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="icon_type_02"></dt>
+                                                                                            <dd>6/10</dd>
+                                                                                        </div>
+                                                                                    </dl>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!-- [D] Cell에 한개만 있을 경우에도 아래 구조 추가. 구조상 가능한지 검토해주세요. -->
+                                                                            <div class="bx_info blue type_none"></div>
+                                                                        </div>
+                                                                        <div class="cell_multiple_inner">
+                                                                            <div class="bx_info blue">
+                                                                                <div class="bx_left">
+                                                                                    <strong class="bx_info_title">내과외래</strong>
+                                                                                    <dl class="bx_left_info">
+                                                                                        <dt>진료환자</dt>
+                                                                                        <dd>90<em>/120</em></dd>
+                                                                                    </dl>
+                                                                                </div>
+                                                                                <div class="bx_right">
+                                                                                    <dl>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="info_title">대기</dt>
+                                                                                            <dd>10</dd>
+                                                                                        </div>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="icon_type_01"></dt>
+                                                                                            <dd>6</dd>
+                                                                                        </div>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="icon_type_02"></dt>
+                                                                                            <dd>6/10</dd>
+                                                                                        </div>
+                                                                                    </dl>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="bx_info blue">
+                                                                                <div class="bx_left">
+                                                                                    <strong class="bx_info_title">뇌신경센터</strong>
+                                                                                    <dl class="bx_left_info">
+                                                                                        <dt>진료환자</dt>
+                                                                                        <dd>90<em>/120</em></dd>
+                                                                                    </dl>
+                                                                                </div>
+                                                                                <div class="bx_right">
+                                                                                    <dl>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="info_title">대기</dt>
+                                                                                            <dd>10</dd>
+                                                                                        </div>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="icon_type_01"></dt>
+                                                                                            <dd>6</dd>
+                                                                                        </div>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="icon_type_02"></dt>
+                                                                                            <dd>6/10</dd>
+                                                                                        </div>
+                                                                                    </dl>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="cell_td">
+                                                                    <div class="cell_multiple align_right">
+                                                                        <div class="cell_multiple_inner">
+                                                                            <div class="bx_info type_none"></div>
+                                                                            <div class="bx_info orange">
+                                                                                <div class="bx_left">
+                                                                                    <strong class="bx_info_title">유방센터</strong>
+                                                                                    <dl class="bx_left_info">
+                                                                                        <dt>진료환자</dt>
+                                                                                        <dd>70<em>/120</em></dd>
+                                                                                    </dl>
+                                                                                </div>
+                                                                                <div class="bx_right">
+                                                                                    <dl>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="info_title">대기</dt>
+                                                                                            <dd>10</dd>
+                                                                                        </div>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="icon_type_01"></dt>
+                                                                                            <dd>6</dd>
+                                                                                        </div>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="icon_type_02"></dt>
+                                                                                            <dd>6/10</dd>
+                                                                                        </div>
+                                                                                    </dl>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="cell_multiple_inner">
+                                                                            <div class="bx_info orange">
+                                                                                <div class="bx_left">
+                                                                                    <strong class="bx_info_title">혈액종양내과(2층)</strong>
+                                                                                    <dl class="bx_left_info">
+                                                                                        <dt>진료환자</dt>
+                                                                                        <dd>70<em>/120</em></dd>
+                                                                                    </dl>
+                                                                                </div>
+                                                                                <div class="bx_right">
+                                                                                    <dl>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="info_title">대기</dt>
+                                                                                            <dd>10</dd>
+                                                                                        </div>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="icon_type_01"></dt>
+                                                                                            <dd>6</dd>
+                                                                                        </div>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="icon_type_02"></dt>
+                                                                                            <dd>6/10</dd>
+                                                                                        </div>
+                                                                                    </dl>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="bx_info orange">
+                                                                                <div class="bx_left">
+                                                                                    <strong class="bx_info_title">폐식도센터</strong>
+                                                                                    <dl class="bx_left_info">
+                                                                                        <dt>진료환자</dt>
+                                                                                        <dd>70<em>/120</em></dd>
+                                                                                    </dl>
+                                                                                </div>
+                                                                                <div class="bx_right">
+                                                                                    <dl>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="info_title">대기</dt>
+                                                                                            <dd>10</dd>
+                                                                                        </div>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="icon_type_01"></dt>
+                                                                                            <dd>6</dd>
+                                                                                        </div>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="icon_type_02"></dt>
+                                                                                            <dd>6/10</dd>
+                                                                                        </div>
+                                                                                    </dl>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="cell_td"></div>
+                                                            </div>
+                                                            <div class="bx_table_inner">
+                                                                <div class="cell_td">1F</div>
+                                                                <div class="cell_td">
+                                                                    <div class="cell_multiple">
+                                                                        <div class="cell_multiple_inner">
+                                                                        <!-- 하나이며 Long 사이즈의 경우 class="type_long" 추가해주세요.  -->
+                                                                            <div class="bx_info blue">
+                                                                                <div class="bx_left">
+                                                                                    <strong class="bx_info_title">당뇨병/내분비/갑상선센터</strong>
+                                                                                    <dl class="bx_left_info">
+                                                                                        <dt>진료환자</dt>
+                                                                                        <dd>90<em>/120</em></dd>
+                                                                                    </dl>
+                                                                                </div>
+                                                                                <div class="bx_right">
+                                                                                    <dl>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="info_title">대기</dt>
+                                                                                            <dd>10</dd>
+                                                                                        </div>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="icon_type_01"></dt>
+                                                                                            <dd>6</dd>
+                                                                                        </div>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="icon_type_02"></dt>
+                                                                                            <dd>6/10</dd>
+                                                                                        </div>
+                                                                                    </dl>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="bx_info type_none"></div>
+                                                                        </div>
+                                                                        <div class="cell_multiple_inner">
+                                                                            <div class="bx_info blue">
+                                                                                <div class="bx_left">
+                                                                                    <strong class="bx_info_title">소아청소년센터</strong>
+                                                                                    <dl class="bx_left_info">
+                                                                                        <dt>진료환자</dt>
+                                                                                        <dd>65<em>/120</em></dd>
+                                                                                    </dl>
+                                                                                </div>
+                                                                                <div class="bx_right">
+                                                                                    <dl>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="info_title">대기</dt>
+                                                                                            <dd>10</dd>
+                                                                                        </div>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="icon_type_01"></dt>
+                                                                                            <dd>6</dd>
+                                                                                        </div>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="icon_type_02"></dt>
+                                                                                            <dd>6/10</dd>
+                                                                                        </div>
+                                                                                    </dl>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="bx_info blue">
+                                                                                <div class="bx_left">
+                                                                                    <strong class="bx_info_title">정형외과척추센터</strong>
+                                                                                    <dl class="bx_left_info">
+                                                                                        <dt>진료환자</dt>
+                                                                                        <dd>90<em>/120</em></dd>
+                                                                                    </dl>
+                                                                                </div>
+                                                                                <div class="bx_right">
+                                                                                    <dl>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="info_title">대기</dt>
+                                                                                            <dd>10</dd>
+                                                                                        </div>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="icon_type_01"></dt>
+                                                                                            <dd>6</dd>
+                                                                                        </div>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="icon_type_02"></dt>
+                                                                                            <dd>6/10</dd>
+                                                                                        </div>
+                                                                                    </dl>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="cell_td border_custom">
+                                                                    <div class="cell_multiple">
+                                                                        <div class="cell_multiple_inner type_over">
+                                                                            <div class="bx_info orange">
+                                                                                <div class="bx_left">
+                                                                                    <strong class="bx_info_title">혈액종양내과(1층)</strong>
+                                                                                    <dl class="bx_left_info">
+                                                                                        <dt>진료환자</dt>
+                                                                                        <dd>70<em>/120</em></dd>
+                                                                                    </dl>
+                                                                                </div>
+                                                                                <div class="bx_right">
+                                                                                    <dl>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="info_title">대기</dt>
+                                                                                            <dd>10</dd>
+                                                                                        </div>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="icon_type_01"></dt>
+                                                                                            <dd>6</dd>
+                                                                                        </div>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="icon_type_02"></dt>
+                                                                                            <dd>6/10</dd>
+                                                                                        </div>
+                                                                                    </dl>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="bx_info orange">
+                                                                                <div class="bx_left">
+                                                                                    <strong class="bx_info_title">암치유센터</strong>
+                                                                                    <dl class="bx_left_info">
+                                                                                        <dt>진료환자</dt>
+                                                                                        <dd>70<em>/120</em></dd>
+                                                                                    </dl>
+                                                                                </div>
+                                                                                <div class="bx_right">
+                                                                                    <dl>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="info_title">대기</dt>
+                                                                                            <dd>10</dd>
+                                                                                        </div>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="icon_type_01"></dt>
+                                                                                            <dd>6</dd>
+                                                                                        </div>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="icon_type_02"></dt>
+                                                                                            <dd>6/10</dd>
+                                                                                        </div>
+                                                                                    </dl>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="cell_multiple_inner">
+                                                                            <div class="bx_info orange">
+                                                                                <div class="bx_left">
+                                                                                    <strong class="bx_info_title">위/췌장담도센터</strong>
+                                                                                    <dl class="bx_left_info">
+                                                                                        <dt>진료환자</dt>
+                                                                                        <dd>70<em>/120</em></dd>
+                                                                                    </dl>
+                                                                                </div>
+                                                                                <div class="bx_right">
+                                                                                    <dl>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="info_title">대기</dt>
+                                                                                            <dd>10</dd>
+                                                                                        </div>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="icon_type_01"></dt>
+                                                                                            <dd>6</dd>
+                                                                                        </div>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="icon_type_02"></dt>
+                                                                                            <dd>6/10</dd>
+                                                                                        </div>
+                                                                                    </dl>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="bx_info orange">
+                                                                                <div class="bx_left">
+                                                                                    <strong class="bx_info_title">대장센터</strong>
+                                                                                    <dl class="bx_left_info">
+                                                                                        <dt>진료환자</dt>
+                                                                                        <dd>70<em>/120</em></dd>
+                                                                                    </dl>
+                                                                                </div>
+                                                                                <div class="bx_right">
+                                                                                    <dl>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="info_title">대기</dt>
+                                                                                            <dd>10</dd>
+                                                                                        </div>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="icon_type_01"></dt>
+                                                                                            <dd>6</dd>
+                                                                                        </div>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="icon_type_02"></dt>
+                                                                                            <dd>6/10</dd>
+                                                                                        </div>
+                                                                                    </dl>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="cell_td border_left_none">
+                                                                    <div class="cell_multiple">
+                                                                        <div class="cell_multiple_inner">
+                                                                            <div class="bx_info orange">
+                                                                                <div class="bx_left">
+                                                                                    <strong class="bx_info_title">이비인후과</strong>
+                                                                                    <dl class="bx_left_info">
+                                                                                        <dt>진료환자</dt>
+                                                                                        <dd>70<em>/120</em></dd>
+                                                                                    </dl>
+                                                                                </div>
+                                                                                <div class="bx_right">
+                                                                                    <dl>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="info_title">대기</dt>
+                                                                                            <dd>10</dd>
+                                                                                        </div>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="icon_type_01"></dt>
+                                                                                            <dd>6</dd>
+                                                                                        </div>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="icon_type_02"></dt>
+                                                                                            <dd>6/10</dd>
+                                                                                        </div>
+                                                                                    </dl>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="bx_info type_none"></div>
+                                                                        </div>
+                                                                        <div class="cell_multiple_inner">
+                                                                            <div class="bx_info orange">
+                                                                                <div class="bx_left">
+                                                                                    <strong class="bx_info_title">간센터</strong>
+                                                                                    <dl class="bx_left_info">
+                                                                                        <dt>진료환자</dt>
+                                                                                        <dd>70<em>/120</em></dd>
+                                                                                    </dl>
+                                                                                </div>
+                                                                                <div class="bx_right">
+                                                                                    <dl>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="info_title">대기</dt>
+                                                                                            <dd>10</dd>
+                                                                                        </div>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="icon_type_01"></dt>
+                                                                                            <dd>6</dd>
+                                                                                        </div>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="icon_type_02"></dt>
+                                                                                            <dd>6/10</dd>
+                                                                                        </div>
+                                                                                    </dl>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="bx_info type_none"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="bx_table_inner">
+                                                                <div class="cell_td">B1</div>
+                                                                <div class="cell_td">
+                                                                    <div class="bx_info blue">
+                                                                        <div class="bx_left">
+                                                                            <strong class="bx_info_title">가정의학과</strong>
+                                                                            <dl class="bx_left_info">
+                                                                                <dt>진료환자</dt>
+                                                                                <dd>90<em>/120</em></dd>
+                                                                            </dl>
+                                                                        </div>
+                                                                        <div class="bx_right">
+                                                                            <dl>
+                                                                                <div class="bx_info_number">
+                                                                                    <dt class="info_title">대기</dt>
+                                                                                    <dd>10</dd>
+                                                                                </div>
+                                                                                <div class="bx_info_number">
+                                                                                    <dt class="icon_type_01"></dt>
+                                                                                    <dd>6</dd>
+                                                                                </div>
+                                                                                <div class="bx_info_number">
+                                                                                    <dt class="icon_type_02"></dt>
+                                                                                    <dd>6/10</dd>
+                                                                                </div>
+                                                                            </dl>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="bx_info blue">
+                                                                        <div class="bx_left">
+                                                                            <strong class="bx_info_title">재활의학과</strong>
+                                                                            <dl class="bx_left_info">
+                                                                                <dt>진료환자</dt>
+                                                                                <dd>90<em>/120</em></dd>
+                                                                            </dl>
+                                                                        </div>
+                                                                        <div class="bx_right">
+                                                                            <dl>
+                                                                                <div class="bx_info_number">
+                                                                                    <dt class="info_title">대기</dt>
+                                                                                    <dd>10</dd>
+                                                                                </div>
+                                                                                <div class="bx_info_number">
+                                                                                    <dt class="icon_type_01"></dt>
+                                                                                    <dd>6</dd>
+                                                                                </div>
+                                                                                <div class="bx_info_number">
+                                                                                    <dt class="icon_type_02"></dt>
+                                                                                    <dd>6/10</dd>
+                                                                                </div>
+                                                                            </dl>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="cell_td">
+                                                                    <div class="cell_multiple">
+                                                                        <div class="cell_multiple_inner">
+                                                                            <div class="bx_info orange">
+                                                                                <div class="bx_left">
+                                                                                    <strong class="bx_info_title">방사선종양학과</strong>
+                                                                                    <dl class="bx_left_info">
+                                                                                        <dt>진료환자</dt>
+                                                                                        <dd>70<em>/120</em></dd>
+                                                                                    </dl>
+                                                                                </div>
+                                                                                <div class="bx_right">
+                                                                                    <dl>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="info_title">대기</dt>
+                                                                                            <dd>10</dd>
+                                                                                        </div>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="icon_type_01"></dt>
+                                                                                            <dd>6</dd>
+                                                                                        </div>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="icon_type_02"></dt>
+                                                                                            <dd>6/10</dd>
+                                                                                        </div>
+                                                                                    </dl>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="bx_info dark_blue">
+                                                                                <div class="bx_left">
+                                                                                    <strong class="bx_info_title">방사선종양학과<em class="font_small">(양성자)</em></strong>
+                                                                                    <dl class="bx_left_info">
+                                                                                        <dt>진료환자</dt>
+                                                                                        <dd>70<em>/120</em></dd>
+                                                                                    </dl>
+                                                                                </div>
+                                                                                <div class="bx_right">
+                                                                                    <dl>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="info_title">대기</dt>
+                                                                                            <dd>10</dd>
+                                                                                        </div>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="icon_type_01"></dt>
+                                                                                            <dd>6</dd>
+                                                                                        </div>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="icon_type_02"></dt>
+                                                                                            <dd>6/10</dd>
+                                                                                        </div>
+                                                                                    </dl>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="cell_td border_custom_02">
+                                                                    <div class="cell_multiple">
+                                                                        <div class="cell_multiple_inner">
+                                                                        <!--
+                                                                            [D] 본관 : blue, 암병원 : orange, 별관 : green
+                                                                            암병원 내에 본관 방사선종양학과가 있을 수 있으므로 bx_info 개별로 클래스 지정
+                                                                        -->
+                                                                            <div class="bx_info green">
+                                                                                <div class="bx_left">
+                                                                                    <strong class="bx_info_title">안과</strong>
+                                                                                    <dl class="bx_left_info">
+                                                                                        <dt>진료환자</dt>
+                                                                                        <dd>60<em>/120</em></dd>
+                                                                                    </dl>
+                                                                                </div>
+                                                                                <div class="bx_right">
+                                                                                    <dl>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="info_title">대기</dt>
+                                                                                            <dd>10</dd>
+                                                                                        </div>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="icon_type_01"></dt>
+                                                                                            <dd>6</dd>
+                                                                                        </div>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="icon_type_02"></dt>
+                                                                                            <dd>6/10</dd>
+                                                                                        </div>
+                                                                                    </dl>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="bx_info green">
+                                                                                <div class="bx_left">
+                                                                                    <strong class="bx_info_title">성형외과</strong>
+                                                                                    <dl class="bx_left_info">
+                                                                                        <dt>진료환자</dt>
+                                                                                        <dd>60<em>/120</em></dd>
+                                                                                    </dl>
+                                                                                </div>
+                                                                                <div class="bx_right">
+                                                                                    <dl>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="info_title">대기</dt>
+                                                                                            <dd>10</dd>
+                                                                                        </div>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="icon_type_01"></dt>
+                                                                                            <dd>6</dd>
+                                                                                        </div>
+                                                                                        <div class="bx_info_number">
+                                                                                            <dt class="icon_type_02"></dt>
+                                                                                            <dd>6/10</dd>
+                                                                                        </div>
+                                                                                    </dl>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- //외래 진료현황 End -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="../../js/jquery/jquery-latest.min.js"></script>
+<script defer src="markuptest.js"></script>
+<script>
+    includeHTML();
+</script>
+</body>
+</html>

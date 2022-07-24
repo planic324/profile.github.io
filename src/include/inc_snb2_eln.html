@@ -1,0 +1,165 @@
+                        <div class="snb_btn_area">
+                            <button type="button" class="LUX_basic_btn Confirm basic2"><span>새 과제</span></button>
+                        </div>
+                        <!-- [D] 개발시 overflow 속성 제거. 마크업 테스트용 -->
+                        <div class="LUX_basic_snbin" style="bottom:39px;overflow:visible">
+                            <!--
+                                active : 현재 활성화된 메뉴
+                                is_badge : 뱃지가 있을 경우 사용
+                                is_num : 숫자가 필요할 때 사용
+                                ** is_badge와 is_num은 동시에 사용하지 않는다.
+                                ** 수치는 99가 넘어가면 99+ badge를 사용한다.
+                            -->
+                            <ul class="snbsub_menu">
+                                <li class="active is_num">
+                                    <a href="#">
+                                        <span class="sp_snb ico_eln_board"></span>대시보드
+                                    </a>
+                                    <span class="number">132</span>
+                                </li>
+                                <li class="is_num">
+                                    <a href="#">
+                                        <span class="sp_snb ico_eln_note"></span>전체과제
+                                    </a>
+                                    <span class="number">132</span>
+                                </li>
+                                <li class="is_num">
+                                    <a href="#" class="on">
+                                        <span class="sp_snb ico_star"></span>중요페이지
+                                    </a>
+                                    <span class="number">132</span>
+                                </li>
+                                <!-- [D] Depth가 있을 경우 hover-none 클래스 추가 -->
+                                <li class="is_num">
+                                    <a href="#">
+                                        <span class="sp_snb ico_time"></span>작성중인 페이지
+                                    </a>
+                                    <span class="number">132</span>
+                                </li>
+                            </ul>
+                            <div class="snb_group user_group">
+                                <div class="title_area">
+                                    <!-- [D] 그룹 영역 폴딩할 경우 클래스 fold 추가 및 닫기 텍스트 열기로 변경 -->
+                                    <a href="#" class="title">개인연구과제 <span class="num">2</span>
+                                        <i class="sp_lux">닫기</i>
+                                    </a>
+                                    <div class="btn_area">
+                                        <button type="button" class="add_group"><span class="sp_snb">그룹생성</span></button>
+                                    </div>
+                                </div>
+                                <div class="snb_group_list">
+                                    <!--
+                                         [D] badge가 존재할 경우 클래스 is_badge 추가
+                                             number가 존재할 경우 클래스 is_num 추가
+                                    -->
+                                    <div class="group_box select">
+                                        <a href="#" class="text">
+                                            <i class="sp_snb"></i>
+                                            <em>생명공학기술을 활용한 반도체산업</em>
+                                        </a>
+                                        <!-- [D] 편집 버튼 클릭시 edit_list 영역 활성화 style="display:block" 적용 -->
+                                        <button type="button" class="btn_edit"><i class="sp_snb">편집</i></button>
+                                        <div class="edit_list" style="display:block">
+                                            <ul>
+                                                <li><a href="#">PDF 다운로드</a></li>
+                                                <li><a href="#">시점인증적용</a></li>
+                                                <li><a href="#">프로젝트 연결</a></li>
+                                                <!-- [D] 선택되면 .selected 추가 -->
+                                                <li class="has_sub selected">
+                                                    <a href="#">상태변경</a>
+                                                    <div class="edit_list">
+                                                        <ul>
+                                                            <li><a href="#">진행중</a></li>
+                                                            <li><a href="#">재시도</a></li>
+                                                            <li><a href="#">완료</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li><a href="#">복제</a></li>
+                                                <li><a href="#">인쇄</a></li>
+                                                <li><a href="#">과제 삭제</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="group_box">
+                                        <a href="#" class="text">
+                                            <i class="sp_snb"></i>
+                                            <em>생명공학기술을 활용한 반도체산업</em>
+                                        </a>
+                                        <button type="button" class="btn_edit"><i class="sp_snb">편집</i></button>
+                                    </div>
+                                    <div class="group_box">
+                                        <a href="#" class="text">
+                                            <i class="sp_snb secure_ico"></i>
+                                            <em>생명공학기술을 활용한 반도체산업</em>
+                                        </a>
+                                        <button type="button" class="btn_edit"><i class="sp_snb">편집</i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="snb_group user_group">
+                                <div class="title_area">
+                                    <!-- [D] 그룹 영역 폴딩할 경우 클래스 fold 추가 및 닫기 텍스트 열기로 변경 -->
+                                    <a href="#" class="title">공통과제 <span class="num">2</span>
+                                        <i class="sp_lux">닫기</i>
+                                    </a>
+                                    <div class="btn_area">
+                                        <button type="button" class="add_group"><span class="sp_snb">그룹생성</span></button>
+                                    </div>
+                                </div>
+                                <div class="snb_group_list">
+                                    <!--
+                                         [D] badge가 존재할 경우 클래스 is_badge 추가
+                                             number가 존재할 경우 클래스 is_num 추가
+                                    -->
+                                    <div class="group_box is_num select">
+                                        <a href="#" class="text">
+                                            <i class="sp_snb ico_shareknown"></i>
+                                            <em>R&D연구과제</em>
+                                            <span class="number">132</span>
+                                        </a>
+                                        <!-- [D] 편집 버튼 클릭시 edit_list 영역 활성화 style="display:block" 적용 -->
+                                        <button type="button" class="btn_edit"><i class="sp_snb">편집</i></button>
+                                    </div>
+                                    <div class="group_box is_num">
+                                        <a href="#" class="text">
+                                            <i class="sp_snb ico_shareknown"></i>
+                                            <em>공공 컨테이너 시뮬레이션</em>
+                                            <span class="number">132</span>
+                                        </a>
+                                        <!-- [D] 편집 버튼 클릭시 edit_list 영역 활성화 style="display:block" 적용 -->
+                                        <button type="button" class="btn_edit"><i class="sp_snb">편집</i></button>
+                                    </div>
+                                    <div class="group_box is_num">
+                                        <a href="#" class="text">
+                                            <i class="sp_snb ico_shareknown"></i>
+                                            <em>프로젝트</em>
+                                            <span class="number">132</span>
+                                        </a>
+                                        <!-- [D] 편집 버튼 클릭시 edit_list 영역 활성화 style="display:block" 적용 -->
+                                        <button type="button" class="btn_edit"><i class="sp_snb">편집</i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="snb_group user_group">
+                                <div class="title_area">
+                                    <a href="#" class="title">과제완료함 <span class="num">2</span></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 환경설정 서비스 관리-->
+                        <div class="bottom_btn">
+                            <ul>
+                                <li class="is_trash">
+                                    <a href="#" target="_blank">
+                                        <span class="sp_snb ico_garbage"></span>
+                                        휴지통
+                                    </a>
+                                    <button type="button" class="LUX_basic_btn">
+                                        <span class="sp_snb ico_trash">비우기 버튼</span>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- //환경설정 서비스 관리-->

@@ -1,0 +1,66 @@
+<!-- .LS_dragselect 의 인라인스타일은 마크업 테스트용이므로 개발시 삭제 -->
+<div class="LS_dragselect" style="float:left;width:256px">
+    <div class="top_inputbox">
+        <input type="input" class="dragselect_input" placeholder="예산항목을 입력하세요.">
+        <button type="button" class="LS_btn Default basic"><span>추가</span></button>
+    </div>
+    <div class="LS_dragselect_result">
+        <ul>
+            <!-- [D] 선택되면 .selected 추가 -->
+            <li class="dragselect_item selected">
+                <button type="button" class="btn_move"><span class="num">99</span>일이삼사오육칠팔구십</button>
+                <button type="button" class="btn_del"><span class="blind">삭제 </span></button>
+            </li>
+            <li class="dragselect_item">
+                <button type="button" class="btn_move"><span class="num">1</span>인건비</button>
+                <button type="button" class="btn_del"><span class="blind">삭제 </span></button>
+            </li>
+            <li class="dragselect_item">
+                <button type="button" class="btn_move"><span class="num">2</span>교통비</button>
+                <button type="button" class="btn_opt"><span class="blind">더보기 </span></button>
+                <!--
+                     [D] 컴포넌트 사용자는 아래 li 내용만 변경합니다.
+                         단, 가로폭을 변경해야할 경우 option_bx의 width 값을 인라인스타일로 바꿔줍니다.
+                -->
+                <div class="LS_dragselect_popover">
+                    <ul class="option_bx" style="width:58px;">
+                        <li class="selected"><button type="button">미사용</button></li>
+                        <li><button type="button">사용</button></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="dragselect_item">
+                <button type="button" class="btn_move"><span class="num">3</span>식대</button>
+                <button type="button" class="btn_del"><span class="blind">삭제 </span></button>
+            </li>
+            <li class="dragselect_item">
+                <button type="button" class="btn_move"><span class="num">4</span>교제비</button>
+                <button type="button" class="btn_del"><span class="blind">삭제 </span></button>
+            </li>
+            <li class="dragselect_item">
+                <button type="button" class="btn_move"><span class="num">5</span>교제비</button>
+                <button type="button" class="btn_del"><span class="blind">삭제 </span></button>
+            </li>
+            <li class="dragselect_item">
+                <button type="button" class="btn_move"><span class="num">6</span>교제비</button>
+                <button type="button" class="btn_del"><span class="blind">삭제 </span></button>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- emptyset-->
+<div class="LS_dragselect" style="float:left;margin-left:10px;width:256px">
+    <div class="top_inputbox">
+        <input type="input" class="dragselect_input" placeholder="예산항목을 입력하세요.">
+        <button type="button" class="LS_btn Default basic"><span>추가</span></button>
+    </div>
+    <div class="LS_dragselect_result">
+        <div class="lsempty_area" style="padding-top:40px;">
+            <span class="ico">
+                <img src="https://static.wehago.com/imgs/common/ico_nodata36.png" alt="Empty Image">
+            </span>
+            <p class="empty_text">등록된 항목이 없습니다.<br>항목을 추가하세요.</p>
+        </div>
+    </div>
+</div>

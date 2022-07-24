@@ -1,0 +1,289 @@
+$smallSize : 18px; $smallSizeBg : 34px;
+$mediumSize : 26px; $mediumSizeBg : 48px;
+$largeSize : 54px; $largeSizeBg : 88px;
+
+@mixin icon-size($wh_size, $bgcheck:0) {
+  @if $bgcheck == 1 {
+    margin-left:-($wh_size/2);
+    margin-top:-($wh_size/2);
+  }
+  @else if $bgcheck == 0 {
+    width:$wh_size;
+    height:$wh_size;
+  }
+ }
+
+.LS_icons {
+  position:relative;
+  display:inline-block;
+  overflow:hidden;
+  svg {
+    display:block;
+  }
+  &.small>svg {
+    @include icon-size($smallSize);
+  }
+  &.medium>svg {
+    @include icon-size($mediumSize);
+  }
+  &.large>svg {
+    @include icon-size($largeSize);
+  }
+  &.hasbg {
+    background:#93aad0;
+    border-radius:50%;
+    &.small {
+      width:$smallSizeBg;
+      height:$smallSizeBg;
+      > svg {
+        @include icon-size($smallSize,1);
+      }
+    }
+    &.medium {
+      width:$mediumSizeBg;
+      height:$mediumSizeBg;
+      > svg {
+        @include icon-size($mediumSize,1);
+      }
+    }
+    &.large {
+      width:$largeSizeBg;
+      height:$largeSizeBg;
+      > svg {
+        @include icon-size($largeSize,1);
+      }
+    }
+    svg {
+      position:absolute;
+      top:50%;
+      left:50%;
+      fill:#fff;
+    }
+  }
+
+  &.bg_default {background-color: #93aad0 !important;}  //기본기능, 기타
+  &.disabled {background-color: #cfcfcf !important;}    //비활성화
+
+  /* 컴포넌트 적용 후 삭제 될 부분 */
+      &.bg_sao,   //경영관리
+      &.bg_saoi,  //경영관리 회계
+      &.bg_saoh,  //경영관리 인사
+      &.bg_saol,  //경영관리 물류
+      &.bg_tax {  //전자세금계산서
+        background-color: #3677fb;
+      }
+      &.bg_comunication,  //커뮤니케이션
+      &.bg_mail,          //메일
+      &.bg_fax,           //팩스
+      &.bg_wedrive,       //WE드라이브
+      &.bg_cloud,         //클라우드
+      &.bg_oneoffice {    //ONEOFFICE
+        background-color: #cc7bfb;
+      }
+      &.bg_trade,         //거래처
+      &.bg_contact,       //연락처
+      &.bg_schedule,      //일정
+      &.bg_todo,          //할일
+      &.bg_note,          //노트
+      &.bg_smartsquare {  //스마트스퀘어
+        background-color: #65d8f4;
+      }
+      &.bg_person,    //개인카드
+      &.bg_company,   //법인카드
+      &.bg_expense {  //경비현황조회
+        background-color: #4dccce;
+      }
+      &.bg_credit,    //신용지키미LTE
+      &.bg_cloudcam,  //클라우드캠
+      &.bg_law,       //법무
+      &.bg_card,      //카드
+      &.bg_tenbook {  //10분독서
+        background-color: #ffab58;
+      }
+      &.bg_setcompany,  //회사설정
+      &.bg_setperson,   //개인설정
+      &.bg_help,        //고객센터
+      &.bg_oldsao {     //과거데이터조회
+        background-color: #93aad0;
+      }
+      &.bg_mobile,      //Wehago Mobile
+      &.bg_skbcall,    // SKB 인터넷전화
+      &.bg_svcmarket {  //서비스마켓
+        background-color: #25a6ff;
+      }  
+      //경영관리 아이콘 미세조정
+      // &.bg_sao.small>svg,
+      // &.bg_saoi.small>svg,
+      // &.bg_saoh.small>svg,
+      // &.bg_saol.small>svg {
+      //   margin-left: -9px;
+      // }
+
+  /* //컴포넌트 적용 후 삭제 될 부분 */
+
+
+  /* Renewal */
+  &.bg_blue {background-color: #1c90fb;}      //Smart A Online 및 경영관리/기본서비스
+  &.bg_purple {background-color: #7c4dff;}    //협업/소통/연결서비스
+  &.bg_emerald {background-color: #32d7d2;}   //부가서비스
+  &.bg_3rdparty {background-color: #f8ab58;}  //외부/제휴서비스
+
+  /* Customize */
+  &.hasbg.small {
+    &.svc_kids1>svg,
+    &.svc_kids2>svg,
+    &.svc_kids4>svg,
+    &.svc_kids10>svg {width:16px;height:16px;margin:-8px 0 0 -8px;}
+    &.svc_kids3>svg {margin-top:-8px;}
+    &.svc_kids7>svg {width:17px;margin-left:-8px;}
+    &.svc_gt>svg {width:20px;height:20px;margin:-10px 0 0 -10px;}
+    &.svc_saoin>svg,
+    &.svc_cs>svg,
+    &.svc_com_storage>svg {margin-left:-8px;}
+    &.svc_mobile>svg,
+    &.svc_wk>svg {margin-top:-10px;}
+    &.svc_rca>svg {width:20px;height:17px;margin:-10px 0 0 -10px;}
+    &.svc_sao>svg,
+    &.svc_saoi>svg,
+    &.svc_saoh>svg,
+    &.svc_saoc>svg,
+    &.svc_saol>svg,
+    &.svc_al>svg,
+    &.svc_tpluspack>svg,
+    &.svc_tedge>svg,
+    &.svc_cr_per>svg,
+    &.svc_nt>svg,
+    &.svc_westudio>svg,
+    &.svc_tp_og>svg,
+    &.svc_tp_co>svg,
+    &.svc_wlsm>svg,
+    &.svc_wlfm>svg {margin-left:-8px;}
+    &.svc_dat>svg {margin-top:-7px;}
+    &.svc_saov>svg {height:17px;margin:-8px 0 0 -8px;}
+    &.svc_rcs>svg {width:16px;height:16px;margin:-7px 0 0 -7px;}
+    &.svc_ss>svg,
+    &.svc_eln>svg,
+    &.svc_nc>svg {margin:-8px 0 0 -8px;}
+    &.svc_pms>svg {margin-top:-8px;}
+    &.svc_oneoffice>svg {width:17px;height:17px;margin-left:-8px;}
+    &.svc_am>svg {width:17px;margin-left:-8px;}
+    &.svc_ad>svg {width:20px;margin-left:-10px;}
+    &.svc_wf>svg {-webkit-margin-before:-10px;}
+    &.svc_cr>svg {margin:-8px 0 0 -8px;}
+    &.svc_ins>svg {width:18px;height:18px;margin:-9px 0 0 -8px;}
+    &.svc_mm>svg {margin-left:-9px;}
+    &.svc_nyn>svg {margin-top:-10px;}
+  }
+  &.hasbg.medium {
+    &.svc_kids1>svg,
+    &.svc_kids10>svg {width:22px;height:22px;margin:-11px 0 0 -11px;}
+    &.svc_kids2>svg,
+    &.svc_kids4>svg {width:24px;height:24px;margin:-12px 0 0 -12px;}
+    &.svc_kids3>svg {margin-top:-12px;}
+    &.svc_kids7>svg {width:25px;margin-left:-12px;}
+    &.svc_gt>svg {width:28px;height:28px;margin:-14px 0 0 -14px;}
+    &.svc_saoin>svg,
+    &.svc_cs>svg,
+    &.svc_com_storage>svg {margin-left:-12px;}
+    &.svc_mobile>svg,
+    &.svc_wk>svg {margin-top:-14px;}
+    &.svc_rca>svg {width:28px;height:25px;margin:-14px 0 0 -14px;}
+    &.svc_sao>svg,
+    &.svc_saoi>svg,
+    &.svc_saoh>svg,
+    &.svc_saoc>svg,
+    &.svc_saol>svg,
+    &.svc_yt>svg,
+    &.svc_al>svg,
+    &.svc_tpluspack>svg,
+    &.svc_tedge>svg,
+    &.svc_cr_per>svg,
+    &.svc_nt>svg {margin-left:-12px;}
+    &.svc_dat>svg {margin-top:-10px;}
+    &.svc_saov>svg {height:25px;margin:-12px 0 0 -12px;}
+    &.svc_rcs>svg {width:24px;height:24px;margin:-11px 0 0 -11px;}
+    &.svc_ss>svg,
+    &.svc_eln>svg,
+    &.svc_ins>svg {margin:-12px 0 0 -12px;}
+    &.svc_pms>svg {margin-top:-12px;}
+    &.svc_oneoffice>svg {width:24px;height:24px;margin-left:-11px;}
+    &.svc_ad>svg {width:28px;margin-left:-14px;}
+    &.svc_wf>svg {-webkit-margin-before:-14px;}
+    &.svc_cr>svg {width:24px;height:24px;margin:-11px 0 0 -11px;}
+    &.svc_westudio>svg {margin:-13px 0 0 -12px;}
+    &.svc_tp_og>svg {margin-left:-12px;}
+    &.svc_tp_co>svg,
+    &.svc_wlsm>svg,
+    &.svc_wlfm>svg {margin-left:-11px;}
+    &.svc_nyn>svg {margin:-14px 0 0 -12px;}
+  }
+  &.hasbg.large {
+    &.svc_kids1>svg {width:48px;height:48px;margin:-24px 0 0 -25px;}
+    &.svc_kids10>svg {width:46px;height:46px;margin:-23px 0 0 -23px;}
+    &.svc_kids2>svg,
+    &.svc_kids4>svg {width:52px;height:52px;margin:-26px 0 0 -26px;}
+    &.svc_kids3>svg {margin-top:-26px;}
+    &.svc_kids7>svg {width:48px;height:48px;margin:-23px 0 0 -23px;}
+    &.svc_cs>svg,
+    &.svc_com_storage>svg {margin-left:-26px;}
+    &.svc_mobile>svg,
+    &.svc_wk>svg {margin-top:-28px;}
+    &.svc_rca>svg {width:56px;height:53px;margin:-28px 0 0 -28px;}
+    &.svc_sao>svg,
+    &.svc_saoi>svg,
+    &.svc_saoh>svg,
+    &.svc_saoc>svg,
+    &.svc_saol>svg,
+    &.svc_yt>svg,
+    &.svc_al>svg,
+    &.svc_tpluspack>svg,
+    &.svc_tedge>svg,
+    &.svc_cr_per>svg,
+    &.svc_nt>svg,
+    &.svc_tenbook>svg {margin-left:-25px;}
+    &.svc_dat>svg {margin-top:-21px;}
+    &.svc_saoin>svg {margin-left:-24px;}
+    &.svc_saov>svg {width:52px;height:52px;margin:-24px 0 0 -24px;}
+    &.svc_rcs>svg {width:50px;height:50px;margin:-22px 0 0 -22px;}
+    &.svc_ss>svg {margin:-26px 0 0 -26px;}
+    &.svc_eln>svg {margin:-25px 0 0 -25px;}
+    &.svc_am>svg {margin-left:-25px;}
+    &.svc_pms>svg {margin-top:-26px;}
+    &.svc_oneoffice>svg {width:52px;height:52px;margin-left:-25px;}
+    &.svc_ad>svg {width:56px;margin-left:-28px;}
+    &.svc_wf>svg {-webkit-margin-before:-28px;}
+    &.svc_cr>svg {width:50px;height:50px;margin:-22px 0 0 -22px;}
+    &.svc_ins>svg {margin:-25px 0 0 -24px;}
+    &.svc_westudio>svg {margin:-28px 0 0 -25px;}
+    &.svc_tp_og>svg {width:52px;height:52px;margin-left:-23px;}
+    &.svc_tp_co>svg {width:52px;height:52px;margin-left:-21px;}
+    &.svc_wlsm>svg {margin-top: -27px; margin-left: -24px;}
+    &.svc_wlfm>svg {margin-top: -26px; margin-left: -23px;}
+    &.svc_nyn>svg {margin:-29px 0 0 -25px;}
+  }
+  &.use_lnb {
+    &.svc_sao>svg,
+    &.svc_cr>svg,
+    &.svc_ins>svg,
+    &.svc_ss>svg,
+    &.svc_dt>svg,
+    &.svc_wemeet>svg,
+    &.svc_webuilder>svg,
+    &.svc_moneymanage>svg {margin-left:2px;}
+    &.svc_ad>svg {margin-left:-1px;}
+    &.svc_tr>svg,
+    &.svc_nt>svg,
+    &.svc_am>svg,
+    &.svc_cs>svg {margin-left:1px;}
+    &.svc_eln>svg,
+    &.svc_wlsm>svg,
+    &.svc_wlfm>svg,
+    &.svc_sc>svg {margin-left:2px;}
+    &.svc_rca>svg {margin:-3px 0 0 1px;}
+    &.svc_westudio>svg {margin:-2px 0 0 4px;}
+    &.svc_gt>svg {width:23px !important;height:23px !important;}
+    &.svc_tp_og>svg,
+    &.svc_tp_co>svg {margin-left:4px;}
+    &.svc_nc>svg {margin-left:3px;}
+  }
+}

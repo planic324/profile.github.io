@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOCC</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/nanumsquare.css">
+    <link rel="stylesheet" type="text/css" href="css/docc2.css">
+    <!-- 마크업 확인용 Include -->
+    <script src="includeHTML.js"></script>
+    <!-- //마크업 확인용 Include -->
+</head>
+<body>
+    <!-- [D] 지표 페이지이며, SNB 간소화버전인 경우 class="reduction" 추가해주세요. -->
+    <div class="docc renew reduction">
+        <div id="header" class="header" include-html="docc_include_header.html"></div>
+        <div class="container">
+            <div class="banner">
+                <div class="banner_title">
+                    <h2>DOCC</h2>
+                </div>
+                <div class="banner_content">
+                    <div class="left_bx">
+                        <div class="banner_bi">
+                            <span class="blind">DOCC - DATA BASED OPERATION AND COMMUNICATION CENTER</span>
+                        </div>
+                        <p class="banner_bi_text">축적된 병원의 실시간 데이터를 중심으로 현장 이슈 모니터링 및 소통 가능한 서비스</p>
+                    </div>
+                    <div class="right_bx">
+                        <div class="search_bx">
+                            <input type="text" placeholder="검색어를 입력하세요">
+                            <button type="button" class="icon_search"><span class="blind">검색 버튼</span></button>
+                            <button type="button" class="icon_delete"><span class="blind">검색 내용 삭제</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="snb">
+                    <ul class="snb_bx">
+                        <!-- [D] 클릭시 li class="active" 추가해주세요. -->
+                        <li class="active">
+                            <a href="#" class="list_icon home"><i class="icon_bx"></i><span>홈</span></a>
+                        </li>
+                        <li>
+                            <a href="#" class="list_icon pan"><i class="icon_bx"></i><span>PAN</span></a>
+                        </li>
+                        <li>
+                            <a href="#" class="list_icon fav"><i class="icon_bx"></i><span>즐겨찾기</span></a>
+                        </li>
+                        <li>
+                            <a href="#" class="list_icon recent"><i class="icon_bx"></i><span>최근항목</span></a>
+                        </li>
+                        <li>
+                            <a href="#" class="list_icon setting"><i class="icon_bx"></i><span>설정</span></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="division_bx">
+                    <div class="indicator_bx">
+                        <div class="multiple_bx">
+                            <div class="flow_title">
+                                <a href="#" class="indicator_title">운영지표</a>
+                                <span class="flow_arrow"></span>
+                                <!-- [D] 현재 위치해있는 네비게이션에 class="active" 추가 -->
+                                <a href="#" class="indicator_title active">CT운영현황</a>
+                            </div>
+                            <div class="button_item">
+                                <!-- [D] 클릭시 innerHTML 변경
+                                    <em class="text_blue">ON</em>
+                                    <em class="text_gray">OFF</em>
+                                -->
+                                <button type="button" class="button_default">드릴다운 <em class="text_gray">OFF</em></button>
+                                <span class="dash"></span>
+                                <button type="button" class="button_default"><i class="icon_zoom"></i>확대</button>
+                                <div class="common_component_select open">
+                                    <!-- [D] .selected_item 클릭시 .common_component_select에 .open 추가 -->
+                                    <button type="button" class="selected_item"><span class="color_label" style="background:#000;"></span>블랙테마</button>
+                                    <div class="common_component_select_resultbox">
+                                        <ul>
+                                            <!-- [D] 선택했을때 .selected 추가 -->
+                                            <li class="selected">
+                                                <button type="button" class="resultitem"><span class="color_label" style="background:#2843c1;"></span>블루테마</button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="resultitem"><span class="color_label" style="background:#000;"></span>블랙테마</button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pan_bx">
+                            <div class="docc">
+                                <div class="docc_header">
+                                    <h1>운영지표<span class="time">2021-11-16 10:25:11</span></h1>
+                                    <div class="right_box">
+                                        <div class="tab_btn_box">
+                                            <!-- [D] 선택된 버튼에 .selected 추가  -->
+                                            <button type="button" class="btn_item">분기별</button>
+                                            <button type="button" class="btn_item">월별</button>
+                                            <button type="button" class="btn_item">일별</button>
+                                            <button type="button" class="btn_item selected">오늘</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="docc_content">
+                                    <div class="grid_wrap">
+                                        <!-- 외래 운영현황 -->
+                                        <div class="grid_section">
+                                            <h2 class="section_title">외래 운영현황</h2>
+                                            <div class="oprchat">
+                                                <div class="topboxwrap lbox dashboard_basicbox">
+                                                    <h3 class="box_title">외래 진행율</h3>
+                                                    <div class="countbox purple">
+                                                        <p><em>90</em>%<span class="ico_arrow up">상승</span></p>
+                                                    </div>
+                                                </div>
+                                                <div class="topboxwrap rbox dashboard_basicbox">
+                                                    <h3 class="box_title">진료 대기율</h3>
+                                                    <div class="countbox">
+                                                        <p><em>50</em>%</p>
+                                                    </div>
+                                                </div>
+                                                <div class="btboxwrap fbox dashboard_basicbox">
+                                                    <!-- [D] 개발시 인라인 스타일 제거 -->
+                                                    <div class="chartbox" style="background:#ccc;font-size:11px;color:#000;padding:10px">chart area</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 병상 운영현황 -->
+                                        <div class="grid_section">
+                                            <h2 class="section_title">병상 운영현황</h2>
+                                            <div class="oprchat">
+                                                <div class="topboxwrap lbox dashboard_basicbox">
+                                                    <h3 class="box_title">병상 가농률</h3>
+                                                    <div class="countbox skyblue">
+                                                        <p><em>90</em>%<span class="ico_arrow down">하락</span></p>
+                                                    </div>
+                                                </div>
+                                                <div class="topboxwrap rbox dashboard_basicbox">
+                                                    <h3 class="box_title">병상가동률</h3>
+                                                    <div class="countbox is_badge">
+                                                        <p><em>높음</em></p>
+                                                    </div>
+                                                </div>
+                                                <div class="btboxwrap fbox dashboard_basicbox">
+                                                    <div class="graph_linerbox">
+                                                        <div class="graph">
+                                                            <div class="bar" style="width:60%;"></div>
+                                                            <div class="bar_limitline" style="left:50%">가동률 높음</div>
+                                                            <span class="percent_min">0%</span>
+                                                            <span class="percent_half">50%</span>
+                                                            <span class="percent_max">100%</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="status_box">
+                                                        <div class="status_boxitem">
+                                                            <strong>공병상</strong>
+                                                            <dl>
+                                                                <div>
+                                                                    <dt>당일</dt>
+                                                                    <dd><em>421</em>개</dd>
+                                                                </div>
+                                                                <div>
+                                                                    <dt>전일</dt>
+                                                                    <dd>399개</dd>
+                                                                </div>
+                                                            </dl>
+                                                        </div>
+                                                        <div class="status_boxitem">
+                                                            <strong>재원</strong>
+                                                            <dl>
+                                                                <div>
+                                                                    <dt>당일</dt>
+                                                                    <dd><em>421</em>개</dd>
+                                                                </div>
+                                                                <div>
+                                                                    <dt>전일</dt>
+                                                                    <dd>399개</dd>
+                                                                </div>
+                                                            </dl>
+                                                        </div>
+                                                        <div class="status_boxitem">
+                                                            <strong>입원</strong>
+                                                            <dl>
+                                                                <div>
+                                                                    <dt>당일</dt>
+                                                                    <dd><em>421</em>개</dd>
+                                                                </div>
+                                                                <div>
+                                                                    <dt>전일</dt>
+                                                                    <dd>399개</dd>
+                                                                </div>
+                                                            </dl>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 수술 운영현황 -->
+                                        <div class="grid_section">
+                                            <h2 class="section_title">수술 운영현황</h2>
+                                            <div class="oprchat">
+                                                <div class="topboxwrap lbox dashboard_basicbox">
+                                                    <h3 class="box_title">수술실 사용률<span>(사용중/전체)</span></h3>
+                                                    <div class="countbox lightgreen">
+                                                        <p><em>55</em>%<span class="ico_arrow up">상승</span></p>
+                                                    </div>
+                                                </div>
+                                                <div class="topboxwrap rbox dashboard_basicbox">
+                                                    <h3 class="box_title">수술실 사용률</h3>
+                                                    <div class="countbox">
+                                                        <p><em>99</em>건</p>
+                                                    </div>
+                                                </div>
+                                                <div class="btboxwrap fbox dashboard_basicbox">
+                                                    <div class="inbox_lrsplit clearfix">
+                                                        <div class="inbox_left">
+                                                            <div class="status_boxitem">
+                                                                <strong>사용중</strong>
+                                                                <dl>
+                                                                    <div>
+                                                                        <dt>수술중</dt>
+                                                                        <dd><em>34</em></dd>
+                                                                    </div>
+                                                                    <div>
+                                                                        <dt>봉합중</dt>
+                                                                        <dd><em>9</em></dd>
+                                                                    </div>
+                                                                </dl>
+                                                            </div>
+                                                            <div class="status_boxitem">
+                                                                <strong>미사용</strong>
+                                                                <dl>
+                                                                    <div>
+                                                                        <dt>공실</dt>
+                                                                        <dd><em>13</em></dd>
+                                                                    </div>
+                                                                </dl>
+                                                            </div>
+                                                        </div>
+                                                        <div class="chartbox inbox_right" style="background:#ccc;font-size:11px;color:#000;padding:10px">chart area</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- CT 운영현황 -->
+                                        <div class="grid_section">
+                                            <h2 class="section_title">CT 운영현황</h2>
+                                            <div class="oprchat">
+                                                <div class="topboxwrap lbox dashboard_basicbox">
+                                                    <h3 class="box_title">CT 검사 진행율</h3>
+                                                    <div class="countbox skyblue">
+                                                        <p><em>90</em>%<span class="ico_arrow up">상승</span></p>
+                                                    </div>
+                                                </div>
+                                                <div class="topboxwrap rbox dashboard_basicbox">
+                                                    <h3 class="box_title">검사건수</h3>
+                                                    <div class="countbox">
+                                                        <p><em>999</em>건</p>
+                                                    </div>
+                                                </div>
+                                                <div class="btboxwrap fbox dashboard_basicbox">
+                                                    <!-- [D] 개발시 인라인 스타일 제거 -->
+                                                    <div class="chartbox" style="background:#ccc;font-size:11px;color:#000;padding:10px">chart area</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- MRI 운영현황 -->
+                                        <div class="grid_section">
+                                            <h2 class="section_title">MRI 운영현황</h2>
+                                            <div class="oprchat">
+                                                <div class="topboxwrap lbox dashboard_basicbox">
+                                                    <h3 class="box_title">MRI 검사 진행율</h3>
+                                                    <div class="countbox lightgreen">
+                                                        <p><em>90</em>%<span class="ico_arrow up">상승</span></p>
+                                                    </div>
+                                                </div>
+                                                <div class="topboxwrap rbox dashboard_basicbox">
+                                                    <h3 class="box_title">검사건수</h3>
+                                                    <div class="countbox is_badge">
+                                                        <p><em>999</em>건</p>
+                                                    </div>
+                                                </div>
+                                                <div class="btboxwrap fbox dashboard_basicbox">
+                                                    <!-- [D] 개발시 인라인 스타일 제거 -->
+                                                    <div class="chartbox" style="background:#ccc;font-size:11px;color:#000;padding:10px">chart area</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 채혈 운영현황 -->
+                                        <div class="grid_section">
+                                            <h2 class="section_title">채혈 운영현황</h2>
+                                            <div class="oprchat">
+                                                <div class="topboxwrap lbox dashboard_basicbox">
+                                                    <h3 class="box_title">검사 환자수</h3>
+                                                    <div class="countbox purple">
+                                                        <p><em>1,269</em>명<span class="ico_arrow up">상승</span></p>
+                                                    </div>
+                                                </div>
+                                                <div class="topboxwrap rbox dashboard_basicbox">
+                                                    <h3 class="box_title">대기환자수</h3>
+                                                    <div class="countbox">
+                                                        <p><em>99</em>명</p>
+                                                    </div>
+                                                </div>
+                                                <div class="btboxwrap fbox dashboard_basicbox">
+                                                    <!-- [D] 개발시 인라인 스타일 제거 -->
+                                                    <div class="chartbox" style="background:#ccc;font-size:11px;color:#000;padding:10px">chart area</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="../../js/jquery/jquery-latest.min.js"></script>
+<script>
+    includeHTML();
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+    <div class="horizon_header wehago_header">
+        <div class="main_title">
+            <h1><a href="#"><img src="https://static.wehago.com/imgs/common/wehago_b.svg" width="109" height="22" alt="WEHAGO"></a></h1>
+        </div>
+        <div class="horizon_gnb">
+            <button type="button" class="btn btn_menu"><span class="sp_gnb">메뉴</span></button>
+            <div class="horizon_gnb_section">
+                <div class="gnb_popover gnb_pop_login">
+                    <div class="gnb_btn">
+                        <button type="button" class="LUX_basic_btn Default basic"><span>회원가입</span></button>
+                        <button type="button" class="LUX_basic_btn Default basic"><span>로그인</span></button>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <script>
+        $(".gnb_popover").click(function() {
+            if($(this).children('.gnb_pop_scale').css('display') !='block') {
+                $(".gnb_popover .gnb_pop_scale").css("display","none");
+                $(this).children('.gnb_pop_scale').css("display","block");
+            }
+            else {
+                $(this).children('.gnb_pop_scale').css("display","none");
+            }
+        })
+    </script>

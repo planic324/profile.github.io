@@ -1,0 +1,421 @@
+<div class="LS_viewer_new">
+    <div class="dimmed"></div>
+    <!-- [D] 세부정보 우측영역 열때 .rnd_open 추가 -->
+    <!-- [D] 사이드바 보기 모드일때 .sidebar_open -->
+    <div class="viewer_wrap">
+        <div class="viewer_head">
+            <!-- [D] 웹오피스열기 버튼 필요 없는경우 .is_img 추가 -->
+            <div class="title_wrap">
+                <h1 class="title_filename ellipsis"><img class="fileicon" src="/imgs/common/icon_file/120x120/ico_file_pdf_120.png">WEHAGO WEB 공통 UI  v.27.pdf</h1>
+                <!-- [D] 웹오피스 열기 버튼 없을경우 .v2 추가 -->
+                <div class="title_btnarea">
+                    <button type="button" class="LS_btn Image" style="height:22px;width:16px" title="상세정보">
+                        <span class="sp_selene" style="width:16px;height:16px;background-position:-93px -536px"></span>
+                    </button><button type="button" class="LS_btn Small basic" style="height:22px;border-color:#566e87;background:none;color:#fff"><span>웹오피스로 열기</span></button>
+                </div>
+            </div>
+            <button type="button" class="LS_btn btn_clr">
+                <span class="sp_selene">닫기</span>
+            </button>
+            <div class="header_btngroup">
+                <!--
+                    버튼 클릭시 .click 추가
+                    비활성화시 .disabled 추가
+                    사이드바 활성화시 .on 추가
+                -->
+                <div class="btngroup_wrap">
+                    <!-- 너비맞춤/원본크기, 사이드바없음/보기 버튼은 서로 스위치되는 버튼 -->
+                    <button type="button" class="LS_btn Image icon_height" title="높이맞춤">
+                        <span class="sp_selene">높이맞춤</span>
+                    </button><button type="button" class="LS_btn Image icon_wide" title="너비맞춤">
+                        <span class="sp_selene">너비맞춤</span>
+                    </button><button type="button" class="LS_btn Image icon_real on" title="실제사이즈">
+                        <span class="sp_selene">실제사이즈</span>
+                    </button><button type="button" class="LS_btn Image icon_zoomin click" title="확대">
+                        <span class="sp_selene">확대</span>
+                    </button><button type="button" class="LS_btn Image icon_zoomout disabled" disabled title="축소">
+                        <span class="sp_selene">축소</span>
+                    </button><button type="button" class="LS_btn Image icon_rotate" title="회전">
+                        <span class="sp_selene">회전</span>
+                    </button><button type="button" class="LS_btn Image icon_search" title="검색">
+                        <span class="sp_selene">검색</span>
+                    </button><button type="button" class="LS_btn Image icon_download" title="다운로드">
+                        <span class="sp_selene">다운로드</span>
+                    </button>
+                    <div class="btn_dropdown">
+                        <button type="button" class="LS_btn Image icon_share" title="보내기">
+                            <span class="sp_selene">보내기</span>
+                        </button>
+                        <!-- [D] 보내기 클릭시 아래 .dropdown_menu에 .on 추가 -->
+                        <ul class="dropdown_menu">
+                            <li>
+                                <button type="button" class="LS_btn"><span>메일로 보내기</span></button>
+                            </li>
+                            <li>
+                                <button type="button" class="LS_btn"><span>대화 보내기</span></button>
+                            </li>
+                            <li>
+                                <button type="button" class="LS_btn"><span>메세지 보내기</span></button>
+                            </li>
+                            <li>
+                                <button type="button" class="LS_btn"><span>팩스 보내기</span></button>
+                            </li>
+                        </ul>
+                    </div>
+                    <button type="button" class="LS_btn Image icon_print" title="인쇄">
+                        <span class="sp_selene">인쇄</span>
+                    </button><button type="button" class="LS_btn Image icon_sidebarNone" title="사이드바 없음">
+                        <span class="sp_selene">사이드바 없음</span>
+                    </button><button type="button" class="LS_btn Image icon_sidebarShow" title="사이드바 보기">
+                        <span class="sp_selene">사이드바 보기</span>
+                    </button>
+                </div>
+            </div>
+            <!-- [D] 검색버튼 클릭시 .on 클래스 추가 -->
+            <div class="search_box">
+                <div class="LS_searchfield">
+                    <div class="LS_basic_text">
+                        <!-- 입력창에 포커스 - inpbx class="on" 추가  -->
+                        <div class="inpbx">
+                            <p class="placeholder">입력해주세요</p>
+                            <input type="text" id="textField_text">
+                            <button type="button" class="btn"><span class="sp_selene">검색</span></button>
+                            <span class="count_text">
+                                <span>1</span><span>/</span><span>10</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="btngroup">
+                    <button type="button" class="LS_btn searchbtn">
+                        <span class="sp_selene" style="width:14px;height:14px;background-position:-124px -537px" title="이전">이전</span>
+                    </button>
+                    <button type="button" class="LS_btn searchbtn">
+                        <span class="sp_selene" style="width:14px;height:14px;background-position:-152px -537px" title="다음">다음</span>
+                    </button>
+                    <button type="button" class="LS_btn searchbtn">
+                        <span class="sp_selene" style="background-position:-181px -537px" title="닫기">닫기</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="viewer_contents">
+            <!-- [D] 확대/축소 클릭시 imge에  width,height 값 배율로 증가/축소 시켜서 수정 -->
+            <!--     최대 2배, 최소 0.2배로  제한 -->
+            <!-- [D] 너비맞춤 클릭시 최대 브라우저 크기의 80%까지 width 값 계산하여 수정 -->
+            <div class="tbwrap">
+                <div class="contents_page">
+                    <!-- 파일 큰 경우 아래 문구 표시 -->
+                    <div class="warn_text">
+                        <strong>2MB이상의 파일은 변환 후 미리볼 수 있으며,<br>크기에 따라 시간이 오래 걸릴 수 있습니다. 변환하시겠습니까?</strong>
+                        <button class="LS_btn SAOverDefault basic conversion_file_btn">변환</button>
+                    </div>
+                    <!-- 파일 변환시 로딩화면 표시 -->
+                    <div class="warn_text loading" style="display:none">
+                        <strong>파일 변환 진행중입니다.</strong>
+                        <div class="loading_bar">
+                            <!-- [D] LUXLinearProgress -->
+                            <div value="10" min="0" max="100" color="rgb(0, 188, 212)" style="position: relative; height: 10px; display: block; width: 100%; background-color: rgb(189, 189, 189); border-radius: 5px; margin: 0px; overflow: hidden;"><div style="height: 100%; background-color: rgb(0, 188, 212); transition: width 0.3s linear 0ms; width: 10%;"><div></div><div></div></div></div>
+                        </div>
+                        <button class="LS_btn SAOverDefault basic conversion_file_btn">취소</button>
+                    </div>
+                    <div class="image_wrap multi" style="width: 984px;height: 927px; margin:0 auto">
+                        <!-- [D] 이미지 한개만 있을경우 .view_item.single 추가 -->
+                        <div class="vertical_inline" style="overflow:auto;height:100%;width:100%;">
+                            <div style="height: 581px;padding-top: 0px;box-sizing: border-box;">
+                                <div class="view_item">
+                                    <div class="singleimg"style="background-image:url(https://static.wehago.com/imgs/dummy/@cf_01.png);width:468px;height:581px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 
+                        <div class="view_item">
+                            <img src="imgs//dummy/@cf_01.png" style="width:468px;height:581px">
+                        </div>
+                        <div class="view_item">
+                            <img src="imgs//dummy/@dummy_graph_04.gif" style="width:570px;height:339px">
+                        </div>
+                        <div class="view_item">
+                            <img src="imgs//dummy/@dummy_datepicker.png" style="width:218px;height:230px">
+                        </div>
+                    -->
+                        <!-- <iframe width="640" height="360" src="https://www.youtube.com/embed/PL9iyA3dZ9I" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe> -->
+                    </div>
+                </div>
+            </div>
+            <div class="viewer_utils">
+                <button type="button" class="LS_btn Image lrbtn_left" title="이전 페이지">
+                    <span class="sp_selene">이전 페이지</span>
+                </button>
+                <button type="button" class="LS_btn Image lrbtn_right" title="다음 페이지">
+                    <span class="sp_selene">다음 페이지</span>
+                </button>
+                <div class="page_box">
+                    <p><em>1</em>/25 페이지</p>
+                </div>
+                <!-- [D] 확대/축소 기능 사용시 노출 -->
+                <div class="page_box zoom">
+                    <p>10%</p>
+                </div>
+            </div>
+            <div class="viewer_sidebar">
+                <ul>
+                    <li>
+                        <!-- 클릭된 이미지에 .on 추가 -->
+                        <a href="#" class="contents_page on">
+                            <img src="imgs//dummy/@cf_01.png" width="100%">
+                        </a>
+                        <span class="pagenum">1</span>
+                    </li>
+                    <li>
+                        <a href="#" class="contents_page">
+                            <img src="imgs//dummy//@landing_B-01.png" width="100%">
+                        </a>
+                        <span class="pagenum">2</span>
+                    </li>
+                    <li>
+                        <a href="#" class="contents_page">
+                            <img src="imgs//dummy/@dummy_graph_04.gif" width="100%">
+                        </a>
+                        <span class="pagenum">4</span>
+                    </li>
+                    <li>
+                        <a href="#" class="contents_page">
+                            <img src="imgs//dummy/@dummy_datepicker.png" width="100%">
+                        </a>
+                        <span class="pagenum">5</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="rnd_wrap">
+        <div class="rnb">
+            <div class="rnbtit">
+                <h1>상세정보</h1>
+                <div class="btnbx">
+                    <button type="button" class="LS_btn Image btn_clr"><span class="sp_lux">닫기</span></button>
+                </div>
+            </div>
+            <div class="rnbin">
+                <div class="additional_area">
+                    <h2>일반정보</h2>
+                    <div class="details_info">
+                        <dl>
+                            <dt>파일명</dt>
+                            <dd>WEHAGOWEB 공툥UI기획 v2.7pdf 공툥UI기획공툥UI기획공툥UI기획공툥UI기획</dd>
+                            <dt>위치</dt>
+                            <dd>wedrive/folder/folder2/folder2folder2folder2</dd>
+                            <dt>크기</dt>
+                            <dd>25.23MB</dd>
+                            <dt>종류</dt>
+                            <dd>OFFICE파일(.pdf)</dd>
+                        </dl>
+                    </div>
+                    <div class="details_info">
+                        <dl>
+                            <dt>생성한 날짜</dt>
+                            <dd>2017-09-22 11:40:01</dd>
+                            <dt>업로드한 날짜</dt>
+                            <dd>2017-09-22 11:40:01</dd>
+                            <dt>수정한 날짜</dt>
+                            <dd>2017-09-22 11:40:01</dd>
+                        </dl>
+                    </div>
+                    <div class="details_info">
+                        <dl>
+                            <dt>업로드한 사람</dt>
+                            <dd>성수현(suhyun)</dd>
+                            <dt>수정한 사람</dt>
+                            <dd>성수현(suhyun)</dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="additional_area">
+                    <h2>이미지 정보</h2>
+                    <div class="details_info">
+                        <dl>
+                            <dt>촬영날짜</dt>
+                            <dd>2014-12-12 23:48:46</dd>
+                            <dt>너비</dt>
+                            <dd>2364 pixels</dd>
+                            <dt>높이</dt>
+                            <dd>2448 pixels</dd>
+                        </dl>
+                    </div>
+                    <div class="details_info">
+                        <dl>
+                            <dt>카메라 제조업체</dt>
+                            <dd>Apple</dd>
+                            <dt>카메라 모델</dt>
+                            <dd>iPhone6</dd>
+                            <dt>F-스톱</dt>
+                            <dd>F2.2</dd>
+                            <dt>노출시간</dt>
+                            <dd>1/120 sec</dd>
+                            <dt>ISO 감도</dt>
+                            <dd>50</dd>
+                            <dt>노출 바이어스</dt>
+                            <dd>0</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div class="rnbbtn">
+                <button type="button" class="LS_btn Confirm basic2"><span>닫기</span></button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    $(function() {
+        var canvas;
+        var s_width,s_height;
+        var check_zoom=0;
+        var check_rotate=0;
+        var imgItems = $('.view_item');
+        var viewWidth = $('.contents_page').outerWidth();
+        var viewHeight = $('.contents_page').outerHeight();
+        var image=document.createElement("img");
+        image.src="/imgs/dummy/@cf_01.png";
+
+        function angleDraw() {
+            $.each(imgItems, function( i, val ) {
+                var itemWidth = $(this).outerWidth();
+                var itemHeight = $(this).outerHeight();
+                var itemTop, itemLeft;
+                var checkRotate = $('.image_wrap').hasClass('rotate');
+
+                if(checkRotate) {
+                    itemWidth = $(this).outerHeight();
+                    itemHeight = $(this).outerWidth();
+                }
+                
+                
+                if(i == 0) {
+                    itemTop = 10;
+                }
+                else {
+                    var checkPosition = $('.view_item').eq(i-1).position();
+                    var checkHeight = $('.view_item').eq(i-1).outerHeight();
+
+                    if(checkRotate) {
+                        checkHeight = $('.view_item').eq(i-1).outerWidth();
+                    }
+
+                    itemTop = checkPosition.top + checkHeight + 10;
+                }
+                itemLeft = (viewWidth/2) - (itemWidth/2);
+                console.log(i, itemWidth,itemHeight,viewWidth,viewHeight );
+                $(this).css({'top':itemTop , 'left':itemLeft});
+            });
+        }
+        
+        function drawRotated(degrees){
+            if(canvas) document.body.removeChild(canvas);
+            
+            canvas = document.createElement("canvas");
+            var ctx=canvas.getContext("2d");
+            canvas.style.width="20%";
+            
+            if(degrees == 90 || degrees == 270) {
+                canvas.width = image.height;
+                canvas.height = image.width;
+            } else {
+                canvas.width = image.width;
+                canvas.height = image.height;
+            }
+            
+            ctx.clearRect(0,0,canvas.width,canvas.height);
+            if(degrees == 90 || degrees == 270) {
+                ctx.translate(image.height/2,image.width/2);
+            } else {
+                ctx.translate(image.width/2,image.height/2);
+        }
+            ctx.rotate(degrees*Math.PI/180);
+            ctx.drawImage(image,-image.width/2,-image.height/2);
+            
+            $('.view_item').append(canvas);
+        }
+
+
+        $('.icon_share').click(function() {
+           $('.dropdown_menu').toggleClass('on');
+        });
+        $('.icon_search').click(function() {
+           $('.search_box').toggleClass('on');
+        });
+        $('.icon_sidebarShow').click(function() {
+           $('.viewer_wrap').toggleClass('sidebar_open');
+        });
+        $('.icon_sidebarNone').click(function() {
+           $('.viewer_wrap').toggleClass('sidebar_open');
+        });
+        $('.title_btnarea > button').click(function() {
+            $('.viewer_wrap').toggleClass('rnd_open');
+        });
+
+        // 확대, 축소
+        var closeupEle = '<div class="page_box zoom"><p>10%</p></div>';
+        $('.icon_zoomin').click(function() {
+            check_zoom=1.2;
+            imgItem = $('.tbwrap .contents_page .singleimg');
+            imgMaxBox = $('.tbwrap .contents_page').width();
+
+            s_width = imgItem.width()*check_zoom;
+            s_height = imgItem.height()*check_zoom;
+
+            if(s_width < imgMaxBox ) {
+                imgItem.css({
+                    'width' : s_width,
+                    'height' : s_height
+                });
+            }
+            // angleDraw();
+            $('.page_box.zoom').remove();
+            $('.viewer_utils').append(closeupEle);
+
+        });
+        $('.icon_zoomout').click(function() {
+            check_zoom=0.8;
+            imgItem = $('.tbwrap .contents_page .singleimg');
+
+            s_width = imgItem.width();
+            s_height = imgItem.height();
+
+            imgItem.css({
+                'width' : s_width*check_zoom,
+                'height' : s_height*check_zoom
+            });
+
+            // angleDraw();
+            $('.page_box.zoom').remove();
+            $('.viewer_utils').append(closeupEle);
+        });
+        $('.conversion_file_btn').click(function() {
+            $('.warn_text').eq(0).toggle();
+            $('.warn_text').eq(1).toggle();
+        });
+        
+        $('.icon_download').click(function() {
+            $('.image_wrap').toggleClass('multi');
+        });
+
+        $('.icon_rotate').click(function() {
+            $('.image_wrap').toggleClass('rotate');
+            
+            check_rotate= (check_rotate + 90) % 360;
+            // drawRotated(check_rotate);
+            
+            $('.view_item > img').css('transform', 'rotate(' + check_rotate%360 + 'deg)');
+            // angleDraw();
+        });
+        // angleDraw();
+
+    });
+    
+
+</script>

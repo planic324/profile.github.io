@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta id="viewport" name="viewport" content="width=1280">
+<title>DOCC</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/docc2.css">
+</head>
+<body>
+    <div class="docc">
+        <div class="docc_header">
+            <h1>CT 처방 현황 (시간별)<span class="time">2021-11-16 10:25:11</span></h1>
+            <div class="right_box">
+                <div class="tab_btn_box">
+                    <!-- [D] 선택된 버튼에 .selected 추가  -->
+                    <button type="button" class="btn_item selected">일년 전</button>
+                    <button type="button" class="btn_item">한달 전</button>
+                    <button type="button" class="btn_item">7일 전</button>
+                    <button type="button" class="btn_item">하루 전</button>
+                </div>
+            </div>
+        </div>
+        <div class="docc_content">
+            <div class="section_check_time">
+                <div class="basic_chart_box">
+                    <dl class="total_info_list">
+                        <div class="item">
+                            <dt class="title">전체처방</dt>
+                            <dd class="con"><strong class="num txt_blue">1,034</strong>건</dd>
+                        </div>
+                    </dl>
+                    Chart area
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="../../js/jquery/jquery-latest.min.js"></script>
+</body>
+</html>

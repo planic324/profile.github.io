@@ -1,0 +1,38 @@
+// Profile image
+
+.LS_profile_image {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  width: 34px;
+  height: 34px;
+  background-color: #accfec;
+  border-radius: 50%;
+  vertical-align: top;
+  transform: translateY(0); //chrome bug 대응
+
+  .image_box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(/imgs/common/profile_default.png);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: transparent;
+  }
+
+   &.is_border:after {
+     position: absolute;
+     top: 0;
+     bottom: 0;
+     left: 0;
+     right: 0;
+     border: 1px solid #000;
+     border-radius: 50%;
+     opacity: .1;
+     content: '';
+   }
+}

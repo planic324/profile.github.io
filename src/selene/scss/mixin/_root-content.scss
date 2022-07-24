@@ -1,0 +1,7 @@
+// 최상위 부모를 새롭게 추가해 주는 mixin
+
+@mixin root-content($root-content) {
+  @at-root #{$root-content}#{&} {
+    @content;
+  }
+}

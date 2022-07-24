@@ -456,8 +456,8 @@
         position: relative;
         .historyWrap{
             display: block;
-            width: 1100px;
-            
+            width: 100%;
+            height: 100%;
             border-radius: 20px;
             padding: 30px 20px;
             box-sizing: border-box;
@@ -496,17 +496,21 @@
                 display: block;
                 position: relative;
                 width: 100%;
+                height: calc(100% - 66px);
                 .group{
                     display: block;
-                    max-height: 500px;
+                    height: 100%;
                     .historyList{
                         display: block;
                         position: relative;
                         width: 100%;
+                        height: 100%;
                         .item{
-                            display: block;
                             position: relative;
-                            width: 1060px;
+                            display: block;
+                            padding: 0 20px;
+                            height: 100%;
+                            box-sizing: border-box;
                             .service__title{
                                 display: block;
                                 font-size: 24px;
@@ -521,7 +525,7 @@
                                     margin-top: 2px;
                                 }
                                 &--link{
-                                    color: rgb(0, 0, 238);
+                                    color: #1c90fb;
                                     &:hover{
                                         text-decoration: underline;
                                     }
@@ -529,9 +533,11 @@
                             }
                             .itemList{
                                 display: block;
+                                width: 40%;
                                 position: relative;
                                 margin-top: 15px;
                                 min-height: 400px;
+                                
                                 .dl_item{
                                     display: flex;
                                     font-size: 16px;
@@ -541,8 +547,8 @@
                                     }
                                     dt{
                                         display: block;
-                                        width: 120px;
-                                        min-width: 120px;
+                                        width: 150px;
+                                        min-width: 150px;
                                         font-weight: 900;
                                         color: #000;
                                     }
@@ -551,6 +557,7 @@
                                         position: relative;
                                         a{
                                             font-weight: 900;
+                                            color: #1c90fb;
                                             &:hover{
                                                 text-decoration: underline;
                                             }
@@ -560,7 +567,7 @@
                                             color: #4a4a4a;
                                             word-break: keep-all;
                                             .linkText{
-                                                color: rgb(0, 0, 238);
+                                                color: #1c90fb;
                                                 cursor: pointer;
                                             }
                                             & + span{
@@ -579,9 +586,11 @@
                             display: block;
                             position: relative;
                             width: 100%;
+                            height: 100%;
                             overflow: hidden;
                             .slick-track{
                                 display: flex;
+                                height: 100%;
                                 
                             }
                             
@@ -601,15 +610,16 @@
                             text-indent: -10000px;
                             border: 1px solid #e1e1e1;
                             background-color: #fff;
+                            z-index: 100;
                             &.slick-prev{
-                                left: -40px;
+                                left: 0;
                                 &:before{
                                     transform: rotate(180deg);
                                     margin-left: -8px
                                 }    
                             }
                             &.slick-next{
-                                right: -40px;
+                                right: 0;
                             }
                             &:before{
                                 content: '';
@@ -659,7 +669,7 @@
                 }
             }
             .view__box{
-                display: block;
+                display: none;
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -715,25 +725,34 @@
                 } 
             }
             .viewList{
-                display:none;
+                display:flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
                 position: absolute;
                 top: 0;
-                right: 0;
+                right: 10%;
                 bottom: 0;
-                left: 0;
-                background-color: rgba(0,0,0,0.8);
-                border-radius: 12px ;
-                padding: 20px;
+                width: 45%;
                 box-sizing: border-box;
                 overflow-y: auto;
+                -ms-overflow-style: none;
+                &.viewList::-webkit-scrollbar {
+                    display: none;
+                }
                 &__item{
                     display: block;
+                    width: calc(50% - 10px);
+                    &:nth-child(n+3){
+                        margin-top: 15px;
+                    }
                     &--title{
                         display: block;
-                        font-size: 20px;
-                        line-height: 24px;
+                        margin-bottom: 10px;
+                        font-size: 16px;
+                        line-height: 20px;
                         font-weight: 700;
-                        color: #fff;
+                        color: #000;
+                        text-align: center;
                     }
                     &--img{
                         display: block;
@@ -741,9 +760,12 @@
                         height: auto;
                         img{
                             display: block;
-                            width: 60%;
+                            width: 100%;
                             margin: 0 auto;
                         }
+                    }
+                    &:nth-child(odd){
+                        transform: translateY(100px);
                     }
                 }
             }

@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>윤석열 - 공정과 상식으로, 국민과 함께 만드는 미래 대한민국</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=1280">
+	<link rel="stylesheet" type="text/css" href="/css/nanumsquare.css">
+	<link rel="stylesheet" type="text/css" href="css/ele_ysy.css">
+</head>
+<body>
+<div class="wrap admin type_ysy">
+	<div class="header clearfix">
+		<div class="align_wrap basic_addrinfo">
+			<dl class="addr_infolist">
+				<dt class="blind">주소</dt>
+				<dd class="addr">서울특별시 종로구 종로1길 42 이마빌딩</dd>
+				<dt class="blind">전화번호</dt>
+				<dd class="tel">02.3510.3700</dd>
+			</dl>
+			<div class="snscon">
+				<ul class="sns_infolist">
+					<li>
+						<a href="https://www.facebook.com/sukyeol.yoon" target="_blank" class="snsbtn ico_fb"><span class="blind">페이스북</span></a>
+					</li>
+					<li>
+						<a href="https://www.youtube.com/channel/UCcl16CxYqlbKQJVCfdhSJVw" target="_blank" class="snsbtn ico_tube"><span class="blind">유투브</span></a>
+					</li>
+				</ul>
+			</div>
+			<div class="rightcon">
+				<button type="button" class="btn_login">로그인</button>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="header_menuwrap dzt_font">
+			<div class="align_wrap">
+				<h1>
+					<a href="#"><img src="https://static.wehago.com/imgs/common/svg/public_camp_yoon_b.png" width="158" height="30" alt="윤석열 선거캠프"></a>
+					<span class="admintitle">관리자페이지</span>
+				</h1>
+				
+				<ul class="menulist clearfix">
+					<!-- [D] 선택된 메뉴는 .selected 추가 -->
+					<li>
+						<a href="#" class="listitem">회원관리</a>
+					</li>
+					<li>
+						<a href="#" class="listitem">어디서든 말해요</a>
+					</li>
+					<li>
+						<a href="#" class="listitem">갤러리</a>
+					</li>
+                    <li class="selected">
+						<a href="#" class="listitem">청원관리</a>
+					</li>
+					<li>
+						<a href="#" class="listitem">후원관리</a>
+					</li>
+				</ul>	
+			</div>
+		</div>
+
+		<div class="section">
+			<div class="align_wrap">
+				<div class="admin_list_title">
+					<div class="titletext">
+						<strong class="dzt_font">게시글 작성하기</strong>
+					</div>
+				</div>
+			</div>
+		</div>
+
+        <div class="section sec_admin_write">
+            <div class="align_wrap">
+                <div class="write_wrap">
+                    <div class="title_inpx">
+                        <div class="input_box">
+                            <input type="text" placeholder="제목을 작성해주세요.">
+                        </div>
+                    </div>
+                    <dl class="option_box">
+                        <div class="item">
+                            <dt>종료설정</dt>
+                            <dd>
+                                <div class="inbx">
+                                    <div class="btn_radio">
+                                        <input type="radio" id="ele_radio1" name="ele_radio">
+                                        <span class="ico"></span>
+                                        <label for="ele_radio1">기간 만료시</label>
+                                    </div>
+                                    <div class="btn_radio">
+                                        <input type="radio" id="ele_radio2" name="ele_radio">
+                                        <span class="ico"></span>
+                                        <label for="ele_radio2">참여수 경과 시</label>
+                                    </div>
+                                    <div class="input_box type_small">
+                                        <input type="text" placeholder="0" style="width: 77px;"><span>명</span>
+                                    </div>
+
+                                </div>
+                            </dd>
+                        </div>
+                        <div class="item">
+                            <dt>참여기간</dt>
+                            <dd>
+                                <div class="inbx">
+                                    <div class="LUX_basic_date LUX_renewal" style="display:inline-block;vertical-align: top;">
+                                        <div class="datebx">
+                                            <span class="inpbx">
+                                                <input type="text" id="btn_date" value="2016.08.28">
+                                                <label for="btn_date"></label>
+                                            </span>
+                                            <button type="button" class="btn"><span class="sp_lux">검색</span></button>
+                                        </div>
+                                        <div class="LUX_calendar LUX_renewal" style="margin-top:4px">
+                                            <div class="LUX_date_day_bx">
+                                                <div class="date_select">
+                                                    <button type="button" class="btn btn_prev_year"><span class="sp_lux">이전년</span></button>
+                                                    <button type="button" class="btn btn_prev_mon"><span class="sp_lux">이전달</span></button>
+                                                    <strong class="date_day_title">2017. 08</strong>
+                                                    <button type="button" class="btn btn_next_mon"><span class="sp_lux">다음년</span></button>
+                                                    <button type="button" class="btn btn_next_year"><span class="sp_lux">이전달</span></button>
+                                                </div>
+                                                <div class="date_tbl">
+                                                    <table>
+                                                        <caption></caption>
+                                                        <colgroup>
+                                                            <col style="width:28px" span="7">
+                                                        </colgroup>
+                                                        <thead>
+                                                        <tr>
+                                                            <th scope="col" class="date_week">일</th>
+                                                            <th scope="col" class="date_week">월</th>
+                                                            <th scope="col" class="date_week">화</th>
+                                                            <th scope="col" class="date_week">수</th>
+                                                            <th scope="col" class="date_week">목</th>
+                                                            <th scope="col" class="date_week">금</th>
+                                                            <th scope="col" class="date_week">토</th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        <tr>
+                                                            <td class="date_day date_day_sun date_day_prev_mon"><button type="button"><span>30</span></button></td>
+                                                            <td class="date_day date_day_prev_mon"><button type="button"><span>31</span></button></td>
+                                                            <td class="date_day"><button type="button"><span>1</span></button></td>
+                                                            <td class="date_day"><button type="button"><span>2</span></button></td>
+                                                            <td class="date_day"><button type="button"><span>3</span></button></td>
+                                                            <td class="date_day"><button type="button"><span>4</span></button></td>
+                                                            <td class="date_day date_day_sat"><button type="button"><span>5</span></button></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="date_day date_day_sun"><button type="button"><span>6</span></button></td>
+                                                            <td class="date_day date_day_today"><button type="button"><span>7</span></button></td>
+                                                            <td class="date_day"><button type="button"><span>8</span></button></td>
+                                                            <td class="date_day"><button type="button"><span>9</span></button></td>
+                                                            <td class="date_day"><button type="button"><span>10</span></button></td>
+                                                            <td class="date_day"><button type="button"><span>11</span></button></td>
+                                                            <td class="date_day date_day_sat"><button type="button"><span>12</span></button></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="date_day date_day_sun"><button type="button"><span>13</span></button></td>
+                                                            <td class="date_day"><button type="button"><span>14</span></button></td>
+                                                            <td class="date_day date_day_holiday"><button type="button"><span>15</span></button></td>
+                                                            <td class="date_day"><button type="button"><span>16</span></button></td>
+                                                            <td class="date_day"><button type="button"><span>17</span></button></td>
+                                                            <td class="date_day date_day_selected"><button type="button"><span>18</span></button></td>
+                                                            <td class="date_day date_day_sat date_day_gap"><button type="button">19</button></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="date_day date_day_sun date_day_gap"><button type="button"><span>20</span></button></td>
+                                                            <td class="date_day date_day_gap"><button type="button"><span>21</span></button></td>
+                                                            <td class="date_day date_day_gap"><button type="button"><span>22</span></button></td>
+                                                            <td class="date_day date_day_gap"><button type="button"><span>23</span></button></td>
+                                                            <td class="date_day date_day_selected"><button type="button"><span>24</span></button></td>
+                                                            <td class="date_day"><button type="button"><span>25</span></button></td>
+                                                            <td class="date_day date_day_sat"><button type="button"><span>26</span></button></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="date_day date_day_sun"><button type="button"><span>27</span></button></td>
+                                                            <td class="date_day"><button type="button"><span>28</span></button></td>
+                                                            <td class="date_day"><button type="button"><span>29</span></button></td>
+                                                            <td class="date_day"><button type="button"><span>30</span></button></td>
+                                                            <td class="date_day"><button type="button"><span>31</span></button></td>
+                                                            <td class="date_day date_day_next_mon"><button type="button"><span>1</span></button></td>
+                                                            <td class="date_day date_day_sat date_day_next_mon"><button type="button"><span>2</span></button></td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                            
+                                            <div class="select_area">
+                                                <div class="btn_group">
+                                                    <button type="button" class="btn btn_db">오늘</button>
+                                                </div>
+                                                <p class="solar_area">
+                                                    <span class="_label" data-solar-label="양력" data-lunar-label="음력">음력</span><span class="_text">2017.06.10 (평달)</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="LUX_basic_time LUX_renewal" style="display:inline-block;vertical-align: top;width:99px;margin-left: 4px;">
+                                        <div class="timebx">
+                                            <span class="LUX_basic_switch">
+                                                <span class="LUXckbx">
+                                                    <input type="checkbox" id="input_forid_ckbox_time">
+                                                    <!-- input id 값과 label for 값을 동일하게 연결 -->
+                                                    <label for="input_forid_ckbox_time">오전</label>
+                                                </span>
+                                            </span>
+                                            <span class="inpbx">
+                                                <input type="text" id="btn_time" value="09:00">
+                                            </span>
+                                            <button type="button" class="btn"><span class="sp_lux">검색</span></button>
+                                        </div>
+                                        <div class="resultbx">
+                                            <div class="result_scrall" style="max-height:100px"><!-- 스크롤 생성 height 높이값 제어 -->
+                                                <div class="result_scrallin">
+                                                    <ul class="result_lst">
+                                                        <li>
+                                                            <a href="#">
+                                                                <div>오전 <em>0</em><em>9</em>:<em>0</em><em>0</em></div>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <div>오전 <em>0</em><em>9</em>:<em>3</em><em>0</em></div>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <div>오전 <em>1</em><em>0</em>:<em>0</em><em>0</em></div>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <div>오전 <em>1</em><em>0</em>:<em>3</em><em>0</em></div>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <div>오전 <em>1</em><em>1</em>:<em>0</em><em>0</em></div>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <div>오전 <em>1</em><em>1</em>:<em>3</em><em>0</em></div>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <div>오전 <em>1</em><em>2</em>:<em>0</em><em>0</em></div>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <span style="margin: 0 4px;">~</span>
+                                    <div class="LUX_basic_date LUX_renewal" style="display:inline-block;vertical-align: top;">
+                                        <div class="datebx">
+                                            <span class="inpbx">
+                                                <input type="text" id="btn_date" value="2016.08.28">
+                                                <label for="btn_date"></label>
+                                            </span>
+                                            <button type="button" class="btn"><span class="sp_lux">검색</span></button>
+                                        </div>
+                                        <div class="LUX_calendar LUX_renewal" style="margin-top:4px">
+                                            <div class="LUX_date_day_bx">
+                                                <div class="date_select">
+                                                    <button type="button" class="btn btn_prev_year"><span class="sp_lux">이전년</span></button>
+                                                    <button type="button" class="btn btn_prev_mon"><span class="sp_lux">이전달</span></button>
+                                                    <strong class="date_day_title">2017. 08</strong>
+                                                    <button type="button" class="btn btn_next_mon"><span class="sp_lux">다음년</span></button>
+                                                    <button type="button" class="btn btn_next_year"><span class="sp_lux">이전달</span></button>
+                                                </div>
+                                                <div class="date_tbl">
+                                                    <table>
+                                                        <caption></caption>
+                                                        <colgroup>
+                                                            <col style="width:28px" span="7">
+                                                        </colgroup>
+                                                        <thead>
+                                                        <tr>
+                                                            <th scope="col" class="date_week">일</th>
+                                                            <th scope="col" class="date_week">월</th>
+                                                            <th scope="col" class="date_week">화</th>
+                                                            <th scope="col" class="date_week">수</th>
+                                                            <th scope="col" class="date_week">목</th>
+                                                            <th scope="col" class="date_week">금</th>
+                                                            <th scope="col" class="date_week">토</th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        <tr>
+                                                            <td class="date_day date_day_sun date_day_prev_mon"><button type="button"><span>30</span></button></td>
+                                                            <td class="date_day date_day_prev_mon"><button type="button"><span>31</span></button></td>
+                                                            <td class="date_day"><button type="button"><span>1</span></button></td>
+                                                            <td class="date_day"><button type="button"><span>2</span></button></td>
+                                                            <td class="date_day"><button type="button"><span>3</span></button></td>
+                                                            <td class="date_day"><button type="button"><span>4</span></button></td>
+                                                            <td class="date_day date_day_sat"><button type="button"><span>5</span></button></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="date_day date_day_sun"><button type="button"><span>6</span></button></td>
+                                                            <td class="date_day date_day_today"><button type="button"><span>7</span></button></td>
+                                                            <td class="date_day"><button type="button"><span>8</span></button></td>
+                                                            <td class="date_day"><button type="button"><span>9</span></button></td>
+                                                            <td class="date_day"><button type="button"><span>10</span></button></td>
+                                                            <td class="date_day"><button type="button"><span>11</span></button></td>
+                                                            <td class="date_day date_day_sat"><button type="button"><span>12</span></button></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="date_day date_day_sun"><button type="button"><span>13</span></button></td>
+                                                            <td class="date_day"><button type="button"><span>14</span></button></td>
+                                                            <td class="date_day date_day_holiday"><button type="button"><span>15</span></button></td>
+                                                            <td class="date_day"><button type="button"><span>16</span></button></td>
+                                                            <td class="date_day"><button type="button"><span>17</span></button></td>
+                                                            <td class="date_day date_day_selected"><button type="button"><span>18</span></button></td>
+                                                            <td class="date_day date_day_sat date_day_gap"><button type="button">19</button></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="date_day date_day_sun date_day_gap"><button type="button"><span>20</span></button></td>
+                                                            <td class="date_day date_day_gap"><button type="button"><span>21</span></button></td>
+                                                            <td class="date_day date_day_gap"><button type="button"><span>22</span></button></td>
+                                                            <td class="date_day date_day_gap"><button type="button"><span>23</span></button></td>
+                                                            <td class="date_day date_day_selected"><button type="button"><span>24</span></button></td>
+                                                            <td class="date_day"><button type="button"><span>25</span></button></td>
+                                                            <td class="date_day date_day_sat"><button type="button"><span>26</span></button></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="date_day date_day_sun"><button type="button"><span>27</span></button></td>
+                                                            <td class="date_day"><button type="button"><span>28</span></button></td>
+                                                            <td class="date_day"><button type="button"><span>29</span></button></td>
+                                                            <td class="date_day"><button type="button"><span>30</span></button></td>
+                                                            <td class="date_day"><button type="button"><span>31</span></button></td>
+                                                            <td class="date_day date_day_next_mon"><button type="button"><span>1</span></button></td>
+                                                            <td class="date_day date_day_sat date_day_next_mon"><button type="button"><span>2</span></button></td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                            
+                                            <div class="select_area">
+                                                <div class="btn_group">
+                                                    <button type="button" class="btn btn_db">오늘</button>
+                                                </div>
+                                                <p class="solar_area">
+                                                    <span class="_label" data-solar-label="양력" data-lunar-label="음력">음력</span><span class="_text">2017.06.10 (평달)</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="LUX_basic_time LUX_renewal" style="display:inline-block;vertical-align: top;width:99px;margin-left: 4px;">
+                                        <div class="timebx">
+                                            <span class="LUX_basic_switch">
+                                                <span class="LUXckbx">
+                                                    <input type="checkbox" id="input_forid_ckbox_time">
+                                                    <!-- input id 값과 label for 값을 동일하게 연결 -->
+                                                    <label for="input_forid_ckbox_time">오전</label>
+                                                </span>
+                                            </span>
+                                            <span class="inpbx">
+                                                <input type="text" id="btn_time" value="09:00">
+                                            </span>
+                                            <button type="button" class="btn"><span class="sp_lux">검색</span></button>
+                                        </div>
+                                        <div class="resultbx">
+                                            <div class="result_scrall" style="max-height:100px"><!-- 스크롤 생성 height 높이값 제어 -->
+                                                <div class="result_scrallin">
+                                                    <ul class="result_lst">
+                                                        <li>
+                                                            <a href="#">
+                                                                <div>오전 <em>0</em><em>9</em>:<em>0</em><em>0</em></div>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <div>오전 <em>0</em><em>9</em>:<em>3</em><em>0</em></div>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <div>오전 <em>1</em><em>0</em>:<em>0</em><em>0</em></div>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <div>오전 <em>1</em><em>0</em>:<em>3</em><em>0</em></div>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <div>오전 <em>1</em><em>1</em>:<em>0</em><em>0</em></div>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <div>오전 <em>1</em><em>1</em>:<em>3</em><em>0</em></div>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <div>오전 <em>1</em><em>2</em>:<em>0</em><em>0</em></div>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </dd>
+                        </div>
+                    </dl>
+                    <div class="textarea_wrap">
+                        <textarea name="" id="" cols="30" rows=""></textarea>
+                    </div>
+                    <div class="file_wrap">
+                        <div class="LUX_filezone type2">
+                            <div class="file_bx">
+                                <!-- [D] 기본 상태 -->
+                                <div class="default">
+                                    <p>
+                                        <span class="sp_lux" style="width:41px;height:46px;vertical-align:middle;background-position:-311px -663px"></span>
+                                        <span class="txt">마우스로 파일을 끌어놓으세요.</span>
+                                    </p>
+                                </div>
+                                <!-- //[D] 기본 상태 -->
+                
+                                <!-- [D] 파일 리스트 -->
+                                <div class="attachments_list">
+                                    <ul>
+                                        <li>
+                                            <p>[컨텐츠 이름 / 파일명.확장자] (00MB)</p>
+                                            <div class="btn_group">
+                                                <button type="button" class="LUX_basic_btn Image btn_download">
+                                                    <span class="sp_lux" style="width:14px;height:16px;background-position:-217px -307px">다운로드</span>
+                                                </button>
+                                                <button type="button" class="LUX_basic_btn Image btn_del">
+                                                    <span class="sp_lux" style="width:13px;height:16px;background-position:-239px -307px">삭제</span>
+                                                </button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p>[컨텐츠 이름 / 파일명.확장자] (00MB)</p>
+                                            <div class="btn_group">
+                                                <button type="button" class="LUX_basic_btn Image btn_download">
+                                                    <span class="sp_lux" style="width:14px;height:16px;background-position:-217px -307px">다운로드</span>
+                                                </button>
+                                                <button type="button" class="LUX_basic_btn Image btn_del">
+                                                    <span class="sp_lux" style="width:13px;height:16px;background-position:-239px -307px">삭제</span>
+                                                </button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p>[컨텐츠 이름 / 파일명.확장자] (00MB)</p>
+                                            <div class="btn_group">
+                                                <button type="button" class="LUX_basic_btn Image btn_download">
+                                                    <span class="sp_lux" style="width:14px;height:16px;background-position:-217px -307px">다운로드</span>
+                                                </button>
+                                                <button type="button" class="LUX_basic_btn Image btn_del">
+                                                    <span class="sp_lux" style="width:13px;height:16px;background-position:-239px -307px">삭제</span>
+                                                </button>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- //[D] 파일 리스트 -->
+                
+                                <!-- [D] 파일 업로드 중 -->
+                                <div class="upload">
+                                    <div value="90" min="0" max="100" color="rgb(0, 188, 212)" style="position: relative; display: inline-block; width: 60px; height: 60px;vertical-align:middle;"><div style="width: 60px; height: 60px; display: inline-block; transition: transform 20s linear 0ms;"><svg viewBox="0 0 60 60" style="width: 60px; height: 60px; position: relative;"><circle cx="30" cy="30" r="27.5" fill="none" stroke-width="5" stroke-miterlimit="20" style="stroke: rgb(28, 144, 251); stroke-linecap: round; transition: all 0.3s linear 0ms; stroke-dasharray: 155.509, 172.788;"></circle></svg></div><div style="display: inline-block; vertical-align: middle; position: absolute; top: 0px; left: 0px; right: 0px; bottom: 0px;"><div style="display: inline-block; vertical-align: middle; width: 100%; color: rgb(28, 144, 251);"><span style="display: block; font-size: 7.5px; text-align: center;"><strong style="display: inline-block; font-size: 12px;">90</strong>%</span></div><span style="display: inline-block; margin: 0px -4px; width: 1px; height: 100%; vertical-align: middle; letter-spacing: -5px;"></span></div></div>
+                                    <p style="display:inline-block;vertical-align:middle;font-size:13px;color: rgb(115, 115, 115);">파일을 업로드 하고 있습니다</p>
+                                </div>
+                                <!-- //[D] 파일 업로드 중 -->
+                            </div>
+                            <div class="file_btnbx">
+                                <button type="button" class="LUX_basic_btn Default basic"><span class="sp_lux" style="width:11px;height:12px;padding-right:3px;vertical-align:middle;background-position:-232px -544px"></span><span style="vertical-align:middle;">내PC</span></button><!--
+                                --><button type="button" class="LUX_basic_btn Default basic"><span class="sp_lux" style="width:17px;height:12px;padding-right:3px;vertical-align:middle;background-position:-253px -544px"></span><span style="vertical-align:middle;">스토리지파일선택</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="write_btn_box">
+                        <button type="button" class="write_btn">취소</button><button type="button" class="write_btn type_02">저장</button>  
+                    </div>
+                </div>
+            </div>
+        </div>
+		
+	</div>
+</div>
+<!-- 마크업 테스트 코드 -->
+<script src="../../js/jquery/jquery-latest.min.js"></script>
+<script>
+    $(function(){
+		$('.selected_item').click(function() {
+			$(this).parents('.common_component_select').toggleClass('open');
+		})
+    });
+</script>
+
+</body>
+</html>

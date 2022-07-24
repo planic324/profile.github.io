@@ -1,0 +1,526 @@
+/* LUX_basic_btn */
+
+$btn_lg : 32px;
+$btn_md : 27px;
+$btn_sm : 20px;
+
+$vcolor : (#fa6274,#f39633, #dab900, #92b81e, #58b45c, #02a6a8, #1c90fb, #6476fa, #aa61dc, #e660ac);
+
+// 버튼에 사용되는 아이콘들을 추가하고 위치를 잡아주는 믹스인
+@mixin btn_icon($width, $height, $position_x, $position_y, $use_ab:false) {
+  @if $use_ab {
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-top:-(round($height/2));
+    margin-left:-(round($width/2));
+  }
+  width:$width;
+  height:$height;
+  background-position:$position_x $position_y;
+}
+
+// 버튼의 배경색과 라인색을 설정하는 믹스인
+@mixin set-btn-color($border, $bg, $font) {
+  border: 1px solid $border;
+  background: $bg;
+  color: $font;
+}
+
+.LS_btn {
+  display: inline-block;
+  width:auto;
+  position: relative;
+  border: 0 none;
+  background: transparent;
+  vertical-align: top;
+  box-sizing: border-box;
+  cursor: pointer;
+  border-radius:0;
+
+  &.basic {
+    @include set-btn-color(#d3d3d3,#fff,#4a4a4a);
+  }
+  &.hover {
+    @include set-btn-color(#8c8c8c,#fff,#4a4a4a);
+  }
+  &.basic2 {
+    @include set-btn-color(#1c90fb,#1c90fb,#fff);
+  }
+  &.hover2 {
+    @include set-btn-color(#006dd2,#006dd2,#fff);
+  }
+  &.hover2_v {
+    @include set-btn-color(#0d5598,#0d5598,#fff);
+  }
+  &.basic3 {
+    @include set-btn-color(#b5b5b5,transparent,#dedede);
+  }
+  &.hover3 {
+    @include set-btn-color(#3b4455,#3b4455,#dedede);
+  }
+  &.basic4 {
+    @include set-btn-color(#666,#666,#fff);
+  }
+  &.disable {
+    @include set-btn-color(#e0e0e0,#f2f2f2,#8d8d8d);
+    cursor: default;
+  }
+  &.Image {
+    width: $btn_md;
+    height: $btn_md;
+    padding: 0;
+  }
+  @at-root a#{&} {
+    text-decoration:none;
+  }
+  &.Confirm {
+    height: 37px;
+    font-size: 16px;
+    @include root-content(a) {
+      padding: 0 20px;
+      line-height: 37px;
+    }
+    @include root-content(button) {
+      padding: 1px 20px 0;
+    }
+  }
+  &.SAOverConfirm {
+    height: $btn_lg;
+    font-size: 15px;
+    @include root-content(a) {
+      padding: 0 20px;
+      line-height: $btn_lg;
+    }
+    @include root-content(button) {
+      padding: 1px 20px 0;
+    }
+  }
+  &.SAOverConfirm2 {
+    height: $btn_lg;
+    @include root-content(a) {
+      padding: 0 10px;
+      font-size: 15px;
+      line-height: $btn_lg;
+    }
+    @include root-content(button) {
+      padding: 1px 10px 0;
+      font-size: 14px;
+    }
+  }
+  &.Default {
+    height: $btn_md;
+    font-size: 12px;
+    font-family: $smallfont;
+    letter-spacing: -.5px;
+    @include root-content(a) {
+      padding: 0 10px;
+      line-height: $btn_md;
+    }
+    @include root-content(button) {
+      padding: 2px 10px 0;
+    }
+  }
+  &.Default2 {
+    height: $btn_md;
+    font-size: 12px;
+    font-family: $smallfont;
+    letter-spacing: -.5px;
+    @include root-content(a) {
+      padding: 0 16px;
+      line-height: $btn_md;
+    }
+    @include root-content(button) {
+      padding: 1px 16px 0;
+    }
+  }
+  &.Small {
+    height: $btn_sm;
+    font-size: 11px;
+    font-family: $smallfont;
+    letter-spacing: -.5px;
+    @include root-content(a) {
+      padding: 0 8px;
+      line-height: $btn_sm;
+    }
+    @include root-content(button) {
+      padding: 2px 8px 0;
+    }
+  }
+  &.Small2 {
+    min-width: 42px;
+    height: 23px;
+    font-size: 11px;
+    font-family: $smallfont;
+    letter-spacing: -.5px;
+    @include root-content(a) {
+      padding: 0 8px;
+      line-height: $btn_sm;
+    }
+    @include root-content(button) {
+      padding: 2px 8px 0;
+    }
+  }
+  &.SAOverDefault {
+    height: 25px;
+    font-size: 12px;
+    font-family: $smallfont;
+    letter-spacing: -.5px;
+    @include root-content(a) {
+      padding: 0 12px;
+      line-height: 25px;
+    }
+    @include root-content(button) {
+      padding: 1px 12px 0;
+    }
+  }
+  &.Image {
+    @include root-content(a) {
+      line-height: $btn_md;
+    }
+  }
+  &.Rounded {
+    border-radius: 15px;
+  }
+  &.btn_more {
+    color: #8d8d8d;
+    .sp_selene {
+      width: 3px;
+      height: 5px;
+      margin-top: 7px;
+      background-position: -250px -250px;
+    }
+  }
+  &.ripple_effect {
+    overflow: hidden;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 50%;
+      height: 100%;
+      margin-left: -25%;
+      border-radius: 100%;
+      background:rgba(0,0,0,.9);
+      opacity: 1;
+      z-index: 1;
+      -webkit-transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s;
+      transform: scale(0);
+      animation: ripple_ani 1.5s ease infinite;
+    }
+    > span {
+      position: relative;
+      z-index: 5;
+    }
+  }
+}
+
+.LS_btngruop {
+  margin-left: 1px;
+  letter-spacing: -4px;
+  .LS_btn {
+    letter-spacing: 0;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+    &.basic2{
+      border:1px solid #0072dc;
+       & + .LS_btn{
+         border-left:0;
+         margin-left:0;
+      }
+    }
+    &.Image {
+      padding:0 !important;
+    }
+    & + .LS_btn {
+      margin-left:-1px
+    }
+  }
+}
+
+.LS_splitbtn {
+  position:relative;
+  display:inline-block;
+  vertical-align:top;
+  letter-spacing:0;
+  .btngroup {
+    clear:both;
+    overflow:hidden;
+  }
+  .LS_btn {
+    @include set-btn-color(#d3d3d3, #fff, $text_color)
+    float:left;
+    line-height:$btn_lg;
+    height:$btn_lg;
+    padding:0 12px;
+    font-size:14px;
+    font-weight:normal;
+    .sp_selene {
+      @include btn_icon(7px, 4px, -261px, -307px, true)
+    }
+    + .LS_btn {
+      padding:0;
+      width:22px;
+      margin-left:-1px !important;
+    }
+    &:hover, &.hover {
+      border-color:#8c8c8c;
+      + .LS_btn {
+        border-left-color:#8c8c8c;
+      }
+    }
+    &.click {
+      border-color:#8c8c8c;
+      background:#f5f5f5;
+      + .LS_btn {
+        border-left-color:#8c8c8c;
+      }
+    }
+  }
+  .dropdown_menu.open {
+    display:block;
+  }
+  &.vblue {
+    .LS_btn {
+      @include set-btn-color(#1c90fb, #1c90fb, #fff);
+      .sp_selene {
+        background-position:-280px -307px;
+      }
+      + .LS_btn {
+        border-left:1px solid #0e7ee6;
+      }
+      &:hover, &.hover {
+        border-color:#1177d5;
+        + .LS_btn {
+          border-left-color:#1177d5;
+        }
+      }
+      &.click {
+        border-color:#006dd2;
+        background:#006dd2;
+        + .LS_btn {
+          border-left-color:#006dd2;
+        }
+      }
+    }
+  }
+  &.vsaoheader {
+    background:transparent;
+    box-shadow:rgba(0,0,0,.1)  0px 2px 1px;
+
+    .LS_btn {
+      background:transparent;
+      color:#fff;
+      border-color:rgba(255,255,255,.3);
+      height:27px !important;
+      line-height:27px !important;
+      box-shadow:0 2px 1px rgba(0,0,0,.1);
+      .sp_selene {
+        background-position:-280px -307px;
+      }
+      + .LS_btn {
+        border-left:1px solid rgba(255,255,255,.3);
+      }
+      &.hover,
+      &:hover,
+      &.click{
+        border-color:rgba(0,0,0,.3);
+        + .LS_btn {
+          border-left-color:rgba(0,0,0,.3);
+        }
+      }
+      &.click{
+        background:rgba(0,0,0,.1);
+      }
+    }
+  }
+  &.size_m .LS_btn {
+    height:$btn_md;
+    line-height:$btn_md;
+    font-size:12px;
+    & + .LS_btn {
+      width:16px;
+    }
+  }
+  &.size_s .LS_btn,
+  &.vsaoheader .LS_btn {
+    height:$btn_sm;
+    line-height:$btn_sm;
+    font-size:11px;
+    & + .LS_btn {
+      width:14px;
+    }
+  }
+  &.size_s,
+  &.size_m,
+  &.vsaoheader{
+    .LS_btn {
+      padding:0 8px;
+      font-family: $smallfont;
+      .sp_selene {
+        @include btn_icon(5px, 3px, -299px, -307px, true)
+      }
+      &.disabled .sp_selene {
+        background-position:-280px -320px;
+      }
+    }
+    &.vblue,
+    &.vsaoheader,
+    &[class *= "vcolor"] {
+      .LS_btn .sp_selene {
+        background-position:-316px -307px;
+      }
+    }
+  }
+  &.disabled {
+    .LS_btn {
+      border-color:#e0e0e0 !important;
+      background:#f2f2f2 !important;
+      color:#8d8d8d !important;
+      cursor:not-allowed;
+      .sp_selene {
+        background-position:-261px -320px !important;
+      }
+      &:hover {
+        + .LS_btn {
+          border-left-color:#e0e0e0;
+        }
+      }
+    }
+    &.size_s,
+    &.size_m,
+    &.vsaoheader {
+      .sp_selene {
+        background-position:-280px -320px !important;
+      }
+    }
+  }
+
+  .dropdown_menu{
+    z-index:100;
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    border:1px solid #a3a3a3;
+    box-sizing:border-box;
+    width:100%;
+    max-height:110px;
+    overflow:hidden;
+    overflow-y:auto;
+    > li {
+      > a {
+        display:block;
+        width:100%;
+        font-size:12px;
+        color:$text_color;
+        text-decoration:none;
+        font-family:$smallfont;
+        background:#fff;
+        padding:6px 7px;
+        box-sizing:border-box;
+        @extend %ellipsis;
+        &:hover, &.hover {
+          background:#f5f5f5;
+        }
+        &.disabled {
+          color:#e0e0e0;
+          cursor:not-allowed;
+          &:hover, &.hover {
+            background:#fff;
+          }
+        }
+      }
+    }
+  }
+  &[class *= "vcolor"] {
+    .LS_btn {
+      color:#fff;
+
+      .sp_selene {
+        background-position:-280px -307px;
+      }
+    }
+  }
+
+
+  @for $i from 1 through length($vcolor) {
+    $colorValue: nth($vcolor, $i);
+    $darken10 : darken($colorValue, 10%);
+    $darken25 : darken($colorValue, 25%);
+
+    &.vcolor#{$i} {
+      .LS_btn {
+        border: 1px solid $darken10;
+        background: $colorValue;
+        + .LS_btn {
+          border-left:1px solid $darken10;
+        }
+        &:hover, &.hover {
+          border-color:$darken25;
+          + .LS_btn {
+            border-left-color:$darken25;
+          }
+        }
+        &.click {
+          border-color:$darken25;
+          background:$darken25;
+          + .LS_btn {
+            border-left-color:$darken25;
+          }
+        }
+      }
+    }
+  }
+}
+
+.LS_funcbtn {
+  .LS_btn.funcbtn {
+    width:20px;
+    height:20px;
+
+    .sp_selene {
+      width:3px;
+      height:13px;
+      background-position:-464px -97px;
+    }
+  }
+}
+.LS_funcbtn_list {
+  display:block;
+  border:1px solid #a3a3a3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(20px);
+  width:46px;
+
+  li {
+    > a {
+      display:block;
+      width:100%;
+      text-decoration: none;
+      color:#4a4a4a;
+      font-size:12px;
+      font-family: $smallfont;
+      background:#fff;
+      box-sizing:border-box;
+      padding:0 7px;
+      line-height:23px;
+
+      &:hover {
+        background:#f5f5f5;
+      }
+    }
+  } 
+}
+@keyframes ripple_ani {
+  100%{
+    opacity: 0.35;
+    transform: scale(2);
+  }
+}

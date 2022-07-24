@@ -1,0 +1,182 @@
+/* LS_Tag_Select */
+
+.LS_Tag_Select {
+    position: relative;
+    .btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 27px;
+        height: 27px;
+        border: 0 none;
+        background: transparent;
+        cursor: pointer;
+        .sp_selene {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -4px;
+            margin-top: -2px;
+            width: 8px;
+            height: 4px;
+            background-position: -50px -50px;
+        }
+    }
+    .searchbx {
+        overflow: hidden;
+        position: relative;
+        height: 27px;
+        border: 1px solid #dbdbdb;
+        box-sizing: border-box;
+        .field_wrap {
+            overflow: hidden;
+            height: 20px;
+            padding: 3px 24px 0px 6px;
+            white-space: nowrap;
+            &.select {
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 1px;
+                    right: 27px;
+                    bottom: 1px;
+                    width: 8px;
+                    background: linear-gradient(to right,rgba(255,255,255,0),#fff);
+                }
+            }
+        }
+        .tag_item {
+            display: inline-block;
+            vertical-align: top;
+        }
+        .inpbx {
+            display: inline-block;
+            height: 16px;
+            padding: 4px 6px 0 0;
+            border: 0;
+            background: #fff;
+            line-height: 19px;
+            input {
+                display: block;
+                border: 0;
+                background: transparent;
+                font-size: 12px;
+                font-family: $smallfont;
+                color: #000;
+                letter-spacing: -.5px;
+                outline: none;
+            }
+        }
+    }
+    .searchbx .inpbx input {
+        width: 100%;
+    }
+    .resultbx {
+        display: none;
+        width: 100%;
+        background: #fff;
+    }
+    &:hover {
+        .searchbx {
+            border-color:#58adfc;
+        }
+    }
+    &.open {
+        .searchbx .sp_selene {
+          background-position: -75px -50px;
+        }
+        .resultbx {
+          display:block;
+        }
+      }
+    .result_scrall {
+        overflow: auto;
+        border: 1px solid #a3a3a3;
+        background: #fff;
+        box-shadow: 1px 1px 1px #ececec;
+    }
+    .result_lst {
+        li {
+            position: relative;
+            padding:3px 6px 1px;
+        }
+        a {
+            display: block;
+            position: relative;
+            padding: 2px 6px 0;
+            font-size: 12px;
+            font-family: $smallfont;
+            line-height: 20px;
+            color: #4a4a4a;
+            letter-spacing: -.5px;
+            text-align: left;
+            text-decoration: none;
+            &:hover {
+                background: #f5f5f5;
+            }
+        }
+    }
+    .LS_form {
+        position: relative;
+        display: block;
+        line-height: 20px;
+        font-size: 12px;
+        vertical-align: middle;
+        .icon {
+            position: static;
+            margin: 0 4px 0 0;
+            vertical-align: middle;
+        }
+        .label_text {
+            overflow: hidden;
+            display: inline-block;
+            padding:0 5px 0 0;
+            vertical-align: middle;
+            font-size:12px;
+            line-height: 20px;
+            white-space: nowrap;
+            text-overflow:ellipsis;
+            box-sizing:border-box;
+            @for $i from 1 through 100 {
+                &.w#{$i} {
+                    width: 1% * $i;
+                }
+            }
+            .point_color {color:#1c90fb;}
+        }
+    }
+    .LUX_basic_tag {
+        overflow: hidden;
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        border-radius: 3px;
+        margin-right: 4px;
+        .tag_name {
+            display: inline-block;
+            padding: 4px 25px 3px 10px;
+            background: #f5f5f5;
+            border-radius: 2px;
+            font-size: 12px;
+            font-weight: 200;
+            color: #000;
+        }
+        button {
+            position: absolute;
+            top: 50%;
+            right: 2px;
+            display: inline-block;
+            width: 24px;
+            height: 27px;
+            margin-top: -12px;
+            border: 0 none;
+            background: 0 0;
+            font-weight: 400;
+            text-align: center;
+            vertical-align: top;
+            box-sizing: border-box;
+            outline: 0;
+            cursor: pointer;
+        }
+    }
+}

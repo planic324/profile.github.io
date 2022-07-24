@@ -1,0 +1,260 @@
+// Reply Component
+
+.LS_reply {
+  position:relative;
+
+  &.wrapping {
+    padding:34px 38px;
+    border:1px solid #dbdbdb;
+  }
+
+  .replycount {
+    border-bottom:1px solid #8c8c8c;
+    margin-bottom:12px;
+    padding-bottom:9px;
+    line-height:25px;
+
+    > strong {
+      font-size:18px;
+      color:#000;
+      margin-right:8px;
+    }
+    .LS_btn.refresh {
+      width:22px;
+      height:22px;
+      vertical-align:middle;
+      > .sp_selene {
+        width:22px;
+        height:22px;
+        background-position:-308px -721px;
+      }
+    }
+  }
+  .reply_profile {
+    position:relative;
+    margin-left:16px;
+    padding-left:38px;
+
+    .name {
+      display:block;
+      line-height:30px;
+      font-size:14px;
+      color:#000;
+      text-overflow:ellipsis;
+      overflow:hidden;
+      white-space: nowrap;
+      word-break:break-all;
+      padding-right:25px;
+    }
+    .profile_image{
+      position:absolute;
+      top:0;
+      left:0;
+      overflow:hidden;
+      display:inline-block;
+      width:30px;
+      height:30px;
+      background-color:#accfec;
+      border-radius:50%;
+      vertical-align:top;
+      transform:translateY(0);
+
+      .image_box {
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        background-image:url(https://static.wehago.com/imgs/common/profile_default.png);
+        background-position:50% 50%;
+        background-repeat:no-repeat
+        ;background-size:cover;
+        color:transparent;
+      }
+    }
+  }
+  .reply_placeholder {
+    position:absolute;
+    top:43px;
+    left:54px;
+    display:block;
+    color:#818181;
+    font-size: 13px;
+    line-height: 20px;
+  }
+  .reply_inputbox {
+    display:block;
+    padding-left:54px;
+    padding-right:40px;
+    color:#525252;
+    font-size:13px;
+    line-height:20px;
+    word-break:break-all;
+
+    &:focus {
+      outline:0;
+    }
+  }
+  .reply_submitbox {
+    position:relative;
+    margin-top:15px;
+    border-top:1px solid #e8e8e8;
+    height:39px;
+    text-align:right;
+    padding-right:90px;
+    .text_count {
+      display:inline-block;
+      line-height:41px;
+      font-size:13px;
+      color:#9a9a9a;
+    }
+    .btngroup {
+      position:absolute;
+      top:-1px;
+      right:0;
+      > .LS_btn {
+        width:77px;
+        height:41px;
+        text-align:center;
+        font-size:14px;
+      }
+    }
+  }
+
+  .LSreplybox {
+    position:relative;
+    border:1px solid #c8c8c8;
+    box-sizing:border-box;
+    padding-top:13px;
+  }
+
+  .LSreplybox.modify {
+    .reply_submitbox {
+      padding-right:93px;
+      .text_count {
+        font-size:11px;
+      }
+      .btngroup {
+        top:50%;
+        margin-top:-14px;
+        right:6px;
+
+        .LS_btn {
+          width:38px;
+          height:27px;
+          font-size:12px;
+          + .LS_btn {
+            margin-left:2px;
+          }
+        }
+      }
+    }
+  }
+
+  .LSreplybox.readonly {
+    border:0;
+    padding-bottom:15px;
+    border-bottom:1px solid #e8e8e8;
+
+    .reply_submitbox {
+      border-top:0;
+      margin-top:0;
+      text-align:left;
+      padding:8px 0 0 54px;
+      height:auto;
+
+      .text_count {
+        display:inline-block;
+        line-height:25px;
+        font-size:12px;
+        color:#7c7c7c;
+      }
+      .btngroup {
+        position:relative;
+        display:inline-block;
+        vertical-align: top;
+        .LS_btn {
+          width:auto;
+          height:25px;
+          font-size:12px;
+          color:#000;
+          padding:0 8px;
+        }
+      }
+    }
+    .LS_funcbtn {
+      position:absolute;
+      top:19px;
+      right:28px;
+    }
+  }
+  .LSreplybox_wrap {
+    background:#f9f9f9;
+    padding:14px;
+
+    .LSreplybox {
+      background:#fff;
+      margin:0;
+
+      &:before {
+        content:'';
+        position:absolute;
+        top:22px;
+        left:19px;
+        width:10px;
+        height:10px;
+        background:url($sp_selene) -474px -97px;
+      }
+      .reply_profile {
+        margin-left: 41px;
+      }
+      .reply_inputbox {
+        padding-left:79px;
+      }
+      .reply_placeholder {
+        left:79px;
+      }
+    }
+
+    // depth 2~5 까지의 여백 추가
+    @for $i from 1 through 4 {
+      &.depth#{$i + 1} {
+        padding-left: $i * 40px + 14px;
+      }
+    }
+  }
+  .LSreplybox.readonly.re_reply {
+    background:#f9f9f9;
+    margin-bottom:0;
+    padding-bottom:6px;
+
+    &:before {
+      content:'';
+      position:absolute;
+      top:22px;
+      left:34px;
+      width:10px;
+      height:10px;
+      background:url($sp_selene) -474px -97px;
+    }
+    .reply_profile {
+      margin-left: 56px;
+    }
+    .reply_inputbox {
+      padding-left:94px;
+    }
+    .reply_submitbox {
+      padding-left:94px;
+      padding-top:1px;
+    }
+    // depth 2~5 까지의 여백 추가
+    @for $i from 1 through 4 {
+      &.depth#{$i + 1} {
+        padding-left:$i*40px;
+        &:before {
+          left:$i * 40px + 34px;
+        }
+      }
+    }
+  }
+}

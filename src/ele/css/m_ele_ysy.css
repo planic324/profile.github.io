@@ -1,0 +1,4680 @@
+@charset "utf-8";
+/* 선거캠프 - 독립서비스 */
+
+/* 공통 */
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,img,button,select{margin:0;padding:0}
+body,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,button{font-family:douzone,"Microsoft YaHei","PingFang SC","MS PGothic","Hiragino Kaku Gothic ProN","굴림",gulim,"Apple SD Gothic Neo",sans-serif}
+body{-webkit-text-size-adjust:none}
+img,fieldset{border:0;vertical-align:top}
+a{color:#1a1a1a}
+em,address{font-style:normal}
+ul,ol,li{list-style:none}
+label,button{cursor:pointer;border-radius:0}
+input::-ms-clear{display:none}
+.blind{position:absolute !important;clip:rect(0 0 0 0) !important;width:1px !important;height:1px !important;margin:-1px !important;overflow:hidden !important}
+.table thead.blind{position:static;font-size:0} /* 테이블 thead blind 버그해결 */
+.clearbx:after,.clearfix:after{content:'';clear:both;display:table}
+.ellipsis{overflow:hidden;white-space:nowrap;word-break:break-all;text-overflow:ellipsis}
+.no_ellipsis{white-space:normal !important}
+.no_ellipsis2{white-space:normal !important;text-overflow:clip !important;}
+.us_none{-webkit-user-select:none !important;-moz-user-select:none !important;-ms-user-select:none !important;user-select:none !important}
+.mw_auto{min-width:auto}
+.w_auto{width:auto !important}
+.of_hidden{overflow:hidden !important}
+.of_visible{overflow:visible !important}
+input:disabled{-webkit-text-fill-color:#8d8d8d;opacity:1;}
+iframe{overflow:hidden;margin:0;padding:0;border:0}
+.posfix{position:relative}
+.scroll_touch{-webkit-overflow-scrolling:touch;}
+.align_wrap {position: relative;margin: 0 auto;}
+.align_wrap:after{content:'';clear:both;display:table}
+/* 크롬 input 자동완성 배경 초기화 */
+input:-webkit-autofill {-webkit-box-shadow:0 0 0 30px #fff inset;-webkit-text-fill-color:#000;}
+input:-webkit-autofill,input:-webkit-autofill:hover,input:-webkit-autofill:focus,input:-webkit-autofill:active {transition:background-color 5000s ease-in-out 0s;}
+.dzt_font,
+.dzt_font * {font-family:douzonetitle,"Microsoft YaHei","PingFang SC","MS PGothic","Hiragino Kaku Gothic ProN","굴림",gulim,"Apple SD Gothic Neo",sans-serif}
+.sp_icon{display:inline-block;vertical-align:top;background:url(https://static.wehago.com/imgs/common/sp_icon.png) 0 0 no-repeat;background-size:500px 1000px;line-height:100em;overflow:hidden;}
+.error_color {color:#fc5356}
+
+/* variable */
+:root {
+    --icon_imgurl:url(https://static.wehago.com/imgs/common/sp_icon.png); /* 스프라이트 url : var(--icon_imgurl) */
+    --icon_imgsize:500px 1000px; /* 스프라이트 background-size : var(--icon_imgsize) */
+}
+
+/* 공통 영역 */
+.container > .content {overflow: hidden;}
+.section {display: block;position: relative;}
+.section:last-child {padding-bottom: 30px;}
+.footer {background:#0b3f70;padding:24px 20px}
+.section .in_box {width: 100%;padding: 0 20px;box-sizing: border-box;}
+.container {position:relative;padding-top:46px;overflow-y:auto}
+.main_sectitle {position:relative}
+.main_sectitle > h2 {font-size:22px;line-height:28px;color:#fff;letter-spacing: -.44px}
+.main_sectitle .title_desc{font-size:13px;color:#7c7c7c;line-height:20px;margin-top:8px;}
+.title_lnk_more {position:absolute;top:7px;right:0;font-size:12px;color:#777;line-height:15px;text-decoration: none;padding-right:12px}
+.title_lnk_more:after{content:'';position:absolute;top:50%;right:0;width:5px;height:9px;margin-top:-6px;background:url(https://static.wehago.com/imgs/ele/sp_m_ele_ysy.png) -56px -13px no-repeat;background-size:250px 250px}
+
+
+/* 갤러리 영역 */
+.sec_gallery {display: block;overflow: hidden;margin-top: 24px;}
+.sec_gallery .gallery_list {overflow: hidden;width: 100%;margin: -2px;font-size: 0;}
+.sec_gallery .gallery_list > li {display: inline-block;vertical-align: top;width: calc(33.333% - 4px);padding-bottom: calc(33.333% - 4px);margin: 2px;position: relative;}
+.sec_gallery .gallery_list > li > a {display: block;position: absolute;top: 0;right: 0;bottom: 0;left: 0;}
+.sec_gallery .gallery_list > li > a .img_item {display: block;width: 100%;height: 100%;background-size: cover;background-position: 50% 50%;}
+
+
+/* 로그인 화면 */
+.sce_login {display: block;}
+.sce_login h2 {display: block;margin: 40px 0 18px;font-size: 20px;line-height: 25px;letter-spacing: -0.3px;color: rgba(0, 0, 0, 0.87);text-align: center;font-weight: 700;}
+.sce_login .login_list {display: block;padding: 24px 20px;box-sizing: border-box;border: 1px solid #e5e5e5;border-radius: 4px;background-color: #fcfcfc;}
+.sce_login .login_list > strong {display: block;margin-bottom: 10px;font-size: 14px;line-height: 18px;letter-spacing: -0.21px;color: rgba(0, 0, 0, 0.87);}
+.sce_login .login_list > ul {display: block;}
+.sce_login .login_list > ul li {position: relative;display: block;padding-left: 10px;box-sizing: border-box;font-size: 12px;line-height: 20px;letter-spacing: -0.18px;color: rgba(0, 0, 0, 0.5);}
+.sce_login .login_list > ul li:before {content: '';display: block;width: 2px;height: 2px;border-radius: 50%;background-color: rgba(0, 0, 0, 0.5);position: absolute;top: 50%;left: 0;margin-top: -1px;}
+.sce_login .btn_login_list {display: block;margin-top: 20px;}
+.sce_login .btn_login_list li {display: block;font-size: 13px;margin-top: 8px;}
+.sce_login .btn_login_list li:first-child {margin-top: 0;}
+.sce_login .btn_login_list li > button {display: block;height: 46px;width: 100%;border: 1px solid #e5e5e5;border-radius: 4px;background-color: #fff;color: #777;-webkit-appearance: none;}
+.sce_login .btn_login_list li > button > strong {color: #4a4a4a;}
+.sce_login .btn_login_list li > button .ico_sns {display: inline-block;vertical-align: top;margin-right: 4px;background: url(https://static.wehago.com/imgs/ele/sp_m_ele_ysy.png) no-repeat;background-size: 250px 250px;-webkit-background-size: 250px 250px;}
+.sce_login .btn_login_list li > button .ico_sns.kakao {margin-top: -1px;width: 18px;height: 17px;background-position: -59px -127px;}
+.sce_login .btn_login_list li > button .ico_sns.naver {margin-top: 1px;width: 14px;height: 14px;background-position: -81px -127px;}
+.sce_login .btn_login_list li > button .ico_sns.twiter {width: 18px;height: 15px;background-position: -14px -127px;}
+.sce_login .btn_login_list li > button .ico_sns.facebook {margin-top: -2px;width: 11px;height: 18px;background-position: 0px -127px;}
+
+.sce_login .btn_login_list li > button.hide{
+    position: relative;
+    overflow: hidden;
+}
+.sce_login .btn_login_list li > button.hide:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5);
+}
+.sce_login .btn_login_list li > button.hide:after{    
+    content: '심사중 입니다';
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+}
+/* 헤더 */
+.header {z-index:11;position:fixed;top:0;left:0;right:0;background:#fff;padding:12px 0;height:46px;box-sizing:border-box;box-shadow:0 5px 10px rgb(0 0 0 / 10%)}
+.header .logo{margin-left:20px;font-size: 0;}
+.header .logo > a {display:inline-block;vertical-align:top;font-size:0}
+.header .btn_header {position:absolute;top:0;right:20px;width:72px;height:46px;border:0;background:transparent}
+.header .btn_header:after{content:'';position:absolute;top:50%;left:50%;margin-top:-9.5px;margin-left:-30px;background:url(https://static.wehago.com/imgs/ele/sp_m_ele_ysy.png) -232px -172px no-repeat;width:18px;height:18px;background-size:250px 250px;}
+.header .btn_header > span{
+    font-size: 13px;
+    line-height: 16px;
+    padding: 7px 7px 5px 24px;
+    box-sizing: border-box;
+    border: 1px solid #000;
+    letter-spacing: -0.13px;
+    border-radius: 4px;
+}
+
+/* 메인 */
+.sec_mainbg {position:relative;width:100%;height:492px;background-size:contain}
+
+
+/* 메인_피플플레이스 */
+.sec_peopleplace {background:#fff;padding:50px 0 70px}
+.sec_peopleplace .main_sectitle > h2 {color:#000}
+.sec_peopleplace .mapbox {position:relative;width:100%;height:368px;box-sizing:border-box;overflow:hidden;margin-top:20px}
+.sec_peopleplace .mapbox .picitem_wrap{position:absolute;top:0;left:0;width:46px;height:46px;}
+.sec_peopleplace .mapbox .picitem {z-index:1;position:absolute;top:0;left:0;width:46px;height:46px;border:2px solid #fff;border-radius:3px;box-shadow:0 2px 3px rgba(0,0,0,.4);box-sizing:border-box;background-size:cover;background-repeat: no-repeat;}
+.sec_peopleplace .mapbox .picitem.sub {z-index:0;left:-6px;top:6px}
+.sec_peopleplace .mapbox .count_label {z-index:2;position:absolute;top:-14px;left:100%;border-radius:14px;background:#1ea8d8;padding:0 6px;height:22px;line-height:24px;font-size:12px;color:#fff;letter-spacing: -.3px;transform: translateX(-50%);}
+.sec_peopleplace .ppstep_list {display: flex;width: 100%;margin-top:20px;padding: 22px 12px;box-sizing:border-box;background:#f7f9fc;}
+.sec_peopleplace .ppstep_list > li {box-sizing:border-box;flex: 1;}
+.sec_peopleplace .ppstep_list > li + li{margin-left: 20px;}
+.sec_peopleplace .ppstep_list strong {display:block;font-size:13px;font-weight:normal;color:#4a4a4a;letter-spacing: -.26px;line-height:20px;margin-bottom:8px;font-weight:bold}
+.sec_peopleplace .ppstep_list strong > em {display: block;color:#0b3f70}
+.sec_peopleplace .ppstep_list p {font-size:12px;color:#939393;letter-spacing: -.72px;line-height:15px;word-break: keep-all;}
+.sec_peopleplace .btn_pp {display:block;width:100%;border:1px solid #0e3192;background:transparent;margin-top:20px;font-size:13px;line-height:47px;height:45px;font-weight:bold;color:#0e3192}
+
+.sec_peopleplace .live_chat {display: block;width: 100%;margin-top: 40px;}
+.sec_peopleplace .live_chat .live_title {display: flex;justify-content: space-between;width: 100%;align-items: flex-end;margin-bottom: 18px;}
+.sec_peopleplace .live_chat .live_title > p {display: block;font-size: 16px;line-height: 19px;letter-spacing: -0.32px;color: rgba(0, 0, 0, 0.87);}
+.sec_peopleplace .live_chat .live_title > p > em {display: inline-block;vertical-align: top;margin-left: 4px;font-size: 10px;line-height: 12px;padding: 4px 6px 2px;border-radius: 9px;background-color: #fc4c60;color: #fff;}
+.sec_peopleplace .live_chat .live_title .btn_reset {position: relative;display: block;width: 18px;height: 18px;border: 0;background-color: #fff;}
+.sec_peopleplace .live_chat .live_title .btn_reset:before {content: '';display: block;position: absolute;top: 0;left: 0;width: 18px;height: 18px;background: url(https://static.wehago.com/imgs/ele/sp_m_ele_ysy.png) no-repeat -215px -151px;background-size: 250px 250px;}
+.sec_peopleplace .live_chat .live_list {display: block;width: 100%;max-height: 340px;overflow-y: auto;}
+.sec_peopleplace .live_chat .live_list > li {display: flex;justify-content: space-between;align-items: center;width: 100%;padding: 8px 10px 8px 18px;box-sizing: border-box;border-radius: 12px;background-color: #f2f4f8;}
+.sec_peopleplace .live_chat .live_list > li + li {margin-top: 12px;}
+.sec_peopleplace .live_chat .live_list > li .text_box {display: block;width: 100%;flex: 1;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+.sec_peopleplace .live_chat .live_list > li .text_box .chat {display: block;margin-bottom: 9px;font-size: 14px;line-height: 18px;letter-spacing: -0.7px;color: #000;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+.sec_peopleplace .live_chat .live_list > li .text_box .chat_info {display: flex;width: 100%;}
+.sec_peopleplace .live_chat .live_list > li .text_box .chat_info .data {display: block;font-size: 13px;line-height: 16px;letter-spacing: -0.65px;color: #777;}
+.sec_peopleplace .live_chat .live_list > li .text_box .chat_info .comment {position: relative;display: block;padding-left: 26px;margin-left: 6px;font-size: 13px;line-height: 16px;color: #999;text-decoration: none;}
+.sec_peopleplace .live_chat .live_list > li .text_box .chat_info .comment:before {content: '';display: block;width: 16px;height: 16px;position: absolute;top: -2px;left: 8px;background: url(https://static.wehago.com/imgs/ele/sp_m_ele_ysy.png) no-repeat -100px -150px;background-size: 250px 250px;}
+.sec_peopleplace .live_chat .live_list > li .text_box .chat_info .comment:after {content: '';display: block;width: 1px;height: 12px;background-color: #e1e1e1;position: absolute;top: 1px;left: 0;}
+.sec_peopleplace .live_chat .live_list > li .img_box {display: block;width: 60px;height: 60px;border-radius: 10px;overflow: hidden;margin-left: 30px;}
+.sec_peopleplace .live_chat .live_list > li .img_box > img {display: block;width: 100%;height: 100%;object-fit: cover;}
+
+/* 메인 소식 */
+.sec_article {background:#f4f5f7;padding:50px 0 70px}
+.sec_article .article_wrap + .article_wrap {margin-top:60px}
+.sec_article .main_sectitle > h2 {color:#000}
+.ele_newlist {position:relative;margin:14px -20px 0;padding:0 20px;overflow-x: auto;overflow-y: hidden;white-space: nowrap;-webkit-overflow-scrolling: touch;}
+.ele_newlist > li {display:inline-block;vertical-align: top;width:280px;box-sizing:border-box;margin-right:12px}
+.ele_newlist > li:last-of-type{margin-right:0}
+.ele_newlist .newitem{position:relative;display:block;text-decoration:none;background:#fff;width:100%;height:254px;white-space: normal;}
+.ele_newlist .newitem:hover {box-shadow:0 6px 20px rgba(0,0,0,.1)}
+.ele_newlist .newitem .thumimg {width:100%;height:141px;background-size: cover;background-repeat: no-repeat;}
+.ele_newlist .newitem .textbox {padding:18px 16px 14px}
+.ele_newlist .newitem .textbox > strong {display:box;display:-webkit-box;display:-moz-box;display:-ms-flexbox;font-size:14px;color:#000;letter-spacing: -.28px;line-height:22px;font-weight:normal;max-height:44px;overflow:hidden;-webkit-box-orient: vertical;-webkit-line-clamp: 2;text-overflow:ellipsis;word-break: break-all;}
+.ele_newlist .newitem .textbox > p {display:box;display:-webkit-box;display:-moz-box;display:-ms-flexbox;margin-top:16px;font-size:12px;color:#939393;letter-spacing: -.7px;line-height:19px;max-height:95px;overflow:hidden;-webkit-box-orient: vertical;-webkit-line-clamp: 5;text-overflow:ellipsis;word-break: break-all;}
+.ele_newlist .newitem .copybox {position:absolute;bottom:15px;left:16px;right:16px}
+.ele_newlist .newitem .copybox .snstext {position:relative;float:left;font-size:13px;color:#4a4a4a;line-height:29px;padding-left:35px;overflow: hidden;white-space: nowrap;word-break: break-all;text-overflow: ellipsis;max-width:calc(100% - 130px)}
+.ele_newlist .newitem .copybox .snslogo {position:absolute;top:50%;left:0;width:30px;height:30px;background:url(https://static.wehago.com/imgs/ele/sp_m_ele_ysy3.png) 0 -42px no-repeat;background-size:250px 250px;overflow:hidden;line-height:100em;margin-top:-15px}
+.ele_newlist .newitem .copybox .snslogo.insta {background-position:0 -213px}
+.ele_newlist .newitem .copybox .snslogo.facebook2 {background-position:-195px -213px}
+.ele_newlist .newitem .copybox .snslogo.facebook {background-position:-95px -213px}
+.ele_newlist .newitem .copybox .snslogo.blog {background-position:-160px -213px}
+.ele_newlist .newitem .copybox .snslogo.naver {background-position:-31px -213px}
+.ele_newlist .newitem .copybox .snslogo.twiter {background-position:-63px -213px}
+.ele_newlist .newitem .copybox .snslogo.youtube {background-position:-126px -213px;height:21px;margin-top:-11px}
+.ele_newlist .newitem .copybox .date {float:right;line-height:29px;font-size:12px;color:#999}
+
+
+
+/* 메인_갤러리 */
+.sec_gallery {background:#fff;padding:50px 0 70px}
+.sec_gallery .main_sectitle > h2 {color:#000}
+.sec_gallery .main_gallery_list{display:block;margin:10px -2px -2px}
+.sec_gallery .main_gallery_list .gallery_viewbtn {display:block;border:0;background:transparent;width:100%}
+.sec_gallery .main_gallery_list .gallery_viewbtn > img {width:100%;height:100%;object-fit: cover}
+.sec_gallery .main_gallery_list li {float:left;width:50%;padding:2px;background:transparent;box-sizing:border-box}
+.sec_gallery .main_gallery_list li:first-of-type{width:100%}
+
+
+/* 팝업 영역 */
+.ele .dialog_wrap .section:last-child{
+    padding-bottom: 0;
+}
+.ele .basic_dialog{
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1000;
+}
+.ele .basic_dialog .dimmed{
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1100;
+    background: #000;
+    opacity: .3;
+    filter: alpha(opacity=30);
+    display: block;
+}
+.ele .basic_dialog .dialog_wrap_tbl{
+    display: table;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    table-layout: fixed;
+}
+.ele .basic_dialog .dialog_wrap_tbl .dialog_wrap_tblcel{
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+.ele .dialog_wrap{
+    display: inline-block;
+    position: relative;
+    z-index: 1200;
+    width: 80%;
+    max-width: 450px;
+    border: 0;
+    border-radius: 12px;
+    background: #fff;
+    overflow-y: auto;
+}
+
+.ele .dialog_content{
+    display: block;
+    padding: 40px 20px 30px;
+    background-color: #fff;
+}
+.ele .dialog_content .section_title{
+    display: block;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.ele .dialog_content .section_title > strong{
+    display: block;
+    margin-bottom: 18px;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: -0.24px;
+    color: rgba(0,0,0,0.87);
+}
+.ele .dialog_content .section_title > p{
+    display: block;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: -0.6px;
+    color: rgba(0,0,0,0.6);
+}
+.ele .dialog_content .box_title{
+    display: block;
+    margin-top: 20px;
+    font-size: 0;
+    text-align: left;
+}
+.ele .dialog_content .box_title > strong{
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.7px;
+    color: #000;
+    padding-left: 22px;
+}
+.ele .dialog_content .box_title > strong:before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: -2px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background: url(https://static.wehago.com/imgs/ele/sp_m_ele_ysy.png) no-repeat -173px -174px;
+    background-size: 250px 250px;
+}
+.ele .dialog_content .box_title > span{
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 4px;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.7px;
+    color: #777;
+}
+.ele .dialog_content .type_file{
+    display: block;
+    width: 100%;
+    min-height: 130px;
+    overflow: hidden;
+}
+.ele .dialog_content .type_file.has_img {height:300px;margin:0 auto}
+.ele .dialog_content .type_file.has_img > img {width:100%;object-fit: contain;height:100%}
+.ele .dialog_content .type_file input[type="file"] {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+}
+.ele .dialog_content .type_file > img{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+.ele .dialog_content .type_file .upoload_img_box{
+    display: block;
+    width: 100%;
+    height: 130px;
+    background-color: #000;
+}
+.ele .dialog_content .type_file .upoload_img_box > img{
+    display: block;
+    width: auto;
+    height: 100%;
+    margin: auto;
+}
+.ele .dialog_content .section.type_file label{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 128px;
+    padding-left: 42px;
+    border: 1px solid #dbdbdb;
+    border-radius: 6px;
+    background-color: #fafafa;
+    box-sizing: border-box;
+    font-size: 13px;
+    color: #777;
+    letter-spacing: -0.65px;
+    font-family: douzonetitle,"Microsoft YaHei","PingFang SC","MS PGothic","Hiragino Kaku Gothic ProN","굴림",gulim,"Apple SD Gothic Neo",sans-serif;
+}
+
+.ele .dialog_content .section.type_file label:before{
+    content: '';
+    display: block;
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -21px 0 0 -50px;
+    background: url(https://static.wehago.com/imgs/ele/sp_ele_ysy.png) no-repeat -109px -100px;
+}
+.ele .dialog_content .section.type_sort{
+    margin-top: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+}
+.ele .dialog_content .section.type_sort .basic_select{
+    position: relative;
+    display: block;
+    width: calc(50% - 8px);
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+.ele .dialog_content .section.type_sort .basic_select + .basic_select{
+    
+}
+.ele .dialog_content .section.type_sort .basic_select:before{
+    content: '';
+    display: block;
+    width: 14px;
+    height: 8px;
+    position: absolute;
+    top: 6px;
+    right: 0;
+    background: url(https://static.wehago.com/imgs/ele/sp_m_ele_ysy.png) no-repeat -181px -60px;
+    background-size: 250px 250px;
+    -webkit-background-size: 250px 250px;
+    z-index: 10;
+}
+.ele .dialog_content .section.type_sort .basic_select > select{
+    position: relative;
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    line-height: 19px;
+    letter-spacing: -0.22px;
+    color: #b4b4b4;
+    border: 0;
+    outline: 0;
+    -webkit-appearance: none;
+    background-color: transparent;
+}
+.ele .dialog_content .section.type_btn_box{
+    display: block;
+    margin-top: 30px;
+    text-align: center;
+}
+.ele .dialog_content .section.type_btn_box .btn_basic{
+    display: block;
+    width: 100%;
+    height: 45px;
+    font-size: 13px;
+    letter-spacing: -0.26px;
+    border-radius: 23px;
+    background-color: #1268b5;
+    border: 1px solid #1268b5;
+    box-sizing: border-box;
+    color: #fff;
+}
+.ele .dialog_content .section.type_btn_box .btn_basic.v2{
+    display: inline-block;
+    vertical-align: top;
+    width: 88px;
+    height: 38px;
+    border-color: #1c90fb;
+    background-color: #1c90fb;
+    border-radius: 4px;
+}
+.ele .dialog_content .section.type_btn_box .btn_basic:disabled{
+    background-color: #eaebed;
+    border: 1px solid #eaebed;
+    color: #c5c7c9;
+}
+.ele .dialog_content .btn_dialog_box{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    right: 16px;
+
+}
+.ele .dialog_content .btn_dialog_box .btn_del{
+    position: relative;
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-color: #fff;
+    outline: 0;
+    border: 0;
+}
+.ele .dialog_content .btn_dialog_box .btn_del:before{
+    content: '';
+    display: block;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -7.5px 0 0 -7.5px;
+    background: url(https://static.wehago.com/imgs/ele/sp_m_ele_ysy.png) no-repeat -65px -13px;
+    background-size: 250px 250px;
+    -webkit-background-size: 250px 250px;
+}
+.ele .dialog_content .btn_dialog_box .btn_back{
+    position: relative;
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    outline: 0;
+    border: 0;
+}
+.ele .dialog_content .btn_dialog_box .btn_back:before{
+    content: '';
+    display: block;
+    width: 18px;
+    height: 14px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -7px 0 0 -9px;
+    background: url(https://static.wehago.com/imgs/ele/sp_m_ele_ysy.png) no-repeat -211px -42px;
+    background-size: 250px 250px;
+    -webkit-background-size: 250px 250px;
+}
+.ele .dialog_content .section.type_gallery{
+    display: block;
+    overflow-y: auto;
+    height: 39vh;
+}
+.ele .dialog_content .section.type_gallery .gallery_list{
+    overflow: hidden;
+    font-size: 0;
+    text-align: left;
+    
+}
+.ele .dialog_content .section.type_gallery .gallery_list .item{
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: calc(33.3333% - 2px);
+    padding-bottom: calc(33.3333% - 2px);
+    margin: 0 2px 2px 0;
+}
+.ele .dialog_content .section.type_gallery .gallery_list  .item > a{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    background-color: #000;
+}
+.ele .dialog_content .section.type_gallery .gallery_list  .item > a > img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+.ele .dialog_content .section.type_gallery .gallery_list  .item > a > span{
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+.ele .dialog_content .section.type_gallery.type_detail{
+    display: block;
+    height: auto;
+}
+.ele .dialog_content .section.type_gallery.type_detail .gallery_list{
+    font-size: 0;
+    display: block;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.ele .dialog_content .section.type_gallery.type_detail .gallery_list .item{
+    display: inline-block;
+    vertical-align: middle;
+    width: 290px;
+    height: 290px;
+    padding: 0;
+    margin: 0;
+}
+.ele .dialog_content .section.type_gallery.type_detail .gallery_list .item > a{
+    display: block;
+    position: relative;
+    height: 100%;
+}
+
+.ele .dialog_content .section.type_gallery.type_detail .gallery_list .item > a >img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 0;
+}
+.ele .dialog_content .section.type_gallery.type_detail .gallery_list .item > a .img_box{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50% 50%;
+    padding-bottom: 0;
+}
+
+
+.ele .dialog_content .section.type_gallery.type_detail .num_box{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: block;
+    padding: 5px 6px;
+    background-color: rgba(0,0,0,0.6);
+    border-radius: 12px;
+    font-size: 0;
+}
+.ele .dialog_content .section.type_gallery.type_detail .num_box > span{
+    display: inline-block;
+    vertical-align: top;
+    font-size: 11px;
+    line-height: 14px;
+    color: rgba(255,255,255,0.87);
+}
+
+.ele .dialog_content .section.type_gallery.type_detail .custom_paging{
+    position: absolute;
+    display: block;
+    height: 13px;
+    top: 10px;
+    right: 10px;
+}
+.ele .dialog_content .section.type_gallery.type_detail .custom_paging > li{
+    display: none;
+    min-width: 44px;
+    width: auto;
+    height: 23px;
+    font-size: 11px;
+    line-height: 13px;
+    padding: 6px 6px 4px;
+    background-color: rgba(0,0,0,0.6);
+    border-radius: 12px;
+    box-sizing: border-box;
+    text-align: center;
+    color: rgba(255,255,255,0.87);
+    font-family: douzone,"Microsoft YaHei","PingFang SC","MS PGothic","Hiragino Kaku Gothic ProN","굴림",gulim,"Apple SD Gothic Neo",sans-serif;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.ele .dialog_content .section.type_gallery.type_detail .custom_paging > li.slick-active{
+    display: block;
+}
+
+
+.ele .dialog_wrap.type_02{
+    width: 100%;
+    max-width: none;
+    height: 100%;
+    background: transparent;
+    border-radius: 0;
+}
+.ele .dialog_wrap.type_02 .dialog_content{
+    padding: 0;
+}
+.ele .dialog_content{
+    height: 100%;
+    background: transparent;
+}
+.ele .dialog_content .img_slider_box{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+}
+.ele .dialog_content .img_slider_box .btn_box{
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 36px;
+    margin-top: -18px;
+    
+}
+.ele .dialog_content .img_slider_box .btn_box .btn_arrow{
+    display: block;
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    top: 0;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,0.2);
+    border: 1px solid transparent;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+.ele .dialog_content .img_slider_box .btn_box .btn_arrow:before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 9px;
+    height: 17px;
+    margin: -9px 0 0 -6px;
+    background: url(https://static.wehago.com/imgs/ele/sp_m_ele_ysy.png) no-repeat 0 0;
+    background-size: 250px 250px;
+    -webkit-background-size: 250px 250px;
+}
+.ele .dialog_content .img_slider_box .btn_box .btn_arrow.prev{
+    left: 8px;
+    
+}
+.ele .dialog_content .img_slider_box .btn_box .btn_arrow.prev:before{
+    background-position: -215px 0;
+}
+.ele .dialog_content .img_slider_box .btn_box .btn_arrow.next{
+    right: 8px;
+}
+.ele .dialog_content .img_slider_box .btn_box .btn_arrow.next:before{
+    background-position: -215px 0;
+    transform: rotate(180deg);
+    margin-left: -3px;
+}
+.ele .dialog_content .img_slider_box .img_list{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.ele .dialog_content .img_slider_box .img_list .item{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.ele .dialog_content .img_slider_box .img_list .item > img{
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 100%;
+    height: auto;
+    transform: translateY(-50%);
+}
+.ele .dialog_content .btn_exit_box{
+    display: block;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+    border: 0;
+    background: transparent;
+    outline: 0;
+}
+.ele .dialog_content .btn_exit_box .btn_exit{
+    position: absolute;
+    display: block;
+    width: 13px;
+    height: 13px;
+    top: 50%;
+    left: 50%;
+    margin: -6.5px 0 0 -6.5px;
+    background: url(https://static.wehago.com/imgs/ele/sp_m_ele_ysy.png) -237px 0;
+    background-size: 250px 250px;
+    -webkit-background-size: 250px 250px;
+    border: 0;
+    outline: 0;
+}
+.ele .dialog_content .type_division{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.ele .dialog_content .type_textarea{
+    display: block;
+    margin-top: 8px;
+    width: 100%;
+    height: 94px;
+}
+.ele .dialog_content .type_textarea > textarea{
+    width: 100%;
+    height: 100%;
+    padding: 12px;
+    border: 1px solid #d3d3d3;
+    box-sizing: border-box;
+    border-radius: 4px;
+    resize: none;
+    -webkit-appearance: none;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: -0.65px;
+    font-family: douzone,"Microsoft YaHei","PingFang SC","MS PGothic","Hiragino Kaku Gothic ProN","굴림",gulim,"Apple SD Gothic Neo",sans-serif;
+}
+.ele .dialog_content .type_textarea > textarea::placeholder{
+    color: #b5b5b5;
+}
+.ele .dialog_content .type_people_info{
+    display: block;
+    text-align: left;
+}
+.ele .dialog_content .type_people_info .section_info{
+    display: block;
+    overflow: hidden;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(60,60,67,0.12);
+    
+}
+.ele .dialog_content .type_people_info .section_info .write_info{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 11px 0 12px;
+}
+.ele .dialog_content .type_people_info .section_info .write_info .nickname_box{
+    max-width: 30%;
+    display: flex;
+}
+.ele .dialog_content .type_people_info .section_info .write_info .nickname_box .nick_img{
+    position: relative;
+    display: block;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: 10;
+}
+.ele .dialog_content .type_people_info .section_info .write_info .nickname_box .nick_img > img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.ele .dialog_content .type_people_info .section_info .write_info .nickname_box .nickname{
+    position: relative;
+    display: block;
+    flex: 1;
+    font-size: 12px;
+    line-height: 15px;
+    height: 21px;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 3px 8px;
+    margin: 6px 0 ;
+    background-color: #edf3f8;
+    border-radius: 6px;
+}
+.ele .dialog_content .type_people_info .section_info .write_info .locate{
+    display: flex;
+    width: 70%;
+    padding-left: 10px;
+    box-sizing: border-box;
+} 
+.ele .dialog_content .type_people_info .section_info .write_info .locate > dt,
+.ele .dialog_content .type_people_info .section_info .write_info .locate > dd{
+    display: block;
+    font-size: 12px;
+    line-height: 15px;
+    color: #777;
+}
+.ele .dialog_content .type_people_info .section_info .write_info .locate > dt{
+    min-width: 44px;
+}
+.ele .dialog_content .type_people_info .section_info .write_info .locate > dd{
+    position: relative;
+    flex: 0 1 auto;
+    padding-left: 7px;
+    margin-left: 6px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.ele .dialog_content .type_people_info .section_info .write_info .locate > dd:before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 14px;
+    background-color: #d5d5d5;
+}
+.ele .dialog_content .type_people_info .section_info .write_info .locate > dd.btn_box{
+    display: block;
+    width: 18px;
+    min-width: 18px;
+    height: 18px;
+    padding:0;
+    margin: -3px 0 0 8px;
+}
+.ele .dialog_content .type_people_info .section_info .write_info .locate > dd.btn_box:before{
+    display: none;
+}
+.ele .dialog_content .type_people_info .section_info .write_info .locate > dd.btn_box .btn_del{
+    display: block;
+    width: 18px;
+    height: 18px;
+    position: relative;
+    background-color: #fff;
+    border: 0;
+    outline: 0;
+}
+.ele .dialog_content .type_people_info .section_info .write_info .locate > dd.btn_box .btn_del:before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 14px;
+    height: 14px;
+    margin: -7px 0 0 -7px;
+    background: url(https://static.wehago.com/imgs/ele/sp_m_ele_ysy.png) no-repeat -100px -174px;
+    background-size: 250px 250px;
+}
+.ele .dialog_content .type_people_info .section_info .write_text{
+    display: block;
+    font-size: 13px;
+    line-height: 18px;
+    color: rgba(0,0,0,0.87);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+.ele .dialog_content .type_people_info .section_commnet{
+    display: block;
+    width: 100%;
+}
+.ele .dialog_content .type_people_info .section_commnet .comment_box{
+    display: flex;
+    justify-content: space-between;
+}
+.ele .dialog_content .type_people_info .section_commnet .comment_box > input{
+    display: block;
+    width: calc(100% - 55px);
+    height: 36px;
+    padding: 9px 9px 9px 12px;
+    font-size: 14px;
+    line-height: 18px;
+    border: 1px solid #d3d3d3;
+    border-radius: 4px;
+    background-color: #fff;
+    box-sizing: border-box;
+    letter-spacing: -0.7px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+.ele .dialog_content .type_people_info .section_commnet .comment_box > input::placeholder{
+    color: #b4b4b4;
+    letter-spacing: -0.7px;
+}
+.ele .dialog_content .type_people_info .section_commnet .comment_box .btn_comment{
+    display: block;
+    width: 49px;
+    height: 36px;
+    border: 1px solid #eaebed;
+    border-radius: 4px;
+    color: #c5c7c9;
+    letter-spacing: -0.7px;
+    font-size: 14px;
+    font-weight: 700;
+}
+.ele .dialog_content .type_people_info .section_commnet .comment_box .btn_comment.active{
+    background-color: #1268b5;
+    color: #fff;
+}
+.ele .dialog_content .type_people_info .section_commnet_list{
+    display: block;
+    margin-top:20px;
+}
+.ele .dialog_content .type_people_info .section_commnet_list > ul{
+    display: block;
+    width: 100%;
+}
+.ele .dialog_content .type_people_info .section_commnet_list > ul > li{
+    position: relative;
+    display: block;
+    padding-left: 38px;
+    box-sizing: border-box;
+}
+.ele .dialog_content .type_people_info .section_commnet_list > ul > li:before{
+    content: '';
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #dbdbdb;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.ele .dialog_content .type_people_info .section_commnet_list > ul > li:after{
+    content: '';
+    display: block;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background:url(https://static.wehago.com/imgs/ele/sp_m_ele_ysy.png) no-repeat -100px -150px;
+    background-size: 250px 250px;
+    -webkit-background-size: 250px 250px;
+}
+.ele .dialog_content .type_people_info .section_commnet_list > ul > li + li{
+    margin-top: 20px;
+}
+.ele .dialog_content .type_people_info .section_commnet_list > ul > li .name{
+    display: flex;
+    width: 100%;
+    margin-bottom: 6px;
+}
+.ele .dialog_content .type_people_info .section_commnet_list > ul > li .name > p{
+    display: block;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: -0.2px;
+    color: rgba(74,74,74,0.87);
+    font-weight: 700;
+}
+.ele .dialog_content .type_people_info .section_commnet_list > ul > li .name .btn_del{
+    position: relative;
+    display: block;
+    width: 18px;
+    height: 18px;
+    margin: -2px 0 0 4px;
+    border: 0;
+    outline: 0;
+    background: #fff;
+}
+.ele .dialog_content .type_people_info .section_commnet_list > ul > li .name .btn_del:before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 14px;
+    height: 14px;
+    margin: -7px 0 0 -7px;
+    background: url(https://static.wehago.com/imgs/ele/sp_m_ele_ysy.png) no-repeat -100px -174px;
+    background-size: 250px 250px;
+}
+.ele .dialog_content .type_people_info .section_commnet_list > ul > li .text{
+    display: block;
+}
+.ele .dialog_content .type_people_info .section_commnet_list > ul > li .text > p{
+    display: block;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: -0.2px;
+    color: rgba(74,74,74,0.87);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+.ele .dialog_content .notice_text{
+    display: block;
+    position: relative;
+    padding-left: 8px;
+    margin-top: 10px;
+    text-align: left;
+    font-size: 11px;
+    color: #777;
+    word-break: keep-all;
+}
+.ele .dialog_content .notice_text:before{
+    content: '*';
+    display: block;
+    font-size: 11px;
+    color: #777;
+    position: absolute;
+    top: 3px;
+    left: 0;
+}
+
+.dimmed{
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 10;
+}
+.gnb{
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 30%;
+    bottom: 0;
+    background:#fff;
+    z-index: 12;
+    box-sizing: border-box;
+    transition: 0.8s;
+    transform: translateX(100%);
+}
+.gnb.active{
+    transition: 0.8s;
+    transform: translateX(0);
+}
+.gnb.active, .gnb.active + .dimmed{
+    display: block;
+    
+}
+.gnb .login_box{
+    display: block;
+    width: 100%;
+    height: 46px;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+.gnb .login_box > a{
+    display: inline-block;
+    vertical-align: top;
+    padding: 15px 20px;
+    box-sizing: border-box;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: -0.65px;
+    color: #191919;
+    text-decoration: none;
+}
+.gnb .logo_box{
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid rgba(0,0,0,0.06); 
+    padding: 16px 20px;
+    box-sizing: border-box;
+}
+.gnb .logo_box > a{
+    display: block;
+}
+.gnb .logo_box > a > img{
+    display: block;
+}
+.gnb .gnb_list{
+    display: block;
+    position: relative;
+    height: calc(100% - 99px);
+    padding-bottom: 68px;
+    box-sizing: border-box;
+    overflow-y: auto;
+
+}
+.gnb .gnb_list li{
+    display: block;
+    width: 100%;
+}
+.gnb .gnb_list li > a{
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-size: 0;
+}
+.gnb .gnb_list li > a:before{
+    content: '';
+    display: block;
+    width: calc(100% - 40px);
+    height: 1px;
+    left: 20px;
+    bottom: 0;
+    position: absolute;
+    background-color: rgba(0,0,0,0.06);
+}
+.gnb .gnb_list li > a > span{
+    display: inline-block;
+    vertical-align: top;
+    font-size: 15px;
+    line-height: 24px;
+}
+.gnb .gnb_list li.active > a > span{
+    color: rgba(14, 49, 146, 0.87);
+}
+.gnb .gnb_list li > a > .gnb_ico{
+    margin-right: 8px;
+    width: 24px;
+    height: 24px;
+    position: relative;
+}
+.gnb .gnb_list li > a > .gnb_ico:before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: url(https://static.wehago.com/imgs/ele/sp_m_ele_ysy.png) no-repeat;
+    background-size: 250px 250px;
+    -webkit-background-size: 250px 250px;
+
+}
+.gnb .gnb_list li > a > .gnb_ico.intro:before{
+    width: 18px;
+    height: 19px;
+    margin: -11px 0 0 -9px;
+    background-position: -100px -104px;
+}
+.gnb .gnb_list li > a > .gnb_ico.news:before{
+    width: 18px;
+    height: 18px;
+    margin: -10px 0 0 -9px;
+    background-position: -120px -104px;
+}
+.gnb .gnb_list li > a > .gnb_ico.archives:before{
+    width: 21px;
+    height: 16px;
+    margin: -10px 0 0 -8px;
+    background-position: -140px -104px;
+}
+.gnb .gnb_list li > a > .gnb_ico.policy:before{
+    width: 17px;
+    height: 18px;
+    margin: -10px 0 0 -9px;
+    background-position: -163px -104px;
+}
+.gnb .gnb_list li > a > .gnb_ico.media:before{
+    width: 18px;
+    height: 18px;
+    margin: -10px 0 0 -9px;
+    background-position: -182px -104px;
+}
+.gnb .gnb_list li > a > .gnb_ico.gallery:before{
+    width: 18px;
+    height: 18px;
+    margin: -10px 0 0 -9px;
+    background-position: -202px -104px;
+}
+.gnb .gnb_list li > a > .gnb_ico.write:before{
+    width: 18px;
+    height: 18px;
+    margin: -10px 0 0 -9px;
+    background-position: -222px -104px;
+}
+.gnb .gnb_list li > a > .gnb_ico.sponsor:before{
+    width: 20px;
+    height: 19px;
+    margin: -10px 0 0 -10px;
+    background-position: -119px -150px;
+}
+
+.gnb .gnb_list li.active > a > .gnb_ico.intro:before{
+    width: 18px;
+    height: 19px;
+    margin: -11px 0 0 -9px;
+    background-position: -100px -126px;
+}
+.gnb .gnb_list li.active > a > .gnb_ico.news:before{
+    width: 18px;
+    height: 18px;
+    margin: -10px 0 0 -9px;
+    background-position: -120px -126px;
+}
+.gnb .gnb_list li.active > a > .gnb_ico.archives:before{
+    width: 21px;
+    height: 16px;
+    margin: -10px 0 0 -8px;
+    background-position: -140px -126px;
+}
+.gnb .gnb_list li.active > a > .gnb_ico.policy:before{
+    width: 17px;
+    height: 18px;
+    margin: -10px 0 0 -9px;
+    background-position: -163px -126px;
+}
+.gnb .gnb_list li.active > a > .gnb_ico.media:before{
+    width: 18px;
+    height: 18px;
+    margin: -10px 0 0 -9px;
+    background-position: -182px -126px;
+}
+.gnb .gnb_list li.active > a > .gnb_ico.gallery:before{
+    width: 18px;
+    height: 18px;
+    margin: -10px 0 0 -9px;
+    background-position: -202px -126px;
+}
+.gnb .gnb_list li.active > a > .gnb_ico.write:before{
+    width: 18px;
+    height: 18px;
+    margin: -10px 0 0 -9px;
+    background-position: -222px -126px;
+}
+.gnb .gnb_list li.active > a > .gnb_ico.sponsor:before{
+    width: 20px;
+    height: 19px;
+    margin: -10px 0 0 -10px;
+    background-position: -144px -150px;
+}
+.gnb .sns_list{
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 68px;
+    text-align: center;
+    font-size: 0;
+    padding: 24px 0;
+    box-sizing: border-box;
+    background-color:#0b3f70;
+}
+.gnb .sns_list > li{
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 24px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+}
+.gnb .sns_list > li:first-child{
+    margin-left: 0;
+}
+.gnb .sns_list > li:before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: url(https://static.wehago.com/imgs/ele/sp_m_ele_ysy.png) no-repeat;
+    background-size: 250px 250px;
+    -webkit-background-size: 250px 250px;
+}
+.gnb .sns_list > li.facebook:before{
+    margin: -9px 0 0 -5px;
+    width: 11px;
+    height: 18px;
+    background-position: 0 -104px;
+}
+.gnb .sns_list > li.twiter:before{
+    margin: -7px 0 0 -9px;
+    width: 18px;
+    height: 15px;
+    background-position: -14px -104px;
+}
+.gnb .sns_list > li.insta:before{
+    margin: -9px 0 0 -9px;
+    width: 18px;
+    height: 18px;
+    background-position: -36px -104px;
+}
+.gnb .sns_list > li.kakao:before{
+    margin: -9px 0 0 -9px;
+    width: 18px;
+    height: 17px;
+    background-position: -59px -104px;
+}
+.gnb .sns_list > li.naver:before{
+    margin: -7px 0 0 -7px;
+    width: 14px;
+    height: 14px;
+    background-position: -81px -104px;
+}
+
+.gnb .sns_list > li > a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.gnb .btn_gnb_exit{
+    display: block;
+    position: absolute;
+    top: 11px;
+    right: 11px;
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+}
+.gnb .btn_gnb_exit:before{
+    content: '';
+    display: block;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -8px 0 0 -8px;
+    background: url(https://static.wehago.com/imgs/ele/sp_m_ele_ysy.png) no-repeat -65px -13px;
+    background-size: 250px 250px;
+    -webkit-background-size: 250px 250px;
+}
+
+/* 엠티셋 */
+.sec_empty{
+    position: relative;
+    display: block;
+    height:300px
+}
+.sec_empty .empty_box{
+    display: block;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin-top:-50px;
+
+    
+}
+.sec_empty .empty_box > img{
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+.sec_empty .empty_box > p{
+    display: block;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.21px;
+    color: rgba(0,0,0,0.87);
+}
+
+/* 당근정책 */
+.sec_carrot{
+    display: block;
+}
+.sec_carrot .carrot_banner{
+    display: block;
+    margin: 24px 0;
+    width: 100%;
+    padding: 27px 17px;
+    box-sizing: border-box;
+    border: 1px solid #f7d89b;
+    background-color: #fff6e5;
+    text-align: center;
+}
+.sec_carrot .carrot_banner .banner_title{
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 17px;
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: -0.9px;
+    color: #5f3300;
+    padding-left: 36px;
+}
+.sec_carrot .carrot_banner .banner_title:before{
+    content: '';
+    display: block;
+    width: 33px;
+    height: 37px;
+    position: absolute;
+    top: -5px;
+    left: 3px;
+    background: url(https://static.wehago.com/imgs/ele/sp_m_ele_ysy.png) no-repeat -38px -152px;
+    -webkit-background-size: 250px 250px;
+    background-size: 250px 250px;
+}
+.sec_carrot .carrot_banner .banner_content{
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.7px;
+    color: #4a4a4a;
+}
+.sec_carrot .carrot_list{
+    display: block;
+}
+.sec_carrot .carrot_list .item{
+    display: block;
+    width: 100%;
+    box-shadow: 3px 6px 30px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 16px;
+    overflow: hidden;
+}
+.sec_carrot .carrot_list .item + .item{
+    margin-top: 14px;
+}
+.sec_carrot .carrot_list .item.active .carrot_title + .carrot_content{
+    display: block;
+}
+.sec_carrot .carrot_list .item.active .carrot_title .btn_carrot{
+    display: none;
+}
+.sec_carrot .carrot_list .item .carrot_title{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 140px;
+    overflow: hidden;
+    background-size:cover;
+}
+.sec_carrot .carrot_list .item .carrot_title:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.4);
+}
+.sec_carrot .carrot_list .item .carrot_title > p {
+    position: relative;
+    display: block;
+    text-align: center;
+    padding: 40px 0 56px;
+    box-sizing: border-box;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.8px;
+    color: #fff;
+}
+.sec_carrot .carrot_list .item .carrot_title .btn_carrot{
+    display: block;
+    position: absolute;
+    bottom: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.6px;
+    color: #fff;
+    border: 0;
+    background-color: transparent;
+}
+.sec_carrot .carrot_list .item .carrot_title .btn_carrot .arrow{
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: 14px;
+    height: 14px;
+    margin: -1px 0 0 1px;
+    background: transparent;
+}
+.sec_carrot .carrot_list .item .carrot_title .btn_carrot .arrow:before{
+    content: '';
+    display: block;
+    width: 9px;
+    height: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -2px 0 0 -5px;
+    background: url(https://static.wehago.com/imgs/ele/sp_m_ele_ysy.png) no-repeat -201px 0;
+    -webkit-background-size: 250px 250px;
+    background-size: 250px 250px;
+}
+.sec_carrot .carrot_list .item.bgimg1 .carrot_title{background-image: url(https://static.wehago.com/imgs/ele/carrot_item1_3.jpeg);background-position:50% 33%}
+.sec_carrot .carrot_list .item.bgimg2 .carrot_title{background-image: url(https://static.wehago.com/imgs/ele/carrot_item2_3.jpeg);background-position:50% 38%}
+
+.sec_carrot .carrot_list .item .carrot_content{
+    display: none;
+    width: 100%;
+    padding: 30px 38px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+.sec_carrot .carrot_list .item .carrot_content > img{
+    display: block;
+    margin-bottom: 24px;
+    width: 100%;
+    height: auto;
+}
+.sec_carrot .carrot_list .item .carrot_content > p{
+    display: block;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: -0.6px;
+    color: #000;
+    text-align: center;
+}
+.sec_carrot .carrot_list .item .carrot_content .btn_carrot{
+    position: relative;
+    display: block;
+    margin: 24px auto 0;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.6px;
+    color: #4a4a4a;
+    border: 0;
+    background-color: transparent;
+}
+.sec_carrot .carrot_list .item .carrot_content .btn_carrot .arrow{
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: 14px;
+    height: 14px;
+    margin: -1px 0 0 1px;
+    background: transparent;
+}
+.sec_carrot .carrot_list .item .carrot_content .btn_carrot .arrow:before{
+    content: '';
+    display: block;
+    width: 9px;
+    height: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -2px 0 0 -5px;
+    background: url(https://static.wehago.com/imgs/ele/sp_m_ele_ysy.png) no-repeat -201px -10px;
+    -webkit-background-size: 250px 250px;
+    background-size: 250px 250px;
+}
+
+/* loading 애니메이션 */
+.LS_spinner2 {position: relative;display: inline-block;vertical-align: top;}
+.LS_spinner2 .loading {display: flex;align-items: center;justify-content: center;margin: auto;border-radius: 50%;-webkit-transform: translateZ(0);-ms-transform: translateZ(0);transform: translateZ(0);-webkit-animation: loading_spin 1s infinite linear;animation: loading_spin 1s infinite linear;width:20px;height:20px;border-top: 3px solid rgba(28, 144, 251, .2);border-right: 3px solid rgba(28, 144, 251, .2);border-bottom: 3px solid rgba(28, 144, 251, .2);border-left: 3px solid #0e3192;}
+.LS_spinner2 .loading_text {position: absolute;top: 50%;left: 50%;margin-left: -25px;margin-top: -10px;width: 50px;font-size: 12px;color: #1c90fb;line-height: 20px;height: 18px;font-weight: 700;letter-spacing: -1px;text-align: center;}
+@keyframes loading_spin{
+    0%{-webkit-transform:rotate(0);transform:rotate(0)}
+    100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}
+}
+
+
+/* 후원 */
+.sec_donation {background:#fafbfc;padding:40px 0 72px}
+.sec_donation .donation_img{position:relative}
+.sec_donation .donation_img .pimg {width:100%;object-fit: cover}
+.sec_donation .guidelisst{padding-top:137px}
+.sec_donation .guidelisst > li {position:relative;padding-left:10px;font-size:12px;color:#4a4a4a;line-height:23px;letter-spacing:-.24px;}
+.sec_donation .guidelisst > li:before{content:'';position:absolute;top:8px;left:0;width:4px;height:4px;background:#4a4a4a;}
+.sec_donation .donation_text {position:absolute;top:100%;margin-top:-65px;width:calc(100% - 24px);left:12px;;height:176px;background:#1268b5;text-align:center;color:#fff;padding-top:25px;box-sizing:border-box}
+.sec_donation .donation_text > h3 {display:block;font-size:17px;line-height:29px;font-weight:normal;letter-spacing: -.34px;}
+.sec_donation .donation_text > h3 > em {font-weight:bold}
+.sec_donation .donation_text .bankinfo{position:relative;margin-top:17px;padding-top:17px}
+.sec_donation .donation_text .bankinfo:before{content:'';position:absolute;top:0;left:50%;width:44px;margin-left:-22px;height:1px;background:#fff}
+.sec_donation .donation_text .bankinfo > h4 {position:relative;display:block;font-size:16px;line-height:20px;letter-spacing: -.32px;}
+.sec_donation .donation_text .bankinfo > h4 > span {position:relative;display:inline-block;vertical-align: top;padding-left:20px}
+.sec_donation .donation_text .bankinfo > h4 > span:before{content:'';position:absolute;top:50%;left:0;width:16px;height:19px;background:url(https://static.wehago.com/imgs/ele/sp_m_ele_ysy.png) 0 -19px no-repeat;background-size:250px 250px;margin-top:-10px}
+.sec_donation .donation_text .bankinfo > strong {display:block;margin-top:8px;font-size:13px;line-height:16px;font-weight:normal}
+.sec_donation .donation_text .bankinfo .guidetext {display:block;margin-top:8px;font-size:10px;line-height:12px;letter-spacing: -.5px;}
+
+/* 더보기 버튼영역 */
+.sec_btn_box {display: block;margin-top: 25px;text-align: center;font-size: 0;width: 100%;}
+.sec_btn_box .btn_lage {display: inline-block;vertical-align: top;height: 38px;border: 1px solid;font-size: 14px;min-width: 65px;letter-spacing: -0.7px;padding: 0 20px;border-radius: 4px;}
+.sec_btn_box .btn_lage + .btn_lage {margin-left: 4px;}
+.sec_btn_box .btn_lage.type_white {border-color: #d3d3d3;background-color: #fff;color: #4a4a4a;}
+.sec_btn_box .btn_lage.type_blue {border-color: #1268b5;background-color: #1268b5;color: #fff;}
+.sec_btn_box .btn_more{
+    display: block;
+    width: 110px;
+    box-sizing: border-box;
+    font-size: 13px;
+    border: 1px solid #0e3192;
+    margin: 0 auto;
+    box-sizing: border-box;
+    height: 38px;
+    font-size: 13px;
+    letter-spacing: -0.26px;
+    background-color: #fff;
+    color: #0e3192;
+    font-weight: bold;
+    line-height:38px;
+}
+
+/* footer */
+.footer .addr_infolist {font-size:11px;color:rgba(255,255,255,.8);}
+.footer .addr_infolist dd {position:relative;padding-left:16px;line-height:20px}
+.footer .addr_infolist dd:before{content:'';position:absolute;top:50%;left:0;width:10px;height:12px;margin-top:-6px;background:url(https://static.wehago.com/imgs/ele/sp_m_ele_ysy.png) -166px -42px no-repeat;background-size:250px 250px}
+.footer .addr_infolist dd.tel:before{background-position:-181px -42px;width:11px;height:11px;margin-top:-6px}
+.footer .addr_infolist dd.email:before{background-position:-195px -42px;width:11px;height:9px;margin-top:-5px}
+.footer .copytext {margin-top:15px;font-size:11px;color:rgba(255,255,255,.6);line-height:14px}
+.footer .snslnkbox {position:relative;margin-top:20px;padding-top:12px;text-align:center}
+.footer .snslnkbox:before{content:'';position:absolute;top:0;left:-20px;right:-20px;height:1px;background:#2a5883}
+.footer .sns_infolist > li {display:inline-block;vertical-align: top;}
+.footer .sns_infolist > li + li {margin-left:20px}
+.footer .sns_infolist .snsbtn{position:relative;display:block;background:transparent;border:0;width:18px;height:18px;}
+.footer .sns_infolist .snsbtn:after{content:'';position:absolute;top:50%;left:50%;width:18px;height:18px;margin-top:-9px;margin-left:-9px;background:url(https://static.wehago.com/imgs/ele/sp_m_ele_ysy.png) -36px -76px;background-size:250px 250px}
+.footer .sns_infolist .snsbtn.ico_fb:after{background-position:0 -76px;width:11px;height:17px;margin-top:-9px;margin-left:-6px}
+.footer .sns_infolist .snsbtn.ico_twit:after{background-position:-14px -76px;width:18px;height:15px}
+.footer .sns_infolist .snsbtn.ico_kakao:after{background-position:-58px -76px;width:19px;height:18px}
+.footer .sns_infolist .snsbtn.ico_naver:after{background-position:-81px -76px;width:15px;height:14px}
+
+/* 아카리브 최근업로드영상 */
+.sec_archives .archives_list.v_recently .archives_video_box{float:left;width:124px;height:78px}
+.sec_archives .archives_list.v_recently .archives_video_box > img {width:100%;height:100%;object-fit: cover}
+.sec_archives .archives_list.v_recently > li > a:after{content:'';clear:both;display:table}
+.sec_archives .archives_list.v_recently > li > a .archives_video_box{padding-bottom:0}
+.sec_archives .archives_list.v_recently > li > a .archives_info {float:left;width:calc(100% - 124px);box-sizing:border-box;background:#fff;height:78px;padding:13px 11px}
+.sec_archives .archives_list.v_recently > li > a .archives_info .video_title{font-size:13px;line-height:18px}
+.sec_archives .archives_list.v_recently > li > a .archives_info .list_info{bottom:9px}
+.sec_archives .archives_list.v_recently > li + li {margin-top:13px}
+
+/* 서브페이지 : 후원하기 */
+.sec_sponsor{
+    display: block;
+    width: 100%;
+    position: relative;
+}
+.sec_sponsor .sponsor_poster{
+    display: block;
+    width: 100%;
+    max-width: 768px;
+    position: relative;
+    margin: 0 auto 30px;
+    background-color: #e5e5e5;
+}
+.sec_sponsor .sponsor_poster > img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.sec_sponsor .btn_sponsor_box{
+    display: block;
+    width: 100%;
+    position: relative;
+}
+.sec_sponsor .btn_sponsor_box .btn_sponsor{
+    display: block;
+    width: 100%;
+    max-width: 768px;
+    height: 45px;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: -0.26px;
+    color: #0e3192;
+    border: 1px solid #0e3192;
+    background-color: transparent;
+}
+.sec_sponsor .btn_sponsor_box .btn_sponsor + .btn_sponsor{
+    margin-top: 8px;
+}
+.sec_sponsor .btn_sponsor_box .btn_sponsor .ico{
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 4px;
+    width: 18px;
+    height: 18px;
+    background: url(https://static.wehago.com/imgs/ele/sp_m_ele_ysy.png) no-repeat;
+    background-size: 250px 250px;
+}
+.sec_sponsor .btn_sponsor_box .btn_sponsor .ico.type_bill{
+    background-position:  -169px -150px;
+}
+.sec_sponsor .btn_sponsor_box .btn_sponsor .ico.type_phone{
+    background-position:  -192px -150px;
+}
+
+@media screen and (min-width: 720px) {
+    .sec_mainbg {height:700px}
+    /* 소개영상 */
+    .sec_sub_intro .intro_content{
+        display: flex;
+    }
+    .sec_sub_intro .intro_img{
+        width: calc(45% - 30px);
+        margin-right: 30px;
+        
+        padding-bottom: 0;
+    }
+    .sec_sub_intro .intro_img > img{
+        height: auto;
+    }
+    .sec_sub_intro .intro_info{
+        margin-top: 0;
+        width: 55%;
+    }
+    .sec_sub_intro .intro_info .intro_detail > div dt{
+        width: 60px;
+        padding-top: 10px;
+        
+    }
+    .sec_sub_intro .intro_info .intro_detail > div dd .intro_list > li{
+        padding: 10px 0 8px 10px;
+    }
+    .sec_sponsor .btn_sponsor_box{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 768px;
+        margin: 0 auto;
+    }
+    .sec_sponsor .btn_sponsor_box .btn_sponsor{
+        display: block;
+        width: calc(50% - 4px);
+        max-width: auto;
+    }
+    .sec_sponsor .btn_sponsor_box .btn_sponsor + .btn_sponsor{
+        margin: 0 0 0 4px;
+    }
+    
+}
+
+@media screen and (min-width: 1024px) {
+    .sec_mainbg {height:984px}
+}
+
+/* 팝업 (arert) */
+.mob_alert_wrap{position:relative;z-index:1200;display:inline-block}
+.mob_alert_wrap .sp_lux{display:inline-block;overflow:hidden;background:url(https://static.wehagov.com/imgs/common/sp_lux.png) 0 0 no-repeat;line-height:100em;vertical-align:top;}
+.mob_alert_wrap .alert_bx{position:relative;padding:40px 16px 30px;max-width:268px;background:#fff;border-radius:14px;box-sizing:border-box;}
+.mob_alert_wrap .alert_bx .btn_close{position:absolute;top:16px;left:16px;width:24px;height:24px;border:none;background:none;}
+.mob_alert_wrap .alert_bx .btn_close .sp_lux{width:14px;height:14px;background-position:-279px -54px;}
+.mob_alert_wrap .alert_bx .title_area{text-align:center;}
+.mob_alert_wrap .alert_bx .title_area > img{display:inline-block;margin-bottom:30px;}
+.mob_alert_wrap .alert_bx .title_area > strong{display:block;font-size:16px;font-weight:bold;line-height:19px;color:rgba(0,0,0,.87);}
+.mob_alert_wrap .alert_bx .cont_area{margin-top:18px;text-align:center;font-size:13px;line-height:20px;color:rgba(0,0,0,.6);}
+.mob_alert_wrap .alert_bx .btn_area{margin-top:30px;}
+.mob_alert_wrap .alert_bx .btn_area .btn_alert + .btn_alert{margin-top:8px;}
+.mob_alert_wrap .alert_bx .btn_area .btn_alert{display:block;width:100%;height:48px;border:none;background:rgb(18,126,255);border-radius:24px;font-size:14px;font-weight:bold;line-height:21px;color:#fff;}
+.mob_alert_wrap .alert_bx .btn_area .btn_alert.v2{background:rgb(235,236,239);color:rgba(0,0,0,.87);}
+
+/* 윤석열 버전 */
+.ysy .sec_mainbg{
+    height: 680px;
+    background: url(https://static.wehago.com/imgs/ele/m_bg_new_main3.png) no-repeat 50% 50%;
+    background-size: cover;
+}
+.ysy .sec_mainbg.v_slide {background:none}
+.ysy .sec_mainbg .main_text{
+    position: relative;
+    height: 680px;
+    display: block;
+}
+.ysy .sec_mainbg .main_text .top_box{
+    position: absolute;
+    top: 115px;
+    left: 20px;
+    right: 20px;
+}
+.ysy .sec_mainbg .main_text .bottom_box{
+    position: absolute;
+    top: 200px;
+    left: 20px;
+    right: 20px;
+    text-align: center;
+}
+.ysy .sec_mainbg .main_text .text_small{
+    display: block;
+    font-size: 24px;
+    line-height: 30px;
+    color: #fff;
+    text-align: center;
+}
+.ysy .sec_mainbg .main_text .text40{
+    display: block;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -2px;
+    color: #fff;
+    text-align: center;
+}
+.ysy .sec_mainbg .main_text .text_medium{
+    display: block;
+    font-size: 36px;
+    line-height: 1.2;
+    color: #fff;
+    font-weight: 500;
+} 
+.ysy .sec_mainbg .main_text .text_large{
+    font-size: 56px;
+    color: #fff;
+    font-weight: 700;
+}
+.ysy .sec_mainbg .main_text .lk_spon{
+    position: relative;
+    display: block;
+    margin: 220px 0 14px;
+    text-align: center;
+    font-size: 26px;
+    line-height: 36px;
+    color: #fff;
+    letter-spacing: -1.3px;
+    text-decoration: none;
+    overflow:hidden;
+}
+.ysy .sec_mainbg .main_text .lk_spon:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.ysy .sec_mainbg .main_text .lk_spon .ico_arrow{
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 4px;
+    width: 36px;
+    height: 36px;
+    
+}
+.ysy .sec_mainbg .main_text .lk_spon .ico_arrow:before{
+    content: '';
+    display: block;
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -20px 0 0 -18px;
+    background: url(https://static.wehago.com/imgs/ele/img_ele_ico01.png) no-repeat 0 0;
+    background-size: 36px 36px;
+}
+.ysy .sec_mainbg .main_text .bank_num{
+    display: block;
+    margin-bottom: 2px;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: -1.2px;
+    color: #fff;
+} 
+.ysy .sec_mainbg .main_text .bank_name{
+    display: block;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.8px;
+    color: #fff;
+}
+.ysy .sec_support{
+    padding: 46px 20px 36px;
+    box-sizing: border-box;
+    text-align: right;
+    background: url(https://static.wehago.com/imgs/ele/bg_new_mainbanner.png) no-repeat 50% 50%;
+    background-size: cover;
+
+}
+.ysy .sec_support .desc{
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: -0.65px;
+    text-align: right;
+}
+.ysy .sec_support .regbtn_opener{
+    padding: 0;
+    border: 0;
+    margin-top: 8px;
+    font-size: 15px;
+    line-height: 24px;
+    letter-spacing: -0.75px;
+    color: #fff;
+    font-weight: 700;
+}
+.ysy .sec_support .regbtn_opener .ico_plus{
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin-left: 4px;
+}
+.ysy .sec_support .regbtn_opener .ico_plus:before{
+    content: '';
+    display: block;
+    width: 13px;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -6px;
+    background-color: #707070;
+}
+.ysy .sec_support .regbtn_opener .ico_plus:after{
+    content: '';
+    display: block;
+    width: 1px;
+    height: 13px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -6px;
+    background-color: #707070;
+}
+.ysy .sec_support .regbtn_opener:after{
+    display: none;
+}
+.ysy .sec_schedule{
+    padding: 50px 0 56px;
+    background-color: #f4f5f7;
+}
+.ysy .sec_schedule .in_box{
+    padding: 0;
+}
+.ysy .sec_schedule .main_sectitle{
+    display: block;
+    text-align: center;
+}
+.ysy .sec_schedule .main_sectitle > h2{
+    display: block;
+    margin-bottom: 22px;
+    font-size: 26px;
+    line-height: 26px;
+    letter-spacing: -1.3px;
+    color: #070707;
+}
+.ysy .sec_schedule .cardlist{
+    padding: 0 30px;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.ysy .sec_schedule .cardlist .slick-track{
+    transform: translateX(-6px)
+}
+.ysy .sec_schedule .carditem{
+    padding: 24px 36px;
+    height: auto;
+    border-radius: 8px;
+    margin: 0 6px;
+}
+
+.ysy .sec_schedule .carditem .date{
+    display: block;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: -0.13px;
+    color: #585858;
+    font-weight: 700;
+}
+.ysy .sec_schedule .carditem .info{
+    display: block;
+    margin: 7px 0 14px;
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: -0.18px;
+    color: #111;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;    
+}
+.ysy .sec_schedule .carditem .location{
+    display: block;
+    font-size: 15px;
+    line-height: 19px;
+    letter-spacing: -0.75px;
+    color: #999;
+    padding-left: 0;
+}
+.ysy .sec_schedule .carditem .location:before{
+    display: none;
+}
+.ysy .basic_slick{
+    position: relative;
+}
+.ysy .basic_slick .slick-arrow{
+    position: absolute;
+    top: 50%;
+    margin-top: -18px;
+    display: block;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid #e6e6e6;
+    box-sizing: border-box;
+    font-size: 0;
+    line-height: 0;
+    color: transparent;
+    z-index: 10;
+}
+.ysy .basic_slick .slick-arrow:before{
+    content: '';
+    display: block;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -12px 0 0 -12px;
+    background: url(https://static.wehago.com/imgs/ele/sp_m_ele_ysy.png) no-repeat ;
+    background-size: 250px 250px;
+}
+.ysy .basic_slick .slick-arrow.slick-disabled:before{
+    opacity: 0.3;
+}
+.ysy .basic_slick .slick-arrow.slick-prev{
+    left: 20px;
+}
+.ysy .basic_slick .slick-arrow.slick-next{
+    right: 20px;
+}
+.ysy .basic_slick .slick-arrow.slick-prev:before{
+    background-position: 0 -211px;
+    transform: rotate(180deg);
+}
+.ysy .basic_slick .slick-arrow.slick-next:before{
+    background-position: 0 -211px;
+    
+}
+.ysy .sec_peopleplace{
+    background-color: #252634;
+    padding-bottom: 0;
+}
+.ysy .sec_peopleplace .main_sectitle > h2{
+    font-size: 36px;
+    line-height: 36px;
+    letter-spacing: -1.8px;
+    color: #fff;
+}
+.ysy .main_sectitle .title_desc{
+    margin-top: 24px;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: -0.8px;
+    color: #fff;
+    text-align:center
+}
+.ysy .sec_peopleplace .btn_pp{
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: auto;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 10px 72px 10px 30px;
+    border-color: #fff;
+    color: #fff;
+}
+.ysy .sec_peopleplace .btn_pp:before{
+    content: '';
+    display: block;
+    width: 38px;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    background-color: #fff;
+}
+.ysy .sec_peopleplace .btn_pp:after{
+    content: '';
+    display: block;
+    width: 5px;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    margin-top: -2px;
+    transform: rotate(45deg);
+    background-color: #fff;
+}
+.ysy .sec_peopleplace .ppstep_list{
+    display: block;
+    overflow: hidden;
+    background-color: #252634;
+}
+.ysy .sec_peopleplace .ppstep_list > li{
+    display: block;
+    width: 100%;
+}
+.ysy .sec_peopleplace .ppstep_list > li + li{
+    margin: 30px 0 0 0;
+}
+.ysy .sec_peopleplace .ppstep_list strong{
+    margin-bottom: 6px;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: -1.0px;
+    color: #fff;
+    font-family: 'Nanum Myeongjo';
+}
+.ysy .sec_peopleplace .ppstep_list strong > em{
+    display: block;
+    font-size: 18px;
+    line-height: 20px;
+    margin-bottom: 14px;
+    font-family: 'Libre Baskerville';
+    color: #fff;
+    text-decoration: underline;
+}
+.ysy .sec_peopleplace .ppstep_list p{
+    font-size: 13px;
+    line-height: 20px;
+}
+.sec_peopleplace .balloon_box{
+    display: block;
+    overflow: hidden;
+    height: 220px;
+    background-color: #485364;
+    padding: 34px 0;
+    box-sizing: border-box;
+}
+.sec_peopleplace .balloon_box .balloon_list{
+    display: block;
+    font-size: 0;
+}
+.sec_peopleplace .balloon_box .balloon_list .item{
+    position: relative;
+    display: inline-block;
+    margin: 0 7px;
+    vertical-align: top;
+    width: calc(100% - 94px);
+    height: 100%;
+    padding: 30px;
+    box-sizing: border-box;
+    max-width: 300px;
+    height: 140px;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid #707070;
+}
+.sec_peopleplace .balloon_box .balloon_list .item .point{
+    display: block;
+    font-size: 28px;
+    line-height: 28px;
+    color: #c6c6c6;
+    letter-spacing: -1.4px;
+    font-weight: bold;
+    position: absolute;
+    top: 15px;
+    left: 11px;
+}
+.sec_peopleplace .balloon_box .balloon_list .item .point.bottom{
+    top: auto;
+    right: 11px;
+    bottom: 0;
+    left: auto;
+}
+.sec_peopleplace .balloon_box .balloon_list .item .cheering .text_box{
+    display: block;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: -1px;
+    color: #111;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.sec_peopleplace .balloon_box .balloon_list .item .cheering > p > em{
+    font-weight: bold;
+}
+.sec_peopleplace .balloon_box .balloon_list .item:before{
+    content: '';
+    display: block;
+    border: solid #fff;
+    border-top-color: #fff;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-width: 11px 7px;
+    position: absolute;
+    bottom: -22px;
+    left: 50%;
+    margin-left: -10px;
+}
+.ysy .sec_article{
+    overflow: hidden;
+    background-color: #f4f5f7;
+}
+.ysy .ele_newlist{
+    display: block;
+    overflow: visible;
+    margin-top: 32px;
+}
+.ysy .ele_newlist .item{
+    display: inline-block;
+    vertical-align: top;
+    width: 270px !important;
+    height: 320px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.ysy .ele_newlist .item + .item{
+    margin-left: 20px;
+}
+.ysy .ele_newlist .newitem{
+    height: 100%;
+    padding: 20px 18px;
+    box-sizing: border-box;
+}
+.ysy .ele_newlist .newitem .textbox{
+    padding: 0;
+    margin-bottom: 27px;
+}
+.ysy .ele_newlist .newitem .textbox > strong{
+    display: block;
+    margin-top: 12px;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.9px;
+    color: #000;
+}
+.ysy .ele_newlist .newitem .textbox > p{
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: -0.65px;
+    color: #939393;
+    margin-top: 18px;
+}
+.ysy .ele_newlist .newitem .thumimg{
+    width: auto;
+    margin: 0 -18px;
+}
+.ysy .ele_newlist .item .copybox{
+    display: block;
+    position: relative;
+    top: auto;
+    left: auto;
+    bottom: auto;
+    right: auto;
+    width: 100%;
+    text-align: left;
+}
+.ysy .ele_newlist .newitem .copybox .snstext{
+    font-size: 12px;
+    line-height: 30px;
+    letter-spacing: -0.6px;
+    color: #4a4a4a;
+
+}
+.ysy .ele_newlist .item .copybox .date{
+    float: left;
+}
+.ysy .info_slick .slick-arrow{
+    display: block;
+    position: absolute;
+    top: -71px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 1px solid #4a4a4a;
+    background-color: #fff;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -1000px;
+}
+.ysy .info_slick .slick-arrow:before{
+    content: '';
+    display: block;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -11px 0 0 -11px;
+    background: url(https://static.wehago.com/imgs/ele/sp_m_ele_ysy.png) no-repeat 0 -212px;
+    background-size: 250px 250px;
+}
+.ysy .info_slick .slick-arrow.slick-disabled{
+    opacity: 0.3;
+}
+.ysy .info_slick .slick-arrow.slick-next{
+    right: 20px;
+}
+.ysy .info_slick .slick-arrow.slick-prev{
+    right: 77px;
+    transform: rotate(180deg);
+}
+.ysy .sec_gallery{
+    margin-top: 0;
+    padding: 10px 0 110px;
+    background-color: #f4f5f7;
+}
+.ysy .sec_gallery .main_sectitle{
+    margin-bottom: 28px;
+}
+.ysy .sec_gallery .main_gallery_list{
+    position: relative;
+    display: block;
+    font-size: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    margin: 0 -20px;
+}
+.ysy .sec_gallery .main_gallery_list > li{
+    display: inline-block;
+    vertical-align: top;
+    width: 200px;
+    height: 200px;
+    padding: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    float: none;
+}
+.ysy .sec_gallery .main_gallery_list > li + li{
+    margin-left: 18px;
+}
+.ysy .sec_gallery .main_gallery_list > li:first-child{
+    width: 200px;
+    height: 200px;
+    margin-left: 20px;
+}
+.ysy .sec_gallery .main_gallery_list > li .gallery_viewbtn{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.ysy .sec_donation{
+    position: relative;
+    height: 628px;
+    background: url(https://static.wehago.com/imgs/ele/m_bg_new_main2.png) no-repeat 68% 50%;
+    background-size: cover;
+}
+.ysy .sec_donation:before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #212638;
+    opacity: 0.5;
+}
+.ysy .sec_donation .donation_text{
+    margin: 0;
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    position: relative;
+    padding-top: 50px;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    text-align: center;
+}
+.ysy .sec_donation .donation_text > h3{
+    display: block;
+    font-size: 30px;
+    line-height: 43px;
+}
+.ysy .sec_donation .donation_text > h3 > em{
+    font-size: 36px;
+    font-weight: bold;
+}
+.ysy .sec_donation .donation_text .bankinfo{
+    margin-top: 22px;
+    padding-top: 14px;
+}
+.ysy .sec_donation .donation_text .bankinfo:before{
+    left: 0;
+    margin-left: 0;
+    width: 42px;
+}
+.ysy .sec_donation .donation_text .bankinfo > h4{
+    display: block;
+    margin-bottom: 9px;
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -1.0px;
+}
+.ysy .sec_donation .donation_text .bankinfo > h4 > span{
+    padding-left: 0;
+}
+.ysy .sec_donation .donation_text .bankinfo > h4 > span:before{
+    display: none;
+}
+.ysy .sec_donation .donation_text .bankinfo > strong{
+    display: block;
+    margin-bottom: 4px;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.8px;
+    color: #fff;
+}
+.ysy .sec_donation .donation_text .bankinfo .guidetext{
+    display: block;
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: -0.25px;
+    color: #a5a5a5;
+}
+.ysy .sec_donation .guidelisst{
+    padding-top: 44px;
+}
+.ysy .sec_donation .guidelisst > li{
+    color: #9f9f9f;
+}
+.ysy .sec_donation .guidelisst > li:before{
+    background-color: #9f9f9f;
+}
+.ysy .footer{
+    background-color: #1f1f1f;
+    text-align: center;
+}
+.ysy .footer .addr_infolist dd{
+    display: inline-block;
+    vertical-align: top;
+}
+.ysy .footer .snslnkbox{
+    padding: 0;
+    margin-top: 16px;
+}
+.ysy .footer .snslnkbox:before{
+    display: none;
+}
+.ysy .footer .sns_infolist > li + li{
+    margin-left: 8px;
+}
+.ysy .footer .sns_infolist .snsbtn{
+    width: 28px;
+    height: 28px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 50%;
+}
+.ysy .footer .sns_infolist .snsbtn:after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: url(https://static.wehago.com/imgs/ele/sp_m_ele_ysy.png) no-repeat;
+    background-size: 250px 250px;
+}
+.ysy .footer .sns_infolist .snsbtn.ico_fb:after{
+    width: 12px;
+    height: 12px;
+    margin: -6px 0 0 -6px;
+    background-position: -119px -175px;
+}
+.ysy .footer .sns_infolist .snsbtn.ico_youtube:after{
+    width: 15px;
+    height: 11px;
+    margin: -5px 0 0 -7px;
+    background-position: -136px -175px;
+}
+.ysy .footer .sns_infolist .snsbtn.ico_insta:after{
+    margin: -9px 0 0 -9px;
+    width: 18px;
+    height: 18px;
+    background-position: -36px -104px;
+}
+.ysy .footer .sns_infolist .snsbtn.ico_naver:after{
+    margin: -7px 0 0 -7px;
+    width: 14px;
+    height: 14px;
+    background-position: -81px -104px;
+}
+.ysy .footer .sns_infolist .snsbtn.ico_kakao_ch:after{
+    margin: -9px 0 0 -9px;
+    width: 18px;
+    height: 18px;
+    background-position: 0 -172px;
+}
+.ysy .footer .sns_infolist.v2 .snsbtn{
+    width:42px;
+    height: 42px;
+    background: url(https://static.wehago.com/imgs/ele/sp_m_ele_ysy3.png) no-repeat 0 0 / 250px 250px;
+}
+.ysy.v2 .footer .sns_infolist.v2 > li + li{margin-left:6px}
+.ysy.v2 .footer .sns_infolist.v2 .snsbtn{
+    background: url(https://static.wehago.com/imgs/ele/sp_m_ele_ysy3.png) no-repeat 0 0 / 250px 250px;
+}
+.ysy.v2 .footer .sns_infolist .snsbtn.ico_fb{
+    background-position: 0 0;
+}
+.ysy.v2 .footer .sns_infolist .snsbtn.ico_fb2{
+    background-position: -45px -46px;
+}
+.ysy.v2 .footer .sns_infolist.v2 .snsbtn.ico_youtube{
+    background-position: -45px 0;
+}
+.ysy.v2 .footer .sns_infolist.v2 .snsbtn.ico_insta{
+    background-position: -92px 0;
+}
+.ysy.v2 .footer .sns_infolist.v2 .snsbtn.ico_naver{
+    background-position: -92px -46px;
+}
+.ysy.v2 .footer .sns_infolist.v2 .snsbtn.ico_naver2{
+    background-position: -186px 0;
+}
+.ysy.v2 .footer .sns_infolist.v2 .snsbtn.ico_kakao_ch{
+    background-position: -139px 0;
+}
+.ysy .footer .sns_infolist.v2 .snsbtn:after{
+    display: none;
+}
+.ysy .footer .copytext{
+    margin-top: 12px;
+}
+.ysy .gnb .login_box{
+    font-size: 0;
+}
+.ysy .gnb .login_box > a{
+    padding: 15px 10px 15px 20px;
+}
+.ysy .gnb .login_box > a + a{
+    position: relative;
+    padding: 15px 20px 15px 10px;
+}
+.ysy .gnb .login_box > a + a:before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 16px;
+    left: 0;
+    width: 1px;
+    height: 12px;
+    background-color: #777;
+}
+.ysy .gnb .gnb_list > li:first-child > a{
+    font-size: 18px;
+    line-height: 23px;
+    font-weight: bold;
+    padding: 16px 0 16px 20px;
+    
+}
+.ysy .gnb .gnb_list > li:first-child > a > span{
+    font-size: 18px;
+    line-height: 23px;
+}
+.ysy .gnb .gnb_list > li.active a > span{
+    position: relative;
+    color: #000;
+    font-weight: bold;
+}
+.ysy .gnb .gnb_list > li.active a > span:before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+}
+.ysy .gnb .gnb_list li > a > span{
+    font-size: 15px;
+    line-height: 19px;
+}
+.gnb .gnb_list + .footer{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+.sec_history{
+    display: block;
+}
+.sec_history .history_title{
+    display: block;
+    padding-top: 57px;
+    margin-bottom: 18px;
+}
+.sec_history .history_title > h1{
+    font-size: 34px;
+    line-height: 41px;
+}
+.sec_history .history_box{
+    display: block;   
+}
+.sec_history .history_box .item{
+    display: block;
+    padding-top: 18px;
+    border-top: 1px solid #bcbcbc;
+}
+.sec_history .history_box .item .date{
+    display: block;
+    font-size: 0;
+}
+.sec_history .history_box .item .date > p{
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 20px;
+    font-size: 24px;
+    line-height: 30px;
+}
+.sec_history .history_box .item .img_box{
+    display: block;
+    padding-bottom: 60px;
+}
+.sec_history .history_box .item .img_box .img_list{
+    overflow: hidden;
+    width: 100%;
+    font-size: 0;
+}
+.sec_history .history_box .item .img_box .img_list .img_item{
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: calc(50% - 6px);
+    padding-bottom: 48.2%;
+    margin: 0 0 12px 0;
+    border: 1px solid #c6c6c6;
+    box-sizing: border-box;
+}
+.sec_history .history_box .item .img_box .img_list .img_item:nth-child(odd){
+    margin: 0 12px 12px 0;
+}
+.sec_history .history_box .item .img_box .img_list .img_item > a{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+/* 팝업 : 후보지지하기 */
+.ele .sec_main_title{
+    display: block;
+    margin-bottom: 24px;
+    text-align: center;
+}
+.ele .sec_main_title > strong{
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: -0.27px;
+    color: #000;
+}
+.ele .sec_main_title > p{
+    display: block;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: -0.18px;
+    color: rgba(0,0,0,0.6);
+}
+.ele .sec_reg_inputbox{
+    display: block;
+}
+.ele .sec_reg_inputbox .input_list{
+    display: block;
+    position: relative;
+}
+.ele .sec_reg_inputbox .input_list > div{
+    display: block;
+    width: 100%;
+}
+.ele .sec_reg_inputbox .input_list > div + div{
+    margin-top: 18px;
+}
+.ele .sec_reg_inputbox .input_list > div > dt{
+    display: block;
+    width: 100%;
+}
+.ele .sec_reg_inputbox .input_list > div > dt > span{
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.7px;
+    color: #000;
+    text-align: left;
+}
+.ele .sec_reg_inputbox .input_list > div > dd{
+    display: block;
+    width: 100%;
+    font-size: 13px;
+    line-height: 16px;
+    
+}
+.ele .sec_reg_inputbox .input_list > div > dd input{
+    display: block;
+    width: 100%;
+    padding: 10px 16px;
+    background-color: rgba(229,229,229,0.5);
+    border: 0;
+    font-size: 13px;
+    line-height: 16px;
+    outline: 0;
+    box-sizing: border-box;
+}
+.ele .sec_reg_inputbox .input_list > div > dd input::placeholder{
+    color: #696969;
+}
+.ele .sec_reg_inputbox .input_list > div > dd.division_box{
+    display: flex;
+    justify-content: space-between;
+}
+.ele .sec_reg_inputbox .input_list > div > dd.division_box > div{position: relative;}
+.ele .sec_reg_inputbox .input_list > div > dd.division_box.type_addr > div{
+    width: calc(50% - 3px);
+}
+.ele .sec_reg_inputbox .input_list > div > dd.division_box .open .addrlist{display: block;}
+.ele .sec_reg_inputbox .input_list > div > dd.division_box .option_box{
+    display: block;
+    font-size: 0;
+}
+.ele .sec_reg_inputbox .input_list > div > dd.division_box .option_box .btn_select{
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
+    line-height: 17px;
+    height: 36px;
+    width: 36px;
+    border: 1px solid rgba(0,0,0,0.3);
+    background-color: transparent;
+    color: rgba(105,105,105,0.6);
+}
+.ele .sec_reg_inputbox .input_list > div > dd.division_box .option_box .btn_select.active{
+    border-color: #000;
+    background-color: #f4f4f5;
+    color: rgba(105,105,105,1);
+}
+.ele .sec_reg_inputbox .input_list > div > dd.division_box .option_box .btn_select + .btn_select{
+    margin-left: -1px;
+}
+.ele .sec_reg_inputbox .input_list > div > dd.division_box .addrbtn{
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    background: transparent;
+    border: 1px solid rgba(0,0,0,.26);
+    font-size: 13px;
+    letter-spacing: -0.32px;
+    color: rgba(105,105,105,.6);
+    height: 41px;
+    width: 100%;
+    line-height: 41px;
+    overflow: hidden;
+    text-align: left;
+    padding-left: 16px;
+    box-sizing: border-box;
+}
+.ele .sec_agreebox .reg_agreebox .agree_checkbox{
+    display: block;
+    margin-top: 6px;
+    position: relative;
+    left: auto;
+    bottom: auto;
+}
+.ele .sec_agreebox{
+    text-align: left;
+}
+.ele .btn_reg{
+    position: relative;
+    display: block;
+    width: 170px;
+    height: 40px;
+    border-radius: 20px;
+    background: #000;
+    margin: 30px auto 0;
+    padding: 0 20px 0 43px;
+    border: 0;
+    font-size: 16px;
+    color: #fff;
+    line-height: 41px;
+    overflow: hidden;
+}
+.ele .btn_reg:before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 22px;
+    width: 15px;
+    height: 12px;
+    margin-top: -6px;
+    background: url(https://static.wehago.com/imgs/ele/sp_ele_ysy.png) -259px -244px no-repeat;
+}
+/* 팝업 : 후원금 안내 */
+.ele .sec_spon_title{
+    display: block;
+    margin-bottom: 12px;
+}
+.ele .sec_spon_title > h1{
+    display: block;
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -1px;
+    color: #000;
+}
+.ele .sec_spon_title > p{
+    display: block;
+    margin-top: 8px;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: -0.18px;
+    color: rgba(0,0,0,0.6);
+}
+.ele .sec_spon_content{
+    display: block;
+    width: 100%;
+    background-color: #f2f2f2;
+    border-radius: 4px;
+    padding: 25px 0 17px;
+}
+.ele .sec_spon_content .text_box{
+    padding: 0 20px;
+}
+.ele .sec_spon_content .text_box > p{
+    word-break: keep-all;
+}
+.ele .sec_spon_content .text_small_gray{
+    display: block;
+    margin-bottom: 12px;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: -0.65px;
+    color: #909090;    
+}
+.ele .sec_spon_content .text_large{
+    display: block;
+    margin-bottom: 4px;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.9px;
+    color: #000;
+}
+.ele .sec_spon_content .text_large.v2{font-weight:bold}
+.ele .sec_spon_content .text_large > em {color:#e38c00}
+.ele .sec_spon_content .text_medium{
+    display: block;
+    margin-bottom: 12px;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.7px;
+    color: #000;
+}
+.ele .sec_spon_content .text_medium > em{
+    text-decoration: underline;
+    font-weight: 700;
+}
+.ele .sec_spon_content .phone_info{
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
+    line-height: 18px;
+    color: #fff;
+    font-weight: 700;
+    padding: 10px 30px 9px 50px;
+    background-color: #5a5a5a;
+    border-radius: 22px;
+}
+.ele .sec_spon_content .phone_info:before{
+    content: '';
+    display: block;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    margin-top: -8px;
+    background: url(https://static.wehago.com/imgs/ele/sp_m_ele_ysy.png) -101px -199px no-repeat;
+    background-size:250px 250px;
+}
+.ele .sec_spon_content .btn_detail_link{
+    display: block;
+    width: auto;
+    margin: 25px auto 0;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: -0.7px;
+    padding: 9px 34px;
+    border: 1px solid #000;
+    background-color: transparent;
+    
+}
+.ele .sec_spon_content .spon_dl{
+    display: block;
+    text-align: left;
+}
+.ele .sec_spon_content .spon_dl > div{
+    display: block;
+    padding: 0 17px;
+}
+.ele .sec_spon_content .spon_dl > div + div{
+    margin-top: 20px;
+}
+.ele .sec_spon_content .spon_dl > div dt,
+.ele .sec_spon_content .spon_dl > div dd{
+    display: block;
+    font-size: 12px;
+    line-height: 19px;
+    letter-spacing: -.6px;
+    color: #000;
+    word-break: keep-all; 
+}
+.ele .sec_spon_content .spon_dl > div dt{
+    font-weight: 700;
+}
+.ele .sec_agree_checkbox {position: relative;display: block;text-align: left;margin-top: 8px;}
+.ele .sec_agree_checkbox > label {font-size: 0;}
+.ele .sec_agree_checkbox .input {opacity: 0;position: absolute;}
+.ele .sec_agree_checkbox .input + .icon {display: inline-block;overflow: hidden;line-height: 100em;vertical-align: top;position: absolute;left: 0;top: 50%;width: 16px;height: 16px;margin-top: -10px;border-radius: 1px;background: url(https://static.wehago.com/imgs/ele/sp_ele_ysy.png) -245px -272px no-repeat;}
+.ele .sec_agree_checkbox .input:checked + .icon {background-position: -228px -272px;}
+.ele .sec_agree_checkbox .label_text {display: inline-block;padding-left: 20px;font-size: 12px;line-height: 16px;color: #464646;vertical-align: top;}
+.ele .reg_inputbox{
+    width: 100%;
+}
+.ele .sec_btn_box{
+    display: block;
+    text-align: center;
+} 
+.ele .sec_btn_box .btn_black{
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 11px 20px 9px;
+    border-radius: 4px;
+    background-color: #5a5a5a;
+    color: #fff;
+    border: 0;
+}
+
+/* 지지자등록 레이어 */
+.ele .layer_regbox {display:none;position:absolute;top:0;left:0;right:0;width:1170px;height:390px;border-radius:20px;box-shadow:0 10px 20px 0 rgba(0,0,0,.26);background:#fff;padding:60px 78px;box-sizing:border-box}
+.ele .layer_regbox.open {display:block}
+.ele .layer_regbox .regbox_tit {font-size:34px;color:#000;line-height:43px;letter-spacing: -1.7px;}
+.ele .layer_regbox .regbox_desc {font-size:18px;color:#000;line-height:22px;letter-spacing:-.9px;margin-top:4px}
+.ele .layer_regbox .regbtn {position:absolute;top:90px;right:78px;height:40px;border-radius:20px;background:#000;padding:0 20px 0 43px;border:0;font-size:16px;color:#fff;line-height:41px;overflow:hidden}
+.ele .layer_regbox .regbtn:before{content:'';position:absolute;top:50%;left:22px;width:15px;height:12px;margin-top:-6px;background:url(https://static.wehago.com/imgs/ele/sp_ele_ysy.png) -259px -244px no-repeat}
+.ele .layer_regbox .reg_inputbox {margin-top:24px}
+.ele .reg_inputbox .itemcell{float:left}
+.ele .reg_inputbox .inputitem {border:0;height:41px;width:194px;box-sizing:border-box;color:#696969;font-size:14px;background:#e5e5e5;padding:0 10px;border-radius:0;outline:0}
+.ele .reg_inputbox .inputitem:focus{border-color:#fff}
+.ele .reg_inputbox .itemcell{position:relative}
+.ele .reg_inputbox .itemcell.tel,
+.ele .reg_inputbox .itemcell.birth,
+.ele .reg_inputbox .itemcell.addr {margin-left:7px}
+.ele .reg_inputbox .itemcell.sex{margin-left:6px}
+.ele .reg_inputbox .itemcell.addr + .addr {margin-left:3px}
+.ele .reg_inputbox .itemcell.tel .inputitem{width:239px}
+.ele .reg_inputbox .itemcell.birth .inputitem{width:169px}
+.ele .reg_inputbox .inputitem::-webkit-input-placeholder {color: rgba(105,105,105,.6);letter-spacing:-.5px}
+.ele .reg_inputbox .inputitem:-ms-input-placeholder {color: rgba(105,105,105,.6);letter-spacing:-.5px}
+.ele .reg_inputbox .selectsexbtn,
+.ele .reg_inputbox .addrbtn {position:relative;display:inline-block;vertical-align:top;background:transparent;border:1px solid rgba(0,0,0,.26);font-size:14px;color:rgba(105,105,105,.6);height:41px;width:44px;line-height:43px;overflow:hidden}
+.ele .reg_inputbox .selectsexbtn.selected {border-color:#000;color:#696969}
+.ele .reg_inputbox .selectsexbtn + .selectsexbtn {margin-left:-1px}
+.ele .reg_inputbox .addrbtn{width:135px;text-align:left;padding-left:15px}
+.ele .reg_inputbox .addrbtn.city{width:151px}
+.ele .reg_inputbox .addrbtn:after{content:'';position:absolute;top:50%;right:13px;width:11px;height:6px;margin-top:-3px;background:url(https://static.wehago.com/imgs/ele/sp_ele_ysy.png) -210px -272px no-repeat}
+.ele .reg_inputbox .addrbtn.selected {color:#696969}
+.ele .reg_inputbox .addrlist {display:none;z-index:1;position:absolute;top:100%;margin-top:5px;left:0;right:0;border:1px solid #4a4a4a;background:#fff;box-shadow:0 2px 4px rgba(0,0,0,.11);max-height:152px;overflow-y:auto}
+.ele .reg_inputbox .addrlist .addrlistitem {display:block;width:100%;font-size:14px;color:#4a4a4a;padding:0 7px;;height:30px;line-height:32px;background:transparent;border:0;text-align:left;text-overflow:ellipsis;white-space: nowrap;word-break:break-all;overflow:hidden}
+.ele .reg_inputbox .addrlist li.selected .addrlistitem {color:#1c90fb;background:#f4faff}
+.ele .reg_inputbox .addrlist .addrlistitem:hover {color:#1c90fb}
+.ele .reg_inputbox .addr.open .addrlist {display:block}
+.ele .reg_inputbox .addr.open .addrbtn{border-color:#696969}
+.ele .reg_inputbox .addr.open .addrbtn:after {transform: rotate(180deg);}
+.ele .reg_inputbox .validation_text {position:absolute;top:100%;left:0;font-size:11px;color:rgba(255,255,255,.8);padding-left:20px;margin-top:6px}
+.ele .reg_inputbox .validation_text:before{content:'';position:absolute;top:50%;left:0;width:16px;height:16px;margin-top:-9px;background:url(https://static.wehago.com/imgs/ele/sp_ele_ysy.png) -246px -30px no-repeat}
+.ele .reg_agreebox{position:relative;margin-top:30px}
+.ele .reg_agreebox > strong {display:block;font-size:14px;color:#525252;line-height:17px}
+.ele .reg_agreebox .agreetext {position:relative;overflow-y:auto;height:80px;font-size:12px;color:#8e8e8e;line-height:20px;letter-spacing: -.5px;padding:12px 10px;box-sizing:border-box;background:#fff;margin-top:6px;border:1px solid #d6d6d6}
+.ele .reg_agreebox .regbtn {float:right;;width:151px;height:41px;line-height:43px;overflow:hidden;background:#1ea8d8;color:#fff;font-size:14px;letter-spacing: -.35px;border:0;margin-top:16px}
+.ele .reg_agreebox .regbtn:hover{box-shadow:0 3px 4px rgba(30,168,216,.4)}
+.ele .reg_agreebox .agree_checkbox {position:absolute;left:0;bottom:-27px}
+.ele .reg_agreebox .agree_checkbox label .label_text{display:inline-block;padding-left:20px;font-size:12px;line-height:16px;color:#464646;vertical-align: top;}
+.ele .reg_agreebox .agree_checkbox .input{opacity:0;position:absolute}
+.ele .reg_agreebox .agree_checkbox .input::-ms-clear{display:none}
+.ele .reg_agreebox .agree_checkbox .input:disabled{-webkit-text-fill-color:#8d8d8d}
+.ele .reg_agreebox .agree_checkbox .input+.icon{display:inline-block;overflow:hidden;background:url(https://static.wehago.com/imgs/ele/sp_ele_ysy.png) -245px -272px no-repeat;line-height:100em;vertical-align:top;position:absolute;left:0;top:50%;width:16px;height:16px;margin-top:-10px;border-radius:1px}
+.ele .reg_agreebox .agree_checkbox .input:checked+.icon{background-position:-228px -272px}
+
+/* YSY 후원회 */
+.ysy .sec_sponsor{position:relative;background:#f5f5f5;padding:60px 0 10px}
+.ysy .sec_sponsor .in_box{max-width: 500px;margin: 0 auto;}
+.ysy .sec_sponsor h1 {font-size:31px;color:#000;line-height:40px;letter-spacing: -1.7px;font-weight:normal;padding-bottom:35px}
+.ysy .sec_sponsor h1 > em {font-weight:bold}
+.ysy .sec_sponsor .profilebox{width:100%;display:block;object-fit:cover;}
+.ysy .sec_sponsor .desc {padding:35px 0;font-size:16px;line-height:22px;letter-spacing:-.75px;color:#4a4a4a;word-break: keep-all;}
+.ysy .sec_sponsor h2 {font-size:16px;color:#000;line-height:24px;letter-spacing: -.8px;}
+.ysy .sec_sponsor .donainfo{position:relative;width:100%;height:436px;background:#fff url(https://static.wehago.com/imgs/ele/m_bg_bank_border.png) 50% 50% no-repeat;background-size:360px 436px;margin:45px 0;padding:40px 0 0;box-sizing:border-box;text-align:center}
+.ysy .sec_sponsor .donainfo > strong {display:block;color:#6a5f3e;font-size:20px;margin-bottom:35px}
+.ysy .sec_sponsor .donainfo > p {font-size:18px;color:#000;line-height:28px;margin-bottom:13px}
+.ysy .sec_sponsor .donainfo > p > em {font-weight:bold;color:#fff;background:#e27e1b;padding:0 3px}
+.ysy .sec_sponsor .donainfo > p > span {font-weight:bold}
+.ysy .sec_sponsor .donainfo > p.subtxt {font-size:16px;color:#4a4a4a;line-height:22px;letter-spacing: -.48px;margin-bottom:27px}
+.ysy .sec_sponsor .teldl {display:inline-block;font-size:16px;color:#fff;letter-spacing: -.65px;line-height:40px;overflow:hidden;background:#5a5a5a;text-align:center;padding:0 22px;border-radius:17px;font-weight:bold}
+.ysy .sec_sponsor .teldl > dt {position:relative;display:inline-block;padding-left:18px}
+.ysy .sec_sponsor .teldl > dt:before{content:'';position:absolute;top:50%;left:0;width:16px;height:16px;margin-top:-8px;background:url(https://static.wehago.com/imgs/ele/sp_m_ele_ysy.png) -101px -199px no-repeat;background-size:250px 250px}
+.ysy .sec_sponsor .teldl > dt:after{content:':';padding:0 3px}
+.ysy .sec_sponsor .teldl > dd {display:inline-block;}
+.ysy .sec_gallery.sub {background:#f5f5f5;padding:57px 0}
+.ysy .sec_gallery.sub h1 {font-size:34px;line-height:41px;color:#000;margin-bottom:24px}
+.ysy .sec_gallery.sub .gallery_list{margin:0}
+.ysy .sec_gallery.sub .gallery_list:after{content:'';clear:both;display:table}
+.ysy .sec_gallery.sub .gallery_list .btn_viewimg{border:0;;background:transparent;height:100%;width:100%}
+.ysy .sec_gallery.sub .gallery_list .btn_viewimg img {width:100%;height:100%;object-fit: cover;width:100%;}
+.ysy .sec_gallery.sub .gallery_list li {width:100%;padding-bottom:0;margin:0;height:156px;padding:2px;box-sizing:border-box}
+.ysy .sec_gallery.sub .gallery_list.img2 li {float:left;width:65%}
+.ysy .sec_gallery.sub .gallery_list.img2 li+li {width:35%}
+.ysy .sec_gallery.sub .gallery_list.img3 li {float:left;width:35%}
+.ysy .sec_gallery.sub .gallery_list.img3 li+li {width:65%}
+.ysy .sec_gallery.sub .gallery_list.img3 li:last-of-type{width:100%}
+.ysy .sec_gallery.sub .gallery_list.img4 li {float:left}
+.ysy .sec_gallery.sub .gallery_list.img4 li:nth-child(2){width:35%}
+.ysy .sec_gallery.sub .gallery_list.img4 li:nth-child(3){width:65%}
+.ysy .sec_gallery.sub .gallery_list.img4 li:last-of-type,
+.ysy .sec_gallery.sub .gallery_list.img4 li:first-of-type{width:100%}
+.ysy .sec_gallery.sub .gallery_list.img5 li {float:left}
+.ysy .sec_gallery.sub .gallery_list.img5 li:nth-child(2),
+.ysy .sec_gallery.sub .gallery_list.img5 li:nth-child(3){width:35%}
+.ysy .sec_gallery.sub .gallery_list.img5 li:nth-child(1),
+.ysy .sec_gallery.sub .gallery_list.img5 li:nth-child(4){width:65%}
+.ysy .sec_gallery.sub .gallery_list.img5 li:last-of-type{width:100%}
+
+.ysy .sec_peopleplace.sub {background:#f5f5f5;padding:57px 0}
+.ysy .sec_peopleplace.sub h1 {font-size:34px;line-height:41px;color:#000;margin-bottom:24px}
+.ysy .sec_peopleplace.sub .main_sectitle .title_desc{color:#000}
+.ysy .sec_peopleplace.sub .btn_pp {color:#000;border-color:#000;margin-top:10px}
+.ysy .sec_peopleplace.sub .btn_pp:after,
+.ysy .sec_peopleplace.sub .btn_pp:before{background-color:#000}
+.ysy .sec_peopleplace.sub .ppstep_list{background:transparent}
+.ysy .sec_peopleplace.sub .ppstep_list strong{color:#000}
+.ysy .sec_peopleplace.sub .ppstep_list strong > em {color:#000}
+.ysy .sec_peopleplace.sub .ppstep_list p {color:#000}
+.ysy .sec_peopleplace.sub .balloon_box{background:#e2e2e2}
+.ysy .sec_peopleplace.sub .balloon_box .balloon_list .item{border-color:#fff}
+.ysy .sec_peopleplace.sub .balloon_box .balloon_list .item .cheering > p > span {font-weight:bold}
+
+.ysy .sec_article.sub {background:#f5f5f5;padding:57px 0}
+.ysy .sec_article.sub h1 {font-size:34px;line-height:41px;padding:0 20px}
+.ysy .sec_article.sub .category_list {font-size: 0;white-space: nowrap;display: block;margin-top: 20px;overflow: hidden;overflow-x: auto;-webkit-overflow-scrolling: touch;-ms-overflow-style: none;scrollbar-width: none;padding: 0 20px;text-align: center;}
+.ysy .sec_article.sub .category_list::-webkit-scrollbar {display: none;}
+.ysy .sec_article.sub .category_list .btn_category {display: inline-block;vertical-align: top;min-width: 55px;padding: 0 16px;height: 32px;border: 1px solid #e3e4e5;background-color: #e3e4e5;font-size: 13px;letter-spacing: -0.2px;color: #8e8e8e;border-radius: 17px;font-weight: 700;}
+.ysy .sec_article.sub .category_list .btn_category.active {border-color: #000;background-color: #000;color: #fff;}
+.ysy .sec_article.sub .category_list .btn_category + .btn_category {margin-left: 8px;}
+.ysy .sec_article.sub .ele_newlist .item{display:block;width:100% !important;margin-right:0;max-height:350px;height:auto;box-shadow:0 10px 20px rgba(0,0,0,0.2)}
+.ysy .sec_article.sub .ele_newlist .item + .item{margin-left:0;margin-top:20px}
+.ysy .sec_article.sub .ele_newlist .newitem .thumimg{height:171px}
+.ysy .sec_article.sub .ele_newlist .item.has_thum .newitem .textbox > p{-webkit-line-clamp:2}
+.ysy .sec_article.sub .ele_newlist .item.has_thum .newitem .videobox {position:relative;margin:0 -18px;height:171px}
+.ysy .sec_article.sub .ele_newlist .item.has_thum .newitem .videobox > iframe {display: block;position: absolute;top: 0;left: 0;right: 0;bottom: 0;}
+.ysy .sec_btn_box .btn_more {border-color:#000;color:#000;overflow:hidden}
+.ysy .LS_spinner2 .loading {border-left-color:#000;border-top-color:rgba(0,0,0,.2);border-right-color:rgba(0,0,0,.2);border-bottom-color:rgba(0,0,0,.2)}
+
+.ysy .sec_history.sub .history_box{display: block;width: 100%;position: relative;overflow: hidden;padding-bottom: 82px;}
+.ysy .sec_history.sub .history_box .item{display: block;width: 100%;}
+.ysy .sec_history.sub .history_box .item .img_list{display: block;width: 100%;font-size: 0;position:static}
+.ysy .sec_history.sub .history_box .item .img_list .img_item{position:relative;display: inline-block;vertical-align: middle;width: 360px;height: 370px;margin: 0 15px;background:#000}
+.ysy .sec_history.sub .history_box .item .img_list .img_item:after{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.3)}
+.ysy .sec_history.sub .history_box .item .img_list .img_item.slick-center:after{display:none}
+.ysy .sec_history.sub .history_box .item .img_list .img_item > a{display: block;width: 100%;height: 100%;}
+.ysy .sec_history.sub .history_box .item .img_list .img_item > a .thumimg{display: block;width: 100%;height: 100%;background-size: cover;background-repeat: no-repeat;background-position: 50% 0}
+.ysy .sec_history.sub .history_box .item .img_list .slick-arrow {position: absolute;top: auto;bottom: 0;left: 50%;margin-left:15px;border: 1px solid #4a4a4a;border-radius: 50%;width: 45px;height: 45px;background: transparent;overflow: hidden;line-height: 100em;}
+.ysy .sec_history.sub .history_box .item .img_list .slick-arrow:after {content: '';position: absolute;top: 50%;left: 50%;width: 11px;height: 20px;margin-top: -10px;margin-left: -3px;background: url(https://static.wehago.com/imgs/ele/sp_m_ele_ysy.png) -24px -215px no-repeat;background-size:250px 250px}
+.ysy .sec_history.sub .history_box .item .img_list .slick-arrow.slick-prev {margin-left: -40px;}
+.ysy .sec_history.sub .history_box .item .img_list .slick-arrow.slick-prev:after {transform: rotate(-180deg);margin-left: -6px;}
+.ysy .sec_history.sub .history_box .item .img_list .slick-arrow.slick-disabled {opacity: 0.3;}
+.ysy .sec_history.sub .history_title{position:relative;}
+.ysy .sec_history.sub .history_title .btn_box{position:absolute;bottom:7px;right:0}
+.ysy .sec_history.sub .history_title .btn_box > button{display: inline-block;vertical-align: top;position: relative;width: 30px;height: 30px;border: 0;outline: 0;font-size: 0;line-height: 0;text-indent: -1000px;background: none;}
+.ysy .sec_history.sub .history_title .btn_box > button:hover{background: rgba(0,0,0,0.13);border-radius: 5px;}
+.ysy .sec_history.sub .history_title .btn_box > button:before{content: '';position: absolute;top: 50%;left: 50%;margin: -7px 0 0 -6px;display: block;width: 13px;height: 15px;background: url(https://static.wehago.com/imgs/ele/sp_m_ele_ysy.png) -195px -175px no-repeat;background-size:250px 250px}
+.ysy .sec_history.sub .history_title .btn_box > button.play:before{background-position: -195px -175px;}
+.ysy .sec_history.sub .history_title .btn_box > button.pause{position: relative;}
+.ysy .sec_history.sub .history_title .btn_box > button.pause:before{width:12px;height:14px;background-position: -212px -175px;}
+.ysy .sec_history.sub .history_title .btn_box > button.pause:after{content: '';display: block;width: 1px;height: 15px;position: absolute;top: 7px;left: 0;background-color: #bcbcbc;}
+.ysy .sec_article.sub .ele_newlist .newitem .thumimg.has_playicon{position:relative}
+.ysy .sec_article.sub .ele_newlist .newitem .thumimg.has_playicon:after {content:'';position:absolute;top:50%;left:50%;width:81px;height:81px;margin-top:-40px;margin-left:-40px;background:url(https://static.wehago.com/imgs/ele/m_youtube_playicon.png) 0 0 no-repeat;background-size:81px 81px}
+.ysy .sec_article.sub .ele_newlist .newitem .thumimg.has_playicon:before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.3)}
+
+/* YSY 응원사진 업로드 팝업 */
+.ele .dialog_content .type_textarea .location_title {position:relative;text-align:left;padding-left:19px;}
+.ele .dialog_content .type_textarea .location_title > strong{font-size:14px;color:#000;line-height:18px;letter-spacing: -.7px;vertical-align:top}
+.ele .dialog_content .type_textarea .location_title > strong > span {color:#777;vertical-align:top;max-width:300px;display:inline-block}
+.ele .dialog_content .type_textarea .location_title:before{content:'';position:absolute;top:50%;left:0;width:14px;height:17px;margin-top:-12px;background:url(https://static.wehago.com/imgs/ele/sp_m_ele_ysy.png) -176px -175px no-repeat;background-size:250px 250px}
+.ele .dialog_content .type_textarea.v2 > textarea{height:94px;font-size:13px;}
+.ele .dialog_content .type_textarea.v2{height:110px;margin-top:21px}
+.ele .dialog_content .section.type_btn_box.v2 .btn_basic {background:#1c90fb;width:88px;border-radius:4px;border:0;margin:0 auto;height:38px}
+.ele .dialog_content .section.type_btn_box.v2 .btn_basic:disabled{background:#eaebed;color:#c5c7c9}
+.ele .dialog_content .type_people_info.v2 .section_info{border-bottom:0;margin-bottom:0;padding-bottom: 0;}
+
+/* 메인 후원회 영역 수정 */
+.sec_donation .donation_infotext{position:relative;margin-top:24px;padding-top:17px}
+.sec_donation .donation_infotext:before{content:'';position:absolute;top:0;left:50%;width:40px;background:#fff;height:1px;margin-left:-20px}
+.sec_donation .donation_infotext > p {font-size:15px;color:#fff;letter-spacing: -.45px;line-height:19px;}
+.sec_donation .donation_infotext > p.t2 {font-size:20px;line-height:24px;letter-spacing: -.6px;margin:12px 0 5px}
+.sec_donation .donation_infotext > p.t2 > em {color:#ffc400}
+.sec_donation .donation_infotext > p.t3 {font-size:13px;line-height:20px;letter-spacing: -.39px;margin-bottom:18px}
+.sec_donation .donation_infotext > button.btn_detail_link{
+    display: inline-block;
+    vertical-align: top;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.6px;
+    color: #000;
+    padding: 9px 35px 8px;
+    border: 1px solid #fff;
+    background-color: rgba(255,255,255,0.16);
+    color: #fff;
+}
+
+/* 후원하기 영역 추가 210723 */
+.sec_donation .donation_infotext .inquiry{
+    display: block;
+    margin: 60px 0 9px;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: -0.9px;
+    color: #fff;
+}
+.sec_donation .donation_infotext .inquiry_list{
+    display: block;
+    overflow-y: hidden;
+    text-align:center;
+    display:inline-block;
+}
+.sec_donation .donation_infotext .inquiry_list div{
+    display: block;
+}
+.sec_donation .donation_infotext .inquiry_list div + div{
+    margin-top: 6px;
+}
+.sec_donation .donation_infotext .inquiry_list div .ico{
+    display: block;
+    width: 18px;
+    height: 18px;
+    position: relative;
+}
+.sec_donation .donation_infotext .inquiry_list div .ico:before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: url(https://static.wehago.com/imgs/ele/sp_m_ele_ysy.png) no-repeat;
+    background-size: 250px 250px;
+}
+.sec_donation .donation_infotext .inquiry_list div .ico.phone:before{
+    background-position: -181px -42px;
+    width: 11px;
+    height: 11px;
+    margin: -6px 0 0 -6px;
+}
+.sec_donation .donation_infotext .inquiry_list div .ico.mail:before{
+    background-position: -195px -42px;
+    width: 11px;
+    height: 9px;
+    margin: -5px 0 0 -6px;
+}
+.sec_donation .donation_infotext .inquiry_list div > dt{display:inline-block;vertical-align:top}
+.sec_donation .donation_infotext .inquiry_list div > dd{
+    display: inline-block;
+    font-size: 16px;
+    line-height: 18px;
+    color: #fff;
+    vertical-align: top;
+}
+.sec_sponsor.type_02{
+    display: block;
+    padding-bottom: 0;
+    background-color: #fff;
+}
+.sec_sponsor.type_02:last-child{
+    position: relative;
+}
+.sec_sponsor.type_02:last-child:before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 155px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #f5f5f5;
+}
+.sec_sponsor.type_02:last-child .in_box{
+    position: relative;
+}
+.sec_sponsor.type_02 .box_title{
+    display: block;
+    margin-bottom: 22px;
+}
+.sec_sponsor.type_02 .box_title > strong{
+    display: block;
+    font-size: 28px;
+    line-height: 35px;
+    letter-spacing: -1.4px;
+    color: #000;
+}
+.sec_sponsor.type_02 .box_title > p{
+    display: block;
+    margin-top: 14px;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.8px;
+    color: #4a4a4a;
+    word-break: keep-all;
+}
+.sec_sponsor.type_02 .box_content{
+    display: block;
+}
+.sec_sponsor.type_02 .box_content .bank_num{
+    display: block;
+    margin-bottom: 6px;
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -1px;
+}
+.sec_sponsor.type_02 .box_content .bank_name{
+    display: block;
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: -0.8px;
+    color: #000;
+}
+.sec_sponsor.type_02 .box_content .bank_notice_list{
+    display: block;
+}
+.sec_sponsor.type_02 .box_content .bank_notice_list > li{
+    position: relative;
+    display: block;
+    padding-left: 10px;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: -0.56px;
+    color: #4a4a4a;
+}
+.sec_sponsor.type_02 .box_content .bank_notice_list > li:before{
+    content: '-';
+    display: block;
+    position: absolute;
+    font-size: 14px;
+    line-height: 24px;
+    top: 0;
+    left: 0;
+}
+.sec_sponsor.type_02 .overseas_list{
+    display: block;
+}
+.sec_sponsor.type_02 .overseas_list > div{
+    display: block;
+}
+.sec_sponsor.type_02 .overseas_list > div + div{
+    margin-top: 20px;
+}
+.sec_sponsor.type_02 .overseas_list > div > dt{
+    display: block;
+    margin-bottom: 5px;
+    font-size: 15px;
+    line-height: 19px;
+    letter-spacing: -0.75px;
+    color: #4a4a4a;
+}
+.sec_sponsor.type_02 .overseas_list > div > dd{
+    display: block;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000;
+    font-weight: 700;
+}
+.sec_sponsor.type_02 .inpbx_list{
+    display: block;
+    position: relative;
+}
+.sec_sponsor.type_02 .inpbx_list > div{
+    display: block;
+    width: 100%;
+    font-size: 0;
+}
+.sec_sponsor.type_02 .inpbx_list > div + div{
+    margin-top: 20px;
+}
+.sec_sponsor.type_02 .inpbx_list > div > dt{
+    display: block;
+    margin-bottom: 8px;
+}
+.sec_sponsor.type_02 .inpbx_list > div > dt > span{
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: -0.65px;
+    color: #000;
+}
+.sec_sponsor.type_02 .inpbx_list > div > dt > span.ess{
+    padding-right: 10px;
+}
+.sec_sponsor.type_02 .inpbx_list > div > dt > span.ess:before{
+    content: '*';
+    display: block;
+    position: absolute;
+    top: 4px;
+    right: 0;
+    font-size: 13px;
+    line-height: 16px;
+    color: #ff5252;
+}
+.sec_sponsor.type_02 .inpbx_list > div > dt > em{
+    display: block;
+    margin-top: 2px;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.6px;
+    color: #777;
+}
+.sec_sponsor.type_02 .inpbx_list > div > dd{
+    display: block;
+    width: 100%;
+}
+.sec_sponsor.type_02 .inpbx_list > div > dd .text{
+    font-size: 14px;
+    line-height: 36px;
+    color: #4a4a4a;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 3px;
+}
+.sec_sponsor.type_02 .inpbx_list > div > dd .basic_input{
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.7px;
+    padding: 9px 12px 7px;
+    border: 1px solid #d3d3d3;
+    border-radius: 4px;
+    background-color: transparent;
+    box-sizing: border-box;
+    outline: 0;
+}
+.sec_sponsor.type_02 .inpbx_list > div > dd .basic_input:disabled{
+    background-color: #fafafa;
+}
+.sec_sponsor.type_02 .inpbx_list > div > dd input::placeholder{
+    color: #b4b4b4;
+}
+.sec_sponsor.type_02 .inpbx_list > div > dd .select_box{
+    display: block;
+    position: relative;
+    width: auto;
+}
+.sec_sponsor.type_02 .inpbx_list > div > dd .select_box .view_box{
+    position: relative;
+    display: block;
+    border: 1px solid #d3d3d3;
+    border-radius: 4px;
+    background-color: transparent;
+    height: 36px;
+    box-sizing: border-box;
+}
+.sec_sponsor.type_02 .inpbx_list > div > dd .select_box .view_box > span{
+    display: block;
+    font-size: 14px;
+    line-height: 18px;
+    color: #4a4a4a;
+    letter-spacing: -0.7px;
+    padding: 9px 12px 7px;
+}
+.sec_sponsor.type_02 .inpbx_list > div > dd .select_box .view_box .basic_input{
+    border:0;
+    padding-right: 30px;
+}
+.sec_sponsor.type_02 .inpbx_list > div > dd .select_box .view_box .btn_arrow{
+    display: block;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    margin-top: -6px;
+    border: 0;
+    background-color: transparent;
+}
+.sec_sponsor.type_02 .inpbx_list > div > dd .select_box .view_box .btn_arrow:before{
+    content: '';
+    display: block;
+    width: 14px;
+    height: 8px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -4px 0 0 -7px;
+    background: url(https://static.wehago.com/imgs/ele/sp_m_ele_ysy.png) no-repeat -181px -60px;
+    background-size: 250px 250px;
+}
+.sec_sponsor.type_02 .inpbx_list > div > dd .select_box.active .view_box .btn_arrow:before{
+    transform: rotateX(180deg);
+}
+.sec_sponsor.type_02 .inpbx_list > div > dd .select_box .list_box{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    border: 1px solid #b3b3b3;
+    border-radius: 4px;
+    overflow: hidden;
+    box-sizing: border-box;
+    max-height: 170px;
+    overflow-y: auto;
+}
+.sec_sponsor.type_02 .inpbx_list > div > dd .select_box.active .list_box{
+    display: block;
+    z-index: 10;
+}
+.sec_sponsor.type_02 .inpbx_list > div > dd .select_box .list_box > li{
+    display: block;
+    width: 100%;
+}
+.sec_sponsor.type_02 .inpbx_list > div > dd .select_box .list_box > li > button{
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    line-height: 18px;
+    color: #4a4a4a;
+    letter-spacing: -0.7px;
+    padding: 9px 12px 7px;
+    border: 0;
+    background-color: #fff;
+    text-align: left;
+}
+.sec_sponsor.type_02 .inpbx_list > div > dd.type_date{
+    display: flex;
+    justify-content: space-between;
+}
+.sec_sponsor.type_02 .inpbx_list > div > dd.type_date.v2{
+    justify-content: flex-start;
+}
+.sec_sponsor.type_02 .inpbx_list > div > dd.type_date > div{
+    width: calc(30% - 2px);
+}
+.sec_sponsor.type_02 .inpbx_list > div > dd.type_date > div:first-child{
+    width: calc(40% - 2px);
+}
+.sec_sponsor.type_02 .inpbx_list > div > dd.type_search{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.sec_sponsor.type_02 .inpbx_list > div > dd.type_search .basic_input{
+    display: block;
+    width: calc(100% - 75px);
+}
+.sec_sponsor.type_02 .inpbx_list > div > dd.type_search .btn_search{
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.7px;
+    color: #4a4a4a;
+    padding: 9px 10px 7px;
+    border: 1px solid #b4b4b4;
+    border-radius: 4px;
+    background-color: #fff;
+}
+.sec_sponsor.type_02 .inpbx_list > div > dd .bank_name{
+    display: block;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.7px;
+    color: #000;
+}
+.sec_sponsor.type_02 .inpbx_list > div > dd .switch_box{
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    padding: 9px 0;
+}
+.sec_sponsor.type_02 .inpbx_list > div > dd .switch_box + .switch_box{
+    margin-left: 30px;
+}
+.sec_sponsor.type_02 .inpbx_list > div > dd .switch_box > input{
+    display: block;
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    z-index: -10;
+    width: 14px;
+    height: 14px;
+}
+.sec_sponsor.type_02 .inpbx_list > div > dd .switch_box .sp_lux{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 14px;
+    height: 14px;
+    margin-top: -8px;
+    background: url(https://static.wehago.com/imgs/common/sp_diana.png) -194px -83px no-repeat;
+}
+.sec_sponsor.type_02 .inpbx_list > div > dd .switch_box > input[type=radio]:checked + .sp_lux{
+    background-position: -211px -83px;
+}
+.sec_sponsor.type_02 .inpbx_list > div > dd .switch_box > label{
+    display: block;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: -0.65px;
+    color: #4a4a4a;
+    padding-left: 18px;
+}
+.sec_sponsor.type_02 .inpbx_list > div > dd .text_area_box{
+    display: block;
+    width: 100%;
+    height: 100px;
+    border: 1px solid #b3b3b3;
+    border-radius: 4px;
+    background-color: #fff;
+    padding: 8px;
+    font-size: 14px;
+    line-height: 18px;
+    box-sizing: border-box;
+    resize: none;
+    font-family: douzone,"Microsoft YaHei","PingFang SC","MS PGothic","Hiragino Kaku Gothic ProN","굴림",gulim,"Apple SD Gothic Neo",sans-serif;
+}
+.sec_sponsor.type_02 .inpbx_list > div > dd .date_box{
+    display: block;
+    position: relative;
+}
+.sec_sponsor.type_02 .inpbx_list > div > dd .date_box .ico_date{
+    display: block;
+    position: absolute;
+    top: 50%; 
+    right: 10px;
+    width: 18px;
+    height: 18px;
+    margin-top: -9px;
+    background:transparent;
+    border: 0;
+}
+.sec_sponsor.type_02 .inpbx_list > div > dd .date_box .ico_date:before{
+    content: '';
+    display: block;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -7px 0 0 -7px;
+    background: url(https://static.wehago.com/imgs/ele/sp_m_ele_ysy.png) no-repeat -157px -199px;
+    background-size: 250px 250px;
+}
+.sec_sponsor.type_02 .btn_sumit_box{
+    display: block;
+    margin: 50px 0 60px;
+    text-align: center;
+}
+.sec_sponsor.type_02 .btn_sumit_box > button{
+    display: inline-block;
+    vertical-align: top;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.4px;
+    color: #000;
+    border: 1px solid #000;
+    padding: 9px 33px;
+    background-color: #fff;
+}
+.sec_sponsor.type_02 .sec_sub_inquiry{
+    display: block;
+    padding: 40px 0;
+}
+.sec_sponsor.type_02 .sec_sub_inquiry > strong{
+    display: block;
+    margin-bottom: 10px;
+    font-size: 17px;
+    line-height: 20px;
+    letter-spacing: -0.85px;
+    color: #080808;
+}
+.sec_sponsor.type_02 .sec_sub_inquiry .inquiry_list{
+    display: block;
+}
+.sec_sponsor.type_02 .sec_sub_inquiry .inquiry_list > div{
+    display: flex;
+}
+.sec_sponsor.type_02 .sec_sub_inquiry .inquiry_list > div + div{
+    margin-top: 7px;
+}
+.sec_sponsor.type_02 .sec_sub_inquiry .inquiry_list > div dt{
+    position: relative;
+    display: block;
+    width: 18px;
+    height: 18px;
+    margin-right: 4px;
+}
+.sec_sponsor.type_02 .sec_sub_inquiry .inquiry_list > div dt .ico{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.sec_sponsor.type_02 .sec_sub_inquiry .inquiry_list > div dt .ico:before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: url(https://static.wehago.com/imgs/ele/sp_m_ele_ysy.png) no-repeat;
+    background-size: 250px 250px;
+}
+.sec_sponsor.type_02 .sec_sub_inquiry .inquiry_list > div dt .ico.phone:before{
+    width: 16px;
+    height: 16px;
+    margin: -8px 0 0 -8px;
+    background-position: -119px -199px;
+}
+.sec_sponsor.type_02 .sec_sub_inquiry .inquiry_list > div dt .ico.mail:before{
+    width: 15px;
+    height: 12px;
+    margin: -6px 0 0 -8px;
+    background-position: -138px -199px;
+}
+.sec_sponsor.type_02 .sec_sub_inquiry .inquiry_list > div dd{
+    display: block;
+    font-size: 15px;
+    line-height: 19px;
+    color: #080808;
+}
+.sec_sponsor.type_02 .agree_checkbox {position: relative;display: block;text-align: center;margin-top: 18px;font-size: 0;}
+.sec_sponsor.type_02 .agree_checkbox > label {font-size: 0;display: inline-block;vertical-align: top;position: relative;}
+.sec_sponsor.type_02 .agree_checkbox .input {opacity: 0;position: absolute;}
+.sec_sponsor.type_02 .agree_checkbox .input + .icon {display: inline-block;overflow: hidden;line-height: 100em;vertical-align: top;position: absolute;left: 0;top: 50%;width: 16px;height: 16px;margin-top: -9px;border-radius: 1px;background: url(https://static.wehago.com/imgs/ele/sp_ele_ysy.png) -245px -272px no-repeat;}
+.sec_sponsor.type_02 .agree_checkbox .input:checked + .icon {background-position: -228px -272px;}
+.sec_sponsor.type_02 .agree_checkbox .label_text {display: inline-block;padding-left: 20px;font-size: 12px;line-height: 16px;color: #464646;vertical-align: top;}
+.sec_sponsor.type_02 .agree_checkbox .label_text > em{font-size: 11px;color: #989898;}
+.sec_sponsor.type_02 .agree_checkbox > a{display: inline-block;vertical-align: top;margin-left: 4px;font-size: 11px;line-height: 16px;text-decoration: none;color: #989898;}
+.sec_sponsor.end_sponsor{background:#fff}
+.sec_sponsor.end_sponsor .donainfo{margin:0}
+.sec_sponsor.end_sponsor .donainfo > p{line-height:33px}
+
+@media screen and (max-width: 364px) {
+    .ysy .sec_sponsor .donainfo {background-size:350px 436px}
+}
+
+/* 방문자 수 영역 */
+.sec_peopleplace .visitor_box {display: flex;width: 100%;margin-top: 30px;justify-content: center;}
+.sec_peopleplace .visitor_box > div {display: flex;align-items: center;}
+.sec_peopleplace .visitor_box > div + div {position: relative;margin-left: 15px;padding-left: 16px;}
+.sec_peopleplace .visitor_box > div + div:before {content: '';display: block;width: 1px;height: 20px;position: absolute;top: 2px;left: 0;background-color: rgba(255, 255, 255, 0.7);}
+.sec_peopleplace .visitor_box > div dt {display: block;width: 85px;font-size: 14px;line-height: 18px;letter-spacing: -0.7px;color: #fff;text-align: left;}
+.sec_peopleplace .visitor_box > div dd {font-size: 18px;line-height: 25px;letter-spacing: -0.5px;color: #fff;text-align: left;}
+.sec_peopleplace .visitor_box > div dd > em {margin-right: 2px;font-size: 20px;font-weight: 700;}
+/* 1024 대응 */
+.ysy .sec_peopleplace .in_box{text-align:center}
+@media screen and (min-width: 500px) {
+    .gnb {left:50%}
+}
+@media screen and (min-width: 900px) {
+    .gnb {left:70%}
+}
+
+/* 후원회 추가 */
+.sec_sub_thanks {position:relative;height:600px;background:url(https://static.wehago.com/imgs/ele/img_ysy_m18_t.png) 0 0 repeat-y;}
+.sec_sub_thanks:after{content: '';display: block;position: absolute;top: 0;right: 0;bottom: 0;left: 0;background-color: #212638;opacity: 0.5;}
+.sec_sub_thanks .in_box{position:relative;height:600px;background:url(https://static.wehago.com/imgs/ele/img_ysy_m18.png) 50% 0 no-repeat;background-size:cover}
+.sec_sub_thanks .in_box .textbox{z-index:1;position:relative;padding:40px 0;margin: 0 auto;max-width: 500px;}
+.sec_sub_thanks .in_box .textbox > p {font-size:15px;color:#fff;line-height:27px;letter-spacing: -.45px;}
+
+/* 당원가입 팝업 */
+.ele .dialog_wrap .ysy_joinqrbox {position:relative;background:#f2f2f2;padding:26px 10px 30px;border-radius:4px}
+.ele .dialog_wrap .ysy_joinqrbox > a{font-size:15px;color:#000;text-decoration: none;line-height:19px;font-weight:bold}
+.ele .dialog_wrap .ysy_joinqrbox > a:hover{text-decoration: underline;}
+.ele .dialog_wrap .ysy_joinqrbox .qrbox{position:relative;background:#fff;border-radius:20px;padding:20px;box-sizing:border-box;margin:18px 30px 15px;}
+.ele .dialog_wrap .ysy_joinqrbox .desc{font-size:14px;color:#000;letter-spacing: -.7px;line-height:19px}
+.ele .dialog_wrap .ysy_joinqrbox .desc > em {font-weight:bold}
+
+/* 갤러리 업데이트 */
+.ysy .gallery_group{
+    display: block;
+    width: 100%;
+    padding: 16px 0 30px;
+    border-top: 1px solid #bcbcbc;
+}
+.ysy .gallery_group .group_title{
+    display: block;
+    margin-bottom: 18px;
+    font-size: 20px;
+    line-height: 25px;
+    color: #000;
+}
+.ysy .gallery_group .group_title .date{
+    display: block;
+    margin-bottom: 2px;
+}
+.ysy .gallery_group .group_list{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: -4px;
+}
+.ysy .gallery_group .group_list .item{
+    position: relative;
+    display: block;
+    width: calc(33.333% - 4px);
+    padding-bottom: 33.333%;
+    margin: 2px;
+}
+.ysy .gallery_group .group_list .item .thumimg_box{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: 0;
+    outline: 0;
+}
+.ysy .gallery_group .group_list .item .thumimg_box .thumimg{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+.ysy .fix_option_box{
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 204px;
+    background-color: #fff;
+    box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 12px 12px 0 0;
+    overflow: hidden;
+    z-index: 20;
+}
+.ysy .fix_option_box .group_select_list{
+    position: relative;
+    display: block;
+    padding: 28px 0 11px;
+    box-sizing: border-box;
+    height: 204px;
+    overflow-y: auto;
+}
+.ysy .fix_option_box .group_select_list:before{
+    content: '';
+    display: block;
+    width: 38px;
+    height: 2px;
+    position: absolute;
+    top: 16px;
+    left: 50%;
+    margin-left: -19px;
+    background-color: #bcbcbc;
+}
+.ysy .fix_option_box .group_select_list .item{
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+}
+.ysy .fix_option_box .group_select_list .item > button{
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    line-height: 17px;
+    color: #939393;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+}
+.ysy .fix_option_box .group_select_list .item.active > button{
+    color: #000;
+    font-family: douzonetitle,"Microsoft YaHei","PingFang SC","MS PGothic","Hiragino Kaku Gothic ProN","굴림",gulim,"Apple SD Gothic Neo",sans-serif;
+    font-weight: 700;
+}
+/* 당원가입 안내팝업 */
+.ele .sec_main_title.v2 > strong{
+    font-size: 16px;
+}
+.ele .sec_main_title.v2 > strong > em{
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 8px;
+    font-size: 22px;
+}
+.ele .section .join_info_list {display: block;position: relative;padding: 20px 16px;border-radius: 4px;box-sizing: border-box;background-color: #f2f2f2;text-align: left;}
+.ele .section .join_info_list > li {position: relative;display: block;padding-left: 14px;font-size: 12px;line-height: 20px;letter-spacing: -0.6px;color: #000;}
+.ele .section .join_info_list > li:before {content: '';display: block;width: 9px;height: 9px;border-radius: 50%;border: 1px solid #000;position: absolute;top: 3px;left: 0;}
+.ele .section .join_info_list > li + li {margin-top: 10px;}
+.ele .section .join_info_list > li.type_gray {margin-top: 2px;font-size: 11px;line-height: 16px;letter-spacing: -0.55px;color: #777;}
+.ele .section .join_info_list > li.type_gray:before {display: none;}
+.ele .section .link_box {display: block;width: 100%;}
+.ele .section .link_box .item {display: flex;justify-content: space-between;align-items: center;margin-top: 8px;padding: 20px 20px 12px;box-sizing: border-box;background-color: #f2f2f2;border-radius: 4px;}
+.ele .section .link_box .item > span {display: block;font-size: 13px;line-height: 16px;letter-spacing: -0.39px;color: #e34f00;font-weight: 700;}
+.ele .section .link_box .item > span > em {font-size: 11px;font-weight: 500;}
+.ele .section .link_box .item > a {position: relative;display: block;font-size: 12px;line-height: 15px;letter-spacing: -0.6px;color: #000;font-weight: 700;text-decoration: none;padding-right: 22px;}
+.ele .section .link_box .item > a:before {content: '';display: block;width: 18px;height: 18px;position: absolute;top: 50%;right: 0;margin-top: -11px;background: url(https://static.wehago.com/imgs/ele/sp_m_ele_ysy.png) no-repeat -40px -215px;background-size: 250px 250px;}
+
+/* 후원회 수정 0907 */
+.ysy .sec_sponsor.v2 h1{font-size:28px}
+.ysy .sec_sponsor.v2 h1 > em{font-size:34px}
+.ysy .sec_sponsor.v2 .desc{font-size:14px}
+.ysy .sec_sponsor.v2 .donainfo{height:620px;background:url(https://static.wehago.com/imgs/ele/m_bg_sponbox.png) 50% 0 no-repeat;background-size:360px 620px}
+.ysy .sec_sponsor.v2 .in_box{padding:0 15px}
+.ysy .sec_sponsor.v2 .donainfo > strong{margin-top:6px}
+.ysy .sec_sponsor.v2 .donainfo .donainfo_dl{text-align:left;width:280px;margin:0 auto}
+.ysy .sec_sponsor.v2 .donainfo .donainfo_dl dt{font-size:16px;color:#000;letter-spacing: -.8px;}
+.ysy .sec_sponsor.v2 .donainfo .donainfo_dl .text_large {font-size:20px;color:#000;letter-spacing: -.1px;margin:8px 0 4px}
+.ysy .sec_sponsor.v2 .donainfo .donainfo_dl .text_medium {font-size:13px;color:#000;letter-spacing: -.65px;}
+.ysy .sec_sponsor.v2 .donainfo .donainfo_dl ul {font-size:14px;color:#000;letter-spacing: -.8px;line-height:17px;margin-top:20px}
+.ysy .sec_sponsor.v2 .donainfo .donainfo_dl li{margin-top:10px}
+.ysy .sec_sponsor.v2 .donainfo .donainfo_dl li > span {font-size:11px;color:#4a4a4a;letter-spacing: -.55px;line-height:13px;padding-left:10px}
+.ysy .sec_sponsor.v2 .donainfo .donainfo_dl li > em {font-weight:bold}
+.ysy .sec_sponsor.v2 .donainfo .donainfo_dl .text_info {font-size:11px;color:#777;letter-spacing: -.44px;margin-top:20px;line-height:18px}
+.ysy .sec_sponsor.v2 .donainfo .donainfo_dl .btn_requestbill {display: inline-block;position: relative;vertical-align: top;box-sizing: border-box;cursor: pointer;border-radius: 4px;font-size: 14px;padding: 0 20px;text-decoration: none;overflow: hidden;height: 41px;line-height: 42px;border: 1px solid #273047;background: #273047;color: #fff}
+.ysy .sec_sponsor.v2 .donainfo .donainfo_dl .btn_requestbill:hover {background:#10172b;box-shadow:0 3px 4px rgba(16,23,43,.4)}
+.ysy .sec_sponsor.v2 .donainfo .donainfo_dl .footbtnwrap{text-align:center;margin-top:25px}
+.sec_sponsor.type_02 .inpbx_list .togglebtn > button {display:inline-block;vertical-align: top;width:120px;font-size:14px;letter-spacing:-.7px;color:#4a4a4a;line-height:37px;height:36px;overflow:hidden;border:1px solid #d3d3d3;background:#fff;box-sizing:border-box;border-radius:4px}
+.sec_sponsor.type_02 .inpbx_list .togglebtn > button.selected{color:#fff;font-weight:bold;background:#1c90fb;border-color:#1c90fb}
+.sec_sponsor.type_02 .inpbx_list .togglebtn > button + button {margin-left:4px}
+
+/* 후원회 수정 0909 */
+.sec_sub_thanks.v2{background:#171614;height:822px}
+.sec_sub_thanks.v2 .in_box{background:url(https://static.wehago.com/imgs/ele/img_ysy_m19.jpg) 50% no-repeat;height:321px;background-size:360px 321px}
+.sec_sub_thanks.v2:after{display:none}
+.sec_sub_thanks.v2 .in_box .textbox{padding:366px 0 0}
+.sec_sub_thanks.v2 .in_box .textbox > p{font-size:14px;line-height:26px;padding-left:20px}
+.sec_sub_thanks.v2 .in_box .textbox > p > em {display: inline-block;font-weight:bold;vertical-align: top;margin-top: -1px}
+.ysy .sec_sponsor.v3{padding-bottom:40px;background:#f5f5f5}
+.ysy .sec_sponsor.v3 .profilebox{float:left;width:94px;height:113px}
+.ysy .sec_sponsor.v3 h1 {float:left;margin-left:15px;font-size:28px;padding-bottom:0}
+.ysy .sec_sponsor.v3 h1 > em {font-size:32px}
+.ysy .sec_sponsor.v3 .desc{font-size:14px;color:#4a4a4a;line-height:20px;letter-spacing: -.5px;padding-top:20px}
+
+/* 좋아요 기능 추가 */
+.sec_peopleplace .pp_likebest{position:relative;text-align:left}
+.sec_peopleplace .pp_likebest .titlebox > h2 {display:block;font-size:20px;color:#000;line-height:25px;letter-spacing: -1px;}
+.sec_peopleplace .pp_likebest .titlebox .titledesc {margin-top:5px;font-size:13px;color:#777;line-height:16px;letter-spacing: -.65px;}
+.sec_peopleplace .pp_likebest .titlebox .date{font-size:11px;color:#999;line-height:13px;margin-top:14px}
+.sec_peopleplace .pp_likebest .pp_likeboard_list{position:relative;padding:15px 0 20px}
+.sec_peopleplace .pp_likebest .pp_likeboard_listitem{display:inline-block;vertical-align:top;position:relative;background:#fff;border-radius:10px;box-shadow:0 4px 10px rgba(0,0,0,.1);overflow:hidden;margin-right:20px}
+.sec_peopleplace .pp_likebest .pp_likeboard_listitem .thumbox{display:block;text-decoration:none;width:100%;height:472px;background:#000;}
+.sec_peopleplace .pp_likebest .pp_likeboard_listitem .thumbox .thumimg{width:100%;height:100%;object-fit: contain}
+.sec_peopleplace .pp_likebest .pp_likeboard_listitem .txtbox{padding:20px 18px 0;box-sizing:border-box;height:132px;}
+.sec_peopleplace .pp_likebest .pp_likeboard_listitem .fighting_txt{display: -webkit-box;text-decoration: none;font-size:13px;color:#2f2f2f;letter-spacing: -.26px;line-height:18px;max-height:54px;overflow:hidden;-webkit-box-orient: vertical;-webkit-line-clamp: 3;text-overflow:ellipsis;word-break: break-all;font-weight:900}
+.sec_peopleplace .pp_likebest .pp_likeboard_listitem .infobox{position:absolute;bottom:15px;left:18px;right:18px;}
+.sec_peopleplace .pp_likebest .pp_likeboard_listitem .infobox .uselabel{display:inline-block;vertical-align: top;font-size:13px;color:#000;letter-spacing: -.6px;height:28px;line-height:29px;padding:0 13px;background:#eff3f5;border-radius:15px;font-weight:900;margin-right:4px;max-width:60px}
+.sec_peopleplace .pp_likebest .pp_likeboard_listitem .infobox dl{display:inline-block;vertical-align:top;font-size:12px;width:calc(100% - 166px)}
+.sec_peopleplace .pp_likebest .pp_likeboard_listitem .infobox dl dt{position:relative;display:inline-block;vertical-align:top;color:rgba(0,0,0,.38);letter-spacing: -.19px;line-height:28px;padding-left:16px}
+.sec_peopleplace .pp_likebest .pp_likeboard_listitem .infobox dl dt:before{content:'';position:absolute;top:50%;left:0;background:url(https://static.wehago.com/imgs/ele/sp_m_ele_ysy.png) -74px -181px no-repeat;width:12px;height:15px;margin-top:-9px;background-size:250px 250px}
+.sec_peopleplace .pp_likebest .pp_likeboard_listitem .infobox dl dd{position:relative;display:inline-block;vertical-align:top;color:#939393;font-weight:bold;line-height:28px;padding-left:6px;margin-left:5px;max-width:calc(100% - 72px)}
+.sec_peopleplace .pp_likebest .pp_likeboard_listitem .infobox dl dd:before{content:'';position:absolute;top:50%;left:0;width:1px;height:10px;margin-top:-6px;background:#d5d5d5}
+.ysy .ele_likeit_btn {position:relative;display:inline-block;border:1px solid #d3d3d3;border-radius:4px;background:#fff;box-sizing:border-box;height:30px;line-height:31px;padding:0 9px 0 29px;font-size:14px;letter-spacing: -.7px;overflow:hidden;color:#4a4a4a;}
+.ysy .ele_likeit_btn:before{content:'';position:absolute;top:50%;left:9px;width:15px;height:14px;margin-top:-7px;background:url(https://static.wehago.com/imgs/ele/sp_m_ele_ysy.png) -74px -165px no-repeat;background-size:250px 250px}
+.ysy .ele_likeit_btn.active:before{background-position:-74px -150px}
+.sec_peopleplace .pp_likebest .ele_likeit_btn{position:absolute;bottom:0;right:0;}
+.sec_peopleplace .pp_likebest .custompage{position:relative;text-align:center;margin-top:18px}
+.sec_peopleplace .pp_likebest .custompage .paging_dot{display:block;width:6px;height:6px;border-radius:50%;background:#d0d0d0;border:0;}
+.sec_peopleplace .pp_likebest .custompage .paging_dot[aria-selected="true"]{background:#343434}
+.sec_peopleplace .pp_likebest .custompage > li{display:inline-block;vertical-align:top}
+.sec_peopleplace .pp_likebest .custompage > li + li {margin-left:6px}
+.ysy .sec_gallery.v_likeit{background:#fff}
+.ysy .sec_gallery.v_likeit .gallery_group .group_title{position:relative;padding-right:75px}
+.ysy .gallery_group .group_title .ele_likeit_btn{position:absolute;bottom:0;right:0;}
+.ysy .gallery_group.likebest{background:#f5f5f5;width:calc(100% + 40px);margin:0 -20px;border-top:0;margin-bottom:30px;padding:40px 30px 30px;box-sizing:border-box}
+.ysy .sec_gallery.v_likeit .gallery_group.likebest .group_title{padding-right:0}
+.ysy .gallery_group.likebest + .gallery_group{border-top:0}
+.ysy .gallery_group.likebest .group_title > strong{float:left;font-size:24px;color:#000;letter-spacing: -1.2px;line-height:30px;}
+.ysy .gallery_group.likebest .group_title .date {float:right;font-size:11px;color:#999;letter-spacing: -.22px;line-height:15px;font-weight:bold;padding-top:15px}
+.ysy .gallery_group.likebest .slide_gal_likebox{position:relative;padding:15px 0 20px}
+.ysy .gallery_group.likebest .likebox_listitem{display:inline-block;vertical-align:top;border-radius:12px;background:#fff;box-shadow:0 4px 12px rgba(0,0,0,.08);border:1px solid #d7dbe3;overflow:hidden;margin-right:20px}
+.ysy .gallery_group.likebest .likebox_listitem .thumbox{display:block;text-decoration:none;width:100%;}
+.ysy .gallery_group.likebest .likebox_listitem .thumbox .thumimg{width:100%;height:100%;object-fit: cover}
+.ysy .gallery_group.likebest .likebox_listitem .txtbox{position:relative;height:148px;padding:24px 18px 20px;box-sizing:border-box}
+.ysy .gallery_group.likebest .likebox_listitem .txtbox .goto_lnk{float:left;text-decoration: none;font-size:13px;color:#777;line-height:30px}
+.ysy .gallery_group.likebest .likebox_listitem .txtbox .ele_likeit_btn{float:right}
+.ysy .gallery_group.likebest .likebox_listitem .txtbox .likebox_text{font-size:20px;color:#000;letter-spacing: -1px;line-height:25px;}
+.ysy .gallery_group.likebest .likebox_listitem .txtbox .likebox_text > em {font-weight:bold}
+.ysy .gallery_group.likebest .likebox_listitem .txtbox .btnbox{position:absolute;bottom:18px;left:20px;right:20px;}
+.ysy .gallery_group.likebest .slide_gal_likebox .custompage{position:relative;text-align:center;margin-top:20px}
+.ysy .gallery_group.likebest .slide_gal_likebox .custompage button{border:0;background:transparent;font-size:12px;color:#303030;line-height:15px;font-weight:bold}
+.ysy .gallery_group.likebest .slide_gal_likebox .custompage li{display:inline-block;vertical-align: top;}
+.ysy .gallery_group.likebest .slide_gal_likebox .custompage li + li{margin-left:15px}
+.ysy .gallery_group.likebest .slide_gal_likebox .custompage button[aria-selected="true"] {font-weight:900;color:#000}
+.dialog_content .type_people_info .section_info .write_info .ele_likeit_btn {position:relative;display:inline-block;border:1px solid #d3d3d3;border-radius:4px;background:#fff;box-sizing:border-box;height:30px;line-height:31px;padding:0 9px 0 29px;font-size:14px;letter-spacing: -.7px;overflow:hidden;color:#4a4a4a;}
+.dialog_content .type_people_info .section_info .write_info .ele_likeit_btn:before{content:'';position:absolute;top:50%;left:9px;width:15px;height:14px;margin-top:-7px;background:url(https://static.wehago.com/imgs/ele/sp_m_ele_ysy.png) -74px -165px no-repeat;background-size:250px 250px}
+.dialog_content .type_people_info .section_info .write_info .ele_likeit_btn.active:before{background-position:-74px -150px}
+.ele .dialog_content .type_people_info.add_likeit .section_info .write_info .locate{position:relative;height:30px;width:80%;padding-right:103px}
+.ele .dialog_content .type_people_info.add_likeit .section_info .write_info .locate > dd.btn_box{position:absolute;top:3px;right:0;width:auto;height:auto}
+.ele .dialog_content .type_people_info.add_likeit .section_info .write_info .locate > dd.btn_box .btn_del{display:inline-block;vertical-align:top;width:30px;height:30px;border:1px solid #d3d3d3;margin-left:2px;border-radius:4px}
+.ele .dialog_content .type_people_info.add_likeit .section_info .write_info .locate > dt,
+.ele .dialog_content .type_people_info.add_likeit .section_info .write_info .locate > dd{line-height:30px}
+.ele .dialog_content .type_people_info.add_likeit .section_info .write_info .locate > dd:before{top:50%;margin-top:-7px}
+.ele .dialog_content .type_people_info.add_likeit .section_info .write_info .nickname_box{width:20%;max-width:20%}
+.ele .dialog_content .type_people_info.add_likeit .section_info .write_info .nickname_box .nickname{text-align:center}
+.ele .dialog_content .type_people_info.add_likeit .in_box {padding:0 10px}
+
+/* 회원가입 */
+.ysy .emphasis{color:#1c90fb;}
+.ysy .flex_item{display:-webkit-flex;display:-ms-flex;display:-o-flex;display:flex;}
+.ysy .content_wrap{padding:30px 20px 60px;background:#f5f4f5;}
+.ysy .content_wrap .title_area .title{margin-bottom:24px;text-align:center;font-size:20px;font-weight:900;line-height:25px;letter-spacing:-.3px;color:rgba(0, 0, 0, 0.87);}
+.ysy .basic_step_list{display:-webkit-flex;display:-ms-flex;display:-o-flex;display:flex;align-items:center;padding-bottom:17px;border-bottom:1px solid #e3e3e3;font-size:16px;line-height:23px;letter-spacing:-.8px;color:#777;}
+.ysy .basic_step_list .active{font-weight:700;color:#222;}
+.ysy .basic_step_list li{flex:1;position:relative;padding:0 8px;text-align:center;}
+.ysy .basic_step_list li:first-of-type{padding-left:0;}
+.ysy .basic_step_list li:last-of-type{padding-right:0;}
+.ysy .basic_step_list li:after{content:'';position:absolute;top:0;right:-6px;width:13px;height:23px;background:var(--icon_imgurl) -79px -257px;background-size:var(--icon_imgsize);}
+.ysy .basic_step_list li:last-of-type:after{display:none;}
+.ysy .basic_step_list .num{display:inline-block;vertical-align:top;margin-right:5px;box-sizing:border-box;width:22px;height:22px;background:#c9c9c9;border-radius:50%;text-align:center;font-size:14px;font-weight:700;color:#fff;}
+.ysy .basic_step_list .active .num{background:#022;box-shadow:0 3px 8px rgba(34, 34, 34, 0.2);}
+.ysy .basic_step_list .fin .num{width:22px;height:22px;background:var(--icon_imgurl) 0 -350px;background-size:var(--icon_imgsize);font-size:0;color:transparent;}
+.ysy .content_box{margin-top:20px;}
+.ysy .content_box .form_title{margin-bottom:6px;font-size:14px;line-height:19px;color:rgba(0,0,0,.7);}
+.ysy .form_box .input_list + .input_list{margin-top:20px;}
+.ysy .form_box .guide_input_box{position:relative;}
+.ysy .form_box .guide_input_box.success:before{content:'';position:absolute;top:8px;right:12px;width:14px;height:14px;background:url(https://static.wehago.com/imgs/ele/sp_m_ele_ysy.png) no-repeat -195px -199px;background-size:250px 250px;}
+.ysy .form_box .guide_input_box.success .input_basic{border-color:#1fc47c;}
+.ysy .form_box .guide_input_box.success .guide_text{color:#21c47c;}
+.ysy .form_box .guide_input_box.error:before{content:'';position:absolute;top:8px;right:12px;width:14px;height:14px;background:url(https://static.wehago.com/imgs/ele/sp_m_ele_ysy.png) no-repeat -213px -199px;background-size:250px 250px;}
+.ysy .form_box .guide_input_box.error .input_basic{border-color:#fc5356;}
+.ysy .form_box .guide_input_box.error .guide_text{color:#fc5356;}
+.ysy .form_box .input_basic{display:block;padding: 6px 8px 4px;box-sizing: border-box;width:100%;border: 1px solid #d3d3d3;border-radius: 4px;font-size: 14px;line-height: 18px;outline: 0;letter-spacing: -0.7px;font-family:douzone, "Microsoft YaHei", "PingFang SC", "MS PGothic", "Hiragino Kaku Gothic ProN", "굴림", gulim, "Apple SD Gothic Neo", sans-serif !important;}
+.ysy .form_box .flex_item .guide_input_box{flex:1;}
+.ysy .form_box dd .text{line-height:30px;margin:0 4px;}
+.ysy .form_box dd + dd{margin-top:5px;}
+.ysy .form_box .select_box{position:relative;}
+.ysy .form_box .select_box .view_box{display: block;position: relative;box-sizing: border-box;width: 100%;height: 30px;border: 1px solid #d3d3d3;background:#fff;border-radius: 4px;}
+.ysy .form_box .select_box .view_box > span{display: block;padding: 7px 8px 5px;font-size: 14px;line-height: 18px;}
+.ysy .form_box .select_box .view_box .btn_arrow{display: block;width: 12px;height: 12px;position: absolute;top: 50%;right: 6px;margin-top: -6px;border: 0;background: transparent;}
+.ysy .form_box .select_box .view_box .btn_arrow:before {content: '';display: block;width: 10px;height: 6px;position: absolute;top: 50%;left: 50%;margin: -3px 0 0 -5px;transform: rotateX(180deg);background: url(https://static.wehago.com/imgs/ele/sp_ele_ysy.png) no-repeat -180px -145px;}
+.ysy .form_box .select_box .view_box .directinp{border:0;border-radius:4px;height:100%;width:100%;padding:0 20px 0 8px;box-sizing:border-box}
+.ysy .form_box .select_box.active .view_box .btn_arrow:before {transform: rotateX(0);}
+.ysy .form_box .select_box .list_box {display: none;position: absolute;top: 100%;left: 0;width: 100%;max-height: 152px;overflow-y: auto;border: 1px solid #d3d3d3;border-radius: 4px;z-index: 10;background-color: #fff;box-sizing:border-box;}
+.ysy .form_box .select_box .list_box > li {display: block;width: 100%;}
+.ysy .form_box .select_box .list_box > li:hover {background-color: #f3f3f3;}
+.ysy .form_box .select_box .list_box > li > button {display: block;width: 100%;font-size: 14px;line-height: 18px;padding: 7px 8px 5px;text-align: left;border: 0;background-color: transparent;}
+.ysy .form_box .select_box.active .list_box {display: block;}
+.ysy .form_box .input_list .guide_text{margin-top:6px;font-size:12px;line-height:18px;color:#767676;}
+.ysy .form_box .flex_item .input_basic{flex:1;}
+.ysy .form_box .flex_item .select_box{flex:1;}
+.ysy .form_box .flex_item .name_box{flex:1;}
+.ysy .form_box .flex_item .gender_box{margin-left:20px;width:67px;}
+.ysy .form_box .gender_box .button_gender{flex:1;padding:0 5px;box-sizing:border-box;height:30px;border:1px solid #dcdddd;background:#fff;border-radius:3px;font-size:14px;color:#696969;}
+.ysy .form_box .gender_box .button_gender.active{border-color:#1f1f1f;color:#1f1f1f;}
+.ysy .form_box .gender_box .button_gender + .button_gender{margin-left:4px;}
+.ysy .button_basic{display:inline-block;vertical-align:top;padding:0 10px;box-sizing:border-box;min-width:64px;height:40px;border:1px solid #b4b4b4;background:#fff;border-radius:4px;font-size:14px;color:#1f1f1f;}
+.ysy .button_basic2{display:inline-block;vertical-align:top;padding:0 10px;box-sizing:border-box;min-width:64px;height:40px;border:1px solid #1f1f1f;background:#1f1f1f;border-radius:4px;font-size:14px;color:#fff;}
+.ysy .button_basic.pd20,
+.ysy .button_basic2.pd20{padding:0 20px;}
+.ysy .button_basic:disabled,
+.ysy .button_basic2:disabled{border-color:#c1c1c1;background:#c1c1c1;color:#fff;cursor:default;}
+.ysy .height30{height:30px;}
+.ysy .form_box .code_check_box{margin-top:15px;}
+.ysy .form_box .code_check_box .timer{position:absolute;top:8px;right:35px;font-size:12px;color:#767676;}
+.ysy .form_box .code_check_box .timer em{margin-left:4px;color:#1891ff;}
+.ysy .form_box .button_code{margin-left:6px;height:30px;}
+.ysy .form_box .button_code_check{margin-left:6px;height:30px;}
+.ysy .content_box .bottom_btn_box{display:-webkit-flex;display:-ms-flex;display:-o-flex;display:flex;align-items:center;justify-content:center;margin-top:30px;}
+.ysy .content_box .bottom_btn_box button{margin:0 3px;}
+.ysy .inp_check_item{position:relative;}
+.ysy .inp_check_item .label_text{display:inline-block;vertical-align:top;margin-right:2px;line-height:21px;}
+.ysy .inp_check_item input[type='checkbox']{position:absolute;width:1px;height:1px;opacity:0;}
+.ysy .inp_check_item .icon_check{display:inline-block;vertical-align:top;width:20px;height:20px;background:var(--icon_imgurl) 0 -281px;background-size:var(--icon_imgsize);}
+.ysy .inp_check_item input[type='checkbox']:checked + .icon_check{background-position:0 -326px;}
+.ysy .agree_list_box .top_box{margin-bottom:8px;text-align:right;margin-right:20px}
+.ysy .agree_list_box .top_box .inp_check_item{font-size:14px;font-weight:700;color:#202020;}
+.ysy .agree_list_box .agree_item{padding:10px 20px;box-sizing:border-box;border:1px solid #dbdbdb;background:#fff;border-radius:6px;}
+.ysy .agree_list_box .agree_item.active{border-color:#000;}
+.ysy .agree_list_box .agree_item + .agree_item{margin-top:6px;}
+.ysy .agree_list_box .agree_item .title_box{display:-webkit-flex;display:-ms-flex;display:-o-flex;display:flex;align-items:center;}
+.ysy .agree_list_box .agree_item .title_box .title{position:relative;font-size:14px;line-height:19px;color:#202020;}
+.ysy .agree_list_box .agree_item .title_box .title.required:after{content:'*';position:absolute;top:3px;right:0;font-size:13px;color:#fc5356;}
+.ysy .agree_list_box .agree_item .title_box .button_fold{position:relative;margin-right:6px;min-height:20px;border:0;background:none;}
+.ysy .agree_list_box .agree_item .title_box .button_fold .title{display:inline-block;vertical-align:top;text-align:left;padding-left:20px;padding-right:10px;}
+.ysy .agree_list_box .agree_item .title_box .button_fold .sp_icon{position:absolute;top:50%;left:0;margin-top:-4px;width:9px;height:5px;background-position:-193px -250px;}
+.ysy .agree_list_box .agree_item .title_box .button_fold .title .required_text{display:inline-block;vertical-align:middle;color:#fc5356;font-size:13px}
+.ysy .agree_list_box .agree_item.active .title_box .button_fold .sp_icon{-webkit-transform:rotate(180deg);-ms-transform:rotate(180deg);-o-transform:rotate(180deg);transform:rotate(180deg);}
+.ysy .agree_list_box .agree_item .title_box .inp_check_item{margin-left:auto;}
+.ysy .agree_list_box .agree_item .cont_box{display:none;margin-top:11px;padding:10px;box-sizing:border-box;max-height:133px;overflow-y:auto;background:#f8f8f8;border-radius:4px;font-size:12px;line-height:18px;color:#4a4a4a;}
+.ysy .agree_list_box .agree_item.active .cont_box{display:block;}
+.ysy .agree_list_box .agree_item.active .cont_box table{width:100%}
+.ysy .top_desc_box{margin-bottom:30px;text-align:center;}
+.ysy .top_desc_box .desc_title{display:block;margin-top:20px;font-size:18px;font-weight:700;line-height:23px;color:#222;}
+.ysy .top_desc_box .desc_title strong{font-weight:900;}
+.ysy .top_desc_box p{margin-top:5px;font-size:14px;line-height:19px;color:#4a4a4a;}
+.ysy .basic_row_tbl{border:1px solid #d3d3d3;border-radius:10px;}
+.ysy .basic_row_tbl table{width:100%;table-layout:fixed;border-collapse:collapse;font-size:13px;color:#4a4a4a;word-break:break-word;overflow-wrap:break-word;}
+.ysy .basic_row_tbl table tr{border-top:1px solid #eaeaea;}
+.ysy .basic_row_tbl table tr:first-of-type{border-top:none;}
+.ysy .basic_row_tbl table th{padding:10px 10px 10px 15px;background:#f8f8f8;text-align:left;font-weight:700;}
+.ysy .basic_row_tbl table td{padding:10px 10px 10px 15px;background:#fff;}
+.ysy .basic_row_tbl table tr:first-of-type th:first-of-type{border-top-left-radius:9px;}
+.ysy .basic_row_tbl table tr:last-of-type th:first-of-type{border-bottom-left-radius:9px;}
+.ysy .basic_row_tbl table tr:first-of-type td:last-of-type{border-top-right-radius:9px;}
+.ysy .basic_row_tbl table tr:last-of-type td:last-of-type{border-bottom-right-radius:9px;}
+.ysy .content_wrap.login .content_box{margin-top:0;}
+.ysy .content_wrap.login .content_box .button_login{width:100%;}
+.ysy .auto_login_checkbox{margin-top:5px;margin-bottom:24px;text-align:right;}
+.ysy .auto_login_checkbox .inp_check_item{font-size:14px;}
+.ysy .content_wrap.login .form_box dd{position:relative;padding-bottom:20px;}
+.ysy .content_wrap.login .input_list + .input_list{margin-top:5px;}
+.ysy .content_wrap.login .input_list .guide_text{position:absolute;top:100%;left:0;margin-top:0;}
+.ysy .bottom_link_area{display:-webkit-flex;display:-ms-flex;display:-o-flex;display:flex;align-items:center;justify-content:center;margin-top:20px;}
+.ysy .bottom_link_area li{position:relative;}
+.ysy .bottom_link_area li + li{margin-left:10px;padding-left:11px;}
+.ysy .bottom_link_area li + li:before{content:'';position:absolute;top:5px;left:0;width:1px;height:10px;background:#d1d1d1;}
+.ysy .bottom_link_area a{text-decoration:none;font-size:14px;line-height:19px;color:#4a4a4a;}
+.ysy .bottom_link_area a:hover{text-decoration:underline;text-underline-position:under;}
+.ysy .round_info_box{margin-bottom:20px;padding:20px 12px;box-sizing:border-box;border:1px solid #e5e5e5;background:#fcfcfc;border-radius:4px;}
+.ysy .round_info_box .title{display:block;margin-bottom:10px;font-size:14px;line-height:19px;color:rgba(0,0,0,.87);}
+.ysy .round_info_box .title .icon_info{margin-right:4px;width:16px;height:16px;background-position:-25px -281px;}
+.ysy .round_info_box .desc{font-size:12px;line-height:21px;color:rgba(0,0,0,.5);}
+
+/* 국민청원 */
+.ysy .top_tab_list{margin:0 -20px 25px;border-bottom:1px solid #eaeaea;}
+.ysy .top_tab_list:after{content:'';display:block;clear:both;}
+.ysy .top_tab_list li{position:relative;float:left;}
+.ysy .top_tab_list li.active:after{content:'';position:absolute;bottom:-1px;left:0;width:100%;height:2px;background:#127eff;}
+.ysy .top_tab_list li a{display:block;padding:0 25px;box-sizing:border-box;height:40px;text-decoration:none;font-size:13px;line-height:40px;color:#636363;}
+.ysy .top_tab_list li.active a{font-weight:700;color:#127eff;}
+.ysy .board_list_wrap .board_list_box + .board_list_box{margin-top:45px;}
+.ysy .board_list_wrap .title_box{display:-webkit-flex;display:-ms-flex;display:-o-flex;display:flex;align-items:center;justify-content:space-between;margin-bottom:15px;}
+.ysy .board_list_wrap .board_title{font-size:15px;font-weight:900;line-height:20px;color:#000;}
+.ysy .board_list_wrap .link_more{text-decoration:none;font-size:12px;color:#777;}
+.ysy .board_list_wrap .link_more .icon_arrow{margin-top:3px;margin-left:4px;width:4px;height:7px;background-position:-164px -244px;}
+.ysy .board_list_wrap .post_list .item_list{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid #efefef;}
+.ysy .board_list_wrap .post_list .title{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;text-decoration:none;font-size:15px;line-height:22px;color:#000;}
+.ysy .board_list_wrap .post_list .title:hover{text-decoration:underline;}
+.ysy .board_list_wrap .post_list .info{margin-top:8px;font-size:12px;line-height:15px;color:#999;}
+.ysy .board_list_wrap .post_list .info:after{content:'';display:block;clear:both;}
+.ysy .board_list_wrap .post_list .info .item{position:relative;float:left;}
+.ysy .board_list_wrap .post_list .info .item + .item{margin-left:5px;padding-left:8px;}
+.ysy .board_list_wrap .post_list .info .item + .item:before{content:'';position:absolute;top:4px;left:0;width:3px;height:3px;background:#dbdbdb;}
+.ysy .board_list_wrap .search_box{position:relative;margin-bottom:20px;padding-left:25px;padding-bottom:5px;border-bottom:1px solid #ccc;}
+.ysy .board_list_wrap .search_box .button_search{position:absolute;top:0;left:0;width:24px;height:24px;border:0;background:none;}
+.ysy .board_list_wrap .search_box .button_search:before{content:'';position:absolute;top:50%;left:50%;margin-top:-9px;margin-left:-9px;width:17px;height:17px;background:url(https://static.wehago.com/imgs/ele/sp_m_ele_ysy.png) -102px -76px;background-size:250px 250px;}
+.ysy .board_list_wrap .search_box input{padding:0 10px;box-sizing:border-box;border:0;font-size:15px;width:100%;height:24px;outline:none;font-family:douzone, "Microsoft YaHei", "PingFang SC", "MS PGothic", "Hiragino Kaku Gothic ProN", "굴림", gulim, "Apple SD Gothic Neo", sans-serif !important;}
+.ysy .header.type_end{text-align:center;}
+.ysy .header.type_end .title{font-size:18px;font-weight:900;line-height:24px;color:#000;}
+.ysy .header.type_end .button_back{position:absolute;top:11px;left:20px;width:24px;height:24px;border:0;background:none;}
+.ysy .header.type_end .button_back:before{content:'';position:absolute;top:50%;left:50%;margin-top:-7px;margin-left:-9px;width:18px;height:14px;background:url(https://static.wehago.com/imgs/ele/sp_m_ele_ysy.png) -211px -42px;background-size:250px 250px;}
+.ysy .header.type_end .button_close{position:absolute;top:10px;left:20px;width:24px;height:24px;border:0;background:none;}
+.ysy .header.type_end .button_close:before{content:'';position:absolute;top:50%;left:50%;margin-top:-7px;margin-left:-7px;width:15px;height:15px;background:url(https://static.wehago.com/imgs/ele/sp_m_ele_ysy.png) -65px -13px;background-size:250px 250px;}
+.ysy .section.petition{padding-top:48px;}
+.ysy .section.petition .in_box > h1{margin-bottom:15px;}
+.ysy .section.petition.type_detail{padding-top:35px;}
+.ysy .empty_area{text-align:center;}
+.ysy .empty_area .icon_empty{display:inline-block;vertical-align:top;;margin-bottom:13px;width:70px;height:70px;border-radius:50%;background-color:#f2f2f2}
+.ysy .empty_area .empty_text{font-size:16px;line-height:19px;color:#989898;}
+.ysy .view_detail_wrap .title_area{border-bottom:1px solid #efefef;}
+.ysy .view_detail_wrap .title_area .title{display:block;margin-bottom:25px;font-size:22px;line-height:34px;color:#000;word-break: break-all;word-wrap:break-word}
+.ysy .view_detail_wrap .info_box{display:-webkit-flex;display:-ms-flex;display:-o-flex;display:flex;margin-bottom:25px;width: 100%;}
+.ysy .view_detail_wrap .info_box .thumbnail{position:relative;box-sizing:border-box;width:32px;height:32px;border:solid 1px rgba(0, 0, 0, .06);border-radius:50%;overflow:hidden;}
+.ysy .view_detail_wrap .info_box .thumbnail .thumb_img{position:absolute;top:0;left:0;width:100%;height:100%;background-repeat:no-repeat;background-size:cover;background-position:50% 50%;}
+.ysy .view_detail_wrap .info_box .post_info{margin-left:8px;font-size:0;flex: 1;}
+.ysy .view_detail_wrap .info_box .post_info .date_box{display: block;font-size: 0;}
+.ysy .view_detail_wrap .info_box .post_info .name{display:block;font-size:12px;color:#636363;}
+.ysy .view_detail_wrap .info_box .post_info .date{vertical-align:top;font-size:11px;line-height:20px;color:#999;}
+.ysy .view_detail_wrap .info_box .post_info .label{display:inline-block;vertical-align:top;margin-top:-1px;margin-left:6px;padding:0 6px;box-sizing:border-box;border-radius:10px;font-size:11px;line-height:19px;color:#fff;}
+.ysy .view_detail_wrap .info_box .post_info .label.blue{background-color:#1c90fb;}
+.ysy .view_detail_wrap .info_box .post_info .label.green{background-color:#24bbd2;}
+.ysy .view_detail_wrap .info_box .post_info .label.purple{background-color:#8247f6;}
+.ysy .view_detail_wrap .info_box .post_info .label.gray{background-color:#98a4b2;}
+.ysy .view_detail_wrap .info_box .post_info .option_box {display: flex;float: right;}
+.ysy .view_detail_wrap .info_box .post_info .option_box .item {display: block;font-size: 0;}
+.ysy .view_detail_wrap .info_box .post_info .option_box .item + .item {margin-left: 12px;}
+.ysy .view_detail_wrap .info_box .post_info .option_box .item .ico_option {display: inline-block;vertical-align: top;width: 18px;height: 18px;position: relative;}
+.ysy .view_detail_wrap .info_box .post_info .option_box .item .ico_option:before {content: '';display: block;position: absolute;top: 50%;left: 50%;background: url(https://static.wehago.com/imgs/ele/sp_m_ele_ysy.png) no-repeat 0 0 / 250px 250px;}
+.ysy .view_detail_wrap .info_box .post_info .option_box .item .ico_option.view:before {width: 16px;height: 13px;margin: -7px 0 0 -8px;background-position: -174px -221px;}
+.ysy .view_detail_wrap .info_box .post_info .option_box .item .ico_option.comment:before {width: 14px;height: 15px;margin: -8px 0 0 -7px;background-position: -155px -221px;}
+.ysy .view_detail_wrap .info_box .post_info .option_box .item .num {display: inline-block;vertical-align: top;margin-left: 2px;font-size: 12px;line-height: 18px;color: #4a4a4a;}
+
+.ysy .view_detail_wrap .content_area{position:relative;padding-top:30px;padding-bottom:48px;}
+.ysy .view_detail_wrap .content_area:after{content:'';position:absolute;bottom:0;left:-20px;right:-20px;height:1px;background:#efefef;}
+.ysy .view_detail_wrap .content_area .petition_info{margin-bottom:24px;padding:20px 18px;box-sizing:border-box;background:#f9fafc;border-radius:10px;}
+.ysy .view_detail_wrap .content_area .petition_info .info_list .item{position:relative;padding-left:45px;}
+.ysy .view_detail_wrap .content_area .petition_info .info_list .item + .item{margin-top:20px;}
+.ysy .view_detail_wrap .content_area .petition_info .info_list .item.date:before{content: '';position:absolute;top:-3px;left:-10px;width:56px;height:56px;background:url(https://static.wehago.com/imgs/ele/img_petition_date.png) no-repeat 0 0;}
+.ysy .view_detail_wrap .content_area .petition_info .info_list .item.member:before{content: '';position:absolute;top:-3px;left:-10px;width:56px;height:56px;background:url(https://static.wehago.com/imgs/ele/img_petition_member.png) no-repeat 0 0;}
+.ysy .view_detail_wrap .content_area .petition_info .info_list dt{font-size:12px;line-height:15px;color:#777;}
+.ysy .view_detail_wrap .content_area .petition_info .info_list dd{margin-top:6px;font-size:16px;line-height:19px;color:#4a4a4a;}
+.ysy .view_detail_wrap .content_area .petition_info .info_list strong{color:#000;}
+.ysy .view_detail_wrap .content_area .petition_info .info_list .emp_text{font-size:18px;}
+.ysy .view_detail_wrap .content_area .petition_info .info_list .sub_text{margin-left:3px;font-size:13px;}
+.ysy .view_detail_wrap .content_area .text_content img{max-width:100%;}
+.ysy .view_detail_wrap .content_area .text_content .text{display:block;font-size:15px;line-height:26px;letter-spacing:-.3px;color:#000;font-family: douzone,"Microsoft YaHei","PingFang SC","MS PGothic","Hiragino Kaku Gothic ProN","굴림",gulim,"Apple SD Gothic Neo",sans-serif;word-break:break-word;overflow-wrap:break-word;}
+.ysy .view_detail_wrap .content_area .text_content .text .link{text-decoration:none;color:#1c90fb;}
+.ysy .view_detail_wrap .content_area .attach_file_box{margin-top:15px;padding:12px 10px;box-sizing:border-box;border:1px solid #d7dbe3;border-radius:6px;}
+.ysy .view_detail_wrap .content_area .attach_file_box dt{position:relative;padding-left:17px;font-size:11px;line-height:18px;color:#000;}
+.ysy .view_detail_wrap .content_area .attach_file_box dt:before{content:'';position:absolute;top:0;left:0;width:12px;height:17px;background:url(https://static.wehago.com/imgs/ele/sp_m_ele_ysy.png) -232px -199px;background-size:250px 250px;}
+.ysy .view_detail_wrap .content_area .attach_file_box .file_list{margin-top:3px;}
+.ysy .view_detail_wrap .content_area .attach_file_box .file_list a{text-underline-position:under;font-size:12px;color:#777;}
+.ysy .view_detail_wrap .content_under_area{padding-top:22px;}
+.ysy .view_detail_wrap .content_under_area .top_button_box{margin-bottom:45px;text-align:center;}
+.ysy .view_detail_wrap .content_under_area .top_button_box .button_agree{padding:0 18px;border-radius:20px;}
+.ysy .view_detail_wrap .content_under_area .top_button_box .button_agree .icon{display:inline-block;vertical-align:top;margin-top:1px;margin-right:3px;width:16px;height:16px;background:url(https://static.wehago.com/imgs/ele/sp_m_ele_ysy.png) -73px -202px;background-size:250px 250px;}
+.ysy .view_detail_wrap .content_under_area .petition_result_box{padding:24px;box-sizing:border-box;background:#fff;border-radius:12px;box-shadow:0 8px 20px 0 rgba(23, 25, 29, 0.1);}
+.ysy .view_detail_wrap .content_under_area .petition_result_box .title{display:block;margin-bottom:12px;font-size:15px;line-height:22px;color:#000;}
+.ysy .view_detail_wrap .content_under_area .petition_result_box .desc_box{font-size:13px;line-height:20px;color:#777;word-break:break-all;overflow-wrap:break-word;}
+.ysy .view_detail_wrap .reply_area{margin-top:40px;}
+.ysy .view_detail_wrap .reply_area .title{display:block;margin-bottom:6px;font-size:14px;font-weight:700;line-height:21px;}
+.ysy .view_detail_wrap .reply_area .title a{text-decoration:none;}
+.ysy .view_detail_wrap .reply_box .reply_item{padding:12px 0;}
+.ysy .view_detail_wrap .reply_box .reply_item .inbox{position:relative;padding:0 20px 0 45px;}
+.ysy .view_detail_wrap .reply_box .reply_item .thumbnail{position:absolute;top:0;left:0;box-sizing:border-box;width:40px;height:40px;border:solid 1px rgba(0, 0, 0, .06);border-radius:50%;overflow:hidden;}
+.ysy .view_detail_wrap .reply_box .reply_item .thumbnail .thumb_img{position:absolute;top:0;left:0;width:100%;height:100%;background-repeat:no-repeat;background-size:cover;background-position:50% 50%;}
+.ysy .view_detail_wrap .reply_box .reply_item .reply_con .name{display:block;margin-bottom:6px;font-size:13px;font-weight:700;line-height:18px;}
+.ysy .view_detail_wrap .reply_box .reply_item .reply_con .desc{font-size:13px;line-height:20px;color:rgba(0, 0, 0, 0.87);word-break:break-all;overflow-wrap:break-word;}
+.ysy .view_detail_wrap .reply_box .reply_item .reply_con .bottom_box{margin-top:6px;}
+.ysy .view_detail_wrap .reply_box .reply_item .reply_con .bottom_box:after{content:'';display:block;clear:both;}
+.ysy .view_detail_wrap .reply_box .reply_item .reply_con .bottom_box .date{float:left;margin-right:5px;font-size:10px;line-height:15px;color:rgba(0, 0, 0, 0.38);}
+.ysy .view_detail_wrap .reply_box .reply_item .reply_con .bottom_box .button_comment{float:left;height:15px;border:0;background:none;font-size:10px;font-weight:700;color:rgba(0, 0, 0, 0.38);}
+.ysy .view_detail_wrap .reply_box .reply_item .more_box{position:absolute;top:23px;right:0;}
+.ysy .view_detail_wrap .reply_box .reply_item .more_box .button_more{width:20px;height:20px;border:0;background:none;}
+.ysy .view_detail_wrap .reply_box .reply_item .more_box .button_more .icon_more{display:inline-block;margin-top:2px;width:3px;height:14px;background:url(https://static.wehago.com/imgs/ele/sp_m_ele_ysy.png) -73px -223px;background-size:250px 250px;}
+.ysy .view_detail_wrap .reply_box .reply_item .more_box .more_func_list{display:none;position:absolute;top:100%;right:0;z-index:3;padding:8px 0;box-sizing:border-box;width:112px;background:#fff;border-radius:8px;box-shadow:0 4px 8px 0 rgba(0, 0, 0, .1);}
+.ysy .view_detail_wrap .reply_box .reply_item .more_box .more_func_list.active{display:block;}
+.ysy .view_detail_wrap .reply_box .reply_item .more_box .more_func_list li a{display:block;padding:0 16px;text-decoration:none;font-size:13px;line-height:49px;color:rgba(0, 0, 0, 0.87);}
+.ysy .view_detail_wrap .reply_box .reply_item .more_box .more_func_list li a:hover{background:rgba(138, 145, 167, 0.12);}
+.ysy .view_detail_wrap .reply_box .re_reply_wrap .reply_item:first-of-type{margin-top:12px;}
+.ysy .view_detail_wrap .reply_box .reply_item .reply_item .thumbnail{width:32px;height:32px;}
+.ysy .view_detail_wrap .reply_box .reply_item .reply_item .inbox{padding-left:40px;padding-right:0;}
+.ysy .view_detail_wrap .reply_box .reply_item .reply_item .more_box{right:-20px;}
+.ysy .view_detail_wrap .reply_area .reply_input_box{display:-webkit-flex;display:-ms-flex;display:-o-flex;display:flex;align-items:center;margin-top:8px;margin-bottom:38px;}
+.ysy .view_detail_wrap .reply_area .reply_input_box .thumbnail{position:relative;box-sizing:border-box;margin-right:8px;width:32px;height:32px;border:solid 1px rgba(0, 0, 0, .06);border-radius:50%;overflow:hidden;}
+.ysy .view_detail_wrap .reply_area .reply_input_box .thumbnail .thumb_img{position:absolute;top:0;left:0;width:100%;height:100%;background-repeat:no-repeat;background-size:cover;background-position:50% 50%;}
+.ysy .view_detail_wrap .reply_area .reply_input_box .button_reply{flex:1;padding:0 12px;box-sizing:border-box;height:40px;border:1px solid rgba(0, 0, 0, 0.12);background:none;border-radius:20px;text-align:left;font-size:14px;color:rgba(0, 0, 0, 0.38);outline:none;}
+.ysy .view_detail_wrap .reply_area .option_box{display:-webkit-flex;display:-ms-flex;display:-o-flex;display:flex;margin:0 -20px;padding:10px 20px;box-sizing:border-box;border-top:1px solid #e5e6e8;}
+.ysy .view_detail_wrap .reply_area .option_box .like button{margin-top:1px;width:21px;height:18px;border:0;background:url(https://static.wehago.com/imgs/ele/sp_m_ele_ysy.png) -81px -223px;background-size:250px 250px;vertical-align:top;}
+.ysy .view_detail_wrap .reply_area .option_box .comment{margin-left:16px;}
+.ysy .view_detail_wrap .reply_area .option_box .comment button{width:21px;height:20px;border:0;background:url(https://static.wehago.com/imgs/ele/sp_m_ele_ysy.png) -107px -223px;background-size:250px 250px;vertical-align:top;}
+.ysy .view_detail_wrap .reply_area .option_box .text{margin-left:3px;font-size:13px;line-height:22px;color:rgba(0, 0, 0, 0.6);vertical-align:top;}
+.ysy .section.reply_detail .view_detail_wrap .reply_area{margin-top:0;}
+.ysy .section.reply_detail .reply_input_box{margin:0 -20px;padding:8px;border-top:1px solid rgba(60, 60, 67, 0.12);}
+.ysy .view_detail_wrap .reply_area .reply_input_box .input_wrap{flex:1;box-sizing:border-box;border:1px solid rgba(0, 0, 0, 0.12);border-radius:20px;overflow:hidden;}
+.ysy .view_detail_wrap .reply_area .reply_input_box .input_wrap .input_box{padding:8px 12px;box-sizing:border-box;max-height:150px;font-size:14px;outline:none;overflow-y:auto;}
+.ysy .view_detail_wrap .reply_area .reply_input_box .input_wrap .placeholder{color:rgba(0, 0, 0, 0.38);}
+.ysy .view_detail_wrap .reply_area .reply_input_box .button_submit{position:relative;margin-left:6px;width:28px;height:28px;border:0;background:#dbdfe3;border-radius:50%;}
+.ysy .view_detail_wrap .reply_area .reply_input_box .button_submit .icon{position:absolute;top:50%;left:50%;margin-left:-8px;margin-top:-9px;width:16px;height:19px;background:url(https://static.wehago.com/imgs/ele/sp_m_ele_ysy.png) -134px -221px;background-size:250px 250px;}
+
+/* 회원가입 아이디 입력폼 수정 */
+.ysy .form_box .inp_error input,
+.ysy .form_box .inp_error .select_box .view_box {border-color:#fc5356}
+.ysy .form_box .inp_errortext {color:#fc5356;font-size:12px;line-height:18px;margin-top:6px}
+.ysy .form_box .inp_success input,
+.ysy .form_box .inp_success .select_box .view_box {border-color:#21c47c}
+.ysy .form_box .inp_successtext {display:block;color:#21c47c;font-size:12px;line-height:18px;margin-top:6px}
+.ysy .content_wrap input:disabled{background-color:#f5f4f5}
+
+/* 메인 국민청원 추가 */
+.ysy .ele_newlist .newitem .info_box{margin-top:15px;}
+.ysy .ele_newlist .newitem .info_box [class^='item']{position:relative;padding-left:22px;}
+.ysy .ele_newlist .newitem .info_box .item_date{font-size:13px;line-height:16px;color:#4a4a4a;}
+.ysy .ele_newlist .newitem .info_box .item_date:before{content:'';position:absolute;top:0;left:2px;width:14px;height:14px;background:url(https://static.wehago.com/imgs/ele/sp_m_ele_ysy.png) -157px -199px no-repeat;background-size:250px 250px;}
+.ysy .ele_newlist .newitem .info_box .item_like{margin-top:4px;font-size:12px;line-height:16px;color:#4a4a4a;}
+.ysy .ele_newlist .newitem .info_box .item_like:before{content:'';position:absolute;top:0;left:0;width:16px;height:16px;background:url(https://static.wehago.com/imgs/ele/sp_m_ele_ysy.png) -195px -221px no-repeat;background-size:250px 250px;}
+.ysy .ele_newlist .newitem .info_box .item_like em{vertical-align:top;margin-right:2px;font-size:13px;font-weight:700;color:#1c90fb;}
+
+/* 메인 - 오토슬라이드 추가 */
+.ysy .sec_mainbg .slick_wrap {display: block;position: absolute;top: 0;left: 0;right: 0;height: 680px;overflow:hidden;}
+.ysy .sec_mainbg .slick_wrap .slick_list {display: block;position: relative;}
+.ysy .sec_mainbg .slick_wrap .slick_list .item {display: block;float: left;position: relative;width: 100%;height: 680px;}
+.ysy .sec_mainbg .slick_wrap .slick_list .item > img {display: block;position: relative;width: 100%;height: 100%;object-fit: cover;}
+
+/* 푸터영역 링크 추가 */
+.footer .foot_lnklist {position:relative;text-align:center;margin-top:10px}
+.footer .foot_lnklist .footlink {display:inline-block;vertical-align: top;font-size:11px;color:rgba(255,255,255,.8);text-decoration: none;line-height:14px}
+.footer .foot_lnklist .footlink:hover{text-decoration: underline;}
+.footer .foot_lnklist > li{position:relative;display:inline-block;vertical-align:top;line-height:14px}
+.footer .foot_lnklist > li + li {padding-left:8px;margin-left:6px;}
+.footer .foot_lnklist > li + li:before{content:'';position:absolute;top:50%;left:0;width:1px;height:10px;background:#fff;margin-top:-6px}
+.footer .foot_lnklist + .copytext{margin-top:0}
+
+/* 메인 상단 타이틀영역 슬라이드 텍스트 추가 */
+.ysy .sec_mainbg .main_bgbox {position: absolute;top: 0;left: 0;right: 0;height: 680px;overflow:hidden;}
+.ysy .sec_mainbg .main_bgbox > img {display: block;position: relative;width: 100%;height: 100%;object-fit: cover;}
+.ysy .sec_mainbg .slide_titlebox{position:relative;text-align:center;padding-top:70px}
+.ysy .sec_mainbg .slide_titlebox .slideitem{display:inline-block;vertical-align:top}
+.ysy .sec_mainbg .slide_titlebox .title_desc{display: block;font-size: 24px;line-height: 30px;color: #fff;text-align: center;}
+.ysy .sec_mainbg .slide_titlebox .title_str{display: block;font-size: 36px;line-height: 1.2;color: #fff;margin-top:30px}
+.ysy .sec_mainbg .slide_titlebox .title_str > em {font-weight:bold;font-size:56px;color:#fff}
+.ysy .sec_mainbg .main_text .bottom_box.v2{top:280px}
+
+/* 리뉴얼 */
+.sec_peopleplace .pp_likebest .pp_likeboard_list.v2 .pp_likeboard_listitem .infobox dl{display:none}
+.sec_peopleplace .pp_likebest .pp_likeboard_list.v2 .pp_likeboard_listitem .infobox .uselabel{background:transparent;padding:0;max-width:calc(100% - 90px)}
+
+.sec_peopleplace .pp_likeboard_list.v2 .pp_likeboard_listitem{display:inline-block;vertical-align:top;position:relative;background:#fff;border-radius:10px;box-shadow:0 4px 10px rgba(0,0,0,.1);overflow:hidden;margin-right:20px}
+.sec_peopleplace .pp_likeboard_list.v2 .pp_likeboard_listitem .thumbox{display:block;text-decoration:none;width:100%;height:472px;background:#000;}
+.sec_peopleplace .pp_likeboard_list.v2 .pp_likeboard_listitem .thumbox .thumimg{width:100%;height:100%;object-fit: contain}
+.sec_peopleplace .pp_likeboard_list.v2 .pp_likeboard_listitem .txtbox{padding:20px 18px 0;box-sizing:border-box;height:132px;}
+.sec_peopleplace .pp_likeboard_list.v2 .pp_likeboard_listitem .fighting_txt{display: -webkit-box;text-decoration: none;font-size:13px;color:#2f2f2f;letter-spacing: -.26px;line-height:18px;max-height:54px;overflow:hidden;-webkit-box-orient: vertical;-webkit-line-clamp: 3;text-overflow:ellipsis;word-break: break-all;font-weight:900}
+.sec_peopleplace .pp_likeboard_list.v2 .pp_likeboard_listitem .infobox{position:absolute;bottom:15px;left:18px;right:18px;}
+.sec_peopleplace .pp_likeboard_list.v2 .pp_likeboard_listitem .infobox .uselabel{display:inline-block;vertical-align: top;font-size:13px;color:#000;letter-spacing: -.6px;height:28px;line-height:29px;padding:0 13px;background:#eff3f5;border-radius:15px;font-weight:900;margin-right:4px;max-width:60px}
+.sec_peopleplace .pp_likeboard_list.v2 .pp_likeboard_listitem .infobox dl{display:inline-block;vertical-align:top;font-size:12px;width:calc(100% - 166px)}
+.sec_peopleplace .pp_likeboard_list.v2 .pp_likeboard_listitem .infobox dl dt{position:relative;display:inline-block;vertical-align:top;color:rgba(0,0,0,.38);letter-spacing: -.19px;line-height:28px;padding-left:16px}
+.sec_peopleplace .pp_likeboard_list.v2 .pp_likeboard_listitem .infobox dl dt:before{content:'';position:absolute;top:50%;left:0;background:url(https://static.wehago.com/imgs/ele/sp_m_ele_ysy.png) -74px -181px no-repeat;width:12px;height:15px;margin-top:-9px;background-size:250px 250px}
+.sec_peopleplace .pp_likeboard_list.v2 .pp_likeboard_listitem .infobox dl dd{position:relative;display:inline-block;vertical-align:top;color:#939393;font-weight:bold;line-height:28px;padding-left:6px;margin-left:5px;max-width:calc(100% - 72px)}
+.sec_peopleplace .pp_likeboard_list.v2 .pp_likeboard_listitem .infobox dl dd:before{content:'';position:absolute;top:50%;left:0;width:1px;height:10px;margin-top:-6px;background:#d5d5d5}
+
+/* 2022.01.14 리뉴얼 */
+.ysy.v2 .header {background-color: #e61e2b;color: #fff;}
+.ysy.v2 .header .btn_header {display: block;width: 46px;height: 46px;right: 12px;top: 0;}
+.ysy.v2 .header .btn_header:after {width: 17px;height: 15px;margin: -8px 0 0 -9px;background: url(https://static.wehago.com/imgs/ele/sp_m_ele_ysy.png) no-repeat -216px -221px / 250px 250px;}
+.ysy.v2 .sec_mainbg {height: 540px;position: relative;background:url(https://static.wehago.com/imgs/ele/bg_ysy_m11.png) no-repeat 50% 0;background-size:cover}
+.ysy.v2 .sec_mainbg > img{
+    position: absolute;
+    display: block;
+    height: auto;
+    width: 41.6vw;
+    right: 4.4vw;
+    top: 10vw;
+}
+.ysy.v2 .sec_mainbg > img.v2{    
+    top: 53vw;
+}
+@media screen and (min-width : 470px) {
+    .ysy.v2 .sec_mainbg{
+        background-position: 50% 35%;
+    }
+    .ysy.v2 .sec_mainbg > img{
+        top: 100px !important;
+        width: 34vw
+    }   
+}
+.ysy.v2 .sec_mainbg .btn_box {display: block;position: absolute;width: 100%;bottom: 140px;left: 0;text-align: center;}
+.ysy.v2 .sec_mainbg .btn_box .btn_mainbg {display: inline-block;vertical-align: top;font-size: 20px;line-height: 25px;letter-spacing: -1px;color: #fff;background-color: #e61e2b;padding: 10px 15px;box-sizing: border-box;border-radius: 24px;border: 0;font-weight: bold;}
+.ysy.v2 .sec_mainbg .btn_box .btn_mainbg .ico_link {display: inline-block;vertical-align: top;width: 28px;height: 24px;position: relative;}
+.ysy.v2 .sec_mainbg .btn_box .btn_mainbg .ico_link:before {content: '';display: block;width: 8px;height: 13px;position: absolute;top: 50%;left: 50%;margin: -7px 0 0 -4px;background: url(https://static.wehago.com/imgs/ele/sp_m_ele_ysy.png) no-repeat -234px -42px / 250px 250px;}
+.ysy .sec_banner {display: block;position: relative;}
+.ysy .sec_banner .link_banner {position: absolute;top: 0;left: 0;width: 100%;height: 100%;}
+
+
+
+.ysy .sec_cheering {display: block;position: relative;background: #f5f5f5;padding: 52px 0 62px;overflow: hidden;}
+.ysy .sec_cheering .text_box {display: block;margin-bottom: 32px;text-align: center;}
+.ysy .sec_cheering .text_box .cheering_main_text {font-size: 30px;line-height: 36px;letter-spacing: -1.5px;color: #000;font-weight: bold;text-align: center;}
+.ysy .sec_cheering .text_box .link_more{
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: auto;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 6px 30px 4px;
+    border: 1px solid #000;
+    color: #000;
+    text-decoration: none;
+}
+.ysy .sec_cheering .text_box .count_text{
+    display: block;
+    text-align: center;
+    font-size: 0;
+    color: #000;
+    margin: 5px 0 15px;
+}
+.ysy .sec_cheering .text_box .count_text > span{
+    display: inline-block;
+    vertical-align: top;
+    font-size: 16px;
+    line-height: 30px;
+}
+.ysy .sec_cheering .text_box .count_text > em{
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 10px;
+    font-size: 20px;
+    line-height: 30px;
+}
+.ysy .section .cheering_slick_box {display: block;}
+.ysy .section .cheering_slick_box .slick_list {display: block;position: relative;font-size: 0;}
+.ysy .section .cheering_slick_box .slick_list .item {display: inline-block;vertical-align:top;min-width: 280px;padding: 24px 20px;box-sizing: border-box;position: relative;border-radius: 10px;box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);background-color: #fff;min-height: 370px;}
+.ysy .section .cheering_slick_box .slick_list .item + .item {margin-left: 17px;}
+.ysy .section .cheering_slick_box .slick_list .item .cheering_img_box {display: block;width: 100%;height: 172px;position: relative;background: #000;}
+.ysy .section .cheering_slick_box .slick_list .item .cheering_img_box > img {display: block;height: 100%;width: auto;max-width:100%;margin: 0 auto;}
+.ysy .section .cheering_slick_box .slick_list .item .cheering_text_box {display: block;margin-top: 20px;}
+.ysy .section .cheering_slick_box .slick_list .item .cheering_text_box .name {font-size: 16px;line-height: 20px;letter-spacing: -0.8px;color: #4a4a4a;font-weight: bold;}
+.ysy .section .cheering_slick_box .slick_list .item .cheering_text_box .cheering_text {margin-top: 10px;font-size: 15px;line-height: 20px;letter-spacing: -0.75px;color: #4a4a4a;overflow: hidden;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 5;-webkit-box-orient: vertical;}
+.ysy .section .in_box.v2 {max-width: 375px;margin: 0 auto;text-align: left;}
+
+.ysy.v2 .sec_peopleplace {background-color: #fff;padding: 70px 0;}
+.ysy.v2 .main_sectitle .title_desc {font-size: 30px;line-height: 37px;letter-spacing: -1.5px;color: #000;text-align: left;font-weight: bold;margin: 0;}
+.ysy.v2 .sec_peopleplace .btn_pp {text-align: left;border-color: #000;color: #000;}
+.ysy.v2 .sec_peopleplace .btn_pp:before {background: #000;}
+.ysy.v2 .sec_peopleplace .btn_pp:after {background: #000;}
+.ysy.v2 .sec_peopleplace .ppstep_list {background-color:transparent;margin-top: 26px;}
+.ysy.v2 .sec_peopleplace .ppstep_list > li + li {margin-top: 36px;}
+.ysy.v2 .sec_peopleplace .ppstep_list strong {color: #000;font-size: 24px;line-height: 28px;}
+.ysy.v2 .sec_peopleplace .ppstep_list strong > em {display: inline-block;vertical-align: top;margin: 3px 12px 0 0;color: #000;font-size: 20px;}
+.ysy.v2 .sec_peopleplace .ppstep_list p {font-size: 16px;line-height: 23px;letter-spacing: -0.8px;color: #4a4a4a;}
+
+.ysy.v2 .sec_peopleplace.type_white{
+    background:url(https://static.wehago.com/imgs/ele/m_bg_new_main2_2.png) 0 0;background-size: cover;
+}
+.ysy.v2 .sec_peopleplace.type_white .main_sectitle .title_desc{
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: -1.4px;
+    color: #fff;
+    text-align: center;
+}
+.ysy.v2 .sec_peopleplace.type_white .btn_pp {display:block;margin:20px auto 0;border-color: #fff;color: #fff;background:rgba(255, 255, 255, 0.16)}
+.ysy.v2 .sec_peopleplace.type_white .btn_pp:before {background: #fff;}
+.ysy.v2 .sec_peopleplace.type_white .btn_pp:after {background: #fff;}
+
+.ysy.v2 .sec_peopleplace.type_white .ppstep_list {background-color:transparent;margin-top: 26px;}
+.ysy.v2 .sec_peopleplace.type_white .ppstep_list > li + li {margin-top: 36px;}
+.ysy.v2 .sec_peopleplace.type_white .ppstep_list strong {color: #fff;font-size: 20px;line-height: 23px;}
+.ysy.v2 .sec_peopleplace.type_white .ppstep_list strong > em {display:block;margin: 0 0 14px 0;color: #fff;font-size: 18px;line-height: 20px;}
+.ysy.v2 .sec_peopleplace.type_white .ppstep_list p {font-size: 13px;line-height: 16px;letter-spacing: -0.65px;color: #fff;}
+
+.ysy .section.bg_white {background: #fff;}
+.ysy.v2 .sec_gallery {padding: 50px 0 70px;}
+.ysy.v2 .sec_gallery.sub{padding:57px 0}
+.ysy.v2 .sec_donation {height: 540px;padding: 60px 0 0 0;background:url(https://static.wehago.com/imgs/ele/bg_ysy_m10.png) 0 0;background-size: cover}
+.ysy.v2 .sec_donation:before{display:none;}
+.ysy.v2 .sec_donation:after{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(110,92,77,.64)}
+.ysy.v2 .sec_donation .in_box {position:relative;z-index:1;}
+.ysy.v2 .sec_donation .donation_text {text-align: left;padding: 0;}
+.ysy.v2 .sec_donation .donation_infotext:before {left: 0;margin: 0;}
+.ysy.v2 .sec_donation .donation_infotext .inquiry_list {text-align: left;}
+.ysy.v2 .sec_donation .donation_infotext .inquiry_list div .ico.phone:before {width: 17px;height: 16px;margin: -8px 0 0 -8px;background-position: -21px -195px;}
+.ysy.v2 .sec_donation .donation_infotext .inquiry_list div .ico.mail:before {width: 18px;height: 18px;margin: -5px 0 0 -9px;background-position: -42px -195px;}
+.ysy.v2 .sec_donation .btn_detail_link{margin-top:16px;font-size:14px;padding:9px 30px 8px}
+.ysy.v2 .footer {padding: 24px 0;background-color: #e61e2b;}
+.ysy.v2 .footer .snslnkbox {margin-bottom: 14px;}
+
+.ysy.v2 .sec_history.sub{
+    display: block;
+    padding: 57px 0 45px;
+}
+.ysy.v2 .sec_history.sub .history_title{
+    padding: 0 0 20px 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #bcbcbc;
+}
+.ysy.v2 .sec_history.sub .history_video_box{
+    margin: 0 -20px;
+    height: auto;
+    position: relative;
+    padding-bottom: 59.8%;
+}
+.ysy.v2 .sec_history.sub .history_video_box > iframe{
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.ysy.v2 .sec_history.sub .histroy_content{
+    display: block;
+    margin-top: 42px;
+}
+.ysy.v2 .sec_history.sub .histroy_content .history_sub_title{
+    display: block;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: -0.6px;
+    color: #000;
+    font-weight: bold;
+    margin-bottom: 24px;
+}
+.ysy.v2 .sec_history.sub .histroy_content .history_list{
+    display: block;
+    position: relative;
+}
+.ysy.v2 .sec_history.sub .histroy_content .history_list + .history_sub_title{
+    margin-top: 43px;
+}
+.ysy.v2 .sec_history.sub .histroy_content .history_list .item{
+    display: block;
+    flex-wrap: wrap;
+}
+.ysy.v2 .sec_history.sub .histroy_content .history_list .item dt{
+    display: block;
+    float: left;
+    width: 110px;
+    padding-right: 15px;
+    box-sizing: border-box;
+    font-size: 12px;
+    line-height: 22px;
+    color: #222;
+    font-weight: bold;
+    text-align: right;
+    font-family: douzonetitle,"Microsoft YaHei","PingFang SC","MS PGothic","Hiragino Kaku Gothic ProN","굴림",gulim,"Apple SD Gothic Neo",sans-serif;
+}
+.ysy.v2 .sec_history.sub .histroy_content .history_list .item dd{
+    display: block;
+    overflow: hidden;
+    font-size: 11px;
+    line-height: 22px;
+    letter-spacing: -0.55px;
+    color: #222;
+}
+.ysy.v2 .sec_history.sub .histroy_content .history_list .item dd > span{
+    display: block;
+}
+.ysy.v2 .gallery_group.v2{
+    display: block;
+    border-top: 0;
+    padding: 72px 0 30px;
+}
+.ysy.v2 .gallery_group.v2 .group_list{
+    width: auto;
+    margin: -12px;
+}
+.ysy.v2 .gallery_group.v2 .group_list .item{
+    width: calc(50% - 12px);
+    margin: 6px;
+}
+.ysy.v2 .sec_btn_box .btn_more{
+    width: 120px;
+    height: 32px;
+    line-height: 32px;
+    border-color: #222;
+    color: #222;
+}
+.ysy.v2 .sec_btn_box .btn_more.v2{
+    color: #fff;
+    background-color: #222;
+}
+
+.ysy.v2 .sec_peopleplace.sub{
+    background-color: #f5f5f5;
+    padding: 57px 0 49px;
+    overflow: hidden;
+}
+.ysy.v2 .sec_peopleplace.sub .history_title{
+    padding: 0 0 20px 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #bcbcbc;
+}
+.ysy.v2 .sec_peopleplace.sub .history_title h1{
+    margin: 0;
+    text-align: left;
+}
+.ysy.v2 .sec_peopleplace.sub .text_box{
+    display: block;
+    position: relative;
+    text-align: left;
+    margin-bottom: 24px;
+}
+.ysy.v2 .sec_peopleplace.sub .text_box .peopleplace_main_text{
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -1px;
+    color: #000;
+    font-weight: bold;
+}
+.ysy.v2 .sec_peopleplace.sub .text_box .peopleplace_sub_text{
+    margin-top: 6px;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: -0.65px;
+    color: #777;
+}
+.ysy.v2 .sec_peopleplace.sub .slick_list .slick-dots{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    margin-top: 24px;
+}
+.ysy.v2 .sec_peopleplace.sub .slick_list .slick-dots > li{
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #d0d0d0;
+
+}
+.ysy.v2 .sec_peopleplace.sub .slick_list .slick-dots > li + li{
+    margin-left: 6px;
+}
+.ysy.v2 .sec_peopleplace.sub .slick_list .slick-dots > li.slick-active{
+    background-color: #343434;
+}
+
+.ysy.v2 .sec_peopleplace.sub .slick_list .slick-dots > li > button{
+    font-size: 0;
+    line-height: 0;
+    border: 0;
+    background: transparent;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.ysy.v2 .sec_peopleplace.sub .slick_list .slick-dots > li > button:before{
+    display: none;
+}
+.ysy.v2 .sec_peopleplace.type_balloon{
+    padding: 0;
+}
+.ysy.v2 .sec_peopleplace.type_balloon .balloon_box{
+    padding: 49px 0;
+    background-color: #f0f0f0;
+    height: auto;
+}
+.ysy.v2 .sec_peopleplace.type_balloon .balloon_box .balloon_list .item{
+    border: 0;
+    height: 170px;
+}
+.ysy.v2 .sec_peopleplace.type_balloon .balloon_box .balloon_list .item .cheering .name_box{
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: bold;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+.ysy.v2 .sec_peopleplace.type_balloon .balloon_box .balloon_list .item .cheering .text_box{
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: -0.65px;
+    color: #000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+}
+.ysy.v2 .footer .sns_infolist .snsbtn{background:rgba(255,255,255,.15)}
+.ysy.v2 .section_title_morebtn {position:absolute;top:50%;right:0;font-size:12px;line-height:15px;color:#777;letter-spacing: -.6px;text-decoration:none;font-weight:bold;margin-top:-7px}
+.ysy.v2 .footer .copytext{margin-top:8px}
+.ysy.v2 .footer .foot_lnklist{margin-top:8px}
+
+/* gnb 수정(로고 없는버전) */
+.ysy.v2 .gnb .gnb_list > li:first-child > a{
+    padding: 12px 20px;
+    font-size: 0;
+    font-weight: normal;
+    text-decoration: none;
+    line-height: normal;
+}
+.ysy.v2 .gnb .gnb_list > li:first-child > a > span{
+    font-size: 15px;
+    line-height: 19px;
+}
+
+/* 메인 힘이되는 한마디 스크롤링 부분 수정 */
+.ysy.v2 .section .cheering_slick_box .slick_list .slick-list {overflow:visible}
+.ysy.v2 .gnb .footer{padding:24px 0 10px}
+
+.ysy.v2 .sec_gallery.v_likeit .gallery_group .group_title{
+    padding-right: 0;
+}
+
+
+
+/* 헤더 수정 */
+.ysy.v2 .header h1.logo > a {display:inline-block;vertical-align: top;font-size:17px;color:#fff;letter-spacing: -.45px;line-height:25px;text-decoration: none;font-weight:bold}
+
+/* 페이스북 페이지 썸네일 위치 수정 */
+.ysy .ele_newlist .newitem .thumimg.postop{background-position:50% 0 !important}
+.ysy .sec_article.sub .ele_newlist .newitem .thumimg.postop{background-position:50% 0 !important}
+.ele .sec_spon_content.type_scroll{height: 270px;overflow-y: auto;}
+.ele .sec_spon_content .spon_dl .tbl_box{
+    display: block;
+    margin: 15px 0;
+}
+.ele .sec_spon_content .spon_dl .tbl_box > table{
+    border: solid #ccc;
+    border-width: 1px 0 0 1px;
+}
+.ele .sec_spon_content .spon_dl .tbl_box > table th,
+.ele .sec_spon_content .spon_dl .tbl_box > table td{
+    border: solid #ccc;
+    border-width: 0 1px 1px 0;
+    padding: 8px 4px;
+    box-sizing: border-box;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: -0.65px;
+}
+.ele .sec_spon_content .spon_dl .tbl_box > table th{
+    background-color: #e4e4e4;
+}
+.ele .sec_spon_content .spon_dl .tbl_box > table td{
+    background-color: #fff;
+}
+
+/* 배너 수정 */
+.ysy.v2 .sec_mainbg .sec_banner{position:absolute;bottom:0;left:0;right:0;padding:0}
+.ysy.v2 .sec_mainbg .sec_banner > img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.ysy.v2 .sec_mainbg .sec_banner.v2{position:absolute;bottom:0;left:0;right:0;padding-top: 30%;}
+.ysy.v2 .sec_mainbg .sec_banner.v2 .banner_img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: auto;
+    background:url(https://static.wehago.com/imgs/ele/banner_ysy_main3.png) no-repeat 0 0;
+    background-size: cover;
+}
+@media screen and (min-width : 470px) {
+    .ysy.v2 .sec_mainbg .sec_banner.v2{
+        position: absolute;
+        padding-top: 120px;
+        padding-bottom: 0;
+    }
+    .ysy.v2 .sec_mainbg .sec_banner.v2:before{
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba(255,255,255,0.8)
+    }
+    .ysy.v2 .sec_mainbg .sec_banner.v2 .banner_img{
+        background:url(https://static.wehago.com/imgs/ele/banner_ysy_mainpc3.png) no-repeat 50% 0;
+        background-size: cover;
+    }
+}

@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,img,button,select{margin:0;padding:0}
+body,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,button{font-family:'Nanum Square','돋움',Dotum,Helvetica,'Apple SD Gothic Neo',sans-serif}
+body{-webkit-text-size-adjust:none}
+img,fieldset{border:0;vertical-align:top}
+a{color:#1a1a1a}
+em,address{font-style:normal}
+ul,ol{list-style:none}
+label,button{cursor:pointer}
+
+.blind{position:absolute !important;clip:rect(0 0 0 0) !important;width:1px !important;height:1px !important;margin:-1px !important;overflow:hidden !important}
+.clearbx:after,.clearfix:after{content:'';clear:both;display:table}
+.ellipsis{overflow:hidden;white-space:nowrap;word-break:break-all;text-overflow:ellipsis}
+.no_ellipsis{white-space:normal !important}
+.body_dimm{width:100%;height:100%;overflow:hidden}
+
+// text align
+.txtcnt{text-align:center !important}
+.txtlft{text-align:left !important}
+.txtrgt{text-align:right !important}
+.txttop{vertical-align:top !important}
+.txtmid{vertical-align:middle !important}
+
+// font
+.smallfont{font-family:'돋움',Dotum,Helvetica,'Apple SD Gothic Neo',sans-serif !important}
+.nfont{font-family:'Nanum Square','돋움',Dotum,Helvetica,'Apple SD Gothic Neo',sans-serif !important}
+.dz_font,
+.dz_font *{font-family:douzone,"Microsoft YaHei","PingFang SC","MS PGothic","Hiragino Kaku Gothic ProN","굴림",gulim,"Apple SD Gothic Neo",sans-serif}
+.dzt_font,
+.dzt_font *{font-family:douzonetitle,"Microsoft YaHei","PingFang SC","MS PGothic","Hiragino Kaku Gothic ProN","굴림",gulim,"Apple SD Gothic Neo",sans-serif}
+.text_bold{font-weight:bold !important}
+
+// floating
+.fltrgt{float:right}
+.fltlft{float:left}
+
+// selene sprite image
+.sp_selene {
+  @include sprite-img($sp_selene);
+}
+
+// 뷰어 적용시 body 스크롤 막기
+body.fixscroll {
+  position:fixed;
+  overflow:hidden;
+  width:100%;
+  height:100%;
+}
+
+.lsempty_area {
+  text-align:center;
+  .ico {
+      display:inline-block;
+      vertical-align: top;
+  }
+  .empty_text {
+      font-size:13px;
+      color:#959595;
+      font-weight:bold;
+      margin-top:8px;
+      line-height:18px;
+  }
+}

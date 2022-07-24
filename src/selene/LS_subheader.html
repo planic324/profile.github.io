@@ -1,0 +1,581 @@
+<!--
+     [D] 화면이 줄어들어 서비스명과 메뉴가 겹쳐질 경우
+         div.LS_subheader에 shorten 클래스 추가
+-->
+<div class="LS_subheader">
+    <a href="#"><h1 class="sub_tit">서비스명<span class="new_label">신규메뉴</span></h1></a>
+    <div class="sub_menu">
+        <div class="order_btn">
+            <button type="button">
+                <span class="sp_selene">메뉴</span>
+            </button>
+        </div>
+
+        <ul class="tabs_wrap">
+            <!-- [D] li 테그에 hover, focus 되면 li 테그에 open 클래스 추가, 선택된건 active 추가  -->
+            <li class="active">
+                <a href="#">Depth_1-1<span class="subheader_badge_counter">99+</span></a>
+                <div class="sub_dt2">
+                    <ul class="dt2_lst">
+                        <!-- [D] hover, focus 되면 li 테그에 active 클래스 추가 -->
+                        <li class="active underline">
+                            <a href="#">Depth_2-1<span class="tabs_wrap__labelNahago">나하고</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Depth_2-2 Depth_2-2<span class="tabs_wrap__labelNahago">나하고</span></a>
+                        </li>
+                        <li class="active">
+                            <a href="#">Depth_2-3</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <!-- [D] depth 메뉴가 없을 경우 no_depth 클래스 추가 -->
+            <li class="no_depth">
+                <a href="#">Depth_1-2<span class="subheader_badge_counter">9</span></a>
+            </li>
+            <!-- [D] depth 메뉴가 없을 경우 no_depth 클래스 추가 -->
+            <!-- [D] 출시예정메뉴 .disabled 추가  -->
+            <li class="no_depth">
+                <div class="menulink"><span class="disabled_lnk">출시예정</span>Depth_1-3</div>
+            </li>
+            <li>
+                <a href="#">Depth_1-4</a>
+                <div class="sub_dt2">
+                    <ul class="dt2_lst">
+                        <!-- [D] hover, focus 되면 li 테그에 active 클래스 추가 -->
+                        <li class="active">
+                            <a href="#">Depth_2-1</a>
+                        </li>
+                        <li>
+                            <a href="#">Depth_2-2 Depth_2-2</a>
+                        </li>
+                        <li>
+                            <a href="#">Depth_2-3</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<p style="margin:20px 0 10px">펼침 on/off 기능</p>
+<div class="LS_subheader v2">
+    <a href="#"><h1 class="sub_tit">서비스명</h1></a>
+    <div class="sub_menu">
+        <ul class="tabs_wrap">
+            <!-- [D] li 테그에 hover, focus 되면 li 테그에 open 클래스 추가 -->
+            <li>
+                <a href="#">Depth_1-1</a>
+                <!-- 활성화 시 클래스 on 추가 -->
+                <div class="dep2_wrap">
+                    <ul class="dep2_item">
+                        <li class="on underline">
+                            <a href="#">depth_1-2-1<span class="tabs_wrap__labelNahago">나하고</span></a>
+                        </li>
+                        <li>
+                            <a href="#">depth_1-2-2</a>
+                        </li>
+                    </ul>
+                    <div class="toggle_btn_wrap">
+                        <span>메뉴펼침</span>
+                        <div class="toggle_bx">
+                            <button type="button" class="btn_on">ON</button>
+                            <button type="button" class="btn_off active">OFF</button>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a href="#">Depth_1-2</a>
+                <div class="dep2_wrap">
+                    <ul class="dep2_item">
+                        <li class="on">
+                            <a href="#">depth_2-2-1</a>
+                        </li>
+                        <li>
+                            <a href="#">depth_2-2-2</a>
+                        </li>
+                        <li>
+                            <a href="#">depth_2-2-3</a>
+                        </li>
+                        <li>
+                            <a href="#">depth_2-2-4</a>
+                        </li>
+                    </ul>
+                    <div class="toggle_btn_wrap">
+                        <span>메뉴펼침</span>
+                        <div class="toggle_bx">
+                            <button type="button" class="btn_on">ON</button>
+                            <button type="button" class="btn_off active">OFF</button>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a href="#">Depth_1-3</a>
+                <div class="dep2_wrap">
+                    <ul class="dep2_item">
+                        <li>
+                            <a href="#">depth_3-2-1</a>
+                        </li>
+                        <li>
+                            <a href="#">depth_3-2-2</a>
+                        </li>
+                        <li>
+                            <a href="#">depth_3-2-3</a>
+                        </li>
+                        <li>
+                            <a href="#">depth_3-2-4</a>
+                        </li>
+                        <li>
+                            <a href="#">depth_3-2-5</a>
+                        </li>
+                    </ul>
+                    <div class="toggle_btn_wrap">
+                        <span>메뉴펼침</span>
+                        <div class="toggle_bx">
+                            <button type="button" class="btn_on">ON</button>
+                            <button type="button" class="btn_off active">OFF</button>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a href="#">Depth_1-4</a>
+                <div class="dep2_wrap">
+                    <ul class="dep2_item">
+                        <li>
+                            <a href="#">depth_4-2-1</a>
+                        </li>
+                    </ul>
+                    <div class="toggle_btn_wrap">
+                        <span>메뉴펼침</span>
+                        <div class="toggle_bx">
+                            <button type="button" class="btn_on">ON</button>
+                            <button type="button" class="btn_off active">OFF</button>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+        <!-- 메뉴펼침 on (전체보기) -->
+        <!-- 활성화 시 클래스 on 추가 / *** 개발 시 인라인 스타일 삭제 부탁드립니다. *** -->
+        <div class="dep2_wrap allmenu" style="display: block;z-index: 0;">
+            <ul class="dep2_bx">
+                <li class="dep2_item">
+                    <ul>
+                        <li class="on underline">
+                            <a href="#">depth_1-2-1<span class="tabs_wrap__labelNahago">나하고</span></a>
+                        </li>
+                        <li>
+                            <a href="#">depth_1-2-2</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dep2_item">
+                    <ul>
+                        <li class="on">
+                            <a href="#">depth_2-2-1</a>
+                        </li>
+                        <li>
+                            <a href="#">depth_2-2-2</a>
+                        </li>
+                        <li>
+                            <a href="#">depth_2-2-3</a>
+                        </li>
+                        <li>
+                            <a href="#">depth_2-2-4</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dep2_item">
+                    <ul>
+                        <li>
+                            <a href="#">depth_3-2-1</a>
+                        </li>
+                        <li>
+                            <a href="#">depth_3-2-2</a>
+                        </li>
+                        <li>
+                            <a href="#">depth_3-2-3</a>
+                        </li>
+                        <li>
+                            <a href="#">depth_3-2-4</a>
+                        </li>
+                        <li>
+                            <a href="#">depth_3-2-5</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dep2_item">
+                    <ul>
+                        <li>
+                            <a href="#">depth_4-2-1</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <!--<div class="toggle_btn_wrap">
+                <span>메뉴펼침</span>
+                <div class="toggle_bx">
+                    <button type="button" class="btn_on active">ON</button>
+                    <button type="button" class="btn_off">OFF</button>
+                </div>
+            </div>-->
+        </div>
+    </div>
+</div>
+
+<p style="margin:200px 0 10px">언더바 액티브 타입 (+ depth 3)</p>
+<div class="LS_subheader type_underbar">
+    <a href="#"><h1 class="sub_tit">서비스명</h1></a>
+    <div class="sub_menu">
+        <div class="order_btn">
+            <button type="button">
+                <span class="sp_selene">메뉴</span>
+            </button>
+        </div>
+        <ul class="tabs_wrap">
+            <!-- [D] li 테그에 hover, focus 되면 li 테그에 open 클래스 추가, 선택된건 active 추가  -->
+            <li class="active">
+                <a href="#">Depth_1-1<span class="subheader_badge_counter">99+</span></a>
+                <div class="sub_dt2">
+                    <ul class="dt2_lst">
+                        <!-- [D] hover, focus 되면 li 테그에 active 클래스 추가 -->
+                        <!-- [D] 3 depth 있을 시 클래스 has_dep3 추가 -->
+                        <!-- [D] 3 depth 오픈 시 클래스 open 추가 (클릭 시 오픈) -->
+                        <li class="active has_dep3 open">
+                            <a href="#">Depth_2-1</a>
+                            <ul class="dep3_list">
+                                <li>
+                                    <a href="#">Depth_3-1</a>
+                                </li>
+                                <li>
+                                    <a href="#">Depth_3-2</a>
+                                </li>
+                                <li>
+                                    <a href="#">Depth_3-3</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="has_dep3">
+                            <a href="#">Depth_2-2 Depth_2-2</a>
+                            <ul class="dep3_list">
+                                <li>
+                                    <a href="#">Depth_3-1</a>
+                                </li>
+                                <li>
+                                    <a href="#">Depth_3-2</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="has_dep3">
+                            <a href="#">Depth_2-3</a>
+                            <ul class="dep3_list">
+                                <li>
+                                    <a href="#">Depth_3-1</a>
+                                </li>
+                                <li>
+                                    <a href="#">Depth_3-2</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <!-- [D] depth 메뉴가 없을 경우 no_depth 클래스 추가 -->
+            <li class="no_depth">
+                <a href="#">Depth_1-2<span class="subheader_badge_counter">9</span></a>
+            </li>
+            <!-- [D] depth 메뉴가 없을 경우 no_depth 클래스 추가 -->
+            <!-- [D] 출시예정메뉴 .disabled 추가  -->
+            <li class="no_depth">
+                <div class="menulink"><span class="disabled_lnk">출시예정</span>Depth_1-3</div>
+            </li>
+            <li>
+                <a href="#">Depth_1-4</a>
+                <div class="sub_dt2">
+                    <ul class="dt2_lst">
+                        <!-- [D] hover, focus 되면 li 테그에 active 클래스 추가 -->
+                        <li class="active">
+                            <a href="#">Depth_2-1</a>
+                        </li>
+                        <!-- [D] 3 depth 있을 시 클래스 has_dep3 추가 -->
+                        <!-- [D] 3 depth 오픈 시 클래스 open 추가 (클릭 시 오픈) -->
+                        <li class="has_dep3">
+                            <a href="#">Depth_2-2 Depth_2-2</a>
+                            <ul class="dep3_list">
+                                <li>
+                                    <a href="#">Depth_3-1</a>
+                                </li>
+                                <li>
+                                    <a href="#">Depth_3-2</a>
+                                </li>
+                                <li>
+                                    <a href="#">Depth_3-3</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Depth_2-3</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="left_bar">
+                <a href="#">Depth_1-5</a>
+                <div class="sub_dt2">
+                    <ul class="dt2_lst">
+                        <!-- [D] hover, focus 되면 li 테그에 active 클래스 추가 -->
+                        <li class="active">
+                            <a href="#">Depth_2-1</a>
+                        </li>
+                        <li>
+                            <a href="#">Depth_2-2 Depth_2-2</a>
+                        </li>
+                        <li>
+                            <a href="#">Depth_2-3</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<p style="margin:200px 0 10px">화이트 타입</p>
+<!-- [D] 화이트 테마일 경우 클래스 white_type 추가 -->
+<div class="LS_subheader white_type">
+    <a href="#"><h1 class="sub_tit">서비스명<span class="new_label">신규메뉴</span></h1></a>
+    <div class="sub_menu">
+        <div class="order_btn">
+            <button type="button">
+                <span class="sp_selene">메뉴</span>
+            </button>
+        </div>
+
+        <ul class="tabs_wrap">
+            <!-- [D] li 테그에 hover, focus 되면 li 테그에 open 클래스 추가 -->
+            <li>
+                <a href="#">Depth_1-1<span class="subheader_badge_counter">99+</span></a>
+                <!-- [D] 화이트 테마일 경우 클래스 white_type 추가 -->
+                <div class="sub_dt2">
+                    <ul class="dt2_lst">
+                        <!-- [D] hover, focus 되면 li 테그에 active 클래스 추가 -->
+                        <li class="active">
+                            <a href="#">Depth_2-1</a>
+                        </li>
+                        <li>
+                            <a href="#">Depth_2-2 Depth_2-2</a>
+                        </li>
+                        <li>
+                            <a href="#">Depth_2-3</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <!-- [D] depth 메뉴가 없을 경우 no_depth 클래스 추가 -->
+            <li class="no_depth">
+                <a href="#">Depth_1-2<span class="subheader_badge_counter">9</span></a>
+            </li>
+            <!-- [D] depth 메뉴가 없을 경우 no_depth 클래스 추가 -->
+            <!-- [D] 출시예정메뉴 .disabled 추가  -->
+            <li class="no_depth">
+                <div class="menulink"><span class="disabled_lnk">출시예정</span>Depth_1-3</div>
+            </li>
+            <li>
+                <a href="#">Depth_1-4</a>
+                <div class="sub_dt2">
+                    <ul class="dt2_lst">
+                        <!-- [D] hover, focus 되면 li 테그에 active 클래스 추가 -->
+                        <li class="active">
+                            <a href="#">Depth_2-1</a>
+                        </li>
+                        <li>
+                            <a href="#">Depth_2-2 Depth_2-2</a>
+                        </li>
+                        <li>
+                            <a href="#">Depth_2-3</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<p style="margin:200px 0 10px">화이트 타입2</p>
+<!-- [D] 화이트 테마일 경우 클래스 white_type 추가 -->
+<div class="LS_subheader white_type2">
+    <a href="#"><h1 class="sub_tit">서비스명<span class="new_label">신규메뉴</span></h1></a>
+    <div class="sub_menu">
+        <div class="order_btn">
+            <button type="button">
+                <span class="sp_selene">메뉴</span>
+            </button>
+        </div>
+
+        <ul class="tabs_wrap">
+            <!-- [D] li 테그에 hover, focus 되면 li 테그에 open 클래스 추가 -->
+            <li>
+                <a href="#">Depth_1-1<span class="subheader_badge_counter">99+</span></a>
+                <!-- [D] 화이트 테마일 경우 클래스 white_type 추가 -->
+                <div class="sub_dt2">
+                    <ul class="dt2_lst">
+                        <!-- [D] hover, focus 되면 li 테그에 active 클래스 추가 -->
+                        <li class="active">
+                            <a href="#"><span class="itemtext">Depth_2-1</span></a>
+                            <div class="sub_dt3">
+                                <ul class="dt3_lst">
+                                    <li class="active">
+                                        <a href="#"><span class="itemtext">Depth2_1</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><span class="itemtext">Depth2_2</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><span class="itemtext">Depth2_3</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#"><span class="itemtext">Depth_2-2 Depth_2-2</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="itemtext">Depth_2-3</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <!-- [D] depth 메뉴가 없을 경우 no_depth 클래스 추가 -->
+            <li class="no_depth">
+                <a href="#"><span class="itemtext">Depth_1-2</span><span class="subheader_badge_counter">9</span></a>
+            </li>
+            <!-- [D] depth 메뉴가 없을 경우 no_depth 클래스 추가 -->
+            <!-- [D] 출시예정메뉴 .disabled 추가  -->
+            <li class="no_depth">
+                <div class="menulink"><span class="disabled_lnk">출시예정</span><span class="itemtext">Depth_1-3</span></div>
+            </li>
+            <li>
+                <a href="#"><span class="itemtext">Depth_1-4</span></a>
+                <div class="sub_dt2">
+                    <ul class="dt2_lst">
+                        <!-- [D] hover, focus 되면 li 테그에 active 클래스 추가 -->
+                        <li class="active">
+                            <a href="#"><span class="itemtext">Depth_2-1</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="itemtext">Depth_2-2 Depth_2-2</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="itemtext">Depth_2-3</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- 영역 구분용 -->
+<div class="clear_bx" style="margin-top: 200px"></div>
+<!--//영역 구분용 -->
+
+<div class="LS_subheader shorten">
+    <a href="#"><h1 class="sub_tit">서비스명<span class="beta_label">베타메뉴</span></h1></a>
+    <div class="sub_menu">
+        <div class="order_btn">
+            <button type="button">
+                <span class="sp_selene">메뉴</span>
+            </button>
+        </div>
+        <!-- [D] 클릭시 .on 추가 -->
+        <ul class="tabs_wrap on">
+            <!-- [D] li 테그에 hover, focus 되면 li 테그에 open 클래스 추가 -->
+            <li>
+                <a href="#">Depth_1-1<span class="subheader_badge_counter">99+</span></a>
+                <div class="sub_dt2">
+                    <ul class="dt2_lst">
+                        <!-- [D] hover, focus 되면 li 테그에 active 클래스 추가 -->
+                        <li class="active">
+                            <a href="#">프리랜서 신고지원<span class="tabs_wrap__labelNahago">나하고</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Depth_2-2 Depth_2-2</a>
+                        </li>
+                        <li>
+                            <a href="#">Depth_2-3</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <!-- [D] depth 메뉴가 없을 경우 no_depth 클래스 추가 -->
+            <li class="no_depth">
+                <a href="#">Depth_1-2<span class="subheader_badge_counter">9</span></a>
+            </li>
+            <!-- [D] depth 메뉴가 없을 경우 no_depth 클래스 추가 -->
+            <li class="no_depth">
+                <div class="menulink"><span class="disabled_lnk">출시예정</span>Depth_1-3</div>
+            </li>
+            <li>
+                <a href="#">Depth_1-4</a>
+                <div class="sub_dt2">
+                    <ul class="dt2_lst">
+                        <!-- [D] hover, focus 되면 li 테그에 active 클래스 추가 -->
+                        <li class="active">
+                            <a href="#">Depth_2-1</a>
+                        </li>
+                        <li>
+                            <a href="#">Depth_2-2 Depth_2-2</a>
+                        </li>
+                        <li>
+                            <a href="#">Depth_2-3</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- jQuery는 디자인 확인용입니다. 개발 시 삭제하세요. -->
+<script type="text/javascript">
+    $(function(){
+        //메뉴열기
+        $('.order_btn>button').click(function(e) {
+            $('.tabs_wrap').toggleClass('on');
+            e.preventDefault();
+        });
+
+        $('.tabs_wrap>li').hover(function(e) {
+            $(this).toggleClass('open');
+            e.preventDefault();
+        });
+        $('.has_dep3>a').click(function(e) {
+            $(this).parent().toggleClass('active');
+            $(this).parent().toggleClass('open');
+        });
+
+        // sub header v2
+        // 토글 버튼
+        $('.toggle_btn_wrap .toggle_bx button').click(function(){
+            $('.toggle_btn_wrap .toggle_bx button').toggleClass('active');
+        });
+
+        // gnb
+        if($('.toggle_btn_wrap .toggle_bx .btn_off').hasClass('active')){
+            $('.tabs_wrap > li').hover(function(e){
+                $(this).children('.dep2_wrap').toggleClass('on');
+                e.preventDefault();
+            });
+        }else if($('.dep2_wrap.allmenu .toggle_btn_wrap .toggle_bx .btn_on').hasClass('active')){
+            $('.tabs_wrap > li').hover(function(){
+                $('.tabs_wrap').siblings('.dep2_wrap.allmenu').toggleClass('on');
+                e.preventDefault();
+            });
+        }
+
+    });
+</script>

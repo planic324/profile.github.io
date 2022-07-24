@@ -1,0 +1,56 @@
+// Password Input display
+
+.LS_pwinput {
+  position:relative;
+  display:inline-block;
+  padding-top:78px;
+  &:before {
+    content:'';
+    position:absolute;
+    top:0;
+    left:50%;
+    margin-left:-21px;
+    width:42px;
+    height:51px;
+    background:url($sp_selene) 0 -536px no-repeat;
+  }
+  &[class*="ico_"]:after {
+    content:'';
+    position:absolute;
+    top:35px;
+    left:50%;
+    margin-left:9px;
+    width:21px;
+    height:21px;
+    background:url($sp_selene) 0 0 no-repeat;
+  }
+  &.ico_chk:after {
+    background-position:-57px -536px;
+  }
+  &.ico_dis:after {
+    background-position:-57px -566px;
+  }
+  .inputbox_wrap {
+    clear:both;
+    overflow:hidden;
+  }
+  .pwinput {
+    float:left;
+    display:block;
+    width:43px;
+    height:43px;
+    line-height:55px;
+    background:#e7e7e7;
+    border-radius:2px;
+    text-align:center;
+    font-size:22px;
+    font-family: $nfont;
+    + .pwinput {
+      margin-left:8px;
+    }
+    &.focus {
+      background:#249fff;
+      color:#fff;
+    }
+  }
+}

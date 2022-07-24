@@ -1,0 +1,159 @@
+// Multi Select
+
+.LS_multiselect {
+    position:relative;
+    display:inline-block;
+    vertical-align:top;
+
+    .LSmultibutton {
+        > button {
+            display: inline-block;
+            width:100%;
+            position: relative;
+            font-weight: normal;
+            text-align: center;
+            vertical-align: top;
+            box-sizing: border-box;
+            outline: 0;
+            background: #fff;
+            color: #4a4a4a;
+            font-size: 12px;
+            font-family: "돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;
+            letter-spacing: -.5px;
+            padding: 1px 2px 0;
+            -webkit-padding-before: 0;
+            border: 0;
+            @extend %ellipsis;
+        }
+        &.hasicon {
+            > button {
+                padding-right:10px;
+                box-sizing:border-box;
+                &:after {
+                    content:'';
+                    position:absolute;
+                    top:50%;
+                    right:2px;
+                    width:5px;
+                    height:3px;
+                    margin-top:-2px;
+                    background:url($sp_selene) -299px -307px no-repeat;
+                }
+            }
+            &.open > button:after {
+                background-position:-316px -320px;
+            }
+        }
+    }
+    .LSmultipopover {
+        border: 1px solid #d9d9d9;
+        background: #fff;
+        box-shadow: 1px 1px 1px #ececec;
+        width:100px;
+
+        .LSmultipopover_scroll {
+            overflow: auto;
+        }
+        .LSmultipopover_title {
+            display:block;
+            width:100%;
+            box-sizing:border-box;
+            padding: 3px 0 1px;
+            border-width: 1px 0;
+            border-style: solid;
+            border-color: #dcdcdc;
+            font-weight: bold;
+            font-size: 11px;
+            text-align:center;
+            font-family: "돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;
+            color:#999;
+            @extend %ellipsis;
+
+            &.noline {
+                border-top:0;
+            }
+        }
+        .LSmultipopover_list {
+            &.line {
+                border-top:1px solid #dcdcdc;
+            }
+
+            .LSmultipopover_btn {
+                position:relative;
+                display: block;
+                width:100%;
+                padding: 4px 6px 3px 25px;
+                font-size: 11px;
+                font-family: "돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif;
+                line-height: 20px;
+                color: #4a4a4a;
+                letter-spacing: -.5px;
+                text-align: left;
+                line-height:13px;
+                border:0;
+                background:#fff;
+                @extend %ellipsis;
+
+                &:focus {
+                    outline:0;
+                }
+                &.focus,
+                &:hover {
+                    background:#f4f9fe; 
+                }
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 3px;
+                    left: 7px;
+                    width: 14px;
+                    height: 14px;
+                    background: url($sp_selene) 0 0 no-repeat;
+                }
+            }
+            li.on .LSmultipopover_btn {
+                background:#f5f5f5;
+
+                &:before {
+                    background-position:-25px 0;
+                }
+                &.focus,
+                &:hover {
+                    background:#f4f9fe;
+                }
+            }
+            &.radio_group {
+                .LSmultipopover_btn:before {
+                    background-position:0 -25px;
+                }
+                li.on .LSmultipopover_btn:before {
+                    background-position:-25px -25px;
+                }
+            }
+        }
+        .LSmultipopover_btnbox {
+            border-top:1px solid #d9d9d9;
+            padding:4px 0;
+            text-align:center;
+            > button {
+                display: inline-block;
+                width: 45px;
+                position: relative;
+                height: 20px;
+                font-size: 11px;
+                font-family: "돋움",Dotum,Helvetica,"Apple SD Gothic Neo",sans-serif!important;
+                letter-spacing: -.5px;
+                padding: 2px 8px 0; 
+                border: 1px solid #1c90fb;
+                background: #1c90fb;
+                color: #fff;
+                font-weight: 400;
+                text-align: center;
+                vertical-align: top;
+                box-sizing: border-box;
+                cursor: pointer;
+                outline: 0;
+            }
+        }
+    }
+}

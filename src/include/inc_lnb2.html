@@ -1,0 +1,149 @@
+    <!-- [D] home 클릭시 .lnbin 에 .full_open 추가 -->
+    <!-- [D] 메뉴 펼쳐져있을때만(full_open) 각 메뉴 클릭시 li에 .active 추가 -->
+    <!-- [D] 서브메뉴 있을 경우 li 에 .sub 추가 -->
+    <div class="lnb_header_logo">
+        <a href="#main" class="lnb_lnk"><img src="https://static.wehago.com/imgs/common/wehago_w.svg" width="109" height="22" alt="WEHAGO"><span class="blind">위하고 홈</span></a>
+        <a href="#" class="lnb_close_lnk"><span class="blind">메뉴 닫기</span></a>
+    </div>
+    <div class="lnbin wehago_header">
+        <div class="bdbx">
+            <ul class="lnb_root">
+                <li class="lnb_menu_full"></li>
+                <li class="lnb_menu_sao sub">
+                    <a href="#schedule" class="lnb_lnk">SmartA Online</a>
+                    <ul>
+                        <li><a href="#">SmartA Online 회계</a></li>
+                        <li><a href="#">SmartA Online 인사</a></li>
+                    </ul>
+                </li>
+                <li class="lnb_menu_tr">
+                    <a href="#customer" class="lnb_lnk">거래처서비스</a>
+                </li>
+                <li class="lnb_menu_ad">
+                    <a href="#personal" class="lnb_lnk">연락처서비스</a>
+                </li>
+                <li class="lnb_menu_ca">
+                    <a href="#schedule" class="lnb_lnk">일정관리서비스</a>
+                </li>
+                <li class="lnb_menu_td">
+                    <a href="#todo" class="lnb_lnk">할일서비스</a>
+                </li>
+                <li class="lnb_menu_in">
+                    <a href="#approval" class="lnb_lnk">전자세금계산서</a>
+                </li>
+                <li class="lnb_menu_co">
+                    <a href="#communication" class="lnb_lnk">커뮤니케이션</a>
+                </li>
+                <li class="lnb_menu_vd sub">
+                    <a href="#vdiservice" class="lnb_lnk">가상화서비스</a>
+                    <ul>
+                        <li><a href="#">SmartA</a></li>
+                        <li><a href="#">iCube</a></li>
+                        <li><a href="#">Word (MS Office)</a></li>
+                        <li><a href="#">Excel (MS Office)</a></li>
+                        <li><a href="#">PowerPoint (MS Office)</a></li>
+                    </ul>
+                </li>
+                <li class="lnb_menu_vd sub allert">
+                    <a href="#vdiservice" class="lnb_lnk">가상화서비스</a>
+                    <div class="etc_layer txtcnt">
+                        <p class="smallfont">접속하신 OS환경에서는<br><em>지원하지 않는 서비스</em>입니다</p>
+                        <p class="smallfont"><em class="blue">Windows OS</em>에서 접속해주세요.</p>
+                    </div>
+                </li>
+                <li class="lnb_menu_vd sub allert">
+                    <a href="#vdiservice" class="lnb_lnk">가상화서비스</a>
+                    <div class="etc_layer">
+                        <p class="smallfont">해당 서비스를 사용하기 위해서는<br>가상화 실행 프로그램을 설치해야합니다.</p>
+                        <p class="info smallfont">* 다운로드 후, 재실행해주세요.</p>
+                        <div class="txtcnt">
+                            <button type="button" class="LUX_basic_btn Default basic btn_download"><span>다운로드</span></button>
+                        </div>
+                    </div>
+                </li>
+                <li class="lnb_menu_st">
+                    <a href="#cloudstg" class="lnb_lnk">클라우드스토리지</a>
+                </li>
+                <li class="lnb_menu_cr">
+                    <a href="#expencebill" class="lnb_lnk">경비청구서비스</a>
+                </li>
+                <li class="lnb_menu_ic">
+                    <a href="#basicicon" class="lnb_lnk">메일서비스</a>
+                </li>
+                <li class="lnb_menu_ic">
+                    <a href="#basicicon" class="lnb_lnk">회사설정</a>
+                </li>
+                <li class="lnb_menu_ic">
+                    <a href="#basicicon" class="lnb_lnk">개인설정</a>
+                </li>
+                <li class="lnb_menu_ic">
+                    <a href="#basicicon" class="lnb_lnk">LUNA</a>
+                </li>
+                <li class="lnb_menu_ic">
+                    <a href="#basicicon" class="lnb_lnk">마크업</a>
+                </li>
+                <li class="lnb_menu_sm">
+                    <a href="#marketplace" class="lnb_lnk">서비스마켓</a>
+                </li>
+                <li class="lnb_menu_ic">
+                    <a href="#basicicon" class="lnb_lnk">고객센터</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="fix_lnbmenu">
+        <div class="direct_menu">
+            <a href="#"><span class="menu_icon"></span>WEHAGO 마켓</a>
+        </div>
+        <div class="magnify_menu clearfix">
+            <strong class="magnify_text">100%</strong>
+            <div class="LUX_basic_btngruop">
+                <button type="button" class="LUX_basic_btn magnify_btn"><span class="magnify_plus_icon">확대</span></button>
+                <button type="button" class="LUX_basic_btn magnify_btn"><span class="magnify_minus_icon">축소</span></button>
+            </div>
+        </div>
+    </div>
+<!-- [D] 마크업 확인용 스크립트, 개발적용시 삭제해주세요 -->
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript" src="../js/jquery.slimscroll.js"></script>
+<script>
+$(function() {
+
+    $('.lnb_root>li').click(function() {
+        $('.lnb_root>li').removeClass('active');
+        if($(this).index() == $('.lnb_root>li').eq(0).index()) {
+            $('.lnb').addClass('full_open');
+        }
+        if($('.lnb').hasClass('full_open')){
+            $(this).addClass('active');
+        }
+        return false;
+    });
+    $('.lnb_close_lnk').click(function() {
+        $('.lnb').removeClass('full_open');
+    })
+    // 전체보기 메뉴를  제외한 다른 메뉴에 마우스 오버시.
+    $('.lnb_root li').on('mouseenter', function() {
+        if($(this).index() != $('.lnb_root>li').eq(0).index()) {
+            $('.lnb').addClass('show_sub');
+        }
+    });
+    $('.lnb_root li').on('mouseleave', function() {
+        if($(this).index() != $('.lnb_root>li').eq(0).index()) {
+            $('.lnb').removeClass('show_sub');
+        }
+    });
+
+    // 전체보기 상태일때 마우스가 떠나면 .lnb에서 .show_sub 클래스 제거
+    $('.lnb.full_open').on('mouseleave', function() {
+        $('.lnb').removeClass('show_sub');
+    });
+
+    // slimscroll
+    $('.lnbin').slimScroll({
+        position:'left',
+        height: '100%',
+        color: '#999'
+    });
+});
+</script>

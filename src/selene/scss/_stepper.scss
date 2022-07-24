@@ -1,0 +1,44 @@
+/* LUX_stepper */
+
+.LS_stepper {
+  position: relative;
+  .LS_basic_text .inpbx {
+    padding-right: 20px;
+  }
+  .step_btngroup {
+    position: absolute;
+    top: 0;
+    right: 0;
+    clear: both;
+    overflow: hidden;
+    width: 15px;
+    
+    .LS_btn {
+      float: left;
+      width: 15px;
+      height: 13px;
+      + .LS_btn {
+        margin-top: 1px;
+      }
+      .sp_selene {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -2px;
+        margin-left: -4px;
+        width: 8px;
+        height: 4px;
+        background-position: -75px -60px;
+      }
+      + .LS_btn .sp_selene {
+        background-position: -50px -60px;
+      }
+      &.disable .sp_selene {
+        background-position: -226px -275px;
+      }
+      + .LS_btn.disable .sp_selene {
+        background-position: -226px -286px;
+      }
+    }
+  }
+}

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta id="viewport" name="viewport" content="width=1280">
+<title>DOCC</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/docc2.css">
+</head>
+<body>
+    <div class="docc">
+        <div class="docc_header">
+            <h1>운영지표<span class="time">2021-11-16 10:25:11</span></h1>
+            <div class="right_box">
+                <div class="tab_btn_box">
+                    <!-- [D] 선택된 버튼에 .selected 추가  -->
+                    <button type="button" class="btn_item selected">분기별</button>
+                    <button type="button" class="btn_item">월별</button>
+                    <button type="button" class="btn_item">일별</button>
+                    <button type="button" class="btn_item">오늘</button>
+                </div>
+            </div>
+        </div>
+        <div class="docc_content">
+
+            <div class="grid_wrap v1">
+                <!-- 외래 운영현황 -->
+                <div class="grid_section">
+                    <h2 class="section_title">외래 운영현황</h2>
+                    <div class="oprchat">
+                        <div class="topboxwrap lbox dashboard_basicbox">
+                            <h3 class="box_title">21년 외래 진행율</h3>
+                            <div class="countbox purple">
+                                <p><em>90</em>%<span class="ico_arrow up">상승</span></p>
+                            </div>
+                        </div>
+                        <div class="topboxwrap rbox dashboard_basicbox">
+                            <h3 class="box_title">21년 총 외래환자수</h3>
+                            <span class="label_t">(일평균1,000명)</span>
+                            <div class="countbox">
+                                <p><em>100,000</em>명</p>
+                            </div>
+                        </div>
+                        <div class="btboxwrap lbox dashboard_basicbox">
+                            <h3 class="box_title">4분기<br>외래 진행률</h3>
+                            <!-- [D] 개발시 인라인 스타일 제거 -->
+                            <div class="chartbox" style="background:#ccc;font-size:11px;color:#000;padding:10px">chart area</div>
+                        </div>
+                        <div class="btboxwrap lbox dashboard_basicbox">
+                            <h3 class="box_title">4분기<br>외래 진행률</h3>
+                            <div class="countbox">
+                                <p><em>100</em>명</p>
+                            </div>
+                        </div>
+                        <div class="btboxwrap rbox dashboard_basicbox chart">
+                            <!-- [D] 개발시 인라인 스타일 제거 -->
+                            <div class="chartbox" style="background:#ccc;font-size:11px;color:#000;padding:10px">chart area</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 병상 운영현황 -->
+                <div class="grid_section">
+                    <h2 class="section_title">병상 운영현황</h2>
+                    <div class="oprchat">
+                        <div class="topboxwrap lbox dashboard_basicbox">
+                            <h3 class="box_title">21년 병상 진행율</h3>
+                            <div class="countbox skyblue">
+                                <p><em>90</em>%<span class="ico_arrow down">하락</span></p>
+                            </div>
+                        </div>
+                        <div class="topboxwrap rbox dashboard_basicbox">
+                            <h3 class="box_title">21년 총 재원환자수</h3>
+                            <span class="label_t">(일평균1,000명)</span>
+                            <div class="countbox">
+                                <p><em>100,000</em>명</p>
+                            </div>
+                        </div>
+                        <div class="btboxwrap lbox dashboard_basicbox">
+                            <h3 class="box_title">4분기<br>병상 가동률</h3>
+                            <!-- [D] 개발시 인라인 스타일 제거 -->
+                            <div class="chartbox" style="background:#ccc;font-size:11px;color:#000;padding:10px">chart area</div>
+                        </div>
+                        <div class="btboxwrap lbox dashboard_basicbox">
+                            <h3 class="box_title">4분기<br>재원환자수<br><span>(일평균)</span></h3>
+                            <div class="countbox">
+                                <p><em>9,999</em>명</p>
+                            </div>
+                        </div>
+                        <div class="btboxwrap rbox dashboard_basicbox chart">
+                            <!-- [D] 개발시 인라인 스타일 제거 -->
+                            <div class="chartbox" style="background:#ccc;font-size:11px;color:#000;padding:10px">chart area</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 수술 운영현황 -->
+                <div class="grid_section">
+                    <h2 class="section_title">수술 운영현황</h2>
+                    <div class="oprchat">
+                        <div class="topboxwrap lbox dashboard_basicbox">
+                            <h3 class="box_title">21년 수술실 가동률</h3>
+                            <div class="countbox lightgreen">
+                                <p><em>90</em>%<span class="ico_arrow up">상승</span></p>
+                            </div>
+                        </div>
+                        <div class="topboxwrap rbox dashboard_basicbox">
+                            <h3 class="box_title">21년 수술건수</h3>
+                            <span class="label_t">(일평균1,000명)</span>
+                            <div class="countbox">
+                                <p><em>100,000</em>명</p>
+                            </div>
+                        </div>
+                        <div class="btboxwrap lbox dashboard_basicbox">
+                            <h3 class="box_title">4분기<br>수술실 가동률</h3>
+                            <!-- [D] 개발시 인라인 스타일 제거 -->
+                            <div class="chartbox" style="background:#ccc;font-size:11px;color:#000;padding:10px">chart area</div>
+                        </div>
+                        <div class="btboxwrap lbox dashboard_basicbox">
+                            <h3 class="box_title">4분기<br>수술건수(일평균)</h3>
+                            <div class="countbox">
+                                <p><em>100</em>명</p>
+                            </div>
+                        </div>
+                        <div class="btboxwrap rbox dashboard_basicbox chart">
+                            <!-- [D] 개발시 인라인 스타일 제거 -->
+                            <div class="chartbox" style="background:#ccc;font-size:11px;color:#000;padding:10px">chart area</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- CT 운영현황 -->
+                <div class="grid_section">
+                    <h2 class="section_title">CT 운영현황</h2>
+                    <div class="oprchat">
+                        <div class="topboxwrap lbox dashboard_basicbox">
+                            <h3 class="box_title">21년 CT 검사 진행율</h3>
+                            <div class="countbox skyblue">
+                                <p><em>90</em>%<span class="ico_arrow up">상승</span></p>
+                            </div>
+                        </div>
+                        <div class="topboxwrap rbox dashboard_basicbox">
+                            <h3 class="box_title">21년 총 검사건수</h3>
+                            <span class="label_t">(일평균1,000명)</span>
+                            <div class="countbox">
+                                <p><em>100,000</em>명</p>
+                            </div>
+                        </div>
+                        <div class="btboxwrap lbox dashboard_basicbox">
+                            <h3 class="box_title">4분기<br>CT 검사 진행률</h3>
+                            <!-- [D] 개발시 인라인 스타일 제거 -->
+                            <div class="chartbox" style="background:#ccc;font-size:11px;color:#000;padding:10px">chart area</div>
+                        </div>
+                        <div class="btboxwrap lbox dashboard_basicbox">
+                            <h3 class="box_title">4분기<br>검사건수<span>(일평균)</span></h3>
+                            <div class="countbox">
+                                <p><em>100</em>명</p>
+                            </div>
+                        </div>
+                        <div class="btboxwrap rbox dashboard_basicbox chart">
+                            <!-- [D] 개발시 인라인 스타일 제거 -->
+                            <div class="chartbox" style="background:#ccc;font-size:11px;color:#000;padding:10px">chart area</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- MRI 운영현황 -->
+                <div class="grid_section">
+                    <h2 class="section_title">MRI 운영현황</h2>
+                    <div class="oprchat">
+                        <div class="topboxwrap lbox dashboard_basicbox">
+                            <h3 class="box_title">21년 MRI 검사 진행율</h3>
+                            <div class="countbox lightgreen">
+                                <p><em>90</em>%<span class="ico_arrow up">상승</span></p>
+                            </div>
+                        </div>
+                        <div class="topboxwrap rbox dashboard_basicbox">
+                            <h3 class="box_title">21년 총 검사건수</h3>
+                            <span class="label_t">(일평균1,000명)</span>
+                            <div class="countbox">
+                                <p><em>100,000</em>명</p>
+                            </div>
+                        </div>
+                        <div class="btboxwrap lbox dashboard_basicbox">
+                            <h3 class="box_title">4분기<br>MRI 검사 진행률</h3>
+                            <!-- [D] 개발시 인라인 스타일 제거 -->
+                            <div class="chartbox" style="background:#ccc;font-size:11px;color:#000;padding:10px">chart area</div>
+                        </div>
+                        <div class="btboxwrap lbox dashboard_basicbox">
+                            <h3 class="box_title">4분기<br>검사건수<span>(일평균)</span></h3>
+                            <div class="countbox">
+                                <p><em>100</em>건</p>
+                            </div>
+                        </div>
+                        <div class="btboxwrap rbox dashboard_basicbox chart">
+                            <!-- [D] 개발시 인라인 스타일 제거 -->
+                            <div class="chartbox" style="background:#ccc;font-size:11px;color:#000;padding:10px">chart area</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 채혈 운영현황 -->
+                <div class="grid_section">
+                    <h2 class="section_title">채혈 운영현황</h2>
+                    <div class="oprchat">
+                        <div class="topboxwrap lbox dashboard_basicbox">
+                            <h3 class="box_title">21년 총 검사 환자수</h3>
+                            <div class="countbox purple">
+                                <p><em>1,269</em>명<span class="ico_arrow up">상승</span></p>
+                            </div>
+                        </div>
+                        <div class="topboxwrap rbox dashboard_basicbox">
+                            <h3 class="box_title">21년 대기시간<span>(오전평균)</span></h3>
+                            <div class="countbox">
+                                <p><em>100</em>분</p>
+                            </div>
+                        </div>
+                        <div class="btboxwrap lbox dashboard_basicbox">
+                            <h3 class="box_title">4분기<br>검사 환자수<span>(일평균)</span></h3>
+                            <div class="countbox purple icon_pp" style="display: none;">
+                                <p><em>100</em>명</p>
+                            </div>
+                            <div class="countbox purple">
+                                <p><em>100</em>명</p>
+                            </div>
+                        </div>
+                        <div class="btboxwrap lbox dashboard_basicbox">
+                            <h3 class="box_title">4분기<br>대기시간<span>(오전평균)</span></h3>
+                            <div class="countbox">
+                                <p><em>100</em>분</p>
+                            </div>
+                        </div>
+                        <div class="btboxwrap rbox dashboard_basicbox chart">
+                            <!-- [D] 개발시 인라인 스타일 제거 -->
+                            <div class="chartbox" style="background:#ccc;font-size:11px;color:#000;padding:10px">chart area</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="../../js/jquery/jquery-latest.min.js"></script>
+</body>
+</html>

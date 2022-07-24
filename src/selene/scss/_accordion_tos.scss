@@ -1,0 +1,212 @@
+/* LS_Accordion_TOS */
+
+.LS_Accordion_TOS {
+    padding:15px;
+    border:1px solid #dadada;
+    .LS_tosAgreeAll {
+        position: relative;
+        margin-top:-15px;
+        padding: 15px 50px 15px 0;
+        border-bottom: 1px solid #ccc;
+        -webkit-user-select: none;
+        .text {
+            display: block;
+            font-size: 15px;
+            line-height: 26px;
+        }
+    }
+    .LS_tosItem {
+        border-bottom:1px solid #dadada;
+        .itemHeader {
+            position: relative;
+            padding:15px 50px 15px 0;
+            .text {
+                position: relative;
+                display: block;
+                padding-left: 32px;
+                font-size: 14px;
+                font-weight: normal;
+                line-height: 20px;
+                color: #4a4a4a;
+                .required {
+                    color: #fc5356;
+                }
+                .sp_selene {
+                    position: absolute;
+                    top: 50%;
+                    left: 10px;
+                    width: 12px;
+                    height: 6px;
+                    margin-top: -3px;
+                    vertical-align: middle;
+                    background-position: -275px -260px;
+                }
+                .btn_allcontents {
+                    position: relative;
+                    display: inline-block;
+                    width: auto;
+                    height: 20px;
+                    margin-left: 4px;
+                    padding:0 8px;
+                    border: 1px solid #d3d3d3;
+                    background: #fff;
+                    text-decoration: none;
+                    font-size: 11px;
+                    letter-spacing: -.5px;
+                    font-weight: 400;
+                    text-align: center;
+                    vertical-align: middle;
+                    box-sizing: border-box;
+                    cursor: pointer;
+                    outline: 0;
+                    color: #4a4a4a;
+                    z-index: 5;
+                }
+            }
+            .LS_btn {
+                position:absolute;
+                top:0;
+                left:0;
+                width: calc(100% - 50px);
+                height: 100%;
+                padding: 0;
+                border:0 none;
+                background: 0 none;
+            }
+        }
+        .itemContent {
+            display: none;
+            overflow-y: auto;
+            position: relative;
+            max-height: 155px;
+            padding: 10px 10px 0;
+            border: 1px solid #f0f0f0;
+            background: #f7f7f7;
+            font-size: 12px;
+            line-height: 20px;
+            text-align: left;
+            &:after {
+                content:"";
+                display: block;
+                height:10px;
+            }
+            // Editer 예외처리
+            p, p[class^="s"],
+            p span, p span[class^="s"],
+            li, li span[class^="s"],
+            h1, h2, h3, h4, h5, h6 {margin:0 !important;font-size:12px !important;line-height:20px !important;font-family:'돋움',Dotum,Helvetica,'Apple SD Gothic Neo',sans-serif !important;}
+            table {width:100% !important;}
+        }
+        .itemSubAgree {
+            display: none;
+            padding: 7px 0;
+            text-align: right;
+            .text {
+                margin-right:10px;
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 20px;
+                color: #4a4a4a;
+            }
+            .LS_form {
+                position: relative;
+                font-size: 12px;
+                + .LS_form {
+                    margin-left: 10px;
+                }
+            }
+        }
+        &:last-of-type {
+            margin-bottom: 0;
+            border-bottom:0 none;
+        }
+        &.open {
+            .itemHeader {
+                .text {
+                    .sp_selene{
+                        background-position: -275px -250px;
+                    }
+                }
+            }
+            .itemContent {
+                display: block;
+                margin-bottom: -1px;
+            }
+            .itemSubAgree {
+                display: block;
+            }
+        }
+    }
+    .LS_form {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        margin-top: -12px;
+        .LSinput[type=checkbox]{
+            +.icon {
+                position: static;
+                width: 25px;
+                height: 25px;
+                margin-top: 0;
+                background-position: -187px -563px;
+            }
+        }
+        &.checked {
+            .LSinput[type=checkbox]{
+                +.icon {
+                    background-position: -152px -563px;
+                }
+            }
+        }
+    }
+    &.typeSingle {
+        .LS_tosItem {
+            .itemHeader {
+                .text {
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+    &.version_02{
+        .LS_tosAgreeAll{
+            padding: 15px 0 15px 50px;
+            .LS_form{
+                right: auto;
+                left: 10px;
+            }
+        }
+        .LS_tosItem{
+            .itemHeader{
+                padding: 15px 0 15px 50px;
+                .text{
+                    padding: 0 50px 0 0;
+                    .sp_selene{
+                        left: auto;
+                        right: 10px;
+                        width: 8px;
+                        height: 13px;
+                        margin: -6px 0 0 -4px;
+                        background: url(https://static.wehago.com/imgs/cc/sp_cc.png) -120px -112px no-repeat;
+                    }
+                }
+                .LS_btn{
+                    width: 50px;
+                    left: auto;
+                    right: 0;
+                }
+                .LS_form{
+                    left: 10px;
+                    right: auto;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:400px){
+    .LS_Accordion_TOS .LS_tosItem .itemHeader .text{
+        font-size: .8em;
+        letter-spacing: -.5px;
+    }
+}

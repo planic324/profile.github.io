@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta id="viewport" name="viewport" content="width=1280">
+<title>DOCC</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/css/nanumsquare.css">
+<link rel="stylesheet" type="text/css" href="/css/common.css">
+<link rel="stylesheet" type="text/css" href="/css/lux.css">
+<link rel="stylesheet" type="text/css" href="/selene/css/selene.css">
+<link rel="stylesheet" type="text/css" href="/css/svc/docc.css">
+</head>
+<!-- [D] 우측확장영역 오픈시 body style="overflow-y: hidden" 필요합니다. 우측확장영역에 이너스크롤이 있으므로 브라우저 스크롤 제거를 위함입니다. -->
+<body>
+    <div class="docc">
+        <div class="extension active">
+            <div class="dimmed"></div>
+            <div class="rnb">
+                <div class="rnb_title">
+                    <h2 class="ellipsis">파일 다운로드</h2>
+                    <button type="button" class="button_close"><span class="blind">우측확장영역 닫기</span></button>
+                </div>
+                <div class="rnb_content">
+                    <div class="group">
+                        <div class="group_title">
+                            <h3>파일형식</h3>
+                        </div>
+                        <div class="file_box">
+                            <h4>데이터형식</h4>
+                            <ul class="file_box_list">
+                                <!-- [D] 선택시 class="selected" 추가해주세요. -->
+                                <li class="selected">
+                                    <a href="#" class="icon_excel">데이터 엑셀</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="icon_excel">배치 엑셀</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="file_box">
+                            <h4>보고서형식</h4>
+                            <ul class="file_box_list">
+                                <!-- [D] 선택시 class="selected" 추가해주세요. -->
+                                <li>
+                                    <a href="#" class="icon_pdf">일간보고서</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="icon_pdf">주간보고서</a>
+                                </li>
+                                <li class="selected">
+                                    <a href="#" class="icon_pdf">월간보고서</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="group">
+                        <div class="group_title">
+                            <h3>기간</h3>
+                        </div>
+                        <div class="group_box">
+                            <div class="LUX_basic_date_gap" style="float: left;">
+                                <div class="date_gap">
+                                    <div class="LUX_basic_date">
+                                        <div class="datebx" style="width: 100px;">
+                                            <span class="inpbx">
+                                                <input type="text" id="btn_date2" value="2016.08.28">
+                                                <label for="btn_date2"></label>
+                                            </span>
+                                            <button type="button" class="btn"><span class="sp_lux">캘린더 검색</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="dash" style="width: 15px;max-width: 15px;line-height: 30px">~</span>
+                                <div class="date_gap">
+                                    <div class="LUX_basic_date">
+                                        <div class="datebx" style="width: 100px;">
+                                            <span class="inpbx">
+                                                <input type="text" id="btn_date3" value="2016.08.28">
+                                                <label for="btn_date3"></label>
+                                            </span>
+                                            <button type="button" class="btn"><span class="sp_lux">캘린더 검색</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // http://luna.duzon.com/#/rocket/LUXSelectField 로 대체하였음. -->
+                            <div class="LUX_basic_select" style="float:left;width:calc(100% - 220px);margin-left: 5px;">
+                                <div class="searchbx">
+                                    <span class="inpbx">
+                                        <span class="placeholder text_black" style="font-size: 12px;">10시</span>
+                                    </span>
+                                    <button type="button" class="btn"><span class="sp_lux">검색</span></button>
+                                </div>
+                                <div class="resultbx">
+                                    <div class="result_scrall" style="max-height:100px"><!-- 스크롤 생성 height 높이값 제어 -->
+                                        <div class="result_scrallin">
+                                            <ul class="result_lst">
+                                                <li><a href="#"><div>10시</div></a></li>
+                                                <li><a href="#"><div>11시</div></a></li>
+                                                <li><a href="#"><div>12시</div></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group">
+                        <div class="group_title">
+                            <h3>표시항목</h3>
+                        </div>
+                        <div class="check_box">
+                            <ul>
+                                <li>
+                                    <div class="button_check_box">
+                                        <label for="label_check" class="button_check">
+                                            <input type="checkbox" id="label_check">
+                                            <span class="ico"></span>
+                                            <span class="label_text all">환자유형 전체</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="button_check_box">
+                                        <label for="label_check2" class="button_check">
+                                            <input type="checkbox" id="label_check2">
+                                            <span class="ico"></span>
+                                            <span class="label_text all">위치 전체</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="button_check_box">
+                                        <label for="label_check3" class="button_check">
+                                            <input type="checkbox" id="label_check3" checked>
+                                            <span class="ico"></span>
+                                            <span class="label_text">신환초진</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="button_check_box">
+                                        <label for="label_check4" class="button_check">
+                                            <input type="checkbox" id="label_check4" checked>
+                                            <span class="ico"></span>
+                                            <span class="label_text">본관</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="button_check_box">
+                                        <label for="label_check5" class="button_check">
+                                            <input type="checkbox" id="label_check5">
+                                            <span class="ico"></span>
+                                            <span class="label_text">Fast Track</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="button_check_box">
+                                        <label for="label_check6" class="button_check">
+                                            <input type="checkbox" id="label_check6" checked>
+                                            <span class="ico"></span>
+                                            <span class="label_text">암병동</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="button_check_box">
+                                        <label for="label_check7" class="button_check">
+                                            <input type="checkbox" id="label_check7">
+                                            <span class="ico"></span>
+                                            <span class="label_text">재진당일</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="button_check_box">
+                                        <label for="label_check8" class="button_check">
+                                            <input type="checkbox" id="label_check8">
+                                            <span class="ico"></span>
+                                            <span class="label_text">양성자</span>
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="rnb_bottom">
+                    <button type="button" class="button_download">다운로드</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="../../js/jquery/jquery-latest.min.js"></script>
+<script type="text/javascript">
+    // 마크업 테스트용
+</script>
+</body>
+</html>

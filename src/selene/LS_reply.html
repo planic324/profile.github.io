@@ -1,0 +1,186 @@
+<!-- [D] 테두리 필요한 경우 .wrap 추가 -->
+<div class="LS_reply wrapping">
+    <!-- 댓글 카운팅 -->
+    <div class="replycount">
+        <strong>댓글(<span>13</span>)</strong><div style="/*position:absolute;*/vertical-align:middle;display:inline-block"><div><button type="button" class="LS_btn refresh"><span class="sp_selene">새로고침</span></button></div></div>
+    </div>
+    <!-- 댓글 입력 -->
+    <div class="LSreplybox">
+        <div class="reply_profile">
+            <div class="profile_image">
+                <div class="image_box" style="background-image:url(https://static.wehago.com/imgs/dummy/@memberlist_sample.png)"></div>
+            </div>
+            <strong class="name">홍길동</strong>
+        </div>
+        <div class="reply_inputbox" contenteditable="true"></div>
+        <span class="reply_placeholder">댓글을 입력하세요.</span>
+        <div class="reply_submitbox">
+            <div class="btngroup">
+                <button type="button" class="LS_btn basic2">등록</button>
+            </div><span class="text_count">0/400</span>
+        </div>
+    </div>
+
+    <!-- 댓글 수정 .modify 추가 -->
+    <div class="LSreplybox modify">
+        <div class="reply_profile">
+            <div class="profile_image">
+                <div class="image_box" style="background-image:url(https://static.wehago.com/imgs/dummy/@memberlist_sample.png)"></div>
+            </div>
+            <strong class="name">홍길동홍길동홍길동홍길동홍길동홍길동홍길동홍길동홍길동홍길동홍길동홍길동홍길동홍길동홍길동홍길동홍길동홍길동홍길동홍길동홍길동홍길동홍길동홍길동홍길동홍길동홍길동홍길동홍길동홍길동홍길동홍길동홍길동홍길동홍길동홍길동홍길동홍길동홍길동홍길동홍길동홍길동홍길동홍길동홍길동홍길동</strong>
+        </div>
+        <div class="reply_inputbox" contenteditable="true">댓글을 수정하는 화면입니다.</div>
+        <div class="reply_submitbox">
+            <div class="btngroup">
+                <button type="button" class="LS_btn basic">취소</button><button type="button" class="LS_btn basic2">등록</button>
+            </div>
+            <span class="text_count">0/400</span>
+        </div>
+    </div>
+
+     <!-- 댓글 보기 .readonly 추가 -->
+     <div class="LSreplybox readonly">
+        <div class="reply_profile">
+            <div class="profile_image">
+                <div class="image_box" style="background-image:url(https://static.wehago.com/imgs/dummy/@memberlist_sample.png)"></div>
+            </div>
+            <strong class="name">홍길동</strong>
+        </div>
+        <div class="reply_inputbox" contenteditable="false">큰 그림을 보고 큰 숲에서 노는 사람만이 부자가 될 수 있다. 큰손, 즉 온종일 투자만 생각하는 세력들의 생각과 시각은 개미들과 확연히 다르다. 이들은 남다른 통찰력으로 돈의 물꼬를 틀 줄 안다. 투자는 시장을 읽는 것부터 출발한다. 쉬운 예를 들어보자. 금리상승기에  가격이 상승하는 투자자산이 있고, 금리하락기에 오르는 투자자산이 있다. 일종의 법칙 같은 거다. </div>
+        <div class="reply_submitbox">
+            <div class="btngroup">
+                <button type="button" class="LS_btn basic">답글 2</button>
+            </div>
+            <span class="text_count">1시간 전</span>
+        </div>
+        <div class="LS_funcbtn">
+            <button type="button" class="LS_btn funcbtn"><span class="sp_selene">메뉴</span></button>
+            <!-- [D] 버튼 클릭시 display:block 처리 -->
+            <ul class="LS_funcbtn_list" style="display:block">
+                <li>
+                    <a href="#">수정</a>
+                </li>
+                <li>
+                    <a href="#">삭제</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 대댓글 보기 .re_reply.readonly 추가 -->
+    <div class="LSreplybox re_reply readonly">
+        <div class="reply_profile">
+            <div class="profile_image">
+                <div class="image_box" style="background-image:url(https://static.wehago.com/imgs/dummy/@memberlist_sample.png)"></div>
+            </div>
+            <strong class="name">홍길동</strong>
+        </div>
+        <div class="reply_inputbox" contenteditable="false">큰 그림을 보고 큰 숲에서 노는 사람만이 부자가 될 수 있다. 큰손, 즉 온종일 투자만 생각하는 세력들의 생각과 시각은 개미들과 확연히 다르다. 이들은 남다른 통찰력으로 돈의 물꼬를 틀 줄 안다. 투자는 시장을 읽는 것부터 출발한다. 쉬운 예를 들어보자. 금리상승기에  가격이 상승하는 투자자산이 있고, 금리하락기에 오르는 투자자산이 있다. 일종의 법칙 같은 거다. </div>
+        <div class="reply_submitbox">
+            <span class="text_count">1시간 전</span>
+        </div>
+        <div class="LS_funcbtn">
+            <button type="button" class="LS_btn funcbtn"><span class="sp_selene">메뉴</span></button>
+        </div>
+    </div>
+    <!-- depth2 대댓글 보기 .re_reply.readonly 추가 -->
+    <div class="LSreplybox re_reply readonly depth2">
+        <div class="reply_profile">
+            <div class="profile_image">
+                <div class="image_box" style="background-image:url(https://static.wehago.com/imgs/dummy/@memberlist_sample.png)"></div>
+            </div>
+            <strong class="name">2 depth</strong>
+        </div>
+        <div class="reply_inputbox" contenteditable="false">큰 그림을 보고 큰 숲에서 노는 사람만이 부자가 될 수 있다. 큰손, 즉 온종일 투자만 생각하는 세력들의 생각과 시각은 개미들과 확연히 다르다. 이들은 남다른 통찰력으로 돈의 물꼬를 틀 줄 안다. 투자는 시장을 읽는 것부터 출발한다. 쉬운 예를 들어보자. 금리상승기에  가격이 상승하는 투자자산이 있고, 금리하락기에 오르는 투자자산이 있다. 일종의 법칙 같은 거다. </div>
+        <div class="reply_submitbox">
+            <span class="text_count">1시간 전</span>
+        </div>
+        <div class="LS_funcbtn">
+            <button type="button" class="LS_btn funcbtn"><span class="sp_selene">메뉴</span></button>
+        </div>
+    </div>
+    <!-- depth3 대댓글 보기 .re_reply.readonly 추가 -->
+    <div class="LSreplybox re_reply readonly depth3">
+        <div class="reply_profile">
+            <div class="profile_image">
+                <div class="image_box" style="background-image:url(https://static.wehago.com/imgs/dummy/@memberlist_sample.png)"></div>
+            </div>
+            <strong class="name">3 depth</strong>
+        </div>
+        <div class="reply_inputbox" contenteditable="false">큰 그림을 보고 큰 숲에서 노는 사람만이 부자가 될 수 있다. 큰손, 즉 온종일 투자만 생각하는 세력들의 생각과 시각은 개미들과 확연히 다르다. 이들은 남다른 통찰력으로 돈의 물꼬를 틀 줄 안다. 투자는 시장을 읽는 것부터 출발한다. 쉬운 예를 들어보자. 금리상승기에  가격이 상승하는 투자자산이 있고, 금리하락기에 오르는 투자자산이 있다. 일종의 법칙 같은 거다. </div>
+        <div class="reply_submitbox">
+            <span class="text_count">1시간 전</span>
+        </div>
+        <div class="LS_funcbtn">
+            <button type="button" class="LS_btn funcbtn"><span class="sp_selene">메뉴</span></button>
+        </div>
+    </div>
+    <!-- depth4 대댓글 보기 .re_reply.readonly 추가 -->
+    <div class="LSreplybox re_reply readonly depth4">
+        <div class="reply_profile">
+            <div class="profile_image">
+                <div class="image_box" style="background-image:url(https://static.wehago.com/imgs/dummy/@memberlist_sample.png)"></div>
+            </div>
+            <strong class="name">4 depth</strong>
+        </div>
+        <div class="reply_inputbox" contenteditable="false">큰 그림을 보고 큰 숲에서 노는 사람만이 부자가 될 수 있다. 큰손, 즉 온종일 투자만 생각하는 세력들의 생각과 시각은 개미들과 확연히 다르다. 이들은 남다른 통찰력으로 돈의 물꼬를 틀 줄 안다. 투자는 시장을 읽는 것부터 출발한다. 쉬운 예를 들어보자. 금리상승기에  가격이 상승하는 투자자산이 있고, 금리하락기에 오르는 투자자산이 있다. 일종의 법칙 같은 거다. </div>
+        <div class="reply_submitbox">
+            <span class="text_count">1시간 전</span>
+        </div>
+        <div class="LS_funcbtn">
+            <button type="button" class="LS_btn funcbtn"><span class="sp_selene">메뉴</span></button>
+        </div>
+    </div>
+    <!-- depth5 대댓글 보기 .re_reply.readonly 추가 -->
+    <div class="LSreplybox re_reply readonly depth5">
+        <div class="reply_profile">
+            <div class="profile_image">
+                <div class="image_box" style="background-image:url(https://static.wehago.com/imgs/dummy/@memberlist_sample.png)"></div>
+            </div>
+            <strong class="name">5 depth</strong>
+        </div>
+        <div class="reply_inputbox" contenteditable="false">큰 그림을 보고 큰 숲에서 노는 사람만이 부자가 될 수 있다. 큰손, 즉 온종일 투자만 생각하는 세력들의 생각과 시각은 개미들과 확연히 다르다. 이들은 남다른 통찰력으로 돈의 물꼬를 틀 줄 안다. 투자는 시장을 읽는 것부터 출발한다. 쉬운 예를 들어보자. 금리상승기에  가격이 상승하는 투자자산이 있고, 금리하락기에 오르는 투자자산이 있다. 일종의 법칙 같은 거다. </div>
+        <div class="reply_submitbox">
+            <span class="text_count">1시간 전</span>
+        </div>
+        <div class="LS_funcbtn">
+            <button type="button" class="LS_btn funcbtn"><span class="sp_selene">메뉴</span></button>
+        </div>
+    </div>
+    <!-- 대댓글 입력 -->
+    <div class="LSreplybox_wrap">
+        <div class="LSreplybox">
+            <div class="reply_profile">
+                <div class="profile_image">
+                    <div class="image_box" style="background-image:url(https://static.wehago.com/imgs/dummy/@memberlist_sample.png)"></div>
+                </div>
+                <strong class="name">홍길동</strong>
+            </div>
+            <div class="reply_inputbox" contenteditable="true"></div>
+            <span class="reply_placeholder">댓글을 입력하세요.</span>
+            <div class="reply_submitbox">
+                <div class="btngroup">
+                    <button type="button" class="LS_btn basic2">등록</button>
+                </div><span class="text_count">0/400</span>
+            </div>
+        </div>
+    </div>
+    <!-- 대댓글 입력, depth에 따라서 .depth2 ~ .depth5 추가 -->
+    <div class="LSreplybox_wrap depth2">
+        <div class="LSreplybox">
+            <div class="reply_profile">
+                <div class="profile_image">
+                    <div class="image_box" style="background-image:url(https://static.wehago.com/imgs/dummy/@memberlist_sample.png)"></div>
+                </div>
+                <strong class="name">2 depth</strong>
+            </div>
+            <div class="reply_inputbox" contenteditable="true"></div>
+            <span class="reply_placeholder">댓글을 입력하세요.</span>
+            <div class="reply_submitbox">
+                <div class="btngroup">
+                    <button type="button" class="LS_btn basic2">등록</button>
+                </div><span class="text_count">0/400</span>
+            </div>
+        </div>
+    </div>
+</div>

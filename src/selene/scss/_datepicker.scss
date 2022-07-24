@@ -1,0 +1,583 @@
+.LS_datepicker {
+  position: relative;
+  font-family: $nfont;
+  .datebx {
+    position: relative;
+    width: 115px;
+    .inpbx {
+      display: block;
+      height: 14px;
+      padding: 7px 24px 4px 6px;
+      border: 1px solid #dbdbdb;
+      background: #fff;
+      line-height: 19px;
+      input {
+        display: block;
+        width: 100%;
+        border: 0;
+        background: transparent;
+        font-size: 12px;
+        font-family: $smallfont;
+        color: #000;
+        outline: none;
+      }
+    }
+    .btn {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 27px;
+      height: 27px;
+      border: 0 none;
+      background: transparent;
+      cursor: pointer;
+      .sp_selene {
+        width: 16px;
+        height: 14px;
+        margin-top: 1px;
+        background-position: -175px 0;
+      }
+    }
+  }
+  &.active, &:hover {
+    .LS_calendar {
+      display: block;
+    }
+    .datebx .inpbx {
+      border-color: #1c90fb;
+    }
+  }
+  &.yearpicker {
+    .LS_calendar {
+      width:192px;
+      .date_tbl .date_day button {
+        width:43px;
+        height:36px;
+      }
+    }
+  }
+  &.wide {
+    position:relative;
+    .LUX_basic_date {
+      float:none;
+    }
+    .date_gap {
+      width:50%;
+      box-sizing:border-box;
+      padding-right:7px;
+      margin:0;
+    }
+    .dash + .date_gap {
+      padding-right:0;
+      padding-left:7px;
+    }
+    .dash {
+      float:none;
+      max-width:none;
+      width:14px;
+      position:absolute;
+      left:50%;
+      margin-left:-7px;
+    }
+    .datebx {
+      width:100%;
+    }
+  }
+  &.yeardisabled {
+    .inpbx:before {
+      position: absolute;
+      top: 50%;
+      left: 5px;
+      width: 30px;
+      height: 14px;
+      -webkit-padding-after: 1px;
+      margin-top:-7px;
+      background: rgba(180, 180, 180, .5);
+      content: '';
+      z-index:10;
+    }
+  }
+}
+
+.LS_calendar {
+  width: 216px;
+  border: 1px solid #a3a3a3;
+  background: #fff;
+  box-shadow: 1px 1px 1px #ececec;
+  font-family: $nfont;
+  .date_select {
+    position: relative;
+    height: 40px;
+    background: #fafafa;
+    line-height: 38px;
+    text-align: center;
+    vertical-align: top;
+    .btn {
+      position: absolute;
+      top: 8px;
+      width: 23px;
+      height: 23px;
+      border: 1px solid transparent;
+      background: transparent;
+      line-height: 23px;
+      text-align: center;
+      &:hover {
+        border-color: #ccc;
+        .sp_selene {
+          opacity: 1;
+        }
+      }
+      .sp_selene {
+        width: 10px;
+        height: 9px;
+        margin-top: 6px;
+        opacity: .5;
+      }
+    }
+    .btn_prev_year {
+      left: 15px;
+      .sp_selene {
+        background-position: -50px -100px;
+      }
+    }
+    .btn_prev_mon {
+      left: 40px;
+      .sp_selene {
+        background-position: -50px -75px;
+      }
+    }
+    .date_day_title {
+      display:inline-block;
+      vertical-align: top;
+      font-family: tahoma,sans-serif;
+      font-size: 14px;
+      color: #000;
+    }
+    .btn_next_mon {
+      right: 40px;
+      .sp_selene {
+        background-position: -75px -75px;
+      }
+    }
+    .btn_next_year {
+      right: 15px;
+      .sp_selene {
+        background-position: -75px -100px;
+      }
+    }
+  }
+  .date_tbl {
+    padding: 10px;
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 0;
+      text-align: center;
+      table-layout: fixed;
+      border-spacing: 0;
+    }
+    th, td, tr:first-child td {
+      margin: 0;
+      padding: 0;
+      border-collapse: collapse;
+      border: 0 none !important;
+      background: none;
+      border-spacing: 0;
+    }
+    .date_week {
+      height: 21px;
+      padding: 0;
+      border: 0 none;
+      background: transparent;
+      font-size: 11px;
+      font-family: $smallfont;
+      color: #8d8d8d;
+      letter-spacing: -.5px;
+      text-align: center;
+    }
+    .date_day button {
+      display: block;
+      width: 28px;
+      height: 21px;
+      border: 1px solid transparent;
+      background: transparent;
+      color: #4a4a4a;
+      text-align: center;
+      text-decoration: none;
+      vertical-align: top;
+      cursor: pointer;
+      outline: none;
+      font-size: 11px;
+      span {
+        font-size: 12px;
+        font-family: $smallfont;
+      }
+      &:hover {
+        border-color: #ccc;
+      }
+    }
+    .date_day_sun button {
+      color: #f00;
+    }
+    .date_day_holiday button {
+      color: #f00;
+      &:hover {
+        color: #f00;
+      }
+    }
+    .date_day_prev_mon button {
+      color: #c2c2c2;
+    }
+  }
+  .date_day_next_mon button {
+    color: #c2c2c2;
+  }
+  .date_tbl {
+    .date_day_today button {
+      background: #f0f0f0;
+    }
+    .date_day_selected button {
+      background: #1c90fb;
+      color: #fff;
+      &:hover {
+        border-color: #0072dc;
+      }
+    }
+    .date_day_gap button {
+      background: #e9f5ff;
+    }
+  }
+  .select_area {
+    clear: both;
+    padding: 10px;
+    border-top: 1px solid #e6e6e6;
+    white-space: nowrap;
+    .btn {
+      display: inline-block;
+      position: relative;
+      line-height:20px;
+      height: 21px;
+      padding: 1px 6px 0;
+      border: 1px solid #e0e0e0;
+      background: #fff;
+      font-size: 11px;
+      font-family: $smallfont;
+      font-weight: normal;
+      color: #4a4a4a;
+      letter-spacing: -.5px;
+      text-align: center;
+      vertical-align: top;
+      box-sizing: border-box;
+      cursor: pointer;
+      outline: none;
+    }
+    .btn_group {
+      display: inline-block;
+      .btn {
+        margin: 0 5px;
+      }
+    }
+    .btn_group2 {
+      float: right;
+      .btn {
+        margin: -1px 0 0 -1px;
+        font-weight:normal;
+      }
+    }
+    .solar_area {
+      display: inline-block;
+      font-size: 12px;
+      font-family: $smallfont;
+      color: #999;
+      letter-spacing: -.5px;
+      vertical-align:top;
+      padding-top:5px;
+      span {
+        margin: 0 3px 0 0;
+      }
+    }
+  }
+}
+
+.LS_datepicker.gap {
+  font-family: $nfont;
+  &:after {
+    content:'';
+    clear:both;
+    display:table;
+  }
+  .date_gap {
+    display: inline-block;
+    float: left;
+    & + .date_gap {
+      margin-left:12px;
+    }
+  }
+  .dash {
+    float: left;
+    width: 12px;
+    line-height: 27px;
+    font-size: 12px;
+    text-align: center;
+  }
+  .LS_basic_date {
+    float: left;
+  }
+  .LS_calendar {
+    width: 429px;
+  }
+  .LS_date_day_bx {
+    float: left;
+    width: 50%;
+    + .LS_date_day_bx {
+      position: relative;
+      &:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 10;
+        width: 1px;
+        background: #e0e0e0;
+        content: '';
+      }
+    }
+  }
+  .LS_date_complex {
+    padding: 8px 10px 10px;
+    border-bottom: 1px solid #e0e0e0;
+    button {
+      float: left;
+      margin-top: 2px;
+      padding: 1px 0 0;
+      font-weight:normal;
+      + button {
+        margin-left: 2px;
+      }
+    }
+    > div {
+      overflow: hidden;
+    }
+    .date_complex button {
+      &:first-child {
+        width: 13.5%;
+      }
+      width: 13.4%;
+      &:last-child {
+        width: 16.5%;
+      }
+    }
+    .date_complex2 button {
+      float: left;
+      width: 16.2%;
+      &:last-child {
+        float: left;
+        width: 16.5%;
+      }
+    }
+    .date_complex3 {
+      position: relative;
+      padding-left: 1px;
+      &:after {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: calc(34px * 6);
+        height: 3px;
+        margin-top: -3px;
+        background: #1c90fb;
+        content: '';
+      }
+      button {
+        width: 35px;
+        margin-left: -1px;
+      }
+    }
+  }
+}
+
+/* SAO 스마트가이드에 사용되는 캘린더 */
+
+.LS_smart_calendar .LS_calendar {
+  font-family: $nfont;
+  display: block;
+  position: relative;
+  width: 100%;
+  border: 0;
+  box-shadow: none;
+  .date_tbl {
+    padding-left: 8px;
+    .date_day button {
+      position: relative;
+    }
+    colgroup col {
+      width: 27px !important;
+    }
+    .date_day_check button:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 5px 5px 0;
+      border-color: transparent #00b4b7 transparent transparent;
+    }
+  }
+  .date_select {
+    .btn_prev_year, .btn_next_year {
+      display: none;
+    }
+  }
+}
+
+/* 미니 캘린더 */
+.LS_mini_calendar .LS_calendar {
+  display: block;
+  position: relative;
+  width: 100%;
+  border: 0;
+  box-shadow: none;
+  font-family: $nfont;
+  .date_tbl {
+    &.check_all {
+      td {
+        background:#f0f0f0;
+      }
+    }
+    .check_week {
+      td, th {
+        background:#f0f0f0;
+      }
+    }
+    .date_day button {
+      position: relative;
+      width:25px;
+    }
+    table {
+      table-layout: auto;
+    }
+    colgroup col {
+      width: 27px !important;
+    }
+    .today_check button {
+      border-color:#ccc;
+    }
+    .date_day_check button:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 5px 5px 0;
+      border-color: transparent #00b4b7 transparent transparent;
+    }
+    .date_day_selected button {
+      border-color:transparent;
+    }
+  }
+}
+
+/* Yearpicker */
+.LS_datepicker.gap.yearpicker {
+  .LS_calendar {
+    width:384px;
+
+    .date_tbl .date_day button{
+      width:43px;
+      height:36px;
+    }
+    .select_area .btn_group2 {
+      float:none;
+      text-align:right;
+    }
+  }
+}
+
+/* Monthpicker */
+.LS_datepicker {
+  &.monthpicker {
+    .LS_calendar {
+      width:200px;
+      .picker_wrap {
+        padding: 8px;
+        box-sizing: border-box;
+        .picker {
+          margin-top: 8px;
+          >li {
+            float: left;
+            margin-top: 2px;
+            font-weight: 400;
+            box-sizing: border-box;
+          }
+          >li + li {
+            padding-left: 2px;
+          }
+          >li + li:nth-of-type(7) {
+            padding-left: 0;
+          }
+          &:after {
+            display: block;
+            clear: both;
+            content:'';
+          }
+          &.quarter {
+            margin-top: 0;
+            >li {
+              width: 20%;
+            }
+          }
+          &.month {
+            >li {
+              width: 16.6666666%;
+            }
+          }
+          .dv_line {
+            position: relative;
+            color: #5e5e5e;
+            font-size: 12px;
+            font-weight: bold;
+            line-height: 16px;
+            &:after {
+              position: absolute;
+              top: 50%;
+              left: 50px;
+              right: 0;
+              height: 1px;
+              margin-top: -1px;
+              background-color: #c8c8c8;
+              content: '';
+            }
+          }
+          .LS_btn {
+            width: 100%;
+            padding: 1px 0 0;
+            &.on {
+              background-color: #1c90fb;
+              border-color: #1c90fb;
+              color: #fff;
+            }
+            &.disable {
+              background-color: #f2f2f2;
+              border: 1px solid #e0e0e0;
+              color: #8d8d8d;
+              cursor: default;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Time picker */
+.LS_datepicker.time {
+  .datebx .btn .sp_selene {
+    width: 16px;
+    height: 14px;
+    background-position: -150px 0;
+  }
+}

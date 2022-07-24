@@ -1,0 +1,118 @@
+// Dialog
+
+.LS_dialog {
+	overflow: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+	z-index: 1000;
+	font-family: $dfont;
+
+	.dimmed {
+		overflow: hidden;
+		position: fixed;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		z-index: 1100;
+		background: #000;
+		opacity: .3;
+		filter: alpha(opacity=30);
+	}
+
+	.dialog_wrap {
+		z-index:1200;
+		position:absolute;
+		top:50%;
+		left:50%;
+		transform:translate(-50%, -50%);
+		display: inline-block;
+		padding: 24px 30px 20px;
+		background: #fff;
+		border: 1px solid #e7e7e7;
+		overflow-y: auto;
+		box-sizing: border-box;
+		min-width:280px;
+
+		&.size_xg{width:1167px}
+		&.size_lg{width:1000px}
+		&.size_md{width:800px} /* 800  */
+		&.size_mmd{width:740px} /* 740 SAO */
+		&.size_sm{width:630px}
+		&.size_ssm{width:540px}
+		&.size_xs{width:460px}
+		&.size_xss{width:360px}
+
+		.dialog_data_tit {
+			position:relative;
+
+			h1 {
+				padding:0 0 8px;
+				font-size:18px;
+				line-height:22px;
+				font-weight:bold;
+			}
+			.btn_clr {
+				position:absolute;
+				top:-7px;
+				right:-8px;
+				width:30px;
+				height:30px;
+				.sp_selene {
+					width:13px;
+					height:13px;
+					background-position:-140px -275px;
+				}
+			}
+		}
+	}
+	.dialog_btnbx {
+		margin-top:20px;
+		text-align:center;
+	}
+}
+.LS_dialog .LS_table th,
+.LS_dialog .LS_table td {font-family: $dfont;}
+
+.LS_dialog .dialog_data_area {
+	position:relative;
+	padding:20px 0 0;
+	border-top:1px solid #000;
+
+	&.padding0 {padding-top:0;}
+	&.noborder {border-top:0;}
+	.table_section {
+		position:relative;
+		margin-bottom:10px;
+		+ .table_section {margin-top:28px}
+		h2 {
+			position:relative;
+			font-size:14px;
+			padding-left:7px;
+			margin-bottom:6px;
+			&:before {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 0;
+				width: 3px;
+				height: 3px;
+				background: #4a4a4a;
+				margin-top: -2px;
+			}
+		}
+		.print_sidetext {
+			display: inline-block;
+			vertical-align: top;
+			line-height: 27px;
+			margin-left: 6px;
+		}
+	}
+	.print_name {
+		font-size:16px;
+		line-height:24px;
+	}
+}

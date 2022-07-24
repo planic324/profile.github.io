@@ -1,0 +1,199 @@
+<div class="LS_viewer">
+    <div class="dimmed"></div>
+    <!-- [D] 세부정보 우측영역 열때 .rnd_open 추가 -->
+    <div class="viewer_wrap">
+        <div class="viewer_head">
+            <h1>
+                <span class="title_filename ellipsis">WEHAGO WEB 공통 UI 기획기획기획기획기획기획기획기획 v.27.pdf<span class="page"><em>6</em> /25 페이지</span></span></h1>
+            <button type="button" class="LS_btn btn_clr">
+                <span class="sp_selene">닫기</span>
+            </button>
+            <div class="header_btngroup">
+                <button type="button" class="LS_btn"><span>웹오피스로 열기</span></button>
+                <button type="button" class="LS_btn"><span>다운로드</span></button>
+                <div class="btn_dropdown">
+                    <button type="button" class="LS_btn Image dropdown"><span class="sp_selene">메뉴 더보기</span></button>
+                    <!-- [D] 메뉴 더보기 클릭시 아래 .dropdown_menu에 .on 추가 -->
+                    <ul class="dropdown_menu">
+                        <li>
+                            <button type="button" class="LS_btn"><span>공유정보</span></button>
+                        </li>
+                        <li>
+                            <button type="button" class="LS_btn"><span>인쇄하기</span></button>
+                        </li>
+                        <li>
+                            <button type="button" class="LS_btn"><span>내보내기</span></button>
+                        </li>
+                        <li>
+                            <button type="button" class="LS_btn"><span>파일세부정보</span></button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="viewer_contents">
+            <!-- [D] 기본 max사이즈 1024 기준으로 사이즈 계산하여 width, height 값 계산하여 넣음 -->
+            <!-- [D] 확대/축소 클릭시 .contents_page에  width,height 값 배율로 증가/축소 시켜서 수정 -->
+            <!--     최대 2배, 최소 0.2배로  제한 -->
+            <!-- [D] 너비맞춤 클릭시 최대 브라우저 크기의 80%까지 width 값 계산하여 수정 -->
+
+            <div class="contents_page" style="max-width:1031px;max-height:638px">
+                <img src="imgs//dummy/@landing_B-01.png" style="width:100%;height:100%">
+            </div>
+        </div>
+        <div class="viewer_page">
+            <ul class="clearfix">
+                <li>
+                    <!-- [D] 썸네일 이미지는 a태그 background에 설정-->
+                    <a href="#" class="contents_page" style="background-image:url(https://static.wehago.com/imgs/dummy//@landing_B-01.png)">
+                        <img src="imgs//common/dummy_thum.png" width="100%">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="contents_page" style="background-image:url(https://static.wehago.com/imgs/dummy/@cf_01.png)">
+                        <img src="imgs//common/dummy_thum.png" width="100%">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="contents_page" style="background-image:url(https://static.wehago.com/imgs/dummy//@ns_01.jpg)">
+                        <img src="imgs//common/dummy_thum.png" width="100%">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="contents_page" style="background-image:url(https://static.wehago.com/imgs/dummy//@landing_B-02.png)">
+                        <img src="imgs//common/dummy_thum.png" width="100%">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="contents_page" style="background-image:url(https://static.wehago.com/imgs/dummy/@cf_01.png)">
+                        <img src="imgs//common/dummy_thum.png" width="100%">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="contents_page" style="background-image:url(https://static.wehago.com/imgs/dummy/@cf_01.png)">
+                        <img src="imgs//common/dummy_thum.png" width="100%">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="contents_page" style="background-image:url(https://static.wehago.com/imgs/dummy/@cf_01.png)">
+                        <img src="imgs//common/dummy_thum.png" width="100%">
+                    </a>
+                </li><li>
+                    <a href="#" class="contents_page" style="background-image:url(https://static.wehago.com/imgs/dummy/@cf_01.png)">
+                        <img src="imgs//common/dummy_thum.png" width="100%">
+                    </a>
+                </li>
+            </ul>
+            <div class="page_btn_group">
+                <button class="LS_btn Image prev_btn"><span class="sp_selene">이전</span></button>
+                <button class="LS_btn Image next_btn"><span class="sp_selene">다음</span></button>
+
+            </div>
+        </div>
+        <ul class="viewer_btngroup">
+           <li>
+               <button type="button" class="LS_btn Image zoom_p"><span class="sp_selene"></span></button>
+               <span class="hover_text blind">확대</span>
+           </li>
+            <li>
+               <button type="button" class="LS_btn Image zoom_m"><span class="sp_selene"></span></button>
+               <span class="hover_text blind">축소</span>
+           </li>
+            <li>
+                <button type="button" class="LS_btn Image zoom_w"><span class="sp_selene"></span></button>
+                <span class="hover_text blind">너비에 맞춤</span>
+            </li>
+            <li>
+                <button type="button" class="LS_btn Image spin"><span class="sp_selene"></span></button>
+                <span class="hover_text blind">회전</span>
+            </li>
+        </ul>
+    </div>
+    <div class="rnd_wrap">
+        <div class="rnb">
+            <div class="rnbtit">
+                <h1>세부정보</h1>
+                <div class="btnbx">
+                    <button type="button" class="LS_btn Image btn_clr"><span class="sp_lux">닫기</span></button>
+                </div>
+            </div>
+            <div class="rnbin">
+                <div class="details_info">
+                    <dl>
+                        <dt>유형</dt>
+                        <dd>pdf</dd>
+                        <dt>파일이름</dt>
+                        <dd>WEHAGOWEB 공툥UI기획 v2.7pdf 공툥UI기획공툥UI기획공툥UI기획공툥UI기획</dd>
+                        <dt>크기</dt>
+                        <dd>25.23MB</dd>
+                        <dt>최종수정시간</dt>
+                        <dd>2017.03.02 오전 09:00</dd>
+                        <dt>생성일</dt>
+                        <dd>2017.03.02 오전 09:00</dd>
+                        <dt>파일소유자</dt>
+                        <dd>김더존(douzone@douzone.com)</dd>
+                    </dl>
+
+                </div>
+                <div class="additional_area">
+                    <h2>추가기능영역</h2>
+                    <div class="additional_area_contents">
+                        <br><br><br><br><br><br><br><br><br>
+                    </div>
+                </div>
+                <div class="additional_area">
+                    <h2>추가기능영역</h2>
+                    <div class="additional_area_contents">
+                        <br><br><br>
+                    </div>
+                </div>
+
+            </div>
+            <div class="rnbbtn">
+                <div class="fltrgt">
+                    <button type="button" class="LS_btn Confirm basic2"><span>닫기</span></button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    $(function() {
+        var cp_height,cp_height2,s_width,s_height;
+        var check_zoom=0;
+        $('button.dropdown').click(function() {
+           $('.dropdown_menu').toggleClass('on');
+        });
+
+        $('div[data-component="LS_viewer2"] .header_btngroup>.LS_btn').click(function() {
+            $('.viewer_wrap').toggleClass('rnd_open');
+        });
+        // 확대, 축소
+        $('.zoom_p').click(function() {
+            check_zoom=1.2;
+
+            for(var i=0;i<$('.contents_page').length;i++) {
+                s_width = $('.contents_page').eq(i).width();
+                s_height = $('.contents_page').eq(i).height();
+
+                $('.contents_page').eq(i).css({
+                    'width' : s_width*check_zoom,
+                    'height' : s_height*check_zoom
+                });
+            }
+        });
+        $('.zoom_m').click(function() {
+            check_zoom=0.8;
+            for(var i=0;i<$('.contents_page').length;i++) {
+                s_width = $('.contents_page').eq(i).width();
+                s_height = $('.contents_page').eq(i).height();
+                $('.contents_page').eq(i).css({
+                    'width' : s_width*check_zoom,
+                    'height' : s_height*check_zoom
+                });
+            }
+        });
+    });
+</script>

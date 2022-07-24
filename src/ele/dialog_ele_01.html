@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>국회의원 이광재 - 세계의 미래를 가장 먼저 만나는 나라, 대한민국</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=1280">
+	<!-- <meta name="description" content="">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="">
+	<meta property="og:description" content="">
+	<meta property="og:url" content="">
+	<meta property="og:image" content=""> -->
+	<link rel="stylesheet" type="text/css" href="/css/nanumsquare.css">
+	<link rel="stylesheet" type="text/css" href="/css/svc/ele.css">
+
+</head>
+<body>
+
+<dl>
+    <dt>Dialog</dt>
+    <dd class="ele dz_font">
+        <div class="basic_dialog">
+            <div class="dimmed"></div>
+            <div class="dialog_wrap_tbl">
+                <div class="dialog_wrap_tblcel">
+                    <!-- [D] 다이얼로그 컴퍼넌트 Root에 아래 속성 추가 -->
+                    <div class="dialog_wrap" style="padding: 0;">
+                        <!-- [D] 여기부터 Luna 다이얼로그에 넣어서 사용 -->
+                        <div class="dialog_content" style="width: 408px">
+							<div class="section_title">
+								<strong>응원사진/동영상 업로드</strong>
+								<p>후보를 응원하는 멋진 사진이나 영상을 올리고<br>위치를 선택해주세요. (300MB 이하)</p>
+							</div>
+
+							<!-- <div class="section type_file">
+								<label for="upload">파일 업로드</label>
+								<input type="file" id="upload" accept="">
+							</div> -->
+							<!-- [D] 이미지 업로드 후 아래의 html 코드를 넣어주세요. -->
+							<div class="section type_file">
+								<div class="upoload_img_box">
+									<img src="https://api0.wehago.com/DCloudStorageServer/WehagoIMG//company_1455418.0/2021/07/23/5fbacaf0-eb6a-11eb-9896-fd4202bf4b19.jpeg" alt="">
+								</div>
+							</div>
+							<!-- <div class="section type_sort">
+								<div class="basic_select">
+									<div class="searchbx">
+										<span class="inpbx">
+											<span class="placeholder">시도 선택</span>
+										</span>
+										<button type="button" class="btn"><span class="blind">검색</span></button>
+									</div>
+									<div class="resultbx">
+										<div class="result_scrall" style="max-height:100px">
+											<ul class="result_lst">
+												<li class="on"><a href="#"><div>select list</div></a></li>
+												<li><a href="#"><div>select list</div></a></li>
+												<li><a href="#"><div>select list</div></a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="basic_select">
+									<div class="searchbx">
+										<span class="inpbx">
+											<span class="placeholder">시군구 선택</span>
+										</span>
+										<button type="button" class="btn"><span class="blind">검색</span></button>
+									</div>
+									<div class="resultbx">
+										<div class="result_scrall" style="max-height:100px">
+											<ul class="result_lst">
+												<li><a href="#"><div>select list</div></a></li>
+												<li><a href="#"><div>select list</div></a></li>
+												<li><a href="#"><div>select list</div></a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div> -->
+
+							<!-- [D] 응원글 영역 필요시 주석을 제거 부탁드립니다. -->
+							<div class="section box_title">
+								<strong class="title">현재 위치</strong>
+								<span>서울특별시 종로구</span>
+							</div>
+							<div class="section type_textarea">
+								<textarea name="" id="" cols="30" rows="10" placeholder="응원 문구를 입력해주세요 (최대100자)"></textarea>
+							</div>
+
+							<p class="notice_text">파일 용량이 클 경우, 업로드 시간이 3~5분 소요될 수 있습니다.</p>
+
+
+							
+
+							<div class="section type_btn_box">
+								<button type="button" class="btn_basic">등록하기</button>
+							</div>
+
+							<div class="btn_dialog_box">
+								<button type="button" class="btn_del type2"><span class="blind">닫기</span></button>
+							</div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </dd>
+</dl>
+<script src="../../js/jquery/jquery-latest.min.js"></script>
+<script src="../js/jquery.include.js"></script>
+<script type="text/javascript">
+    // 마크업 테스트용
+	$(function(){
+		$('.type_sort .searchbx .btn').click(function() {
+			$(this).parent().toggleClass('active');
+		})
+    });
+    
+</script>
+</body>
+</html>

@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta id="viewport" name="viewport" content="width=1280">
+<title>DOCC</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/docc2.css">
+</head>
+<body>
+    <div class="docc">
+        <div class="docc_header">
+            <h1>외래 진료현황<span class="time">2021-11-26 16:10:08</span></h1>
+        </div>
+        <div class="docc_content">
+            <div class="section_ui_wrap section_surgery">
+                <!-- 외래 진료현황 Start -->
+                <div class="division_bx">
+                    <div class="ui_box_left">
+                        <h2 class="section_title">외래 진행현황</h2>
+                        <div class="rect_gather">
+                            <div class="bx_rect">
+                                <h3 class="bx_rect_title">환자현황</h3>
+                                <div class="bx_percent_data">
+                                    <span class="percent_start">0%</span>
+                                    <div class="percent_data">
+                                        <!-- [D] 퍼센트에 맞추어 width 값과 <span class="percent_text">47%</span> 텍스트도 width 값과 같이 변경해주세요. -->
+                                        <div class="percent_bar" style="width: 47%">
+                                            <span class="percent_text">47%</span>
+                                        </div>
+                                    </div>
+                                    <span class="percent_end">100%</span>
+                                </div>
+                                <div class="bx_vertical type_multiple">
+                                    <div class="bx_list_number">
+                                        <dl class="bx_people">
+                                            <div class="bx_people_def">
+                                                <dt>외래환자</dt>
+                                                <dd><span class="num">4,500</span>명</dd>
+                                            </div>
+                                            <div class="bx_people_def small">
+                                                <dt>신환</dt>
+                                                <dd><span class="num">212</span>명</dd>
+                                            </div>
+                                        </dl>
+                                        <dl class="bx_people">
+                                            <div class="bx_people_def">
+                                                <dt>예약환자</dt>
+                                                <dd><span class="num">10,789</span>명</dd>
+                                            </div>
+                                            <div class="bx_people_def small">
+                                                <dt>신환</dt>
+                                                <dd><span class="num">440</span>명</dd>
+                                            </div>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bx_rect">
+                                <h3 class="bx_rect_title">유닛현황</h3>
+                                <div class="bx_vertical">
+                                    <div class="bx_list_number">
+                                        <dl class="bx_people">
+                                            <div class="bx_people_def">
+                                                <dt>진료유닛</dt>
+                                                <dd><span class="num">160</span>개</dd>
+                                            </div>
+                                            <div class="bx_people_def small">
+                                                <dt>휴진유닛</dt>
+                                                <dd><span class="num">204</span>개</dd>
+                                            </div>
+                                        </dl>
+                                    </div>
+                                    <div class="bx_donut_graph">
+                                        <!-- 원 그래프 영역입니다. -->
+                                        <!-- style 값 삭제해주세요. -->
+                                        <div class="donut_graph" style="width: 85px;height: 85px;background-color: gray;border-radius: 100%;"></div>
+                                        <div class="donut_graph" style="width: 85px;height: 85px;background-color: gray;border-radius: 100%;"></div>
+                                        <div class="donut_graph" style="width: 85px;height: 85px;background-color: gray;border-radius: 100%;"></div>
+                                        <!-- //원 그래프 영역입니다. -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bx_rect">
+                                <h3 class="bx_rect_title">진료실 사용현황</h3>
+                                <div class="bx_vertical">
+                                    <div class="bx_list_number">
+                                        <dl class="bx_people">
+                                            <div class="bx_people_def">
+                                                <dt>진료실 사용</dt>
+                                                <dd><span class="num">160</span>개</dd>
+                                            </div>
+                                            <div class="bx_people_def small">
+                                                <dt>진료실 미사용</dt>
+                                                <dd><span class="num">204</span>개</dd>
+                                            </div>
+                                        </dl>
+                                    </div>
+                                    <div class="bx_donut_graph">
+                                        <!-- 원 그래프 영역입니다. -->
+                                        <!-- style 값 삭제해주세요. -->
+                                        <div class="donut_graph" style="width: 85px;height: 85px;background-color: gray;border-radius: 100%;"></div>
+                                        <div class="donut_graph" style="width: 85px;height: 85px;background-color: gray;border-radius: 100%;"></div>
+                                        <div class="donut_graph" style="width: 85px;height: 85px;background-color: gray;border-radius: 100%;"></div>
+                                        <!-- //원 그래프 영역입니다. -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui_box_right">
+                        <h2 class="section_title">Zone별 현황</h2>
+                        <div class="bx_zone">
+                            <div class="room_stats_section">
+                                <table class="stats_tbl">
+                                    <caption class="blind">MOR(본관), AOR(별관), COR(암병원)의 수술실 사용현황을 수술중, 봉합중, 공실 순서로 안내</caption>
+                                    <colgroup>
+                                        <col style="width:67px;">
+                                        <col>
+                                        <col>
+                                        <col>
+                                    </colgroup>
+                                    <thead>
+                                    <tr>
+                                        <th scope="col">
+                                            <div class="inbox"><span class="blind">구분</span></div>
+                                        </th>
+                                        <th scope="col" colspan="2">
+                                            <div class="inbox">본관</div>
+                                        </th>
+                                        <th scope="col" colspan="2">
+                                            <div class="inbox">암병원</div>
+                                        </th>
+                                        <th scope="col" colspan="2">
+                                            <div class="inbox">별관</div>
+                                        </th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <th scope="row">
+                                            <div class="inbox">
+                                                <div class="title"><strong>5F</strong></div>
+                                            </div>
+                                        </th>
+                                        <td colspan="2">
+                                            <div class="inbox">
+
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="inbox">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="inbox">
+
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="inbox">
+
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="inbox">
+
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <div class="inbox">
+                                                <div class="title"><strong>4F</strong></div>
+                                            </div>
+                                        </th>
+                                        <td colspan="2">
+                                            <table class="stats_tbl_inner">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="inbox">
+                                                                <div class="bx_info">
+                                                                    <div class="bx_left">
+                                                                        <strong class="bx_info_title">소화기센터</strong>
+                                                                        <dl class="bx_left_info">
+                                                                            <dt>진료환자</dt>
+                                                                            <dd>110<em>/120</em></dd>
+                                                                        </dl>
+                                                                    </div>
+                                                                    <div class="bx_right">
+                                                                        <dl>
+                                                                            <div class="bx_info_number">
+                                                                                <dt>대기</dt>
+                                                                                <dd>10</dd>
+                                                                            </div>
+                                                                            <div class="bx_info_number">
+                                                                                <dt>대기</dt>
+                                                                                <dd>10</dd>
+                                                                            </div>
+                                                                            <div class="bx_info_number">
+                                                                                <dt>대기</dt>
+                                                                                <dd>10</dd>
+                                                                            </div>
+                                                                        </dl>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="inbox">
+                                                                <div class="bx_info">
+                                                                    <div class="bx_left">
+                                                                        <strong class="bx_info_title">소화기센터</strong>
+                                                                        <dl class="bx_left_info">
+                                                                            <dt>진료환자</dt>
+                                                                            <dd>110<em>/120</em></dd>
+                                                                        </dl>
+                                                                    </div>
+                                                                    <div class="bx_right">
+                                                                        <dl>
+                                                                            <div class="bx_info_number">
+                                                                                <dt>대기</dt>
+                                                                                <dd>10</dd>
+                                                                            </div>
+                                                                            <div class="bx_info_number">
+                                                                                <dt>대기</dt>
+                                                                                <dd>10</dd>
+                                                                            </div>
+                                                                            <div class="bx_info_number">
+                                                                                <dt>대기</dt>
+                                                                                <dd>10</dd>
+                                                                            </div>
+                                                                        </dl>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                        <td>
+                                            <div class="inbox">
+
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="inbox">
+
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="inbox">
+
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="inbox">
+
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <div class="inbox">
+                                                <div class="title"><strong>3F</strong></div>
+                                            </div>
+                                        </th>
+                                        <td>
+                                            <div class="inbox">
+                                                <div class="bx_info">
+                                                    <div class="bx_left">
+                                                        <strong class="bx_info_title">소화기센터</strong>
+                                                        <dl class="bx_left_info">
+                                                            <dt>진료환자</dt>
+                                                            <dd>110<em>/120</em></dd>
+                                                        </dl>
+                                                    </div>
+                                                    <div class="bx_right">
+                                                        <dl>
+                                                            <div class="bx_info_number">
+                                                                <dt>대기</dt>
+                                                                <dd>10</dd>
+                                                            </div>
+                                                            <div class="bx_info_number">
+                                                                <dt>대기</dt>
+                                                                <dd>10</dd>
+                                                            </div>
+                                                            <div class="bx_info_number">
+                                                                <dt>대기</dt>
+                                                                <dd>10</dd>
+                                                            </div>
+                                                        </dl>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="inbox">
+
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="inbox">
+
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="inbox">
+
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="inbox">
+
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="inbox">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <div class="inbox">
+                                                <div class="title"><strong>2F</strong></div>
+                                            </div>
+                                        </th>
+                                        <td>
+                                            <div class="inbox">
+                                                <div class="bx_info">
+                                                    <div class="bx_left">
+                                                        <strong class="bx_info_title">소화기센터</strong>
+                                                        <dl class="bx_left_info">
+                                                            <dt>진료환자</dt>
+                                                            <dd>110<em>/120</em></dd>
+                                                        </dl>
+                                                    </div>
+                                                    <div class="bx_right">
+                                                        <dl>
+                                                            <div class="bx_info_number">
+                                                                <dt>대기</dt>
+                                                                <dd>10</dd>
+                                                            </div>
+                                                            <div class="bx_info_number">
+                                                                <dt>대기</dt>
+                                                                <dd>10</dd>
+                                                            </div>
+                                                            <div class="bx_info_number">
+                                                                <dt>대기</dt>
+                                                                <dd>10</dd>
+                                                            </div>
+                                                        </dl>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="inbox">
+
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="inbox">
+
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="inbox">
+
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="inbox">
+
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="inbox">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <div class="inbox">
+                                                <div class="title"><strong>1F</strong></div>
+                                            </div>
+                                        </th>
+                                        <td>
+                                            <div class="inbox">
+                                                <div class="bx_info">
+                                                    <div class="bx_left">
+                                                        <strong class="bx_info_title">소화기센터</strong>
+                                                        <dl class="bx_left_info">
+                                                            <dt>진료환자</dt>
+                                                            <dd>110<em>/120</em></dd>
+                                                        </dl>
+                                                    </div>
+                                                    <div class="bx_right">
+                                                        <dl>
+                                                            <div class="bx_info_number">
+                                                                <dt>대기</dt>
+                                                                <dd>10</dd>
+                                                            </div>
+                                                            <div class="bx_info_number">
+                                                                <dt>대기</dt>
+                                                                <dd>10</dd>
+                                                            </div>
+                                                            <div class="bx_info_number">
+                                                                <dt>대기</dt>
+                                                                <dd>10</dd>
+                                                            </div>
+                                                        </dl>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="inbox">
+
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="inbox">
+
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="inbox">
+
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="inbox">
+
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="inbox">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <div class="inbox">
+                                                <div class="title"><strong>B1</strong></div>
+                                            </div>
+                                        </th>
+                                        <td>
+                                            <div class="inbox">
+                                                <div class="bx_info">
+                                                    <div class="bx_left">
+                                                        <strong class="bx_info_title">소화기센터</strong>
+                                                        <dl class="bx_left_info">
+                                                            <dt>진료환자</dt>
+                                                            <dd>110<em>/120</em></dd>
+                                                        </dl>
+                                                    </div>
+                                                    <div class="bx_right">
+                                                        <dl>
+                                                            <div class="bx_info_number">
+                                                                <dt>대기</dt>
+                                                                <dd>10</dd>
+                                                            </div>
+                                                            <div class="bx_info_number">
+                                                                <dt>대기</dt>
+                                                                <dd>10</dd>
+                                                            </div>
+                                                            <div class="bx_info_number">
+                                                                <dt>대기</dt>
+                                                                <dd>10</dd>
+                                                            </div>
+                                                        </dl>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="inbox">
+
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="inbox">
+
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="inbox">
+
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="inbox">
+
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="inbox">
+
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //외래 진료현황 End -->
+            </div>
+        </div>
+    </div>
+<script src="../../js/jquery/jquery-latest.min.js"></script>
+</body>
+</html>

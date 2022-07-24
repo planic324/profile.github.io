@@ -1,0 +1,124 @@
+$bgColor : $point-color;
+$barSizeW : 10px;
+$barSizeH : 30px;
+
+.LS_loader {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  font-size:18px;
+
+  .loader_bx {
+    text-align: center;
+  }
+  .loader_txt {
+    margin-top:20px;
+    font-size: 16px;
+    color: $bgColor;
+  }
+  .loading-bar {
+    display: inline-block;
+    width: $barSizeW;
+    height: $barSizeH;
+    animation: LSloader 1s ease-in-out infinite;
+    background-color: $bgColor;
+    + .loading-bar {
+      margin-left:3px;
+    }
+  }
+  .loading-bar:nth-child(1) {
+    animation-delay: 0s;
+  }
+  .loading-bar:nth-child(2) {
+    animation-delay: 0.09s;
+  }
+  .loading-bar:nth-child(3) {
+    animation-delay: .18s;
+  }
+  .loading-bar:nth-child(4) {
+    animation-delay: .27s;
+  }
+  .loading-bar:nth-child(5) {
+    animation-delay: .36s;
+  }
+  .wehago_loader {
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    vertical-align: middle;
+    border-radius: 50%;
+    background: rgba(33, 146, 251, 1);
+    background: -moz-linear-gradient(45deg, rgba(33, 146, 251, 1) 0%, rgba(45, 181, 252, 1) 50%, rgba(55, 216, 245, 1) 100%);
+    background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(33, 146, 251, 1)), color-stop(50%, rgba(45, 181, 252, 1)), color-stop(100%, rgba(55, 216, 245, 1)));
+    background: -webkit-linear-gradient(45deg, rgba(33, 146, 251, 1) 0%, rgba(45, 181, 252, 1) 50%, rgba(55, 216, 245, 1) 100%);
+    background: -o-linear-gradient(45deg, rgba(33, 146, 251, 1) 0%, rgba(45, 181, 252, 1) 50%, rgba(55, 216, 245, 1) 100%);
+    background: -ms-linear-gradient(45deg, rgba(33, 146, 251, 1) 0%, rgba(45, 181, 252, 1) 50%, rgba(55, 216, 245, 1) 100%);
+    background: linear-gradient(45deg, rgba(33, 146, 251, 1) 0%, rgba(45, 181, 252, 1) 50%, rgba(55, 216, 245, 1) 100%);
+    .inner_spinner {
+      position: relative;
+      display: block;
+      width: 140%;
+      height: 140%;
+      margin: -20% 0 0 -20%;
+      animation: Ani_rotate 3s ease forwards infinite;
+      text-align: right;
+      .circle {
+        display: inline-block;
+        width: 15%;
+        height: 15%;
+        border-radius: 50%;
+        background-color: #0f98fd;
+      }
+    }
+    .blank {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: block;
+      width: 50%;
+      height: 50%;
+      margin: -25% 0 0 -25%;
+      border-radius: 50%;
+      background-color: #fff;
+    }
+    &.line_type {
+      .inner_spinner {
+        border-radius: 100%;
+        box-shadow: -2px -2px 1px -1px #0f98fd;
+        &.circle {
+          margin-top: 15%;
+        }
+      }
+    }
+  }
+}
+
+@keyframes LSloader {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1, 2.5);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
+
+@keyframes Ani_rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes Ani_rotate_reverse {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-360deg);
+    }
+}

@@ -1,0 +1,284 @@
+<div class="test_wrap" style="position:relative;height:1300px;">
+
+    <!-- LS_viewer_op -->
+    <!-- 개발 시 인라인 스타일 삭제 -->
+    <!-- border-radius 적용위치 -->
+    <!-- 창 최소값 : 940px -->
+    <div class="LS_viewer_op" style="width:940px;height:550px;">
+        <div class="file_viewer_container">
+            <div class="top_file_zone">
+                <img src="https://static.wehago.com/imgs/common/icon_file/40x40/ico_pdf_40.png" alt="pdf_40" class="file_icon">
+                <div class="file_info">
+                    <button type="button" class="button_detail"><span class="sp_selene icon_info">파일 상세정보</span></button>
+                    <span class="file_title">광고게재위치 대표화면_기획_파일명노출파일명노출파일명노출파일명노출.pdf</span>
+                </div>
+                <div class="right_box">
+                    <button type="button" class="common_round_btn">웹오피스로 열기</button><button type="button" class="common_round_btn"><span class="sp_selene icon_folder"></span></button><button type="button" class="common_round_btn"><span class="sp_selene icon_down">다운로드</span></button>
+                </div>
+            </div>
+            <!-- 단일 이미지의 경우 클래스 single 추가 (추가 시 preview_section의 left 값 0) -->
+            <div class="viewer_content">
+                <!-- 클래스 active 추가 시 활성화 -->
+                <div class="list_section active">
+                    <!-- 클릭 시 list_section 에 클래스 active 추가  -->
+                    <button type="button" class="button_fold"><span class="blind">접기/펼치기</span></button>
+                    <ul class="thumbnail_list_box">
+                        <li>
+                            <a href="#" class="button_thumb">
+                                <img src="https://static.wehago.com/imgs/dummy/@cf_01.png" alt="">
+                                <span class="number">1</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="button_thumb">
+                                <img src="https://static.wehago.com/imgs/dummy/@landing_B-02.png" alt="">
+                                <span class="number">2</span>
+                            </a>
+                        </li>
+                        <li class="selected">
+                            <a href="#" class="button_thumb">
+                                <img src="https://static.wehago.com/imgs/dummy/@main_bg_test_01.png" alt="">
+                                <span class="number">3</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="button_thumb">
+                                <img src="https://static.wehago.com/imgs/dummy/@main_app_ico01.png" alt="">
+                                <span class="number">4</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="preview_section">
+                    <!-- margin-left: -(넓이의 1/2)px -->
+                    <div class="toolbar">
+                        <div class="button_group">
+                            <!-- 클래스 on 추가 시 활성화 -->
+                            <button type="button" class="btn_full"><span class="sp_selene">전체화면</span></button>
+                            <!-- 전체화면 되었을 시 btn_full에서 btn_full_off 버튼으로 전환 -->
+                            <!--<button type="button" class="btn_full_off"><span class="sp_selene">전체화면 종료</span></button>-->
+                            <button type="button" class="btn_h_full on"><span class="sp_selene">수평넓이 맞춤</span></button>
+                            <button type="button" class="btn_v_full"><span class="sp_selene">수직넓이 맞춤</span></button>
+                            <button type="button" class="btn_equal"><span class="sp_selene">등비 맞춤</span></button>
+                            <button type="button" class="btn_zoomin"><span class="sp_selene">확대</span></button>
+                            <button type="button" class="btn_zoomout"><span class="sp_selene">축소</span></button>
+                            <button type="button" class="btn_rotate"><span class="sp_selene">90도 회전</span></button>
+                        </div>
+                        <div class="button_group">
+                            <!-- 클래스 on 추가 시 활성화 -->
+                            <button type="button" class="btn_print on"><span class="sp_selene">인쇄</span></button>
+                            <button type="button" class="btn_sidebar"><span class="sp_selene">사이드바 숨김/열기</span></button>
+                        </div>
+                    </div>
+                    <div class="viewer_utils">
+                        <button type="button" class="btn_prev" title="이전 페이지">
+                            <span class="blind">이전 페이지</span>
+                            <svg viewBox="0 0 14 24">
+                                <path d="M2.1,12.3C2.1,12.3,2.1,12.3,2.1,12.3l9.1,9.5c0.2,0.2,0.5,0.2,0.6,0c0.2-0.2,0.2-0.5,0-0.7L3.1,12l8.8-9.2 c0.2-0.2,0.2-0.5,0-0.7c-0.2-0.2-0.5-0.2-0.6,0l-9.1,9.5c0,0,0,0,0,0C2,11.8,2,11.9,2,12C2,12.1,2,12.2,2.1,12.3z" />
+                            </svg>
+                        </button>
+                        <button type="button" class="btn_next" title="다음 페이지">
+                            <span class="blind">다음 페이지</span>
+                            <svg viewBox="0 0 14 24">
+                                <path d="M11.9,11.7C11.9,11.7,11.9,11.7,11.9,11.7L2.8,2.1C2.6,2,2.3,2,2.1,2.1C2,2.3,2,2.6,2.1,2.8l8.8,9.2l-8.8,9.2 c-0.2,0.2-0.2,0.5,0,0.7c0.2,0.2,0.5,0.2,0.6,0l9.1-9.5c0,0,0,0,0,0C12,12.2,12,12.1,12,12C12,11.9,12,11.8,11.9,11.7z" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="warn_text">
+                        <span class="msg">2MB이상의 파일은 변환 후 미리볼 수 있으며,<br />크기에 따라 시간이 오래 걸릴 수 있습니다. 변환하시겠습니까?</span>
+                        <span class="btn_bx">
+                            <button type="button" class="btn_translate">변환</button>
+                        </span>
+                    </div>
+                    <div class="scroll_wrap">
+                        <div class="tblwrap">
+                            <div class="contents_box">
+                                <div class="view_item" style="width:468px;height:581px;transform:rotate(0deg);">
+                                    <img src="https://static.wehago.com/imgs/dummy/@cf_01.png" alt="">
+                                </div>
+                                <div class="view_item" style="transform:rotate(0deg);">
+                                    <img src="https://static.wehago.com/imgs/dummy/@landing_B-02.png" alt="">
+                                </div>
+                                <div class="view_item" style="transform:rotate(0deg);">
+                                    <img src="https://static.wehago.com/imgs/dummy/@main_bg_test_01.png" alt="">
+                                </div>
+                                <div class="view_item" style="transform:rotate(0deg);">
+                                    <img src="https://static.wehago.com/imgs/dummy/@main_app_ico01.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 개발 시 아래 인라인 스타일 제거 -->
+            <div class="toolbar full_screen" style="position:absolute;">
+                <div class="button_group">
+                    <button type="button" class="btn_full_off"><span class="sp_selene">전체화면 종료</span></button>
+                    <button type="button" class="btn_zoomin"><span class="sp_selene">확대</span></button>
+                    <button type="button" class="btn_zoomout"><span class="sp_selene">축소</span></button>
+                </div>
+            </div>
+        </div>
+        <!-- 개발 시 삭제 -->
+        <p style="color:#e84d50;font-size:13px;font-weight:bold;margin-top:8px;">* 창 최소 크기: 940px</p>
+        <!--//개발 시 삭제 -->
+    </div>
+    <!-- //LS_viewer_op -->
+
+    <!-- LS_viewer_op -->
+    <!-- 개발 시 인라인 스타일 삭제 -->
+    <!-- border-radius 적용위치 -->
+    <!-- 창 최소값 : 940px -->
+    <div class="LS_viewer_op" style="width:940px;height:550px;top:600px;">
+        <div class="file_viewer_container">
+            <div class="top_file_zone">
+                <img src="https://static.wehago.com/imgs/common/icon_file/40x40/ico_pdf_40.png" alt="pdf_40" class="file_icon">
+                <div class="file_info">
+                    <button type="button" class="button_detail"><span class="sp_selene icon_info">파일 상세정보</span></button>
+                    <span class="file_title">광고게재위치 대표화면_기획_파일명노출파일명노출파일명노출파일명노출.pdf</span>
+                </div>
+                <div class="right_box">
+                    <button type="button" class="common_round_btn">웹오피스로 열기</button>
+                    <button type="button" class="common_round_btn"><span class="sp_selene icon_folder"></span></button>
+                    <button type="button" class="common_round_btn"><span class="sp_selene icon_down">다운로드</span></button>
+                </div>
+            </div>
+            <!-- 단일 이미지의 경우 클래스 single 추가 (추가 시 preview_section의 left 값 0) -->
+            <div class="viewer_content">
+                <!-- 클래스 active 추가 시 활성화 -->
+                <div class="list_section active">
+                    <!-- 클릭 시 list_section 에 클래스 active 추가  -->
+                    <button type="button" class="button_fold"><span class="blind">접기/펼치기</span></button>
+                    <ul class="thumbnail_list_box">
+                        <li>
+                            <a href="#" class="button_thumb">
+                                <img src="https://static.wehago.com/imgs/dummy/@cf_01.png" alt="">
+                                <span class="number">1</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="button_thumb">
+                                <img src="https://static.wehago.com/imgs/dummy/@landing_B-02.png" alt="">
+                                <span class="number">2</span>
+                            </a>
+                        </li>
+                        <li class="selected">
+                            <a href="#" class="button_thumb">
+                                <img src="https://static.wehago.com/imgs/dummy/@main_bg_test_01.png" alt="">
+                                <span class="number">3</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="button_thumb">
+                                <img src="https://static.wehago.com/imgs/dummy/@main_app_ico01.png" alt="">
+                                <span class="number">4</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="preview_section">
+                    <!-- margin-left: -(넓이의 1/2)px -->
+                    <div class="toolbar">
+                        <div class="button_group">
+                            <!-- 클래스 on 추가 시 활성화 -->
+                            <button type="button" class="btn_full"><span class="sp_selene">전체화면</span></button>
+                            <!-- 전체화면 되었을 시 btn_full에서 btn_full_off 버튼으로 전환 -->
+                            <!--<button type="button" class="btn_full_off"><span class="sp_selene">전체화면 종료</span></button>-->
+                            <button type="button" class="btn_h_full on"><span class="sp_selene">수평넓이 맞춤</span></button>
+                            <button type="button" class="btn_v_full"><span class="sp_selene">수직넓이 맞춤</span></button>
+                            <button type="button" class="btn_equal"><span class="sp_selene">등비 맞춤</span></button>
+                            <button type="button" class="btn_zoomin"><span class="sp_selene">확대</span></button>
+                            <button type="button" class="btn_zoomout"><span class="sp_selene">축소</span></button>
+                            <button type="button" class="btn_rotate"><span class="sp_selene">90도 회전</span></button>
+                        </div>
+                        <div class="button_group">
+                            <!-- 클래스 on 추가 시 활성화 -->
+                            <button type="button" class="btn_print on"><span class="sp_selene">인쇄</span></button>
+                            <button type="button" class="btn_sidebar"><span class="sp_selene">사이드바 숨김/열기</span></button>
+                        </div>
+                    </div>
+                    <div class="scroll_wrap">
+                        <div class="tblwrap">
+                            <div class="contents_box">
+                                <div class="view_item" style="width:468px;height:581px;transform:rotate(0deg);">
+                                    <img src="https://static.wehago.com/imgs/dummy/@cf_01.png" alt="">
+                                </div>
+                                <div class="view_item" style="transform:rotate(0deg);">
+                                    <img src="https://static.wehago.com/imgs/dummy/@landing_B-02.png" alt="">
+                                </div>
+                                <div class="view_item" style="transform:rotate(0deg);">
+                                    <img src="https://static.wehago.com/imgs/dummy/@main_bg_test_01.png" alt="">
+                                </div>
+                                <div class="view_item" style="transform:rotate(0deg);">
+                                    <img src="https://static.wehago.com/imgs/dummy/@main_app_ico01.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dialog_container">
+                    <div class="dialog_wrap_tbl">
+                        <div class="dialog_wrap_cell">
+                            <div class="dialog_wrap">
+                                <div class="dialog_data" style="width:400px;">
+                                    <div class="dialog_data_tit">
+                                        <h1 class="txtcnt">일반정보</h1>
+                                        <button type="button" class="btn_close">
+                                            <span class="sp_selene">닫기</span>
+                                        </button>
+                                    </div>
+                                    <div class="dialog_data_area">
+                                        <div class="round_info_box">
+                                            <dl class="info_list">
+                                                <div class="row">
+                                                    <dt>파일명</dt>
+                                                    <dd>파일명파일명파일명파일명파일명파일명</dd>
+                                                </div>
+                                                <div class="row">
+                                                    <dt>크기</dt>
+                                                    <dd>123.232KB</dd>
+                                                </div>
+                                                <div class="row">
+                                                    <dt>종류</dt>
+                                                    <dd>image파일(.png)</dd>
+                                                </div>
+                                            </dl>
+                                        </div>
+                                        <div class="round_info_box">
+                                            <dl class="info_list">
+                                                <div class="row">
+                                                    <dt>생성한 날짜</dt>
+                                                    <dd>2021.12.12 13:12</dd>
+                                                </div>
+                                                <div class="row">
+                                                    <dt>수정한 날짜</dt>
+                                                    <dd>2021.12.12 13:12</dd>
+                                                </div>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //LS_viewer_op -->
+
+</div>
+
+<script>
+    $(function(){
+        $(".button_fold").click(function(e) {
+            $(this).parent().toggleClass("active");
+        });
+        $(".preview_section").hover(function(e) {
+            $(".toolbar:not(.full_screen)").toggleClass("fade_in");
+        });
+        $(".preview_section").hover(function(e) {
+            $(".viewer_utils").toggleClass("fade_in");
+        });
+    });
+</script>

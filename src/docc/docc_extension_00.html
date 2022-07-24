@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta id="viewport" name="viewport" content="width=1280">
+<title>DOCC</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/css/nanumsquare.css">
+<link rel="stylesheet" type="text/css" href="/css/common.css">
+<link rel="stylesheet" type="text/css" href="/css/lux.css">
+<link rel="stylesheet" type="text/css" href="/selene/css/selene.css">
+<link rel="stylesheet" type="text/css" href="/css/svc/docc.css">
+</head>
+<!-- [D] 우측확장영역 오픈시 body style="overflow-y: hidden" 필요합니다. 우측확장영역에 이너스크롤이 있으므로 브라우저 스크롤 제거를 위함입니다. -->
+<body style="overflow-y: hidden">
+    <div class="docc">
+        <div class="extension active">
+            <div class="dimmed"></div>
+            <div class="rnb">
+                <div class="rnb_title">
+                    <h2 class="ellipsis">예약현황 상세조회</h2>
+                    <button type="button" class="button_close"><span class="blind">우측확장영역 닫기</span></button>
+                </div>
+                <div class="rnb_content type_normal">
+                    <div class="group">
+                        <div class="group_title">
+                            <h3>기간</h3>
+                        </div>
+                        <div class="group_box">
+                            <div class="LUX_basic_date_gap" style="float: left;">
+                                <div class="date_gap">
+                                    <div class="LUX_basic_date">
+                                        <div class="datebx" style="width: 100px;">
+                                            <span class="inpbx">
+                                                <input type="text" id="btn_date2" value="2016.08.28">
+                                                <label for="btn_date2"></label>
+                                            </span>
+                                            <button type="button" class="btn"><span class="sp_lux">캘린더 검색</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="dash" style="width: 15px;max-width: 15px;line-height: 30px">~</span>
+                                <div class="date_gap">
+                                    <div class="LUX_basic_date">
+                                        <div class="datebx" style="width: 100px;">
+                                            <span class="inpbx">
+                                                <input type="text" id="btn_date3" value="2016.08.28">
+                                                <label for="btn_date3"></label>
+                                            </span>
+                                            <button type="button" class="btn"><span class="sp_lux">캘린더 검색</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // http://luna.duzon.com/#/rocket/LUXSelectField 로 대체하였음. -->
+                            <div class="LUX_basic_select" style="float:left;width:70px;margin-left: 5px;">
+                                <div class="searchbx">
+                                    <span class="inpbx">
+                                        <span class="placeholder text_black" style="font-size: 12px;">10시</span>
+                                    </span>
+                                    <button type="button" class="btn"><span class="sp_lux">검색</span></button>
+                                </div>
+                                <div class="resultbx">
+                                    <div class="result_scrall" style="max-height:100px"><!-- 스크롤 생성 height 높이값 제어 -->
+                                        <div class="result_scrallin">
+                                            <ul class="result_lst">
+                                                <li><a href="#"><div>10시</div></a></li>
+                                                <li><a href="#"><div>11시</div></a></li>
+                                                <li><a href="#"><div>12시</div></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group">
+                        <div class="group_title">
+                            <h3>환자유형</h3>
+                        </div>
+                        <div class="group_box">
+                            <div class="group_button_list">
+                                <ul>
+                                    <li>
+                                        <a href="#" role="button">신환초진신환초진신환초진</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" role="button">Fast Track</a>
+                                    </li>
+                                    <!-- [D] 선택 class="selected" 추가해주세요. -->
+                                    <li class="selected">
+                                        <a href="#" role="button">재진당일</a>
+                                    </li>
+                                </ul>
+                                <!-- [D] 4개일 경우 예시입니다. 삭제하고 개발해주세요. -->
+                                <ul style="margin-top: 10px;">
+                                    <li>
+                                        <a href="#" role="button">병동병동병동병동병동병동</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" role="button">신환초진</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" role="button">Fast Track</a>
+                                    </li>
+                                    <li class="selected">
+                                        <a href="#" role="button">재진당일</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group">
+                        <!-- 타이틀 영역에 나눌경우 class="division" 추가 -->
+                        <div class="group_title division">
+                            <h3>조회결과</h3>
+                            <div class="button_check_box">
+                                <label class="button_check">
+                                    <input type="checkbox" name="agree">
+                                    <span class="ico"></span>
+                                    <span class="label_text">예, 동의합니다.</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="group_box">
+                            <div class="group_tab_list">
+                                <ul role="tablist">
+                                    <li role="tab">
+                                        <a href="#">전체 <em>5</em></a>
+                                    </li>
+                                    <li role="tab">
+                                        <a href="#">본관 <em>0</em></a>
+                                    </li>
+                                    <li role="tab" class="selected">
+                                        <a href="#">암병원 <em>5</em></a>
+                                    </li>
+                                    <li role="tab">
+                                        <a href="#">양성자 <em>0</em></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="group_result_list">
+                                <ul>
+                                    <li>
+                                        <div class="reuslt_box">
+                                            <div class="result_group_box">
+                                                <span class="badge type_blue">암병원</span>
+                                                <span class="place_text">CC1-(암)-CT검사실가나다라마바사 가나다라마바사</span>
+                                            </div>
+                                            <div class="result_group_box">
+                                                <strong class="result_date">2021-03-05 금 10:10</strong>
+                                            </div>
+                                            <div class="result_group_box">
+                                                <span class="people_reservation">예약<em>3</em></span>
+                                                <span class="people_limit">정원<em>50</em></span>
+                                            </div>
+                                        </div>
+                                        <button type="button" class="button_reservation">예약 1</button>
+                                    </li>
+                                    <li>
+                                        <div class="reuslt_box">
+                                            <div class="result_group_box">
+                                                <span class="badge">본관</span>
+                                                <span class="place_text">CC1-(암)-CT검사실가나다라마바사 가나다라마바사</span>
+                                            </div>
+                                            <div class="result_group_box">
+                                                <strong class="result_date">2021-03-05 금 10:30</strong>
+                                            </div>
+                                            <div class="result_group_box">
+                                                <span class="people_reservation">예약<em>3</em></span>
+                                                <span class="people_limit">정원<em>50</em></span>
+                                            </div>
+                                        </div>
+                                        <button type="button" class="button_reservation">예약 3</button>
+                                    </li>
+                                    <li>
+                                        <div class="reuslt_box">
+                                            <div class="result_group_box">
+                                                <span class="badge">본관</span>
+                                                <span class="place_text">CC1-(암)-CT검사실가나다라마바사 가나다라마바사</span>
+                                            </div>
+                                            <div class="result_group_box">
+                                                <strong class="result_date">2021-03-05 금 10:30</strong>
+                                            </div>
+                                            <div class="result_group_box">
+                                                <span class="people_reservation">예약<em>3</em></span>
+                                                <span class="people_limit">정원<em>50</em></span>
+                                            </div>
+                                        </div>
+                                        <button type="button" class="button_reservation">예약 3</button>
+                                    </li>
+                                    <li>
+                                        <div class="reuslt_box">
+                                            <div class="result_group_box">
+                                                <span class="badge">본관</span>
+                                                <span class="place_text">CC1-(암)-CT검사실가나다라마바사 가나다라마바사</span>
+                                            </div>
+                                            <div class="result_group_box">
+                                                <strong class="result_date">2021-03-05 금 10:30</strong>
+                                            </div>
+                                            <div class="result_group_box">
+                                                <span class="people_reservation">예약<em>3</em></span>
+                                                <span class="people_limit">정원<em>50</em></span>
+                                            </div>
+                                        </div>
+                                        <button type="button" class="button_reservation">예약 3</button>
+                                    </li>
+                                    <li>
+                                        <div class="reuslt_box">
+                                            <div class="result_group_box">
+                                                <span class="badge">본관</span>
+                                                <span class="place_text">CC1-(암)-CT검사실가나다라마바사 가나다라마바사</span>
+                                            </div>
+                                            <div class="result_group_box">
+                                                <strong class="result_date">2021-03-05 금 10:30</strong>
+                                            </div>
+                                            <div class="result_group_box">
+                                                <span class="people_reservation">예약<em>3</em></span>
+                                                <span class="people_limit">정원<em>50</em></span>
+                                            </div>
+                                        </div>
+                                        <button type="button" class="button_reservation">예약 3</button>
+                                    </li>
+                                    <li>
+                                        <div class="reuslt_box">
+                                            <div class="result_group_box">
+                                                <span class="badge">본관</span>
+                                                <span class="place_text">CC1-(암)-CT검사실가나다라마바사 가나다라마바사</span>
+                                            </div>
+                                            <div class="result_group_box">
+                                                <strong class="result_date">2021-03-05 금 10:30</strong>
+                                            </div>
+                                            <div class="result_group_box">
+                                                <span class="people_reservation">예약<em>3</em></span>
+                                                <span class="people_limit">정원<em>50</em></span>
+                                            </div>
+                                        </div>
+                                        <button type="button" class="button_reservation">예약 3</button>
+                                    </li>
+                                    <li>
+                                        <div class="reuslt_box">
+                                            <div class="result_group_box">
+                                                <span class="badge type_purple">양성자</span>
+                                                <span class="place_text">CC1-(암)-CT검사실가나다라마바사 가나다라마바사</span>
+                                            </div>
+                                            <div class="result_group_box">
+                                                <strong class="result_date">2021-03-05 금 10:50</strong>
+                                            </div>
+                                            <div class="result_group_box">
+                                                <span class="people_reservation">예약<em class="full_color">50</em></span>
+                                                <span class="people_limit">정원<em>50</em></span>
+                                            </div>
+                                        </div>
+                                        <!-- [D] 마감일 경우 disabled 처리해주세요. -->
+                                        <button type="button" class="button_reservation" disabled>마감 0</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="../../js/jquery/jquery-latest.min.js"></script>
+<script type="text/javascript">
+    // 마크업 테스트용
+</script>
+</body>
+</html>

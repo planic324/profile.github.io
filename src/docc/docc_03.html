@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta id="viewport" name="viewport" content="width=1280">
+<title>DOCC</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/docc2.css">
+</head>
+<body>
+    <div class="docc">
+        <div class="docc_header">
+            <h1>CT 처방 현황 (전체)<span class="time">2021-11-16 10:25:11</span></h1>
+            <div class="right_box">
+                <div class="tab_btn_box">
+                    <!-- [D] 선택된 버튼에 .selected 추가  -->
+                    <button type="button" class="btn_item selected">주별</button>
+                    <button type="button" class="btn_item">월별</button>
+                </div>
+            </div>
+        </div>
+        <div class="docc_content">
+            <!-- [D] 와이드 대응 .v2 추가 -->
+            <div class="section_remedy_all v2">
+                <div class="top_section">
+                    <h2 class="section_title">CT 처방 및 예약 현황</h2>
+                    <div class="basic_chart_box">
+                        Chart area
+                    </div>
+                    <div class="basic_chart_box">
+                        Chart area
+                    </div>
+                </div>
+                <div class="bottom_section">
+                    <h2 class="section_title">CT 처방 진료과 TOP5</h2>
+                    <div class="stats_wrap col4">
+                        <div class="stats_box">
+                            <div class="title">1<span class="blind">순위</span></div>
+                            <div class="cont">
+                                <span class="item">IM6</span>
+                                <span class="item">소화기내과분과</span>
+                                <span class="item"><strong class="txt_blue">일평균처방 : 110</strong></span>
+                            </div>
+                        </div>
+                        <div class="stats_box">
+                            <div class="title">2<span class="blind">순위</span></div>
+                            <div class="cont">
+                                <span class="item">IM6</span>
+                                <span class="item">소화기내과분과</span>
+                                <span class="item"><strong class="txt_blue">일평균처방 : 110</strong></span>
+                            </div>
+                        </div>
+                        <div class="stats_box">
+                            <div class="title">3<span class="blind">순위</span></div>
+                            <div class="cont">
+                                <span class="item">IM6</span>
+                                <span class="item">소화기내과분과</span>
+                                <span class="item"><strong class="txt_blue">일평균처방 : 110</strong></span>
+                            </div>
+                        </div>
+                        <div class="stats_box">
+                            <div class="title">4<span class="blind">순위</span></div>
+                            <div class="cont">
+                                <span class="item">IM6</span>
+                                <span class="item">소화기내과분과</span>
+                                <span class="item"><strong class="txt_blue">일평균처방 : 110</strong></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="../../js/jquery/jquery-latest.min.js"></script>
+<script>
+    $(function(){
+        $('.tab_btn_box .btn_item').click(function(){
+            $('.btn_item').toggleClass('selected');
+        });
+    });
+</script>
+</body>
+</html>

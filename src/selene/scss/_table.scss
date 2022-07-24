@@ -1,0 +1,235 @@
+/* table */
+
+.LS_table {
+  min-width:200px;
+  border-top: 2px solid #646464;
+
+  &.thin_bordered {
+    border-top-width:1px;
+  }
+
+  .LStbl {
+    width: 100%;
+    border: 0;
+    border-collapse: separate;
+    table-layout: fixed;
+    border-spacing: 0;
+    &.rowspan_fix {
+      width:calc(100% - 1px);
+    }
+    &.default {
+      border-collapse: collapse;
+      thead tr:first-of-type th {
+        border-right:0;
+      }
+      th, td {
+        padding:0 9px;
+        height:27px;
+        font-size:12px;
+        font-weight:normal;
+        color:#000;
+        font-family: $smallfont;
+        border:1px solid #e1e1e1;
+      }
+      th {
+        background:#f7f7f7;
+
+        &:first-of-type {
+          border-left:0;
+        }
+      }
+      td {
+        &:last-of-type {
+          border-right:0;
+        }
+      }
+    }
+    &.v2 {
+      th {
+        font-weight:bold;
+        font-size:13px;
+        line-height:18px;
+        border-width:0 1px 1px 0;
+        vertical-align:top;
+        padding:9px 0;
+        font-family: 'Nanum Square','돋움',Dotum,Helvetica,'Apple SD Gothic Neo',sans-serif;
+        .inbx {
+          position:relative;
+          padding: 4px 16px 3px;
+        }
+      }
+      tr:first-of-type {
+        th, td {
+          border-top:0;
+        }
+      }
+      td {
+        padding:6px 0 5px;
+        .inbx {
+          padding:0 14px;
+        }
+      }
+    }
+    th.is_justify {
+      .inbx {
+        height: 16px;
+        margin: 0 auto;
+        text-align: justify;
+        &:after {
+          display: inline-block;
+          width: 100%;
+          content: '';
+        }
+      }
+    }
+  }
+  &.ngh_table {
+    border-top:2px solid $table-bt-color;
+    &.thin_bordered {
+      border-top-width:1px;
+    }
+
+    &.rect_border {
+      border:2px solid #e6e6e6;
+      border-bottom-width:1px;
+    }
+    .LStbl {
+      border-top:0;
+      border-bottom:0;
+      border-collapse:collapse;
+      font-size:12px;
+      font-family: $smallfont;
+      td, th {
+        padding:0;
+        border-style: solid;
+        border-color:#e1e1e1;
+        border-width:0 1px 1px 0;
+        font-weight:normal;
+        height:27px;
+        &.grey_cell {
+          background:#fafafa;
+        }
+        &:last-child {
+          border-right:0;
+        }
+        &.disabled {
+          background: $disable-color;
+        }
+        &.is_bd_right {
+            border-right:1px solid #e1e1e1;
+        }
+      }
+      th {
+        background:#f7f7f7;
+        height:27px;
+        line-height:16px;
+        font-weight:bold;
+        .inbx {
+          padding:0 10px;
+        }
+        &[rowspan] {
+          border-left:1px solid #e1e1e1;
+          &:first-of-type {
+            border-left:0;
+          }
+          + [rowspan] {
+            border-left:0;
+          }
+        }
+      }
+      td {
+        padding:0 5px;
+        line-height: 18px;
+        text-align:center;
+        &.inbx_lux {
+          overflow:hidden;
+        }
+        &.sao_txtbx {
+          margin:-1px;
+        }
+        /* table-td hover border
+        &:hover {
+          .inbx:before {
+            position:absolute;
+            top:-1px;
+            right:-1px;
+            left:-1px;
+            bottom:-1px;
+            border:2px solid $point_color;
+            content:'';
+          }
+        }
+        */
+      }
+      tfoot td {
+        background:#fff4cc;
+      }
+      .icon_filed {
+        text-align:center;
+      }
+      .inbx {
+        position:relative;
+        word-wrap: break-word;
+        word-break: break-all;
+        .inbx_value {
+          padding:0 6px;
+          line-height:27px;
+        }
+      }
+      .sales_tax {
+        background-color:#fff3f3;
+        color:#fc5356;
+        .purchase_tax {
+          background-color:#eefaff;
+          color: $point_color;
+        }
+      }
+    }
+  }
+  .LS_ngh_input2 .LSinput,
+  .LS_ngh_input2 .fakeinput {
+    padding-top:5px;
+  }
+  .LS_ngh_select2 .LSinput,
+  .LS_ngh_select2 .fakeinput {
+    padding: 5px 9px 4px;
+    line-height:normal;
+  }
+  .LS_ngh_select2 .fakeinput {
+    display:block;
+    height:100%;
+  }
+  &.noline.ngh_table {
+    &.del_btline .LStbl {
+      border-bottom:0;
+    }
+    .LStbl {
+      border-bottom:1px solid #e5e5e5;
+    }
+    .LStbl td, .LStbl th {
+      border:0 !important;
+      padding:2px 10px;
+      box-sizing:content-box;
+    }
+    .LStbl tr:first-of-type th {
+      padding-top:4px;
+    }
+    .LStbl tr:first-of-type td {
+      padding-top:6px;
+    }
+    .LStbl tr:last-of-type th,
+    .LStbl tr:last-of-type td
+     {
+      padding-bottom:6px;
+    }
+    .LS_ngh_input2,
+    .LS_ngh_select2 {
+      border-width:1px;
+      border-color:#dbdbdb;
+      margin:0;
+    }
+  }
+  .celblue {
+    background: #f0f6fa!important;
+  }
+}

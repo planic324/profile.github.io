@@ -1,0 +1,19 @@
+/* sprite images */
+
+@mixin sprite-img($url) {
+ display: inline-block;
+  overflow: hidden;
+  background: url($url) 0 0 no-repeat;
+  line-height: 100em;
+  vertical-align: top;
+}
+
+@mixin sprite-size($width, $height) {
+ position:absolute;
+ top:50%;
+ left:50%;
+ width:$width;
+ height:$height;
+ margin-top:-($height / 2);
+ margin-left:-($width / 2);
+}

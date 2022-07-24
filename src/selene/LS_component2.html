@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta id="viewport" name="viewport" content="width=1280">
+<meta property="og:title" content="SELENE"/>
+<meta property="og:url" content="http://172.16.114.131/html/common/LS_component.html" />
+<meta property="og:description" content="Selene UI 컴포넌트"/>
+<link rel="shortcut icon" href="img/selene_fv.png">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.12.0/build/styles/github.min.css">
+<title>WEHAGO Component</title>
+<!-- Selene CSS -->
+<link rel="stylesheet" type="text/css" href="css/selene.css">
+<link rel="stylesheet" type="text/css" href="component.css">
+</head>
+<body>
+<div class="header">
+    <h1>
+        <a href="LS_component.html">WEHAGO Component</a>
+    </h1>
+    <a href="http://wiki.duzon.com:8080/pages/viewpage.action?pageId=21589840" target="_blank" class="athor_link">웹표준개발팀</a>
+</div>
+<div class="container">
+    <!-- 사이드 메뉴 -->
+    <div class="aside">
+        <strong>Table</strong>
+        <ul class="menu">
+            <li>
+                <a href="#" data-ls="LS_table_ngh2" title="Nigahae2">UFO table</a>
+            </li>
+            <li>
+                <a href="#" data-ls="LS_tbl" title="LS_tbl">Table</a>
+            </li>
+        </ul>
+
+        <strong>Input</strong>
+        <ul class="menu">
+            <li>
+                <a href="#" data-ls="LS_saoinput2" title="SAO Input2 (renewal beta)">UFO Input2 (renewal beta)</a>
+            </li>
+            <li>
+                <a href="#" data-ls="LS_HSearch">HSearch</a>
+            </li>
+            <li>
+                <a href="#" data-ls="LS_pwpad">PWpad</a>
+            </li>
+            <li>
+                <a href="#" data-ls="LS_pwinput">PWinput</a>
+            </li>
+            <li>
+                <a href="#" data-ls="LS_Tag_Select">TagSelect</a>
+            </li>
+        </ul>
+
+        <strong>Picker</strong>
+        <ul class="menu">
+            <li>
+                <a href="#" data-ls="LS_datepicker">Datepicker</a>
+            </li>
+        </ul>
+
+        <strong>Sub Header</strong>
+        <ul class="menu">
+            <li>
+                <a href="#" data-ls="LS_subheader">Sub Header</a>
+            </li>
+        </ul>
+
+        <strong>Button</strong>
+        <ul class="menu">
+            <li>
+                <a href="#" data-ls="LS_btn">LS_btn</a>
+            </li>
+            <li>
+                <a href="#" data-ls="LS_splitbtn">Split Button</a>
+            </li>
+        </ul>
+
+        <strong>Select</strong>
+        <ul class="menu">
+            <li>
+                <a href="#" data-ls="LS_roundselect">Round Select</a>
+            </li>
+            <li>
+                <a href="#" data-ls="LS_multiselect">Multi Select</a>
+            </li>
+            <li>
+                <a href="#" data-ls="LS_SmartSelect">Smart Select</a>
+            </li>
+        </ul>
+        <strong>Viewer</strong>
+        <ul class="menu">
+            <li>
+                <a href="#" data-ls="LS_viewer">Viewer</a>
+            </li>
+            <li>
+                <a href="#" data-ls="LS_viewer2">Viewer2</a>
+            </li>
+            <li>
+                <a href="#" data-ls="LS_fixviewer">Fix Viewer</a>
+            </li>
+        </ul>
+        <strong>Preview</strong>
+        <ul class="menu">
+            <li>
+                <a href="#" data-ls="LS_ogurl">URL / Image 미리보기</a>
+            </li>
+            <li>
+                <a href="#" data-ls="LS_uploadpreview">Uploadpreview</a>
+            </li>
+        </ul>
+        <strong>Notification</strong>
+        <ul class="menu">
+            <li>
+                <a href="#" data-ls="LS_notification">Notification</a>
+            </li>
+        </ul>
+        <strong>Accordion</strong>
+        <ul class="menu">
+            <li>
+                <a href="#" data-ls="LS_Accordion_TOS">Terms of service</a>
+            </li>
+        </ul>
+        <strong>Utility</strong>
+        <ul class="menu">
+            <li>
+                <a href="#" data-ls="LS_spinner">Loader/Spinner</a>
+            </li>
+            <li>
+                <a href="#" data-ls="LS_icons">Icons</a>
+            </li>
+            <li>
+                <a href="#" data-ls="LS_rangeslider">Range Slider</a>
+            </li>
+            <li>
+                <a href="#" data-ls="LS_poll">Poll</a>
+            </li>
+            <li>
+                <a href="#" data-ls="LS_reply">Reply</a>
+            </li>
+            <li>
+                <a href="#" data-ls="LS_namecard">Namecard(profile)</a>
+            </li>
+        </ul>
+
+        <strong>Etc</strong>
+        <ul class="menu">
+            <li>
+                <a href="#" data-ls="mixin">* MIXIN</a>
+            </li>
+            <li>
+                <a href="../selene-ufo/UFO_component.html" >UFO Component</a>
+            </li>
+        </ul>
+    </div>
+    <!-- // 사이드 메뉴 -->
+
+    <!-- 결과 노출 페이지 -->
+    <div class="result">
+        <div class="component_contents" data-ls="default">
+            <p>LUNA Selene 컴포넌트 마크업 페이지입니다.</p>
+
+        </div>
+
+        <!--- ngh_table -->
+        <div class="component_contents" data-ls="LS_table_ngh">
+            <h2>Nigahae</h2>
+            <p class="combobox">NIGAHAE Table(SAO)형식에서 사용되는 컴포넌트 모음</p>
+        </div>
+        <div class="component_contents" data-ls="LS_table_ngh2">
+            <h2>Nigahae</h2>
+            <p class="combobox">NIGAHAE Table(SAO)형식에서 사용되는 컴포넌트 모음</p>
+        </div>
+
+        <!--- LS_saoinput -->
+        <div class="component_contents" data-ls="LS_saoinput">
+            <h2>LS_saoinput</h2>
+            <p class="combobox">NIGAHAE Table(SAO)스타일의 input / select</p>
+        </div>
+        <div class="component_contents" data-ls="LS_saoinput2">
+            <h2>LS_saoinput</h2>
+            <p class="combobox">NIGAHAE Table(SAO)스타일의 input / select</p>
+        </div>
+
+        <!-- LS_splitbtn -->
+        <div class="component_contents" data-ls="LS_splitbtn">
+            <h2>LS_splitbtn</h2>
+            <p class="combobox">일반버튼과 드롭다운 메뉴가 결합된 형태의 버튼</p>
+        </div>
+
+        <!-- LS_Viewer -->
+        <div class="component_contents" data-ls="LS_viewer">
+            <h2>LS_viewer</h2>
+            <p class="combobox">이미지 파일과 PDF 파일 등을 볼 수 있는 뷰어 컴포넌트</p>
+        </div>
+        <div class="component_contents" data-ls="LS_viewer2">
+            <h2>LS_viewer2</h2>
+            <p class="combobox">이미지 파일과 PDF 파일 등을 볼 수 있는 뷰어 컴포넌트</p>
+        </div>
+
+        <!-- LS_fixiewer -->
+        <div class="component_contents" data-ls="LS_fixviewer">
+            <h2>LS_fixviewer</h2>
+            <p class="combobox">서비스내에서 우측확장영역으로 노출되는 뷰어<br><a href="http://172.16.114.131/html/cf/cf_04_02.html" target="_blank">[서비스 적용 예시]</a></p>
+        </div>
+
+        <!-- LS_spinner -->
+        <div class="component_contents clearfix" data-ls="LS_spinner">
+            <h2>LS_spinner / LS_loader</h2>
+            <p class="combobox">Loading Spinner and Loader</p>
+        </div>
+
+        <!-- LS_yearpicker -->
+        <div class="component_contents clearfix" data-ls="LS_datepicker">
+            <h2>LS_Datepicker</h2>
+            <p class="combobox">날짜, 연도 등을 선택할 수 있는 컴포넌트</p>
+        </div>
+
+        <!-- LS_ogurl -->
+        <div class="component_contents clearfix" data-ls="LS_ogurl">
+            <h2>LS_ogurl / LS_ogimage</h2>
+            <p class="combobox">URL 링크 및 이미지 미리보기</p>
+        </div>
+
+        <!-- MIXIN -->
+        <div class="component_contents clearfix" data-ls="mixin">
+            <h2>MIXIN</h2>
+            <p class="combobox">Selene SCSS 코드에서 사용하는 MIXIN 설명</p>
+        </div>
+
+        <!-- LS_HSearch -->
+        <div class="component_contents clearfix" data-ls="LS_HSearch">
+            <h2>LS_HSearch</h2>
+            <p class="combobox">헤더영역에 사용되는 전체검색 또는 서비스 검색기능</p>
+        </div>
+        <!-- LS_uploadpreview -->
+        <div class="component_contents clearfix" data-ls="LS_uploadpreview">
+            <h2>LS_uploadpreview</h2>
+            <p class="combobox">커뮤니케이션내에 파일 프리뷰 관련 컴포넌트</p>
+        </div>
+
+        <!-- LS_pwpad -->
+        <div class="component_contents clearfix" data-ls="LS_pwpad">
+            <h2>LS_pwpad</h2>
+            <p class="combobox">결제 비밀번호 입력시 노출되는 키패드 컴포넌트</p>
+        </div>
+
+        <!-- LS_pwinput -->
+        <div class="component_contents clearfix" data-ls="LS_pwinput">
+            <h2>LS_pwinput</h2>
+            <p class="combobox">결제 비밀번호가 입력되는 input 컴포넌트</p>
+        </div>
+
+        <!-- LS_subheader -->
+        <div class="component_contents clearfix" data-ls="LS_subheader">
+            <h2>LS_subheader</h2>
+            <p class="combobox">Wehago 서비스 내에서 사용되는 Sub Header 컴포넌트</p>
+        </div>
+        <!-- LS_icons -->
+        <div class="component_contents clearfix" data-ls="LS_icons" style="min-width:1020px;">
+            <h2>LS_icons</h2>
+            <p class="combobox">WEHAGO 서비스 Icons 컴포넌트</p>
+        </div>
+        <!-- LS_notification -->
+        <div class="component_contents clearfix" data-ls="LS_notification">
+                <h2>LS_notification</h2>
+                <p class="combobox">Sub Header에서 사용되는 서비스별 알림기능</p>
+            </div>
+        <!-- LS_Accordion_TOS -->
+        <div class="component_contents clearfix" data-ls="LS_Accordion_TOS">
+            <h2>LS_Accordion_TOS</h2>
+            <p class="combobox">WEHAGO 서비스 이용약관 컴포넌트</p>
+        </div>
+        <!-- LS_Tbl -->
+        <div class="component_contents clearfix" data-ls="LS_tbl">
+            <h2>LS_tbl</h2>
+            <p class="combobox">Selene Table Guide</p>
+        </div>
+        <!-- LS_Tbl -->
+        <div class="component_contents clearfix" data-ls="LS_rangeslider">
+            <h2>LS_rangeslider</h2>
+            <p class="combobox">Range Slider</p>
+        </div>
+        <!-- LS_roundbtn -->
+        <div class="component_contents clearfix" data-ls="LS_roundselect">
+            <h2>LS_roundselect</h2>
+            <p class="combobox">공통 헤더영역에서 사용되는 라운드 셀렉트 스타일의 버튼</p>
+        </div>
+
+        <!-- LS_poll -->
+        <div class="component_contents clearfix" data-ls="LS_poll">
+            <h2>LS_poll</h2>
+            <p class="combobox">설문조사 컴포넌트</p>
+        </div>
+
+        <!-- LS_Tag_Select -->
+        <div class="component_contents clearfix" data-ls="LS_Tag_Select">
+            <h2>LS_Tag_Select</h2>
+            <p class="combobox">할일 서비스 체크박스 선택 태그 컴포넌트</p>
+        </div>
+        
+        <!-- LS_multiselect -->
+        <div class="component_contents clearfix" data-ls="LS_multiselect">
+            <h2>LS_multiselect</h2>
+            <p class="combobox">멀티 셀렉터 컴포넌트</p>
+        </div>
+
+        <!-- LS_reply -->
+        <div class="component_contents clearfix" data-ls="LS_reply">
+            <h2>LS_reply</h2>
+            <p class="combobox">댓글 컴포넌트</p>
+        </div>
+
+        <!-- LS_SmartSelect -->
+        <div class="component_contents clearfix" data-ls="LS_SmartSelect">
+            <h2>LS_SmartSelect</h2>
+            <p class="combobox">스마트한 체크기능이 있는 셀렉트 박스(경영관리 - 분개구분에서 사용)</p>
+        </div>
+        
+        <!-- LS_namecard -->
+        <div class="component_contents clearfix" data-ls="LS_namecard">
+            <h2>LS_namecard</h2>
+            <p class="combobox">공통으로 사용되는 프로필 화면</p>
+        </div>
+
+        <!-- LS_btn -->
+        <div class="component_contents clearfix" data-ls="LS_btn">
+            <h2>LS_btn</h2>
+            <p class="combobox">공통으로 사용되는 버튼(아직 컴퍼넌트로 제작되지 않음)</p>
+        </div>
+    </div>
+    <!-- // 결과 노출 페이지 -->
+</div>
+<script src="//code.jquery.com/jquery-latest.min.js"></script>
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.12.0/build/highlight.min.js"></script>
+<script src="../../selene/LS_component.js"></script>
+<script>
+$(function() {
+    $('.component_contents[data-ls]').each(function(index) {
+        $(this).append('<div data-component="' + $(this).attr('data-ls') + '"></div>');
+    });
+    hljs.initHighlightingOnLoad();
+
+    $('div[data-component="LS_table_ngh"]').include('../../selene/LS_table_Nigahae.html');
+    $('div[data-component="LS_table_ngh2"]').include('../../selene/LS_table_Nigahae2.html');
+    $('div[data-component="LS_splitbtn"]').include('../../selene/LS_splitbtn.html');
+    $('div[data-component="LS_spinner"]').include('../../selene/LS_spinner.html');
+    $('div[data-component="LS_viewer"]').include('../../selene/LS_viewer.html');
+    $('div[data-component="LS_viewer2"]').include('../../selene/LS_viewer2.html');
+    $('div[data-component="LS_fixviewer"]').include('../../selene/LS_fixviewer.html');
+    $('div[data-component="LS_saoinput"]').include('../../selene/LS_saoinput.html');
+    $('div[data-component="LS_saoinput2"]').include('../../selene/LS_saoinput2.html');
+    $('div[data-component="LS_datepicker"]').include('../../selene/LS_datepicker.html');
+    $('div[data-component="LS_ogurl"]').include('../../selene/LS_ogurl.html');
+    $('div[data-component="LS_HSearch"]').include('../../selene/LS_hsearch.html');
+    $('div[data-component="LS_uploadpreview"]').include('../../selene/LS_uploadpreview.html');
+    $('div[data-component="LS_pwpad"]').include('../../selene/LS_pwpad.html');
+    $('div[data-component="LS_pwinput"]').include('../../selene/LS_pwinput.html');
+    $('div[data-component="LS_subheader"]').include('../../selene/LS_subheader.html');
+    $('div[data-component="mixin"]').include('../../selene/mixin.html');
+    $('div[data-component="LS_icons"]').include('../../selene/LS_icons.html');
+    $('div[data-component="LS_notification"]').include('../../selene/LS_notification.html');
+    $('div[data-component="LS_Accordion_TOS"]').include('../../selene/LS_Accordion_TOS.html');
+    $('div[data-component="LS_tbl"]').include('../../selene/LS_tbl.html');
+    $('div[data-component="LS_rangeslider"]').include('../../selene/LS_rangeslider.html');
+    $('div[data-component="LS_roundselect"]').include('../../selene/LS_roundselect.html');
+    $('div[data-component="LS_poll"]').include('../../selene/LS_poll.html');
+    $('div[data-component="LS_Tag_Select"]').include('../../selene/LS_Tag_Select.html');
+    $('div[data-component="LS_multiselect"]').include('../../selene/LS_multiselect.html');
+    $('div[data-component="LS_reply"]').include('../../selene/LS_reply.html');
+    $('div[data-component="LS_SmartSelect"]').include('../../selene/LS_smartselect.html');
+    $('div[data-component="LS_namecard"]').include('../../selene/LS_namecard.html');
+    $('div[data-component="LS_btn"]').include('../../selene/LS_btn.html');
+
+    $(document).on('click','.demo_preview>button',function() {
+         $(this).parents('div[data-component]').children('.demo_snippet').toggle();
+    });
+    $(document).on('click','.snippet_clr',function() {
+        $(this).parent().toggle();
+    });
+
+    $('.LSselectResult').css('display','none');
+    $(document).on('click','.LS_ngh_select',function() {
+        $(this).children('.LSselectResult').toggle();
+    });
+
+    
+});
+
+</script>
+<!-- [D] 마크업 테스트 코드 -->
+<script>
+
+    //$('.LSselectResult').css('display','none');
+    //$('.LS_ngh_select').click(function() {
+    //    $(this).children('.LSselectResult').toggle();
+    //})
+
+//    var resultBox = document.getElementsByClassName('LSselectResult');
+//    var nghSelect = document.getElementsByClassName('LS_ngh_select');
+//
+//
+//    for(var i=0;i<resultBox.length;i++) { // 결과 레이어 모두 display:none
+//        resultBox[i].style.display = "none";
+//    }
+//
+//    for(var i=0;i<nghSelect.length;i++) { // select input 검색하여 클릭할때 display:none / block 처리
+//        (function(m) { // 클로저
+//            nghSelect[m].addEventListener('click', function(e) {
+//                if(nghSelect[m].querySelector('.LSselectResult')) {
+//                    var display_check = nghSelect[m].querySelector('.LSselectResult').style.display;
+//                    nghSelect[m].querySelector('.LSselectResult').style.display = (display_check == "none" ? "block" : "none");
+//                }
+//            }, false);
+//        })(i);
+//    }
+</script>
+</body>
+</html>

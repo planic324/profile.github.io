@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DOCC</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/css/nanumsquare.css">
+<link rel="stylesheet" type="text/css" href="css/docc2.css">
+<!-- 마크업 확인용 Include -->
+<script src="includeHTML.js"></script>
+<!-- //마크업 확인용 Include -->
+</head>
+<body>
+    <div class="docc renew reduction">
+        <div id="header" class="header" include-html="docc_include_header.html"></div>
+        <div class="container">
+            <div class="banner">
+                <div class="banner_title">
+                    <h2>DOCC</h2>
+                </div>
+                <div class="banner_content">
+                    <div class="left_bx">
+                        <div class="banner_bi">
+                            <span class="blind">DOCC - DATA BASED OPERATION AND COMMUNICATION CENTER</span>
+                        </div>
+                        <p class="banner_bi_text">축적된 병원의 실시간 데이터를 중심으로 현장 이슈 모니터링 및 소통 가능한 서비스</p>
+                    </div>
+                    <div class="right_bx">
+                        <div class="search_bx">
+                            <input type="text" placeholder="검색어를 입력하세요">
+                            <button type="button" class="icon_search"><span class="blind">검색 버튼</span></button>
+                            <button type="button" class="icon_delete"><span class="blind">검색 내용 삭제</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="snb">
+                    <ul class="snb_bx">
+                        <!-- [D] 클릭시 li class="active" 추가해주세요. -->
+                        <li class="active">
+                            <a href="#" class="list_icon home"><i class="icon_bx"></i><span>홈</span></a>
+                        </li>
+                        <li>
+                            <a href="#" class="list_icon pan"><i class="icon_bx"></i><span>PAN</span></a>
+                        </li>
+                        <li>
+                            <a href="#" class="list_icon fav"><i class="icon_bx"></i><span>즐겨찾기</span></a>
+                        </li>
+                        <li>
+                            <a href="#" class="list_icon recent"><i class="icon_bx"></i><span>최근항목</span></a>
+                        </li>
+                        <li>
+                            <a href="#" class="list_icon setting"><i class="icon_bx"></i><span>설정</span></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="division_bx">
+                    <div class="indicator_bx">
+                        <div class="multiple_bx">
+                            <a href="#" class="indicator_title">운영지표</a>
+                            <div class="button_item">
+                                <!-- [D] 클릭시 TEXT: 드릴다운 ON/OFF 수정해주세요. -->
+                                <button type="button" class="button_default">드릴다운 <em class="text_blue">ON</em></button>
+                                <span class="dash"></span>
+                                <button type="button" class="button_default"><i class="icon_zoom"></i>확대</button>
+                                <div class="common_component_select open">
+                                    <!-- [D] .selected_item 클릭시 .common_component_select에 .open 추가 -->
+                                    <button type="button" class="selected_item"><span class="color_label" style="background:#2843c1;"></span>블루테마</button>
+                                    <div class="common_component_select_resultbox">
+                                        <ul>
+                                            <!-- [D] 선택했을때 .selected 추가 -->
+                                            <li class="selected">
+                                                <button type="button" class="resultitem"><span class="color_label" style="background:#2843c1;"></span>블루테마</button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="resultitem"><span class="color_label" style="background:#000;"></span>블랙테마</button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pan_bx">
+                            <div class="docc">
+                                <!-- [D] 버튼 클릭하여 활성화시 class="active" 추가 -->
+                            <div class="zoom_bx active">
+                                <button type="button" class="button_fold"><span class="blind">확대모드 헤더 열기</span></button>
+                                <div class="tool_bx">
+                                    <div class="tool_division">
+                                        <div class="flow_title">
+                                            <a href="#">운영지표</a>
+                                            <span class="dash"></span>
+                                            <!-- [D] 현재 위치하고 있는 페이지 네비게이션 표기 class="active" 추가해주세요. -->
+                                            <a href="#" class="active">CT운영현황</a>
+                                        </div>
+                                        <div class="button_item">
+                                            <button type="button" class="button_default">드릴다운 <em class="text_blue">ON</em></button>
+                                            <span class="dash"></span>
+                                            <button type="button" class="button_default"><i class="icon_zoomout"></i>축소</button>
+                                            <div class="common_component_select open">
+                                                <!-- [D] .selected_item 클릭시 .common_component_select에 .open 추가 -->
+                                                <button type="button" class="selected_item"><span class="color_label" style="background:#000;"></span>블랙테마</button>
+                                                <div class="common_component_select_resultbox">
+                                                    <ul>
+                                                        <!-- [D] 선택했을때 .selected 추가 -->
+                                                        <li class="selected">
+                                                            <button type="button" class="resultitem"><span class="color_label" style="background:#2843c1;"></span>블루테마</button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="resultitem"><span class="color_label" style="background:#000;"></span>블랙테마</button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button type="button" class="button_close"><span class="blind">헤더 닫기</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                                <div class="docc_header">
+                                    <h1>운영지표<span class="time">2021-11-16 10:25:11</span></h1>
+                                    <div class="right_box">
+                                        <div class="tab_btn_box">
+                                            <!-- [D] 선택된 버튼에 .selected 추가  -->
+                                            <button type="button" class="btn_item selected">분기별</button>
+                                            <button type="button" class="btn_item">월별</button>
+                                            <button type="button" class="btn_item">주별</button>
+                                            <button type="button" class="btn_item">일별</button>
+                                            <button type="button" class="btn_item">오늘</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="docc_content">
+                                    <div class="section_indicator">
+                                        <div class="top_section">
+                                            <div class="left_section">
+                                                <h2 class="section_title">CT 운영 현황</h2>
+                                                <div class="basic_chart_box">
+                                                    <div class="chart_top_box">
+                                                        <div class="info_text_box">
+                                                            <h3 class="section_title2">CT 검사 진행률</h3>
+                                                            <span class="num value_up"><em>80</em>%</span><span class="blind">상승</span>
+                                                        </div>
+                                                        <div class="info_label_box">
+                                                            <span class="info_label"
+                                                                style="background-image:linear-gradient(to right,#ab2f2f 20%,transparent 95%);">
+                                                                <span class="tit">검사건수</span>
+                                                                <span class="num">130건</span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    Chart area
+                                                </div>
+                                            </div>
+                                            <div class="center_section">
+                                                <h2 class="section_title">MRI 운영 현황</h2>
+                                                <div class="basic_chart_box">
+                                                    <div class="chart_top_box">
+                                                        <div class="info_text_box">
+                                                            <h3 class="section_title2">MRI 검사 진행률</h3>
+                                                            <span class="num value_up"><em>80</em>%</span><span class="blind">상승</span>
+                                                        </div>
+                                                        <div class="info_label_box">
+                                                            <span class="info_label"
+                                                                style="background-image:linear-gradient(to right,#657ab1 20%,transparent 95%);">
+                                                                <span class="tit">검사건수</span>
+                                                                <span class="num">30건</span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    Chart area
+                                                </div>
+                                            </div>
+                                            <div class="right_section">
+                                                <h2 class="section_title">채혈 운영 현황</h2>
+                                                <div class="basic_chart_box">
+                                                    <div class="chart_top_box">
+                                                        <div class="info_text_box">
+                                                            <h3 class="section_title2">검사 환자수</h3>
+                                                            <span class="num value_down"><em>1,280</em>명</span><span class="blind">하락</span>
+                                                        </div>
+                                                        <div class="info_label_box">
+                                                            <span class="info_label"
+                                                                style="background-image:linear-gradient(to right,#835499 20%,transparent 95%);">
+                                                                <span class="tit">대기환자</span>
+                                                                <span class="num">30건</span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    Chart area
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bottom_section">
+                                            <div class="left_section">
+                                                <h2 class="section_title">외래 운영 현황</h2>
+                                                <div class="basic_chart_box">
+                                                    <div class="chart_top_box">
+                                                        <div class="info_text_box">
+                                                            <h3 class="section_title2">외래 진행률</h3>
+                                                            <span class="num value_down"><em>80</em>%</span><span class="blind">하락</span>
+                                                        </div>
+                                                        <div class="info_label_box">
+                                                            <span class="info_label"
+                                                                style="background-image:linear-gradient(to right,#ab2f2f 20%,transparent 95%);">
+                                                                <span class="tit">진료대기율</span>
+                                                                <span class="num">50%</span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    Chart area
+                                                </div>
+                                            </div>
+                                            <div class="center_section">
+                                                <h2 class="section_title">병상 운영 현황</h2>
+                                                <div class="basic_chart_box">
+                                                    <div class="chart_top_box">
+                                                        <div class="info_text_box">
+                                                            <h3 class="section_title2">병상 가동률</h3>
+                                                            <span class="num value_up"><em>80</em>%</span><span class="blind">상승</span>
+                                                        </div>
+                                                        <div class="info_label_box">
+                                                            <span class="alert_text">가동률 높음</span>
+                                                        </div>
+                                                    </div>
+                                                    Chart area
+                                                    <div class="stats_index_box type_float_bottom">
+                                                        <div class="item_wrap">
+                                                            <dl class="con_box">
+                                                                <div class="item">
+                                                                    <dt>공병상</dt>
+                                                                    <dd>321개</dd>
+                                                                </div>
+                                                            </dl>
+                                                            <dl class="add_box">
+                                                                <dt>전일</dt>
+                                                                <dd>399</dd>
+                                                            </dl>
+                                                        </div>
+                                                        <div class="item_wrap">
+                                                            <dl class="con_box">
+                                                                <div class="item">
+                                                                    <dt>재원</dt>
+                                                                    <dd>1,321명</dd>
+                                                                </div>
+                                                            </dl>
+                                                            <dl class="add_box">
+                                                                <dt>전일</dt>
+                                                                <dd>1,349</dd>
+                                                            </dl>
+                                                        </div>
+                                                        <div class="item_wrap">
+                                                            <dl class="con_box">
+                                                                <div class="item">
+                                                                    <dt>입원</dt>
+                                                                    <dd>32명</dd>
+                                                                </div>
+                                                            </dl>
+                                                            <dl class="add_box">
+                                                                <dt>전일</dt>
+                                                                <dd>129</dd>
+                                                            </dl>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="right_section">
+                                                <h2 class="section_title">수술 운영 현황</h2>
+                                                <div class="basic_chart_box">
+                                                    <div class="chart_top_box">
+                                                        <div class="info_text_box">
+                                                            <h3 class="section_title2">수술실 가동률</h3>
+                                                            <span class="num value_down"><em>80</em>%</span><span class="blind">하락</span>
+                                                        </div>
+                                                        <div class="info_label_box">
+                                                            <span class="alert_text">가동률 높음</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="chart_divide_box">
+                                                        <div class="stats_index_box type_vertical">
+                                                            <div class="item_wrap">
+                                                                <dl class="con_box">
+                                                                    <div class="item">
+                                                                        <dt>수술중</dt>
+                                                                        <dd>32개</dd>
+                                                                    </div>
+                                                                    <div class="item">
+                                                                        <dt class="robot_label">로봇</dt>
+                                                                        <dd>3개</dd>
+                                                                    </div>
+                                                                </dl>
+                                                                <dl class="add_box">
+                                                                    <div class="con_box">
+                                                                        <dt>봉합중</dt>
+                                                                        <dd>9개</dd>
+                                                                    </div>
+                                                                </dl>
+                                                            </div>
+                                                            <div class="item_wrap">
+                                                                <dl class="con_box">
+                                                                    <div class="item">
+                                                                        <dt>공실</dt>
+                                                                        <dd>21개</dd>
+                                                                    </div>
+                                                                </dl>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            Chart area
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="../../js/jquery/jquery-latest.min.js"></script>
+<script>
+    includeHTML();
+</script>
+</body>
+</html>

@@ -29,6 +29,7 @@
 <script src="js/jquery/jquery-latest.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.9/fullpage.min.js"></script>
 <script src="js/slick/slick.min.js"></script>
+<script src="js/slimscroll/jquery.slimscroll.js"></script>
 <script src="js/planic.js"></script>
 </head>
 <body>
@@ -177,28 +178,18 @@
 									<dl class="itemList">
 										<div class="dl_item">
 											<dt>URL</dt>
-											<dd><a href="https://series.naver.com/novel/home.series?isWebtoonAgreePopUp=true" target="_blank">바로가기</a></dd>
+											<dd><a href="https://series.naver.com/novel/home.series?isWebtoonAgreePopUp=true" target="_blank">바로가기 &gt;</a></dd>
 										</div>
 										<div class="dl_item">
-											<dt>사용스킬</dt>
-											<dd>html, sass(gulp)</dd>
+											<dt>Skills</dt>
+											<dd>html, css, sass</dd>
 										</div>
 										<div class="dl_item">
-											<dt>특이사항</dt>
+											<dt>특이사항 & 개선</dt>
 											<dd>
-												<span>결제 서비스를 개선 시점을 기점으로 scss를 통해 기존 코드 개선</span>
-												<span>
-													컨텐츠 우측상단 표기되는 라벨 아이콘 관리가 되지 않아, 동일성격의 다양한 이미지가 존재하였다.
-													그로인해 라벨에 관한 class 타입이 <strong>23개</strong>로 확인되었으며, 가장큰 문제는 개발자마다 다른 라벨을 적용하였다.
-													이를 총 <strong>10개</strong>로 통일화 개선을 진행하였으며, 시리즈를 관리하고 있는 개발자 및 기획자와 회의를 통해 통일화 작업을 진행하였다.
-												</span>
-												<span>
-													ie7을 대응하기 위해 border-radius 효과를 이미지를 이용하여 background로 border-radius를 그리고 있었다.
-													물론, 크로스브라우징을 위해 ie7도 다른 브라우저와 동일하게 노출되어야되지만, 이미지로 들어가는 요소가 많아지면서
-													모바일에서 필요없는 이미지 파일을 모두 불러오는 이슈가 생기게 되었다.
-													ie7수요를 파악 후, 기획자와 협의를 통해 기존에 이미지로 들어간 border-radius를 모두 css로만 제어하기로 진행 하였다.
-													그로인해 메인페이지에서 들어가는 고용량의 스프라이트 이미지(2000px x 5000px:사이즈)를 배제할 수 있었다.
-												</span>
+												<span>크로스 브라우징 범위 : ie7 - ie10</span>
+												<span>css > sass 변경작업</span>
+												<span>라벨(뱃지) 공통화 작업</span>
 											</dd>
 										</div>
 									</dl>
@@ -244,15 +235,14 @@
 											<dd><a href="https://navercloudcorp.com/" target="_blank">바로가기</a></dd>
 										</div>
 										<div class="dl_item">
-											<dt>사용스킬</dt>
-											<dd>html, sass(gulp)</dd>
+											<dt>Skills</dt>
+											<dd>html, sass</dd>
 										</div>
 										<div class="dl_item">
 											<dt>특이사항</dt>
 											<dd>
-												<p>공공기관, 회원전용, 고객용 다양한 페이지를 git을 이용한 분산관리 작업진행</p>
-												<p>스프라이트 이미지 작업이 아닌, <a href="https://icomoon.io/" class="linkText" target="_blank">ico-moon</a>서비스를 이용해 서비스내 아이콘 작업</p>
-												<p></p>
+												<p>git 서버 분산 관리(공공, 기업, 유료회원)</p>
+												<p><a href="https://icomoon.io/" class="linkText" target="_blank" tabindex="0">'ico-moon'</a> 이미지 활용</p>
 											</dd>
 										</div>
 									</dl>
@@ -302,18 +292,42 @@
 											<dd>React</dd>
 										</div>
 										<div class="dl_item">
-											<dt>사용스킬</dt>
-											<dd>html, sass(gulp)</dd>
+											<dt>Skills</dt>
+											<dd>html, sass</dd>
 										</div>
 										<div class="dl_item">
 											<dt>특이사항</dt>
 											<dd>
-												<p>React개발환경에서의 최초 작업 진행이었다.</p>
-												<p>나눔스퀘어에서 발생하는 공백이슈('뷁'과 같은 한글이 공백으로 표기되는 현상) 해결을 하였으며, 다국어 대응 작업도 함께 진행하였다.</p>
-												<p>React 개발환경에서 작업이 이뤄지기 때문에 Front-End 개발자의 환경을 동일하게 싱크하여 작업이 이뤄졌으며, 커밋오류가 나지 않는 것에 가장 유의하며 작업을 진행하였다.</p>
+												<p>Front-End 개발환경과 동일하게 맞춰 작업 진행(React)</p>
+												<p>다국어 대응 작업</p>
 											</dd>
 										</div>
 									</dl>
+									<div class="view__box">
+										<button type="button" class="view__box--btn" tabindex="0">Click</button>
+										<button type="button" class="view__box--btn2" tabindex="0"></button>
+									</div>
+									<ul class="viewList">
+										<li class="viewList__item">
+											<p class="viewList__item--title">파파고 메인</p>
+											<div class="viewList__item--img">
+												<img src="src/papago/img/papago_01.png" alt="">
+											</div>
+										</li>
+										<li class="viewList__item">
+											<p class="viewList__item--title">파파고 검색결과</p>
+											<div class="viewList__item--img">
+												<img src="src/papago/img/papago_02.png" alt="">
+											</div>
+										</li>
+										<li class="viewList__item">
+											<p class="viewList__item--title">파파고 검색기록</p>
+											<div class="viewList__item--img">
+												<img src="src/papago/img/papago_03.png" alt="">
+											</div>
+										</li>
+
+									</ul>
 								</li>
 								<li class="item">
 									<strong class="service__title">
@@ -325,18 +339,106 @@
 											<dd><a href="https://movie.naver.com/" target="_blank">바로가기</a></dd>
 										</div>
 										<div class="dl_item">
-											<dt>사용스킬</dt>
+											<dt>Skills</dt>
+											<dd>html, css</dd>
+										</div>
+										<div class="dl_item">
+											<dt>특이사항 & 개선</dt>
+											<dd>
+												<p>웹 접근성 개선(개선 전: 38점 &gt; 개선 후 85점)</p>
+												<p>크로스 브라우징 범위 : ie7 - ie10</p>
+											</dd>
+										</div>
+									</dl>
+									<div class="view__box">
+										<button type="button" class="view__box--btn" tabindex="0">Click</button>
+										<button type="button" class="view__box--btn2" tabindex="0"></button>
+									</div>
+									<ul class="viewList">
+										<li class="viewList__item">
+											<p class="viewList__item--title">네이버 영화 메인</p>
+											<div class="viewList__item--img">
+												<img src="src/naver_movie/img/naver_movie_01.png" alt="">
+											</div>
+										</li>
+										<li class="viewList__item">
+											<p class="viewList__item--title">네이버 영화 리스트 페이지</p>
+											<div class="viewList__item--img">
+												<img src="src/naver_movie/img/naver_movie_02.png" alt="">
+											</div>
+										</li>
+										<li class="viewList__item">
+											<p class="viewList__item--title">네이버 영화 평점&랭킹</p>
+											<div class="viewList__item--img">
+												<img src="src/naver_movie/img/naver_movie_03.png" alt="">
+											</div>
+										</li>
+										<li class="viewList__item">
+											<p class="viewList__item--title">네이버 영화 상세 페이지</p>
+											<div class="viewList__item--img">
+												<img src="src/naver_movie/img/naver_movie_04.png" alt="">
+											</div>
+										</li>
+										
+									</ul>
+								</li>
+								<li class="item">
+									<strong class="service__title">
+										<img src="imgs/img_favicon_move.png" alt="" class="service__title--logo">
+										V Live - 이벤트 페이지</strong>
+									<dl class="itemList">
+										<div class="dl_item">
+											<dt>URL</dt>
+											<dd><a href="https://campaign.naver.com/v/acrosstheuniverse2018/ko/" target="_blank">바로가기 &gt;</a></dd>
+										</div>
+										<div class="dl_item">
+											<dt>Skills</dt>
 											<dd>html, css</dd>
 										</div>
 										<div class="dl_item">
 											<dt>특이사항</dt>
 											<dd>
-												<p>2018년 웹접근성 최하위 점수를 받은 서비스 개선작업 진행(38점)</p>
-												<p>네이버 영화 모든 페이지를 검수하여 널리에서 제공하는 웹접근성에 맞춰 전수 개선 작업진행</p>
-												<p>2019년 문법오류는 (100점)획득, 레이아웃으로 인한 오류를 제외한 나머지 모든 접근성 85점 이상 획득</p>
+												<p>다국어 대응 작업 - 영어, 중국어(간체/번체), 일본어, 베트남</p>
 											</dd>
 										</div>
 									</dl>
+									<div class="view__box">
+										<button type="button" class="view__box--btn" tabindex="0">Click</button>
+										<button type="button" class="view__box--btn2" tabindex="0"></button>
+									</div>
+									<ul class="viewList">
+										<li class="viewList__item">
+											<p class="viewList__item--title">V Live - 한국</p>
+											<div class="viewList__item--img">
+												<img src="src/vlive/img/vlive_ko.png" alt="">
+											</div>
+										</li>
+										<li class="viewList__item">
+											<p class="viewList__item--title">V Live - 영어</p>
+											<div class="viewList__item--img">
+												<img src="src/vlive/img/vlive_en.png" alt="">
+											</div>
+										</li>
+										<li class="viewList__item">
+											<p class="viewList__item--title">V Live - 일본</p>
+											<div class="viewList__item--img">
+												<img src="src/vlive/img/vlive_jp.png" alt="">
+											</div>
+										</li>
+										<li class="viewList__item">
+											<p class="viewList__item--title">V Live - 중국</p>
+											<div class="viewList__item--img">
+												<img src="src/vlive/img/vlive_cn.png" alt="">
+											</div>
+										</li>
+										<li class="viewList__item">
+											<p class="viewList__item--title">V Live - 베트남</p>
+											<div class="viewList__item--img">
+												<img src="src/vlive/img/vlive_va.png" alt="">
+											</div>
+										</li>
+										
+									</ul>
 								</li>
 							</ul>
 						</div>
@@ -358,7 +460,7 @@
 											<dd>React</dd>
 										</div>
 										<div class="dl_item">
-											<dt>사용스킬</dt>
+											<dt>Skills</dt>
 											<dd>html, sass</dd>
 										</div>
 										<div class="dl_item">
@@ -393,20 +495,12 @@
 								<li class="item">
 									<strong class="service__title">
 										<img src="imgs/img_favicon_wehago.png" alt="" class="service__title--logo">
-										WEHAGO 서비스 운영 및 리뉴얼</strong>
+										WEHAGO L</strong>
 									<dl class="itemList">
 										<div class="dl_item">
-											<dt>WEHAGO?</dt>
+											<dt>WEHAGO L</dt>
 											<dd>
-												<p>더존은 국내 1위 ERP, 그룹웨어 서비스를 가지고 있는 회사입니다.</p>
-												<p>2019년 ERP를 웹페이지화 프로젝트가 이뤄졌으며, 플랫폼명은 'WEHAGO'로 현재 WEHAGO 내에는 120여개 이상의 서비스를 제공하고 있습니다.</p>
-												<p>2019년도 최초 세팅이 React로 작업되었으며, 오픈 당시 10개 미만의 서비스가 현재는 120여개로 성장 하였습니다. </p>
-											</dd>
-										</div>
-										<div class="dl_item">
-											<dt>URL</dt>
-											<dd>
-												<p><a href="https://www.wehago.com/landing/ko/home/" class="linkText" target="_blank">바로가기</a></p>
+												<p>법률 전문 비지니스 플랫폼으로 메신저, 공유폴더, 캘린더등 공통적인 요소와 고객별 사건, 매출 관리등 법률사무소의 특화된 서비스</p>
 											</dd>
 										</div>
 										<div class="dl_item">
@@ -414,20 +508,66 @@
 											<dd>React</dd>
 										</div>
 										<div class="dl_item">
-											<dt>사용스킬</dt>
-											<dd>html, sass(gulp)</dd>
-										</div>
-										<div class="dl_item">
-											<dt>경력사항</dt>
-											<dd>
-												<p>
-													신규 서비스 개발 <strong>8건</strong><br>
-													리뉴얼 서비스 개발 <strong>10건</strong>
-												</p>
-												<p>React 컴포넌트 퍼블리싱</p>
-											</dd>
+											<dt>Skills</dt>
+											<dd>html, css</dd>
 										</div>
 									</dl>
+									<div class="view__box">
+										<button type="button" class="view__box--btn" tabindex="0">Click</button>
+										<button type="button" class="view__box--btn2" tabindex="0"></button>
+									</div>
+									<ul class="viewList">
+										<li class="viewList__item">
+											<p class="viewList__item--title">고객정보 - 메인</p>
+											<div class="viewList__item--img">
+												<img src="src/wehagol/img/wehagol_01.png" alt="">
+											</div>
+										</li>
+										<li class="viewList__item">
+											<p class="viewList__item--title">고객정보 - 수정</p>
+											<div class="viewList__item--img">
+												<img src="src/wehagol/img/wehagol_02.png" alt="">
+											</div>
+										</li>
+										<li class="viewList__item">
+											<p class="viewList__item--title">소송업무 - 메인</p>
+											<div class="viewList__item--img">
+												<img src="src/wehagol/img/wehagol_03.png" alt="">
+											</div>
+										</li>
+										<li class="viewList__item">
+											<p class="viewList__item--title">소송업무 - 사건진행단계</p>
+											<div class="viewList__item--img">
+												<img src="src/wehagol/img/wehagol_04.png" alt="">
+											</div>
+										</li>
+										<li class="viewList__item">
+											<p class="viewList__item--title">소송업무 - 미리보기</p>
+											<div class="viewList__item--img">
+												<img src="src/wehagol/img/wehagol_05.png" alt="">
+											</div>
+										</li>
+										<li class="viewList__item">
+											<p class="viewList__item--title">사건일괄등록</p>
+											<div class="viewList__item--img">
+												<img src="src/wehagol/img/wehagol_06.png" alt="">
+											</div>
+										</li>
+										<li class="viewList__item">
+											<p class="viewList__item--title">소통/협의 - 메일</p>
+											<div class="viewList__item--img">
+												<img src="src/wehagol/img/wehagol_07.png" alt="">
+											</div>
+										</li>
+										<li class="viewList__item">
+											<p class="viewList__item--title">소통/협의 - 메신저</p>
+											<div class="viewList__item--img">
+												<img src="src/wehagol/img/wehagol_08.png" alt="">
+											</div>
+										</li>
+										
+									</ul>
+
 								</li>
 								<li class="item">
 									<strong class="service__title">
@@ -437,15 +577,15 @@
 										<div class="dl_item">
 											<dt>DOCC</dt>
 											<dd>
-												<p>병원에서 발생되는 이슈를 한눈에 확인할 수 있는 플랫폼관리자</p>
-												<p>일, 주, 월, 분기별 운영현황과 병상관리 및 채혈관리 등 다양한 운영현황을 확인 할 수 있다.</p>
-												<p>의사들이 손쉽게 확인할 수 있도록 패드와, 관제센터에서 사용하는 고비율(32:9) 이상의 해상도 크로스브라우징이 매우 중요한 관건이었다.</p>
+												<p>축척된 병원의 실시간 데이터를 중심으로 현장 이슈 모니터링 및 소통 가능한 서비스</p>
 											</dd>
 										</div>
 										<div class="dl_item">
 											<dt>URL</dt>
 											<dd>
-												<p>보안상 이슈로 링크불가</p>
+												<p>
+													<a href="src/docc/index.html">산출물 확인하기 &gt;</a>
+												</p>
 											</dd>
 										</div>
 										<div class="dl_item">
@@ -453,14 +593,14 @@
 											<dd>React</dd>
 										</div>
 										<div class="dl_item">
-											<dt>사용스킬</dt>
-											<dd>html, sass(gulp)</dd>
+											<dt>Skills</dt>
+											<dd>html, css</dd>
 										</div>
 										<div class="dl_item">
 											<dt>특이사항</dt>
 											<dd>
-												<p>클라이언트(병원)측의 요청에 해상도 변경이 이뤄지면서, 최초 작업물에서 저해상도, 고해상도를 모두 대응하는 작업이었다.</p>
-												<p>관제센터와 같이 대형모니터가 있는 환경에서는 px단위가 아닌 vw단위를 사용하여 대응 하였으며,<br>해상도마다 레이아웃이 변경이 될 수 있도록 gird를 사용하여 반응형 작업을 진행하였다.</p>
+												<p>반응형 작업(Pad, 14:9모니터, 32:9모니터)</p>
+												<p>chrmome 브라우저 전용 페이지(grid 레이아웃)</p>
 											</dd>
 										</div>
 									</dl>
@@ -468,12 +608,21 @@
 								<li class="item">
 									<strong class="service__title">
 										<img src="imgs/img_favicon_wehago.png" alt="" class="service__title--logo">
-										윤석열 대통령 후보 페이지</strong>
+										윤석열 대통령 후보 페이지
+									</strong>
 									<dl class="itemList">
 										<div class="dl_item">
 											<dt>윤석열 대통령<br>후보 페이지</dt>
 											<dd>
-												<p>윤석열 대통령 후보 시절 공식 홈페이지로 소개 및 영상자료, SNS와 GPS를 연동한 '힘이되는 한마디' 등 다양한 컨텐츠와 공약 소개 페이지 제작<br>선거 플랫폼의 일환 사업으로 국민의 힘 후보 '윤석열 대통령'을 포함 3명 추가 제작</p>
+												<p>
+													<a href="src/ele/index.html">산출물 확인하기 &gt;</a>
+												</p>
+											</dd>
+										</div>
+										<div class="dl_item">
+											<dt>URL</dt>
+											<dd>
+												<p>윤석열 대통령 후보 시절 공식 홈페이지로 소개 및 영상자료, SNS와 GPS를 연동한 '힘이되는 한마디' 등 다양한 컨텐츠와 공약 소개 페이지 제작</p>
 											</dd>
 										</div>
 										<div class="dl_item">
@@ -481,18 +630,75 @@
 											<dd>React</dd>
 										</div>
 										<div class="dl_item">
-											<dt>사용스킬</dt>
-											<dd>html, scss, jquery, javascrip</dd>
+											<dt>Skills</dt>
+											<dd>html, scss, jquery/javascrip</dd>
+										</div>
+										<div class="dl_item">
+											<dt>Library</dt>
+											<dd>fullpage.js, slick.js</dd>
 										</div>
 										<div class="dl_item">
 											<dt>특이사항</dt>
 											<dd>
-												<p>후보시절 홈페이지로 제작 당시 선거캠프 임원과 비공개로 진행(현재는 서비스 종료로 코드 및 페이지 공개가능)</p>
-												<p>fullpage.js를 이용하여 api 연동을 제외한 모든 동적 개발 진행(jquery/javascrip 이용)</p>
-												<p>고객의 요청사항으로 페이지의 화려함을 강조하여 각종 애니메이션을 사용해 css로 애니메이션 최적화 진행</p>
+												<p>트래픽 증가로 인한 animaition css 최적화</p>
 											</dd>
 										</div>
 									</dl>
+									<div class="view__box">
+										<button type="button" class="view__box--btn" tabindex="0">Click</button>
+										<button type="button" class="view__box--btn2" tabindex="0"></button>
+									</div>
+									<ul class="viewList">
+										<li class="viewList__item">
+											<p class="viewList__item--title">메인 페이지</p>
+											<div class="viewList__item--img">
+												<img src="src/ele/img/ele_01.png" alt="">
+											</div>
+										</li>
+										<li class="viewList__item">
+											<p class="viewList__item--title">서브 페이지</p>
+											<div class="viewList__item--img">
+												<img src="src/ele/img/ele_02.png" alt="">
+											</div>
+										</li>
+										<li class="viewList__item">
+											<p class="viewList__item--title">회원가입 페이지</p>
+											<div class="viewList__item--img">
+												<img src="src/ele/img/ele_03.png" alt="">
+											</div>
+										</li>
+										<li class="viewList__item">
+											<p class="viewList__item--title">관리자 페이지</p>
+											<div class="viewList__item--img">
+												<img src="src/ele/img/ele_04.png" alt="">
+											</div>
+										</li>
+										<li class="viewList__item">
+											<p class="viewList__item--title">(MO)메인 페이지</p>
+											<div class="viewList__item--img">
+												<img src="src/ele/img/ele_05.png" alt="">
+											</div>
+										</li>
+										<li class="viewList__item">
+											<p class="viewList__item--title">(MO)메인 페이지 메뉴</p>
+											<div class="viewList__item--img">
+												<img src="src/ele/img/ele_06.png" alt="">
+											</div>
+										</li>
+										<li class="viewList__item">
+											<p class="viewList__item--title">(MO)서브 페이지</p>
+											<div class="viewList__item--img">
+												<img src="src/ele/img/ele_07.png" alt="">
+											</div>
+										</li>
+										<li class="viewList__item">
+											<p class="viewList__item--title">(MO)회원가입 페이지</p>
+											<div class="viewList__item--img">
+												<img src="src/ele/img/ele_08.png" alt="">
+											</div>
+										</li>
+										
+									</ul>
 								</li>
 								<li class="item">
 									<strong class="service__title">
@@ -521,7 +727,7 @@
 											<dd>React</dd>
 										</div>
 										<div class="dl_item">
-											<dt>사용스킬</dt>
+											<dt>Skills</dt>
 											<dd>html, css</dd>
 										</div>
 										<div class="dl_item">
@@ -534,34 +740,7 @@
 										</div>
 									</dl>
 								</li>
-								<li class="item">
-									<strong class="service__title">
-										<img src="imgs/img_favicon_wehago.png" alt="" class="service__title--logo">
-										WEHAGO L</strong>
-									<dl class="itemList">
-										<div class="dl_item">
-											<dt>WEHAGO L</dt>
-											<dd>
-												<p>법률 전문 비지니스 플랫폼으로 메신저, 공유폴더, 캘린더등 공통적인 요소와 고객별 사건, 매출 관리등 법률사무소의 특화된 서비스</p>
-											</dd>
-										</div>
-										<div class="dl_item">
-											<dt>개발환경</dt>
-											<dd>React</dd>
-										</div>
-										<div class="dl_item">
-											<dt>사용스킬</dt>
-											<dd>html, css</dd>
-										</div>
-										<div class="dl_item">
-											<dt>특이사항</dt>
-											<dd>
-												<p>법률사무소를 타켓팅으로 한 서비스로서, 전문화된 기능(변호사 수임관리, 자문관리, 변호사 선임 등)을 개발</p>
-												<p>법률사무소를 운용하는 다양한 연령층(컴퓨터 사양)을 고려하여 ie9까지 크로스브라우징 범위로 작업을 진행</p>
-											</dd>
-										</div>
-									</dl>
-								</li>
+								
 
 								
 								

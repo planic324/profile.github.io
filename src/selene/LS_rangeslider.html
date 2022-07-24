@@ -1,0 +1,89 @@
+<div class="LS_rangeslider_custom">
+    <span class="value_text min">0</span>
+    <span class="value_text max">100</span>
+    <div class="rangeslider_wrap">
+        <div class="rangeslider_bar fill" style="width: calc(40%);"></div>
+        <div class="rangeslider_bar empty" style="width: calc(60%);"></div>
+        <div class="rangeslider_btn" style="left: 40%;">
+            <div class="current_value"><span>99</span></div>
+            <div class="rangeslider_pointer"></div>
+        </div>
+    </div>
+</div>
+
+<div class="LS_rangeslider" style="margin-top:50px">
+    <div class="rangeslider_bar">
+        <!-- [D] slider_gauge의 width 값으로 조절 -->
+        <div class="slider_gauge" style="width:20%;">
+            <span class="slider_bar"></span>
+            <button class="LS_btn Image slider_btn"><span class="sp_selene">크기설정</span></button>
+        </div>
+    </div>
+    <button class="LS_btn Image slider_minus"><span class="sp_selene">감소</span></button>
+    <button class="LS_btn Image slider_plus"><span class="sp_selene">증가</span></button>
+</div>
+
+<script>
+
+    $(function(){
+        ragneSlide1(); // Range Slide Style 1
+        ragneSlideCustom(); // Range Slide Style 2
+    })
+
+    function ragneSlideCustom() {
+        $(".LS_rangeslider_custom .rangeslider_bar").click(function(e) {
+            var barFill = $(".LS_rangeslider_custom .rangeslider_bar.fill").width();
+            var barEmpty = $(".LS_rangeslider_custom .rangeslider_bar.empty").width();
+            var totWidth = barFill + barEmpty;
+            var posTot, posTot2;
+            var pointerPos = ($(this).hasClass('fill') ? e.offsetX : e.offsetX + barFill);
+
+            posTot = Math.floor((pointerPos / totWidth) * 100);
+            posTot2 = 100 - posTot;
+            $('.rangeslider_bar.fill').css('width','calc(' + posTot + '%)');
+            $('.rangeslider_bar.empty').css('width','calc(' + posTot2 + '%)');
+            $('.LS_rangeslider_custom .rangeslider_wrap .rangeslider_btn').css('left',posTot + '%');
+            $('.LS_rangeslider_custom .rangeslider_wrap .rangeslider_btn .current_value>span').text(posTot);
+            console.log(pointerPos);
+        });
+    }
+
+    function ragneSlide1() {
+
+        var slider_gauge = $(".slider_gauge");
+        var gauge_width = $(slider_gauge).width();
+        var rangeslider_width = $(".LS_rangeslider .rangeslider_bar").width();
+        var tot = (gauge_width / rangeslider_width) * 100;
+
+        $(".slider_plus").click(function(){
+            $(slider_gauge).css("width", (tot + 5) + "%");
+            tot += 5;
+            if(tot >= 100){
+                $(slider_gauge).css("width", 100 + "%");
+                tot = 100;
+            }
+        });
+
+        $(".slider_minus").click(function(){
+            $(slider_gauge).css("width", (tot - 5) + "%");
+            tot -= 5;
+            if(tot <= 0){
+                $(slider_gauge).css("width", 100 - "%");
+                tot = 0;
+            }
+        });
+
+        
+        $(".LS_rangeslider .rangeslider_bar").on("click",function(e){
+            var rangeOffset = e.offsetX;
+            tot = (rangeOffset / rangeslider_width) * 100;
+
+            if($(".slider_btn").has(e.target).length === 1){
+                $(slider_gauge).css("width", slider_gauge.attr("style"));
+            }else {
+                $(slider_gauge).css("width", tot + "%");
+            }
+
+        });
+    }
+</script>

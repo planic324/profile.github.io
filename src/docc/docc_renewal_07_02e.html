@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DOCC</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/css/nanumsquare.css">
+<link rel="stylesheet" type="text/css" href="/css/lux.css">
+<link rel="stylesheet" type="text/css" href="css/docc2.css">
+<!-- 마크업 확인용 Include -->
+<script src="includeHTML.js"></script>
+<!-- //마크업 확인용 Include -->
+</head>
+<body>
+    <div class="docc renew reduction">
+        <div id="header" class="header" include-html="docc_include_header.html"></div>
+        <div class="container">
+            <div class="banner">
+                <div class="banner_title">
+                    <h2>DOCC</h2>
+                </div>
+                <div class="banner_content">
+                    <div class="left_bx">
+                        <div class="banner_bi">
+                            <span class="blind">DOCC - DATA BASED OPERATION AND COMMUNICATION CENTER</span>
+                        </div>
+                        <p class="banner_bi_text">축적된 병원의 실시간 데이터를 중심으로 현장 이슈 모니터링 및 소통 가능한 서비스</p>
+                    </div>
+                    <div class="right_bx">
+                        <div class="search_bx">
+                            <input type="text" placeholder="검색어를 입력하세요">
+                            <button type="button" class="icon_search"><span class="blind">검색 버튼</span></button>
+                            <button type="button" class="icon_delete"><span class="blind">검색 내용 삭제</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="snb">
+                    <ul class="snb_bx">
+                        <!-- [D] 클릭시 li class="active" 추가해주세요. -->
+                        <li>
+                            <a href="#" class="list_icon home"><i class="icon_bx"></i><span>홈</span></a>
+                        </li>
+                        <li>
+                            <a href="#" class="list_icon pan"><i class="icon_bx"></i><span>PAN</span></a>
+                        </li>
+                        <li>
+                            <a href="#" class="list_icon fav"><i class="icon_bx"></i><span>즐겨찾기</span></a>
+                        </li>
+                        <li>
+                            <a href="#" class="list_icon recent"><i class="icon_bx"></i><span>최근항목</span></a>
+                        </li>
+                        <li class="active">
+                            <a href="#" class="list_icon setting"><i class="icon_bx"></i><span>설정</span></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="division_bx">
+                    <div class="drawing_bx">
+                        <div class="multiple_bx">
+                            <div class="drawing_title_bx">
+                                <button type="button" class="button_prev"><span class="blind">이전 페이지로</span></button>
+                                <span class="drawing_title">권한설정</span>
+                            </div>
+                            <div class="supports_bx">
+                                <div class="common_component_select">
+                                    <!-- [D] .selected_item 클릭시 .common_component_select에 .open 추가 -->
+                                    <button type="button" class="selected_item">전체</button>
+                                    <div class="common_component_select_resultbox">
+                                        <ul>
+                                            <!-- [D] 선택했을때 .selected 추가 -->
+                                            <li class="selected">
+                                                <button type="button" class="resultitem">전체</button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="resultitem">이름</button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="resultitem">사번</button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="resultitem">소속</button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="resultitem">처리담당자</button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="single_search_bx">
+                                    <input type="text" class="single_input" placeholder="검색어를 입력해주세요." title="검색어 입력">
+                                    <button type="button" class="button_search"><span class="blind">검색</span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tabs_bx">
+                            <ul>
+                                <!-- [D] 클릭시 class="active" 추가해주세요. -->
+                                <li class="active">
+                                    <button type="button">
+                                        <span class="tabs_title"><i class="tabs_icon_all"></i>모든 사용자</span>
+                                        <span class="tabs_content">
+                                            <span class="tabs_text">DOCC 서비스가 배포된<br>전체 인원입니다</span>
+                                            <span class="tabs_number">100<em>명</em></span>
+                                        </span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button">
+                                        <span class="tabs_title"><i class="tabs_icon_master"></i>마스터</span>
+                                        <span class="tabs_content">
+                                            <span class="tabs_text">Lv1, Lv2, Lv3 모든 화면의<br>접근 권한을 가진 인원입니다</span>
+                                            <span class="tabs_number">20<em>명</em></span>
+                                        </span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button">
+                                        <span class="tabs_title"><i class="tabs_icon_general"></i>일반 사용자</span>
+                                        <span class="tabs_content">
+                                            <span class="tabs_text">Lv2, Lv3 화면의<br>접근 권한을 가진 인원입니다</span>
+                                            <span class="tabs_number">70<em>명</em></span>
+                                        </span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button">
+                                        <span class="tabs_title"><i class="tabs_icon_user"></i>권한미부여 사용자</span>
+                                        <span class="tabs_content">
+                                            <span class="tabs_text">아직 접근 권한을 부여받지<br>못한 인원입니다</span>
+                                            <span class="tabs_number">10<em>명</em></span>
+                                        </span>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="table_bx">
+                            <div class="common_boxtbl style_basic2">
+                                <div class="list_header clearfix">
+                                    <div class="col1">
+                                        <span class="LUX_basic_switch LUX_renewal" style="width:15px;height:30px;">
+                                            <span class="LUXckbx">
+                                                <!-- 동일한 구조 input type checkbox LUXckbx LUXstarbx / radio LUXrabx LUXonoffbx 로 이이지 변경 -->
+                                                <input type="checkbox" id="input_forid_ckbox1">
+                                                <!-- 이미지 -->
+                                                <span class="sp_lux"></span>
+                                                <!-- input id 값과 label for 값을 동일하게 연결 -->
+                                                <label for="input_forid_ckbox1">선택</label>
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <div class="col2">이름</div>
+                                    <div class="col3">사번</div>
+                                    <div class="col4">소속</div>
+                                    <div class="col5">직급</div>
+                                    <div class="col6">직책</div>
+                                    <!-- [D] 정렬기능 클릭시 class="on" 추가해주세요. -->
+                                    <div class="col7"><button type="button" class="button_sort on">권한부여일자<span class="sp_icon icon_arrow07"></span></button></div>
+                                    <div class="col8">처리담당자</div>
+                                    <div class="col9">권한</div>
+                                </div>
+                                <div class="list_body">
+                                    <div class="empty_bx">
+                                        <i class="icon_empty"></i>
+                                        조회결과가 없습니다.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom_check_bar" style="display: block">
+                <div class="list_check_box">
+                    <strong><em>2개</em> 선택 됨</strong>
+                    <div class="bottom_button_box"><button type="button">권한설정</button><button type="button">권한해제</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="../../js/jquery/jquery-latest.min.js"></script>
+<script>
+    includeHTML();
+</script>
+</body>
+</html>

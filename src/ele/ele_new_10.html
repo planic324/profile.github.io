@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<title>윤석열 국민캠프</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=1280">
+	<link rel="stylesheet" type="text/css" href="/css/nanumsquare.css">
+	<link rel="stylesheet" type="text/css" href="css/ele_ysy.css">
+</head>
+
+<body>
+	<div class="wrap type_ysy">
+		<div class="header clearfix">
+			<div class="align_wrap basic_addrinfo">
+				<dl class="addr_infolist">
+					<dt class="blind">주소</dt>
+					<dd class="addr">서울특별시 종로구 종로1길 42 이마빌딩</dd>
+					<dt class="blind">전화번호</dt>
+					<dd class="tel">02.3510.3700</dd>
+				</dl>
+				<div class="snscon">
+					<ul class="sns_infolist">
+						<li>
+							<a href="https://www.facebook.com/sukyeol.yoon" target="_blank" class="snsbtn ico_fb"><span class="blind">페이스북</span></a>
+						</li>
+						<li>
+							<a href="https://www.youtube.com/channel/UCcl16CxYqlbKQJVCfdhSJVw" target="_blank" class="snsbtn ico_tube"><span class="blind">유투브</span></a>
+						</li>
+					</ul>
+				</div>
+				<div class="rightcon">
+					<button type="button" class="btn_login">로그인</button>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="header_menuwrap dzt_font">
+				<div class="align_wrap">
+					<!-- <h1><a href="#"><img src="https://static.wehago.com/imgs/common/svg/minju.png" width="163" height="28" alt="더불어민주당"></a></h1> -->
+					<img src="https://static.wehago.com/imgs/common/svg/public_camp_yoon_b.png" width="158" height="30" alt="윤석열 선거캠프">
+					<ul class="menulist clearfix">
+						<!-- [D] 선택된 메뉴는 .selected 추가 -->
+						<li class="selected">
+							<a href="#" class="listitem">인간 윤석열</a>
+						</li>
+						<li>
+							<a href="#" class="listitem">윤석열 소식</a>
+						</li>
+						<li>
+							<a href="#" class="listitem">피플앤플레이스</a>
+						</li>
+						<li>
+							<a href="#" class="listitem">갤러리</a>
+						</li>
+						<li>
+							<a href="#" class="listitem">후원회</a>
+						</li>
+						
+					</ul>	
+				</div>
+			</div>
+
+            <div class="section sec_join">
+                <div class="align_wrap">
+                    <div class="join_content" style="width: 668px;">
+                        <div class="message_wrap">
+                            <div class="message_img">
+                                <img src="/imgs/ele/img_user.png" alt="">
+                            </div>
+                            <div class="message_text">
+                                <p>
+                                    <span class="text">김더존</span>회원님의 아이디는<br>
+                                    <span class="text point_color">douzone01@gmail.com</span>입니다.
+                                </p>
+                            </div>
+                        </div>
+                        
+                    </div>                    
+                    <div class="join_btn_box">
+                        <button type="button" class="join_btn">비밀번호 찾기</button><button type="button" class="join_btn type_02">로그인하기</button>  
+                    </div>
+                </div>
+            </div>
+            
+		</div>
+		<div class="footer">
+			<div class="align_wrap">
+				<div class="basic_addrinfo">
+					<dl class="addr_infolist">
+						<dt class="blind">주소</dt>
+						<dd class="addr">서울특별시 종로구 종로1길 42 이마빌딩</dd>
+						<dt class="blind">전화번호</dt>
+						<dd class="tel">02.3510.3700</dd>
+					</dl>
+					<div class="rightcon">
+						<ul class="sns_infolist">
+							<li>
+								<a href="https://www.facebook.com/sukyeol.yoon" target="_blank" class="snsbtn ico_fb"><span class="blind">페이스북</span></a>
+							</li>
+							<li>
+								<a href="https://www.youtube.com/channel/UCcl16CxYqlbKQJVCfdhSJVw" target="_blank" class="snsbtn ico_tube"><span class="blind">유투브</span></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="copybox">
+					<p class="copytext">Copyright © <strong>DOUZONE BIZON.</strong> All rights reserved.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 마크업 테스트 코드 -->
+	<script src="../../js/jquery/jquery-latest.min.js"></script>
+	<script>
+		$(function () {
+			$('.type_date, .btn_arrow').click(function() {
+				$(this).parents('.select_box ').toggleClass('active');
+			})
+            // 자동 로그인 버튼
+            $('.all_agree_box .btn_all_agree').click(function() {
+				$(this).parent().toggleClass('active');
+			})
+            // 약관열기
+            $('.top_box .btn_arrow').click(function() {
+				$(this).parents('.item').toggleClass('open');
+			})
+            // 약관체크
+            $('.top_box .btn_check').click(function() {
+				$(this).parents('.item').toggleClass('check');
+			})
+		});
+	</script>
+
+</body>
+
+</html>

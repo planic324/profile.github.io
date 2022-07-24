@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta id="viewport" name="viewport" content="width=1280">
+<title>DOCC</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/docc2.css">
+</head>
+<body>
+    <div class="docc">
+        <div class="docc_header">
+            <h1>CT 검사 현황 (전체)<span class="time">2021-11-16 10:25:11</span></h1>
+            <div class="right_box">
+                <div class="tab_btn_box">
+                    <!-- [D] 선택된 버튼에 .selected 추가  -->
+                    <button type="button" class="btn_item selected">주별</button>
+                    <button type="button" class="btn_item">월별</button>
+                </div>
+            </div>
+        </div>
+        <div class="docc_content">
+            <div class="section_check_all">
+                <div class="top_section">
+                    <div class="left_section">
+                        <h2 class="section_title">CT 검사 진행률</h2>
+                        <div class="basic_chart_box">
+                            <!-- 개발 시 인라인스타일 background 삭제 -->
+                            <div class="chart_item_box" style="background:rgba(255,255,255,.12)">Chart area</div>
+                            <div class="total_list_box2">
+                                <dl class="total_list">
+                                    <div class="item">
+                                        <dt>전체실시</dt>
+                                        <dd><span class="num">800</span>건</dd>
+                                    </div>
+                                    <div class="item">
+                                        <dt>전체계획</dt>
+                                        <dd><span class="num">1,000</span>건</dd>
+                                    </div>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right_section">
+                        <h2 class="section_title">CT 검사 가동률</h2>
+                        <div class="basic_chart_box">
+                            <!-- 개발 시 인라인스타일 background 삭제 -->
+                            <div class="chart_item_box" style="background:rgba(255,255,255,.12)">Chart area</div>
+                            <div class="total_list_box2">
+                                <dl class="total_list">
+                                    <div class="item">
+                                        <dt>가동중</dt>
+                                        <dd><span class="num">9</span>건</dd>
+                                    </div>
+                                    <div class="item">
+                                        <dt>미가동</dt>
+                                        <dd><span class="num">3</span>건</dd>
+                                    </div>
+                                    <div class="item">
+                                        <dt>보유</dt>
+                                        <dd><span class="num">11</span>건</dd>
+                                    </div>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom_section">
+                    <div class="basic_chart_box">
+                        Chart area
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="../../js/jquery/jquery-latest.min.js"></script>
+<script>
+    $(function(){
+        $('.tab_btn_box .btn_item').click(function(){
+            $('.btn_item').toggleClass('selected');
+        });
+    });
+</script>
+</body>
+</html>

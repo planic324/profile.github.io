@@ -1,0 +1,169 @@
+// Smart Select
+
+.LS_dragselect {
+    position:relative;
+    min-width:180px;
+    .top_inputbox {
+        &:after {
+            content:'';
+            display:table;
+            clear:both;
+        }
+        .dragselect_input {
+            float:left;
+            display: block;
+            width: calc(100% - 54px);
+            margin-right:4px;
+            border: 1px solid #e0e0e0;
+            background:#fff;
+            font-size: 12px;
+            font-family: $smallfont;
+            color: #1a1a1a;
+            letter-spacing: 0;
+            vertical-align: top;
+            outline: 0;
+            height:27px;
+            line-height:28px;
+            box-sizing:border-box;
+            padding:0 5px;
+            overflow:hidden;
+        }
+
+        .LS_btn {
+            float:left;
+            width:50px;
+        }
+    }
+}
+.LS_dragselect_result {
+    position:relative;
+    width:100%;
+    box-sizing:border-box;
+    margin-top:4px;
+    border:1px solid #d5d5d5;
+    background:#fafafa;
+    padding:10px;
+    height:256px;
+    overflow-y:auto;
+
+    .dragselect_item {
+        position:relative;
+
+        + .dragselect_item {
+            margin-top:4px;
+        }
+
+        .btn_move {
+            position:relative;
+            display:block;
+            border:1px solid #e6e6e6;
+            height:43px;
+            line-height:43px;
+            box-sizing:border-box;
+            border-radius:3px;
+            background:#fff;
+            width:100%;
+            text-align:left;
+            padding-left:29px;
+            font-size:14px;
+            color:#000;
+            font-weight:bold;
+            padding-right:32px;
+            outline:0;
+            @extend %ellipsis;
+
+            &:before {
+                content:'';
+                position:absolute;
+                top:50%;
+                left:18px;
+                width:7px;
+                height:11px;
+                margin-top:-5px;
+                @include sprite-img($sp_selene);
+                background-position:-471px -689px;
+            }
+            .num {
+                display:inline-block;
+                vertical-align:top;
+                min-width:18px;
+                text-align:right;
+                font-size:14px;
+                color:#8d8d8d;
+                margin-right:8px;
+            }
+        }
+        .btn_del {
+            position:absolute;
+            top:1px;
+            right:0;
+            width:34px;
+            height:41px;
+            background:transparent;
+            border:0;
+            outline:0;
+            &:after {
+                content:'';
+                position:absolute;
+                top:50%;
+                left:50%;
+                width:9px;
+                height:9px;
+                margin-top:-5px;
+                margin-left:-5px;
+                @include sprite-img($sp_selene);
+                background-position:-484px -689px;
+            }
+        }
+        .btn_opt {
+            position:absolute;
+            top:1px;
+            right:0;
+            width:34px;
+            height:41px;
+            background:transparent;
+            border:0;
+            outline:0;
+
+            &:after {
+                content:'';
+                position:absolute;
+                top:50%;
+                left:50%;
+                width:3px;
+                height:13px;
+                margin-top:-7px;
+                margin-left:-2px;
+                @include sprite-img($sp_selene);
+                background-position:-484px -708px;
+            }
+        }
+    }
+}
+.LS_dragselect_popover {
+    .option_bx {
+        position: absolute;
+        top: 13px;
+        right: 27px;
+        z-index: 1;
+        width: 58px;
+        background: #fff;border:1px solid #a3a3a3;
+        button {
+            display: block;
+            width: 100%;
+            padding: 0 7px;
+            background-color: #fff;
+            border: 0;
+            color: #4a4a4a;
+            font-size: 12px;
+            line-height: 23px;
+            letter-spacing: -.5px;
+            outline: 0;
+            text-align: left;
+            box-sizing: border-box;
+            &:hover, &:focus {
+                background: #f5f5f5;
+            }
+        }
+    }
+}

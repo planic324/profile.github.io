@@ -1,0 +1,208 @@
+<div class="mixin">
+    <ul>
+        <li>
+            <h3 class="component_mixin_title">sprite-img</h3>
+            <div class="component_mixin_code">
+                <p>@mixin <em>sprite-img(</em><span>$url</span><em>)</em></p>
+                <p class="component_mixin_example">example> @include <em>sprite-img(</em><span>$sp_selene</span><em>);</em></p>
+            </div>
+            <dl>
+                <dt>Description</dt>
+                <dd>background-image로 불러올 스프라이트 이미지를 설정</dd>
+                <dt>Parameters</dt>
+                <dd>
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Type</th>
+                            <th>Default value</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>$url</td>
+                            <td>이미지 url</td>
+                            <td>String</td>
+                            <td>-</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </dd>
+            </dl>
+        </li>
+        <li>
+            <h3 class="component_mixin_title">sprite-size</h3>
+            <div class="component_mixin_code">
+                <p>@mixin <em>sprite-size(</em><span>$width</span>, <span>$height</span><em>)</em></p>
+                <p class="component_mixin_example">example> @include <em>sprite-size(</em><span>8px, 4px</span><em>);</em></p>
+            </div>
+            <dl>
+                <dt>Description</dt>
+                <dd>주로 아이콘으로 사용되는 스프라이트 이미지의 사이즈를 지정하여 영역 정중앙에 위치시킴</dd>
+                <dt>Parameters</dt>
+                <dd>
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Type</th>
+                            <th>Default value</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>$width</td>
+                            <td>이미지 width 값</td>
+                            <td>Length</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>$height</td>
+                            <td>이미지 height 값</td>
+                            <td>Length</td>
+                            <td>-</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </dd>
+            </dl>
+        </li>
+        <li>
+            <h3 class="component_mixin_title">animation</h3>
+            <div class="component_mixin_code">
+                <p>@mixin <em>animation(</em><span>$animate...</span><em>)</em></p>
+                <p class="component_mixin_example">example> @include <em>animation(</em><span>spinner_spin $total_duration infinite ease-in-out both</span><em>);</em></p>
+            </div>
+            <dl>
+                <dt>Description</dt>
+                <dd>애니메이션 효과를 설정하며 자동으로 prefix 코드로 생성해줌</dd>
+                <dt>Parameters</dt>
+                <dd>
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Type</th>
+                            <th>Default value</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>$animationName</td>
+                            <td>애니메이션 설정 값</td>
+                            <td>String</td>
+                            <td>-</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </dd>
+            </dl>
+        </li>
+        <li>
+            <h3 class="component_mixin_title">keyframes</h3>
+            <div class="component_mixin_code">
+                <p>@mixin <em>keyframes(</em><span>$animationName</span><em>) {...}</em></p>
+                <pre class="component_mixin_example">example> @include <em>keyframes(</em><span>spinner_spin</span><em>) {
+                <i>0%, 39%, 100% { opacity: 0; }
+                   40% { opacity: 1; }</i>
+                }</em></pre>
+            </div>
+            <dl>
+                <dt>Description</dt>
+                <dd>애니메이션 사용을 위한 키프레임 설정</dd>
+                <dt>Parameters</dt>
+                <dd>
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Type</th>
+                            <th>Default value</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>$animationName</td>
+                            <td>애니메이션 이름</td>
+                            <td>String</td>
+                            <td>-</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </dd>
+            </dl>
+        </li>
+        <li>
+            <h3 class="component_mixin_title">root-content</h3>
+            <div class="component_mixin_code">
+                <p>@mixin <em>root-content(</em><span>$root-content</span><em>) {...}</em></p>
+                <pre class="component_mixin_example">example> @include <em>root-content(</em><span>button</span><em>) {
+                <i>padding: 2px 10px 0;</i>
+                }</em></pre>
+            </div>
+            <dl>
+                <dt>Description</dt>
+                <dd>해당 엘리먼트 또는 클래스('ClassName')를 최상위 부모로 지정하여 속성을 추가함</dd>
+                <dt>Parameters</dt>
+                <dd>
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Type</th>
+                            <th>Default value</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>$root-content</td>
+                            <td>엘리먼트 또는 클래스이름('ClassName')</td>
+                            <td>Element</td>
+                            <td>-</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </dd>
+            </dl>
+        </li>
+        <li>
+            <h3 class="component_mixin_title">setfont</h3>
+            <div class="component_mixin_code">
+                <p>@mixin <em>setfont(</em><span>$font-size</span><em>) {...}</em></p>
+                <pre class="component_mixin_example">example><br>.parent_test .testfont {<br>@include <em>setfont(</em><span>12</span><em>);</em><br>}<i>// result > </i><em>.ja .parent_text .testfont</em><i>{font-size:12px,font-family:'돋움',Dotum,Helvetica,'Apple SD Gothic Neo',sans-serif !important}</i>
+                </pre>
+            </div>
+            <dl>
+                <dt>Description</dt>
+                <dd>12px기준으로 나눔폰트, 시스템폰트를 구분하여 지정해준다. 다국어 설정(html[lang=ja])이 되어 있으면 다국어 폰트로 적용한다.</dd>
+                <dt>Parameters</dt>
+                <dd>
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Type</th>
+                            <th>Default value</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>$font-size</td>
+                            <td>폰트사이즈</td>
+                            <td>Length</td>
+                            <td>-</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </dd>
+            </dl>
+        </li>
+    </ul>
+</div>

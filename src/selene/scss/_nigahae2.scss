@@ -1,0 +1,355 @@
+// NIGAHAE(SAO) 테이블에서 사용되는 컴포넌트
+
+
+// input
+.LS_ngh_input2 {
+  position: relative;
+  overflow:hidden;
+  height: 100%;
+  min-height: 27px !important;
+  margin: -1px -5px;
+  border: 2px solid transparent;
+  box-sizing: border-box;
+  &.focus {
+    border-color:$point_color !important;
+  }
+  &.accurate {
+    border-color:$accurate-color !important;
+  }
+  &.error {
+    border-color:$error-color !important;
+  }
+  &.warning {
+    border-color:$warning-color !important;
+  }
+  &.readonly {
+    border-color:$point_color !important;
+    .fake_inputbox,
+    .real_inputbox {
+      background:$ngh_bg_color;
+    }
+    .LSinput,
+    .fakeinput{
+      color:#000;
+      text-align:left;
+      display:block;
+    }
+  }
+  &.disabled {
+    background:$disable-color;
+    margin: 0 -5px;
+    min-height:27px;
+    .LSbutton,
+    .fakebutton{
+      right:-1px !important;
+      cursor:default !important;
+    }
+  }
+  &.righticon {
+    .LSinput {
+      width: calc(100% - 26px);
+      overflow: hidden;
+    }
+    .fakeinput{
+      width: calc(100% - 26px);
+      overflow: hidden;
+    }
+    .LSbutton,
+    .fakebutton {
+      z-index:20;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      width: 27px;
+      height: 27px;
+      margin-top: -14px;
+      padding:0;
+      border: 0 none;
+      background: 0 0;
+      font-weight: 200;
+      text-align: center;
+      vertical-align: top;
+      box-sizing: border-box;
+      cursor: pointer;
+      outline: 0;
+      .sp_selene {
+        position: absolute;
+        top: 50%;
+        margin-top: -7px;
+        right: 7px;
+      }
+    }
+  }
+  .LSinput,
+  .fakeinput{
+    width: 100%;
+    height: 100%;
+    border: 0;
+    background-color: transparent;
+    font-size: 12px;
+    outline: none;
+    box-sizing: border-box;
+    font-weight: normal;
+    font-family:$smallfont;
+    padding:7px 9px  4px;
+    line-height:normal;
+    &::-ms-clear {
+      display:none;
+    }
+  }
+  .placeholder {
+    overflow: hidden;
+    font-size: 12px;
+    font-family: $smallfont;
+    color: $text-color2 !important;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align:left;
+  }
+  // &.datedisabled {
+  //   &:before {
+  //     position: absolute;
+  //     top: 50%;
+  //     left: 7px;
+  //     width: 30px;
+  //     height: 14px;
+  //     -webkit-padding-after: 1px;
+  //     margin-top:-8px;
+  //     background: rgba(180, 180, 180, .5);
+  //     content: '';
+  //     z-index:10;
+  //   }
+  // }
+  .fake_inputbox {
+    opacity:0;
+    z-index:0;
+    position:absolute;
+    top:0;
+    left:100%;
+    right:0;
+    bottom:0;
+    text-align:left;
+    .fakeinput {
+      display: block;
+      height: 100%;
+      cursor: default;
+      white-space:nowrap;
+    }
+  }
+  .real_inputbox {
+    opacity:1;
+    z-index:10;
+    text-align:left;
+  }
+
+  &.showfake {
+    .fake_inputbox {
+      opacity:1;
+      z-index:10;
+      left:0;
+    }
+    .real_inputbox {
+      opacity:0;
+      z-index:0;
+      > .LSinput {
+        width:0;
+        height:0;
+        padding:0;
+      }
+
+    }
+  }
+  &.LStextarea {
+    height:125px;
+
+    textarea.LSinput {
+      height:125px;
+      resize:none;
+    }
+    .fake_inputbox .fakeinput {
+      white-space: normal;
+      word-break: break-all;
+    }
+  }
+}
+
+
+// select
+
+.LS_ngh_select2 {
+  position: relative;
+  overflow:hidden;
+  height: 100%;
+  min-height: 28px;
+  margin: -1px -5px;
+  border: 2px solid transparent;
+  box-sizing: border-box;
+
+  &.edit {
+    border-color:$point_color !important;
+  }
+  &.view {
+    border-color:$point_color !important;
+    .fake_inputbox,
+    .real_inputbox {
+      background:$ngh_bg_color;
+    }
+    .LSinput,
+    .fakeinput{
+      display:block;
+      color:#000;
+      line-height:24px;
+      overflow: hidden;
+    }
+  }
+  &.disabled {
+    background:$disable-color;
+    margin: 0 -5px;
+    min-height:27px;
+  }
+  .LSinput,
+  .fakeinput{
+    width: 100%;
+    height: 100%;
+    border: 0;
+    background-color: transparent;
+    font-size: 12px;
+    outline: none;
+    box-sizing: border-box;
+    font-weight: normal;
+    font-family:$smallfont;
+    padding:0 23px 0 9px;
+    width: calc(100% - 18px);
+    overflow: hidden;
+    word-break: break-all;
+    white-space: nowrap;
+
+    &::-ms-clear {
+      display:none;
+    }
+  }
+  &.nobutton .LSinput,
+  &.nobutton .fakeinput{
+    padding-right:9px;
+  }
+  .LSbutton,
+  .fakebutton{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 23px;
+    height: 27px;
+    margin-top: -14px;
+    padding: 0;
+    border: 0 none;
+    background: 0 0;
+    font-weight: 200;
+    text-align: center;
+    vertical-align: top;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: 0;
+    .sp_selene {
+      position:absolute;
+      top:50%;
+      margin-top:-2px;
+      right:8px;
+      width:9px;
+      height:4px;
+      background-position:-49px -50px
+    }
+  }
+  &.view .LSbutton .sp_selene,
+  &.edit .LSbutton .sp_selene,
+  &.view .fakebutton .sp_selene,
+  &.edit .fakebutton .sp_selene {
+    background-position:-74px -50px;
+
+  }
+  &.view.close .LSbutton .sp_selene,
+  &.edit.close .LSbutton .sp_selene,
+  &.view.close .fakebutton .sp_selene,
+  &.edit.close .fakebutton .sp_selene{
+    background-position:-75px -50px;
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+
+  }
+  &.disabled .LSbutton,
+  &.disabled .fakebutton{
+    cursor: not-allowed;
+    .sp_selene {
+      background-position:-224px -285px;
+    }
+  }
+  .fake_inputbox {
+    opacity:0;
+    z-index:0;
+    position:absolute;
+    top:0;
+    left:100%;
+    right:0;
+    bottom:0;
+    text-align:left;
+    .fakeinput {
+      display: block;
+      height: 25px;
+      line-height: 26px;
+    }
+  }
+  .real_inputbox {
+    opacity:1;
+    z-index:10;
+    text-align:left;
+  }
+
+  &.showfake {
+    .fake_inputbox {
+      opacity:1;
+      z-index:10;
+      left:0;
+    }
+    .real_inputbox {
+      opacity:0;
+      z-index:0;
+      > .LSinput {
+        width:0;
+        height:0;
+      }
+    }
+  }
+}
+
+.LSselectResult {
+  background: #fff;
+  border: 1px solid #a3a3a3;
+
+  .LSnghSelectResult_listitem {
+    cursor:pointer;
+    &.active a {
+      background: $ngh_bg_color;
+      &:hover {
+        background: $ngh_bg_color;
+      }
+    }
+    a {
+      display: block;
+      position: relative;
+      padding: 2px 6px 0;
+      font-size: 12px;
+      font-family: $smallfont;
+      line-height: 20px;
+      color: $text-color;
+      letter-spacing: -.5px;
+      text-align: left;
+      text-decoration: none;
+      &:hover {
+        background: $hover_color;
+      }
+      > div {
+        @extend %ellipsis;
+      }
+    }
+  }
+}

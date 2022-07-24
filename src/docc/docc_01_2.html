@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta id="viewport" name="viewport" content="width=1280">
+<title>DOCC</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/css/common.css">
+<link rel="stylesheet" type="text/css" href="/css/lux.css">
+<link rel="stylesheet" type="text/css" href="/selene/css/selene.css">
+<link rel="stylesheet" type="text/css" href="/css/svc/docc.css">
+</head>
+<body>
+    <div class="docc">
+        <div class="docc_header">
+            <h1>CT운영현황<span class="time">10:25:11</span></h1>
+            <div class="rirhgt_group">
+                <!-- [D] 버튼 비활성화시 .disabled 추가 -->
+                <button type="button" class="header_btn ico1">상세조회</button><button type="button" class="header_btn ico2">특이사항<em>2</em></button><button type="button" class="header_btn ico3 disabled" disabled>다운로드</button><button type="button" class="header_btn ico_ref">새로고침</button>
+            </div>
+        </div>
+        <!-- [D] 외래간호일 경우 v_nur 추가 -->
+        <div class="section_wrap v_nur">
+            <div class="left_section">
+                <div class="case_statusbx">
+                    <a href="#" class="case_item">
+                        <strong class="ico2">신환초진</strong>
+                        <span class="reserv_btnst">예약하기</span>
+                        <dl class="reserv_dl">
+                            <div>
+                                <dt>예약</dt><dd><em>22</em></dd>
+                            </div>
+                            <div>
+                                <dt>정원</dt><dd>150</dd>
+                            </div>
+                        </dl>
+                        <dl class="total_dl">
+                            <dt class="blind">잔여인원</dt>
+                            <dd>76</dd>
+                        </dl>
+                    </a>
+                    <!-- [D] 정원마감일 경우 .inactive 추가 -->
+                    <a href="#" class="case_item inactive">
+                        <strong class="ico3">Fast Track</strong>
+                        <span class="reserv_btnst">정원마감</span>
+                        <dl class="reserv_dl">
+                            <div>
+                                <dt>예약</dt><dd><em>100</em></dd>
+                            </div>
+                            <div>
+                                <dt>정원</dt><dd>100</dd>
+                            </div>
+                        </dl>
+                        <dl class="total_dl">
+                            <dt class="blind">잔여인원</dt>
+                            <dd>0</dd>
+                        </dl>
+                    </a>
+                    <a href="#" class="case_item">
+                        <strong class="ico4">재진당일</strong>
+                        <span class="reserv_btnst">예약하기</span>
+                        <dl class="reserv_dl">
+                            <div>
+                                <dt>예약</dt><dd><em>999</em></dd>
+                            </div>
+                            <div>
+                                <dt>정원</dt><dd>999</dd>
+                            </div>
+                        </dl>
+                        <dl class="total_dl">
+                            <dt class="blind">잔여인원</dt>
+                            <dd>999</dd>
+                        </dl>
+                    </a>
+                </div>
+                <div class="remaining_statusbx">
+                    <div class="topbox">
+                        <div class="datewrap">
+                            <button type="button" class="tit_datebtn">2021.03.05 금</button>
+                        </div>
+                        <div class="date_btngr">
+                            <button type="button" class="ar_btn left"><span class="blind">이전</span></button><button type="button" class="ar_btn right"><span class="blind">다음</span></button>
+                        </div>
+                        <button type="button" class="today_btn">오늘</button>
+                        <div class="check_reservbox">
+                            <label>
+                                <input type="checkbox" name="test_check">
+                                <span class="icon"></span>
+                                <span class="label_text">예약가능만 보기</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="conbox">
+                        <table class="remaining_tbl" summary="운영현황입니다.">
+                            <colgroup>
+                                <col style="width:46px">
+                                <col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th rowspan="2"><span class="clockimg"></span></th>
+                                    <th colspan="3">신환초진</th>
+                                    <th colspan="3">Fast Track</th>
+                                    <th colspan="3">재진당일</th>
+                                </tr>
+                                <tr>
+                                    <th class="type1">본관</th>
+                                    <th class="type2">암병원</th>
+                                    <th class="type3">양성자</th>
+                                    <th class="type1">본관</th>
+                                    <th class="type2">암병원</th>
+                                    <th class="type3">양성자</th>
+                                    <th class="type1">본관</th>
+                                    <th class="type2">암병원</th>
+                                    <th class="type3">양성자</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th><div>07</div></th>
+                                    <td><div></div></td>
+                                    <td><div></div></td>
+                                    <td><div></div></td>
+                                    <td><div></div></td>
+                                    <td><div></div></td>
+                                    <td><div></div></td>
+                                    <td><div></div></td>
+                                    <td><div></div></td>
+                                    <td><div></div></td>
+                                </tr>
+                                <tr>
+                                    <th><div>08</div></th>
+                                    <!-- [D] 정원 마감일 경우 .inactive 추가 -->
+                                    <td class="inactive">
+                                        <div>
+                                            <button type="button" class="cellbtn">0</button>
+                                        </div>
+                                    </td>
+                                    <td class="inactive">
+                                        <div>
+                                            <button type="button" class="cellbtn">0</button>
+                                        </div>
+                                    </td>
+                                    <!-- [D] 예약가능할 경우 .active 추가 -->
+                                    <td class="active">
+                                        <div>
+                                            <button type="button" class="cellbtn">5</button>
+                                        </div>
+                                    </td>
+                                    <td><div></div></td>
+                                    <td><div></div></td>
+                                    <td><div></div></td>
+                                    <td><div></div></td>
+                                    <td><div></div></td>
+                                    <td><div></div></td>
+                                </tr>
+                                <tr>
+                                    <th><div>09</div></th>
+                                    <!-- [D] 정원 마감일 경우 .inactive 추가 -->
+                                    <td class="inactive">
+                                        <div>
+                                            <button type="button" class="cellbtn">0</button>
+                                        </div>
+                                    </td>
+                                    <td class="inactive">
+                                        <div>
+                                            <button type="button" class="cellbtn">0</button>
+                                        </div>
+                                    </td>
+                                    <td class="active">
+                                        <div>
+                                            <button type="button" class="cellbtn">5</button>
+                                        </div>
+                                    </td>
+                                    <td class="active">
+                                        <div>
+                                            <button type="button" class="cellbtn">5</button>
+                                        </div>
+                                    </td>
+                                    <td class="active">
+                                        <div>
+                                            <button type="button" class="cellbtn">1</button>
+                                        </div>
+                                    </td>
+                                    <td class="active">
+                                        <div>
+                                            <button type="button" class="cellbtn">5</button>
+                                        </div>
+                                    </td>
+                                    <td class="active">
+                                        <div>
+                                            <button type="button" class="cellbtn">5</button>
+                                        </div>
+                                    </td>
+                                    <td class="active">
+                                        <div>
+                                            <button type="button" class="cellbtn">5</button>
+                                        </div>
+                                    </td>
+                                    <td class="active">
+                                        <div>
+                                            <button type="button" class="cellbtn">5</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><div>10</div></th>
+                                    <td class="inactive">
+                                        <div>
+                                            <button type="button" class="cellbtn">0</button>
+                                        </div>
+                                    </td>
+                                    <td class="inactive">
+                                        <div>
+                                            <button type="button" class="cellbtn">0</button>
+                                        </div>
+                                    </td>
+                                    <td><div></div></td>
+                                    <td><div></div></td>
+                                    <td class="active">
+                                        <div>
+                                            <button type="button" class="cellbtn">5</button>
+                                        </div>
+                                    </td>
+                                    <td><div></div></td>
+                                    <td class="inactive">
+                                        <div>
+                                            <button type="button" class="cellbtn">4</button>
+                                        </div>
+                                    </td>
+                                    <td class="inactive">
+                                        <div>
+                                            <button type="button" class="cellbtn">1</button>
+                                        </div>
+                                    </td>
+                                    <td><div></div></td>
+                                </tr>
+                                <tr>
+                                    <th><div>11</div></th>
+                                    <td class="inactive">
+                                        <div>
+                                            <button type="button" class="cellbtn">0</button>
+                                        </div>
+                                    </td>
+                                    <td class="inactive">
+                                        <div>
+                                            <button type="button" class="cellbtn">0</button>
+                                        </div>
+                                    </td>
+                                    <td><div></div></td>
+                                    <td><div></div></td>
+                                    <td class="active">
+                                        <div>
+                                            <button type="button" class="cellbtn">5</button>
+                                        </div>
+                                    </td>
+                                    <td><div></div></td>
+                                    <td class="inactive">
+                                        <div>
+                                            <button type="button" class="cellbtn">4</button>
+                                        </div>
+                                    </td>
+                                    <td class="inactive">
+                                        <div>
+                                            <button type="button" class="cellbtn">1</button>
+                                        </div>
+                                    </td>
+                                    <td><div></div></td>
+                                </tr>
+                                <!-- [D] 현재 시간은 .current 추가 -->
+                                <tr class="current">
+                                    <th><div>12</div></th>
+                                    <td class="inactive">
+                                        <div>
+                                            <button type="button" class="cellbtn">0</button>
+                                            <div class="cel_layer">
+                                                <dl>
+                                                    <div class="top">
+                                                        <dt>잔여 CAPA</dt>
+                                                        <dd>2</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dt>정원</dt>
+                                                        <dd>51</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dt>예약</dt>
+                                                        <dd>48</dd>
+                                                    </div>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="inactive">
+                                        <div>
+                                            <button type="button" class="cellbtn">0</button>
+                                            <div class="cel_layer">
+                                                <dl>
+                                                    <div class="top">
+                                                        <dt>잔여 CAPA</dt>
+                                                        <dd>2</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dt>정원</dt>
+                                                        <dd>51</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dt>예약</dt>
+                                                        <dd>48</dd>
+                                                    </div>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="active">
+                                        <div>
+                                            <button type="button" class="cellbtn">5</button>
+                                            <div class="cel_layer">
+                                                <dl>
+                                                    <div class="top">
+                                                        <dt>잔여 CAPA</dt>
+                                                        <dd>2</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dt>정원</dt>
+                                                        <dd>51</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dt>예약</dt>
+                                                        <dd>48</dd>
+                                                    </div>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="inactive">
+                                        <div>
+                                            <button type="button" class="cellbtn selected">4</button>
+                                            <div class="cel_layer">
+                                                <dl>
+                                                    <div class="top">
+                                                        <dt>잔여 CAPA</dt>
+                                                        <dd>2</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dt>정원</dt>
+                                                        <dd>51</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dt>예약</dt>
+                                                        <dd>48</dd>
+                                                    </div>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="inactive">
+                                        <div>
+                                            <button type="button" class="cellbtn">1</button>
+                                            <div class="cel_layer">
+                                                <dl>
+                                                    <div class="top">
+                                                        <dt>잔여 CAPA</dt>
+                                                        <dd>2</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dt>정원</dt>
+                                                        <dd>51</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dt>예약</dt>
+                                                        <dd>48</dd>
+                                                    </div>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <!-- [D] 추가카파 적용된 경우 .adcapa 추가 -->
+                                    <td class="active addcapa">
+                                        <div>
+                                            <button type="button" class="cellbtn">6</button>
+                                            <div class="cel_layer" style="display:block">
+                                                <dl>
+                                                    <div class="top">
+                                                        <dt>잔여 CAPA</dt>
+                                                        <dd>2</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dt>정원</dt>
+                                                        <dd>51</dd>
+                                                    </div>
+                                                    <div class="capa">
+                                                        <dt>추가CAPA</dt>
+                                                        <dd>2</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dt>예약</dt>
+                                                        <dd>48</dd>
+                                                    </div>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><div></div></td>
+                                    <td><div></div></td>
+                                    <td><div></div></td>
+                                </tr>
+                                <tr>
+                                    <th><div>13</div></th>
+                                    <td class="inactive">
+                                        <div>
+                                            <button type="button" class="cellbtn">0</button>
+                                        </div>
+                                    </td>
+                                    <td class="inactive">
+                                        <div>
+                                            <button type="button" class="cellbtn">0</button>
+                                        </div>
+                                    </td>
+                                    <td><div></div></td>
+                                    <td><div></div></td>
+                                    <td class="active">
+                                        <div>
+                                            <button type="button" class="cellbtn">5</button>
+                                        </div>
+                                    </td>
+                                    <td><div></div></td>
+                                    <td class="inactive">
+                                        <div>
+                                            <button type="button" class="cellbtn">4</button>
+                                        </div>
+                                    </td>
+                                    <td class="inactive">
+                                        <div>
+                                            <button type="button" class="cellbtn">1</button>
+                                        </div>
+                                    </td>
+                                    <td><div></div></td>
+                                </tr>
+                                <tr>
+                                    <th><div>14</div></th>
+                                    <td class="inactive">
+                                        <div>
+                                            <button type="button" class="cellbtn">0</button>
+                                        </div>
+                                    </td>
+                                    <td class="inactive">
+                                        <div>
+                                            <button type="button" class="cellbtn">0</button>
+                                        </div>
+                                    </td>
+                                    <td><div></div></td>
+                                    <td><div></div></td>
+                                    <td class="active">
+                                        <div>
+                                            <button type="button" class="cellbtn">5</button>
+                                        </div>
+                                    </td>
+                                    <td><div></div></td>
+                                    <td class="inactive">
+                                        <div>
+                                            <button type="button" class="cellbtn">4</button>
+                                        </div>
+                                    </td>
+                                    <td class="inactive">
+                                        <div>
+                                            <button type="button" class="cellbtn">1</button>
+                                        </div>
+                                    </td>
+                                    <td><div></div></td>
+                                </tr>
+                                <tr>
+                                    <th><div>15</div></th>
+                                    <td class="inactive">
+                                        <div>
+                                            <button type="button" class="cellbtn">0</button>
+                                        </div>
+                                    </td>
+                                    <td class="inactive">
+                                        <div>
+                                            <button type="button" class="cellbtn">0</button>
+                                        </div>
+                                    </td>
+                                    <td><div></div></td>
+                                    <td><div></div></td>
+                                    <td class="active">
+                                        <div>
+                                            <button type="button" class="cellbtn">5</button>
+                                        </div>
+                                    </td>
+                                    <td><div></div></td>
+                                    <td class="inactive">
+                                        <div>
+                                            <button type="button" class="cellbtn">4</button>
+                                        </div>
+                                    </td>
+                                    <td class="inactive">
+                                        <div>
+                                            <button type="button" class="cellbtn">1</button>
+                                        </div>
+                                    </td>
+                                    <td><div></div></td>
+                                </tr>
+                                <tr>
+                                    <th><div>16</div></th>
+                                    <td class="inactive">
+                                        <div>
+                                            <button type="button" class="cellbtn">0</button>
+                                        </div>
+                                    </td>
+                                    <td class="inactive">
+                                        <div>
+                                            <button type="button" class="cellbtn selected">0</button>
+                                        </div>
+                                    </td>
+                                    <td><div></div></td>
+                                    <td><div></div></td>
+                                    <td class="active">
+                                        <div>
+                                            <button type="button" class="cellbtn">5</button>
+                                        </div>
+                                    </td>
+                                    <td><div></div></td>
+                                    <td class="inactive">
+                                        <div>
+                                            <button type="button" class="cellbtn">4</button>
+                                        </div>
+                                    </td>
+                                    <td class="inactive">
+                                        <div>
+                                            <button type="button" class="cellbtn">1</button>
+                                        </div>
+                                    </td>
+                                    <td><div></div></td>
+                                </tr>
+                                <tr>
+                                    <th><div>17</div></th>
+                                    <td class="inactive">
+                                        <div>
+                                            <button type="button" class="cellbtn">0</button>
+                                        </div>
+                                    </td>
+                                    <td class="inactive">
+                                        <div>
+                                            <button type="button" class="cellbtn">0</button>
+                                        </div>
+                                    </td>
+                                    <td><div></div></td>
+                                    <td><div></div></td>
+                                    <td class="active">
+                                        <div>
+                                            <button type="button" class="cellbtn">5</button>
+                                        </div>
+                                    </td>
+                                    <td><div></div></td>
+                                    <td class="inactive">
+                                        <div>
+                                            <button type="button" class="cellbtn">4</button>
+                                        </div>
+                                    </td>
+                                    <td class="inactive">
+                                        <div>
+                                            <button type="button" class="cellbtn">1</button>
+                                        </div>
+                                    </td>
+                                    <td><div></div></td>
+                                </tr>
+                                <tr>
+                                    <th><div>18</div></th>
+                                    <td class="inactive">
+                                        <div>
+                                            <button type="button" class="cellbtn">0</button>
+                                        </div>
+                                    </td>
+                                    <td class="inactive">
+                                        <div>
+                                            <button type="button" class="cellbtn">0</button>
+                                        </div>
+                                    </td>
+                                    <td><div></div></td>
+                                    <td><div></div></td>
+                                    <td class="active">
+                                        <div>
+                                            <button type="button" class="cellbtn">5</button>
+                                        </div>
+                                    </td>
+                                    <td><div></div></td>
+                                    <td class="inactive">
+                                        <div>
+                                            <button type="button" class="cellbtn">4</button>
+                                        </div>
+                                    </td>
+                                    <td class="inactive">
+                                        <div>
+                                            <button type="button" class="cellbtn">1</button>
+                                        </div>
+                                    </td>
+                                    <td><div></div></td>
+                                </tr>
+                                <tr>
+                                    <th><div>19</div></th>
+                                    <td class="inactive">
+                                        <div>
+                                            <button type="button" class="cellbtn">0</button>
+                                        </div>
+                                    </td>
+                                    <td class="inactive">
+                                        <div>
+                                            <button type="button" class="cellbtn">0</button>
+                                        </div>
+                                    </td>
+                                    <td><div></div></td>
+                                    <td><div></div></td>
+                                    <td class="active">
+                                        <div>
+                                            <button type="button" class="cellbtn">5</button>
+                                        </div>
+                                    </td>
+                                    <td><div></div></td>
+                                    <td class="inactive">
+                                        <div>
+                                            <button type="button" class="cellbtn">4</button>
+                                        </div>
+                                    </td>
+                                    <td class="inactive">
+                                        <div>
+                                            <button type="button" class="cellbtn">1</button>
+                                        </div>
+                                    </td>
+                                    <td><div></div></td>
+                                </tr>
+                                <tr>
+                                    <th><div>20</div></th>
+                                    <td class="inactive">
+                                        <div>
+                                            <button type="button" class="cellbtn">0</button>
+                                        </div>
+                                    </td>
+                                    <td class="inactive">
+                                        <div>
+                                            <button type="button" class="cellbtn">0</button>
+                                        </div>
+                                    </td>
+                                    <td><div></div></td>
+                                    <td><div></div></td>
+                                    <td class="active">
+                                        <div>
+                                            <button type="button" class="cellbtn">5</button>
+                                        </div>
+                                    </td>
+                                    <td><div></div></td>
+                                    <td class="inactive">
+                                        <div>
+                                            <button type="button" class="cellbtn">4</button>
+                                        </div>
+                                    </td>
+                                    <td class="inactive">
+                                        <div>
+                                            <button type="button" class="cellbtn">1</button>
+                                        </div>
+                                    </td>
+                                    <td><div></div></td>
+                                </tr>
+                                <tr>
+                                    <th><div>21</div></th>
+                                    <td class="inactive">
+                                        <div>
+                                            <button type="button" class="cellbtn">0</button>
+                                        </div>
+                                    </td>
+                                    <td class="inactive">
+                                        <div>
+                                            <button type="button" class="cellbtn">0</button>
+                                        </div>
+                                    </td>
+                                    <td><div></div></td>
+                                    <td><div></div></td>
+                                    <td class="active">
+                                        <div>
+                                            <button type="button" class="cellbtn">5</button>
+                                        </div>
+                                    </td>
+                                    <td><div></div></td>
+                                    <td class="inactive">
+                                        <div>
+                                            <button type="button" class="cellbtn">4</button>
+                                        </div>
+                                    </td>
+                                    <td class="inactive">
+                                        <div>
+                                            <button type="button" class="cellbtn">1</button>
+                                        </div>
+                                    </td>
+                                    <td><div></div></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="right_section">
+                <div class="place_statusbx">
+                    <div class="place_item type1">
+                        <strong>본관</strong>
+                        <dl class="count_dl">
+                            <dt class="blind">정원</dt>
+                            <dd><em>226</em> / 300</dd>
+                        </dl>
+                        <dl class="count_total">
+                            <dt class="blind">잔여인원</dt>
+                            <dd>74</dd>
+                        </dl>
+                    </div>
+                    <div class="place_item type2">
+                        <strong>암병원</strong>
+                        <dl class="count_dl">
+                            <dt class="blind">정원</dt>
+                            <dd><em>226</em> / 300</dd>
+                        </dl>
+                        <dl class="count_total">
+                            <dt class="blind">잔여인원</dt>
+                            <dd>74</dd>
+                        </dl>
+                    </div>
+                    <!-- [D] 초과일 경우 over 추가 -->
+                    <div class="place_item type3 over">
+                        <strong>양성자</strong>
+                        <dl class="count_dl">
+                            <dt class="blind">정원</dt>
+                            <dd><em>399</em> / 300</dd>
+                        </dl>
+                        <dl class="count_total">
+                            <dt class="blind">잔여인원</dt>
+                            <dd>-99</dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="resev_statusbx">
+                    <h2 class="subtitle">예약현황</h2>
+                    <ul class="docc_tabbox">
+                        <li class="selected">
+                            <button type="button" class="tabbtn">데이터</button>
+                        </li>
+                        <li>
+                            <button type="button" class="tabbtn">그래프</button>
+                        </li>
+                    </ul>
+                    <ul class="resev_list">
+                        <li class="type1">
+                            <table summary="본관의 예약현황입니다." class="resev_tbl">
+                                <colgroup>
+                                    <col style="width:18%">
+                                    <col style="width:16%">
+                                    <col style="width:23%">
+                                    <col style="width:23%">
+                                    <col style="width:20%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>&nbsp;</th>
+                                        <th>유형</th>
+                                        <th>예약</th>
+                                        <th>정원</th>
+                                        <th>예약률</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th rowspan="2" class="tit">본관</th>
+                                        <th>신환</th>
+                                        <td><div>54</div></td>
+                                        <td><div>54</div></td>
+                                        <td><div>100%</div></td>
+                                    </tr>
+                                    <tr>
+                                        <th>FT</th>
+                                        <td><div>5</div></td>
+                                        <td><div>5</div></td>
+                                        <td><div>45%</div></td>
+                                    </tr>
+                                    <tr>
+                                        <th>&nbsp;</th>
+                                        <th>재진</th>
+                                        <td><div>999</div></td>
+                                        <td><div>54</div></td>
+                                        <td><div>100%</div></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </li>
+                        <li class="type2">
+                            <table summary="암병원의 예약현황입니다." class="resev_tbl">
+                                <colgroup>
+                                    <col style="width:18%">
+                                    <col style="width:16%">
+                                    <col style="width:23%">
+                                    <col style="width:23%">
+                                    <col style="width:20%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>&nbsp;</th>
+                                        <th>유형</th>
+                                        <th>예약</th>
+                                        <th>정원</th>
+                                        <th>예약률</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th rowspan="2" class="tit">암병원</th>
+                                        <th>신환</th>
+                                        <td><div>54</div></td>
+                                        <td><div>54</div></td>
+                                        <td><div>100%</div></td>
+                                    </tr>
+                                    <tr>
+                                        <th>FT</th>
+                                        <td><div>5</div></td>
+                                        <td><div>5</div></td>
+                                        <td><div>45%</div></td>
+                                    </tr>
+                                    <tr>
+                                        <th>&nbsp;</th>
+                                        <th>재진</th>
+                                        <td><div>999</div></td>
+                                        <td><div>54</div></td>
+                                        <td><div>100%</div></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </li>
+                        <li class="type3">
+                            <table summary="양성자의 예약현황입니다." class="resev_tbl">
+                                <colgroup>
+                                    <col style="width:18%">
+                                    <col style="width:16%">
+                                    <col style="width:23%">
+                                    <col style="width:23%">
+                                    <col style="width:20%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>&nbsp;</th>
+                                        <th>유형</th>
+                                        <th>예약</th>
+                                        <th>정원</th>
+                                        <th>예약률</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th rowspan="2" class="tit">양성자</th>
+                                        <th>신환</th>
+                                        <td><div>54</div></td>
+                                        <td><div>54</div></td>
+                                        <td><div>100%</div></td>
+                                    </tr>
+                                    <tr>
+                                        <th>FT</th>
+                                        <td><div>5</div></td>
+                                        <td><div>5</div></td>
+                                        <td><div>45%</div></td>
+                                    </tr>
+                                    <tr>
+                                        <th>&nbsp;</th>
+                                        <th>재진</th>
+                                        <td><div>999</div></td>
+                                        <td><div>54</div></td>
+                                        <td><div>100%</div></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </li>
+                    </ul>
+                </div>
+                <div class="excapa_statusbx">
+                    <h2 class="subtitle">추가 CAPA</h2>
+                    <button type="button" class="setbtn"><span class="blind">설정</span></button>
+                    <ul class="excapa_list">
+                        <li>
+                            <div class="capaitem">
+                                <dl class="time_dl">
+                                    <dt class="blind">시간</dt>
+                                    <dd>10시</dd>
+                                </dl>
+                                <strong><em>14</em> 필요</strong>
+                                <dl class="count_dl">
+                                    <div>
+                                        <dt>본관</dt><dd>10</dd>
+                                    </div>
+                                    <div>
+                                        <dt>암벙동</dt><dd>4</dd>
+                                    </div>
+                                    <div>
+                                        <dt>양성자</dt><dd>0</dd>
+                                    </div>
+                                </dl>
+                            </div>
+                        </li>
+                        <!-- [D] 필요예상일 경우 .ex 추가 -->
+                        <li class="ex">
+                            <div class="capaitem">
+                                <dl class="time_dl">
+                                    <dt class="blind">시간</dt>
+                                    <dd>10시</dd>
+                                </dl>
+                                <strong><em>999</em> 필요예상</strong>
+                                <dl class="count_dl">
+                                    <div>
+                                        <dt>본관</dt><dd>10</dd>
+                                    </div>
+                                    <div>
+                                        <dt>암벙동</dt><dd>4</dd>
+                                    </div>
+                                    <div>
+                                        <dt>양성자</dt><dd>0</dd>
+                                    </div>
+                                </dl>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="../../js/jquery/jquery-latest.min.js"></script>
+</body>
+</html>

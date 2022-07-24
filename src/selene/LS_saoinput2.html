@@ -1,0 +1,362 @@
+<script>
+    function aaa() {
+        console.log("111111");
+        document.getElementById('input').focus();
+    };
+    $(document).ready(function(){
+        $(".btn_change_style").click(function(e) {
+            $(".LS_saoinput").toggleClass("st_rounded");
+            if($(".LS_saoinput").hasClass("st_rounded")) {
+                $(this).html("원래 스타일");
+            } else {
+                $(this).html("라운드 스타일");
+            }
+        });
+    });
+</script>
+<style>
+    .btn_change_style {width:100px;margin-bottom:15px;padding:5px;}
+</style>
+<p><button type="button" class="btn_change_style">라운드 스타일</button></p>
+
+<div class="LS_saoinput">
+    <div class="LS_ngh_input2 showfake">
+        <div class="fake_inputbox">
+            <span tabindex="0" class="fakeinput placeholder" onfocus="aaa()">입력해주세요</span>
+        </div>
+        <div class="real_inputbox">
+            <input id="input" type="text" class="LSinput">
+        </div>
+    </div>
+</div>
+<br>
+<div class="LS_saoinput">
+    <div class="LS_ngh_input2 focus">
+        <div class="fake_inputbox">
+            <span class="fakeinput">focus fake</span>
+        </div>
+        <div class="real_inputbox">
+            <input type="text" class="LSinput" value="텍스트입력">
+        </div>
+    </div>
+</div>
+<br>
+<div class="LS_saoinput">
+    <div class="LS_ngh_input2 focus showfake">
+        <div class="fake_inputbox">
+            <span class="fakeinput">focus fake</span>
+        </div>
+        <div class="real_inputbox">
+            <input type="text" class="LSinput" value="focus">
+        </div>
+    </div>
+</div>
+<br>
+<div class="LS_saoinput">
+    <div class="LS_ngh_input2 accurate showfake">
+        <div class="fake_inputbox">
+            <span class="fakeinput">accurate fake</span>
+        </div>
+        <div class="real_inputbox">
+            <input type="text" class="LSinput" value="accurate" title="accurate">
+        </div>
+    </div>
+</div>
+<br>
+<div class="LS_saoinput">
+    <div class="LS_ngh_input2 error showfake">
+        <div class="fake_inputbox">
+            <span class="fakeinput">error fake</span>
+        </div>
+        <div class="real_inputbox">
+            <input type="text" class="LSinput" value="error" title="error">
+        </div>
+    </div>
+</div>
+<br>
+<div class="LS_saoinput">
+    <div class="LS_ngh_input2 warning showfake">
+        <div class="fake_inputbox">
+            <span class="fakeinput">warning fake</span>
+        </div>
+        <div class="real_inputbox">
+            <input type="text" class="LSinput" value="warning" title="warning">
+        </div>
+    </div>
+</div>
+<br>
+<div class="LS_saoinput">
+    <div class="LS_ngh_input2 readonly showfake">
+        <div class="fake_inputbox">
+            <span class="fakeinput placeholder">readonly fake</span>
+        </div>
+        <div class="real_inputbox">
+            <input type="text" class="LSinput" value="readonly" title="readonly" readonly>
+        </div>
+    </div>
+</div>
+<br>
+<div class="LS_saoinput">
+    <div class="LS_ngh_input2 disabled showfake">
+        <div class="fake_inputbox">
+            <span class="fakeinput">disabled fake</span>
+        </div>
+        <div class="real_inputbox">
+            <input type="text" class="LSinput" value="disabled" title="disabled" disabled>
+        </div>
+
+    </div>
+</div>
+<hr>
+<hr>
+<div class="LS_saoinput">
+    <div class="LS_ngh_input2 righticon">
+        <div class="fake_inputbox">
+            <span class="fakeinput">오른쪽에 아이콘 있는 경우 icon_codehelp fake</span>
+            <div class="fakebutton">
+                <span class="sp_selene icon_codehelp">코드돔열기</span>
+            </div>
+        </div>
+        <div class="real_inputbox">
+            <input type="text" class="LSinput" value="오른쪽에 아이콘 있는 경우 icon_codehelp">
+            <button class="LSbutton" type="button">
+                <span class="sp_selene icon_codehelp">코드돔열기</span>
+            </button>
+        </div>
+    </div>
+</div>
+<br>
+<div class="LS_saoinput">
+    <div class="LS_ngh_input2 righticon focus showfake">
+        <div class="fake_inputbox">
+            <span class="fakeinput">focus fake</span>
+            <div class="fakebutton">
+                <span class="sp_selene icon_codehelp">코드돔열기</span>
+            </div>
+        </div>
+        <div class="real_inputbox">
+           <input type="text" class="LSinput" value="focus">
+           <button class="LSbutton" type="button">
+               <span class="sp_selene icon_codehelp">코드돔열기</span>
+            </button>
+        </div>
+    </div>
+</div>
+<br>
+<div class="LS_saoinput">
+    <div class="LS_ngh_input2 righticon readonly showfake">
+        <div class="fake_inputbox">
+            <span class="fakeinput">readonly fake</span>
+            <div class="fakebutton">
+                <span class="sp_selene icon_codehelp">코드돔열기</span>
+            </div>
+        </div>
+        <div class="real_inputbox">
+           <input type="text" class="LSinput" value="readonly" readonly>
+           <button class="LSbutton" type="button">
+               <span class="sp_selene icon_codehelp">코드돔열기</span>
+           </button>
+        </div>
+    </div>
+</div>
+<br>
+<div class="LS_saoinput">
+    <div class="LS_ngh_input2 righticon disabled showfake">
+        <div class="fake_inputbox">
+            <span class="fakeinput">disabled fake</span>
+            <div class="fakebutton">
+                <span class="sp_selene icon_codehelp">코드돔열기</span>
+            </div>
+        </div>
+        <div class="real_inputbox">
+           <input type="text" class="LSinput" value="disabled" disabled>
+           <button class="LSbutton" type="button">
+               <span class="sp_selene icon_codehelp">코드돔열기</span>
+           </button>
+        </div>
+    </div>
+</div>
+<br>
+<div class="LS_saoinput">
+    <div class="LS_ngh_input2 righticon">
+        <div class="fake_inputbox">
+            <span class="fakeinput">0000.00.00 fake</span>
+            <div class="fakebutton">
+                <span class="sp_selene icon_datefield">달력</span>
+            </div>
+        </div>
+        <div class="real_inputbox">
+            <input type="text" class="LSinput" value="0000.00.00">
+            <button class="LSbutton" type="button">
+                <span class="sp_selene icon_datefield">달력</span>
+            </button>
+        </div>
+    </div>
+</div>
+<br>
+<div class="LS_saoinput perioddate">
+    <div class="period_wrap">
+        <div class="LS_ngh_input2 righticon datedisabled">
+            <div class="fake_inputbox">
+                <span class="fakeinput">0000.00.00 fake</span>
+                <div class="fakebutton">
+                    <span class="sp_selene icon_datefield">달력</span>
+                </div>
+            </div>
+            <div class="real_inputbox">
+                <input type="text" class="LSinput" value="0000.00.00">
+                <button class="LSbutton" type="button">
+                    <span class="sp_selene icon_datefield">달력</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <span class="period_dash">~</span>
+    <div class="period_wrap">
+        <div class="LS_ngh_input2 righticon readonly showfake">
+            <div class="fake_inputbox">
+                <span class="fakeinput">0000.00.00 fake</span>
+                <div class="fakebutton">
+                    <span class="sp_selene icon_datefield">달력</span>
+                </div>
+            </div>
+            <div class="real_inputbox">
+                <input type="text" class="LSinput" value="0000.00.00">
+                <button class="LSbutton" type="button">
+                    <span class="sp_selene icon_datefield">달력</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+<hr>
+<div class="LS_saoinput">
+    <div class="LS_ngh_select2">
+       <!-- [D] aria-expanded 접근성을 위한 속성으로 확장 가능한 객체임을 나타냄.
+            리스트가 노출될때 true 로 상태값 수정이 필요합니다 -->
+        <div class="fake_inputbox">
+            <span class="fakeinput">select - default fake</span>
+            <div class="fakebutton">
+                <span class="sp_selene">리스트 열기</span>
+            </div>
+        </div>
+        <div class="real_inputbox">
+            <input type="text" class="LSinput" aria-expanded="false" value="select - default">
+            <button class="LSbutton" type="button">
+               <span class="sp_selene">리스트 열기</span>
+            </button>
+        </div>
+   </div>
+</div>
+<br>
+<div class="LS_saoinput">
+    <div class="LS_ngh_select2 disabled">
+        <div class="fake_inputbox">
+            <span class="fakeinput">select - disabled fake</span>
+            <div class="fakebutton">
+                <span class="sp_selene">리스트 열기</span>
+            </div>
+        </div>
+        <div class="real_inputbox">
+            <input type="text" class="LSinput" aria-expanded="false" disabled  value="select - disabled">
+            <button class="LSbutton" type="button" disabled>
+               <span class="sp_selene">리스트 열기</span>
+            </button>
+        </div>
+   </div>
+</div>
+<br>
+<div class="LS_saoinput">
+    <!-- [D] focus 될떄 view 클래스 추가 -->
+   <div class="LS_ngh_select2 view showfake">
+        <div class="fake_inputbox">
+            <span class="fakeinput">select - focus fake</span>
+            <div class="fakebutton">
+                <span class="sp_selene">리스트 열기</span>
+            </div>
+        </div>
+        <div class="real_inputbox">
+            <input type="text" class="LSinput" aria-expanded="true" value="select - focus">
+            <button class="LSbutton" type="button">
+               <span class="sp_selene">리스트 열기</span>
+            </button>
+        </div>
+   </div>
+</div>
+<br>
+<div class="LS_saoinput">
+   <!-- [D] 입력가능 상태일때 edit 클래스 추가 -->
+   <div class="LS_ngh_select2 edit">
+       <div class="fake_inputbox">
+            <span class="fakeinput">select - edit (CLICK to view list)</span>
+            <div class="fakebutton">
+                <span class="sp_selene">리스트 열기</span>
+            </div>
+        </div>
+        <div class="real_inputbox">
+            <input type="text" class="LSinput" aria-expanded="true" value="select - edit (CLICK to view list)">
+            <button class="LSbutton" type="button">
+               <span class="sp_selene">리스트 열기</span>
+            </button>
+            <!-- 스크롤 생성 max-height 높이값 제어 -->
+            <ul class="LSselectResult" style="position: absolute; top: 100%; left: -2px; z-index: 10; width: calc(100% + 2px); margin-top: 2px; overflow: auto; max-height: 100px; display: none;">
+                <li class="LSnghSelectResult_listitem active">
+                    <a href="#">
+                        <div>가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 </div>
+                    </a>
+                </li>
+                <li class="LSnghSelectResult_listitem">
+                    <a href="#">
+                        <div>더존비즈온</div>
+                    </a>
+                </li>
+                <li class="LSnghSelectResult_listitem">
+                    <a href="#">
+                        <div>더존비즈온</div>
+                    </a>
+                </li>
+                <li class="LSnghSelectResult_listitem">
+                    <a href="#">
+                        <div>naver.com</div>
+                    </a>
+                </li>
+                <li class="LSnghSelectResult_listitem">
+                    <a href="#">
+                        <div>naver.com</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+   </div>
+</div>
+<br>
+<div class="LS_saoinput">
+   <!-- [D] 버튼 없을 경우 nobutton 클래스 추가  -->
+   <div class="LS_ngh_select2 nobutton">
+       <div class="fake_inputbox">
+            <span class="fakeinput">select - no button</span>
+            <div class="fakebutton">
+                <span class="sp_selene">리스트 열기</span>
+            </div>
+        </div>
+        <div class="real_inputbox">
+            <input type="text" class="LSinput" aria-expanded="false" value="select - no button">
+        </div>
+   </div>
+</div>
+<br>
+<div class="LS_saoinput">
+    <div class="LS_ngh_input2 LStextarea">
+        <div class="fake_inputbox">
+            <span class="fakeinput placeholder">dasdasdasdaasdasdasdasdaasdasdasdasdaasdasdasdasdaasdasdasdasdaas</span>
+        </div>
+        <div class="real_inputbox">
+            <!-- [D] mouse 오버시 짤린 텍스트가 툴팁으로 전체 노출될 수 있도록 처리 필요  -->
+            <textarea class="LSinput">dasdasdasdaasdasdasdasdaasdasda
+sdasdaasrsdasdaasbr
+asdasdasdaasdasdasdasdaas</textarea>
+        </div>
+    </div>
+</div>
+<p style="height:60px;"></p>

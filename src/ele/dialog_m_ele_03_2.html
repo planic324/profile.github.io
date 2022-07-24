@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>국회의원 이광재 - 세계의 미래를 가장 먼저 만나는 나라, 대한민국</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi">
+	<!-- <meta name="description" content="">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="">
+	<meta property="og:description" content="">
+	<meta property="og:url" content="">
+	<meta property="og:image" content=""> -->
+	<link rel="stylesheet" type="text/css" href="/css/nanumsquare.css">
+	<link rel="stylesheet" type="text/css" href="/css/svc/m_ele.css">
+
+</head>
+<body>
+
+<dl>
+    <dt>Dialog</dt>
+    <dd class="ele dz_font">
+        <div class="basic_dialog">
+            <div class="dimmed"></div>
+            <div class="dialog_wrap_tbl">
+                <div class="dialog_wrap_tblcel">
+                    <!-- [D] 다이얼로그 컴퍼넌트 Root에 아래 속성 추가 -->
+                    <div class="dialog_wrap">
+                        <!-- [D] 여기부터 Luna 다이얼로그에 넣어서 사용 -->
+                        <div class="dialog_content" style="padding: 40px 0 30px;">
+							<div class="section_title">
+								<strong>People & Place</strong>
+							</div>
+
+							<div class="section type_gallery type_detail">
+								<ul class="gallery_list">
+									<li class="item">
+										<a href="#">
+											<img src="https://t1.daumcdn.net/cfile/blog/993CFE4E5D64978514" alt="">
+										</a>
+									</li>
+									<li class="item">
+										<a href="#">
+											<img src="https://t1.daumcdn.net/cfile/blog/993CFE4E5D64978514" alt="">
+										</a>
+									</li>
+									<li class="item">
+										<a href="#">
+											<img src="https://blog.kakaocdn.net/dn/ppVti/btqDvhroep4/4u6tZEDijyU7WUj23DvrT0/img.jpg" alt="">
+										</a>
+									</li>						
+
+								</ul>
+							</div>
+
+							<div class="btn_dialog_box">
+								<button type="button" class="btn_del"><span class="blind">닫기</span></button>
+							</div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </dd>
+</dl>
+<script src="../../js/jquery/jquery-latest.min.js"></script>
+<script src="../js/jquery.include.js"></script>
+<script src="../../js/slick/slick.min.js"></script>>
+<script type="text/javascript">
+    //메인 슬릭 영역
+	$('.gallery_list').slick({
+		infinite: false,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		speed: 300,
+		dots: true, 
+		dotsClass: 'custom_paging', 
+		customPaging: function (slider, i) { 
+		return (i + 1) + ' ' + '/' + ' ' + slider.slideCount; 
+		} 
+	});
+</script>
+</body>
+</html>

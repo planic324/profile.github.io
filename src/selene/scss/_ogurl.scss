@@ -1,0 +1,200 @@
+// OG URL
+
+.LS_ogimage {
+  .message_content {
+    .header_container {
+      display: inline-block;
+      position: relative;
+      padding-right: 18px;
+      box-sizing:border-box;
+      width:100%;
+      a.imagelnk {
+        display:block;
+        width:100%;
+        text-decoration: none;
+        color: $point-color;
+        font-size: 12px;
+        font-family: $smallfont;
+        line-height: 14px;
+        max-width:655px;
+        @extend %ellipsis;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      button.LS_btn {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        height: 14px;
+        width: 14px;
+        margin-top: -7px;
+
+        .sp_selene {
+          @include sprite-size(8px, 4px)
+          background-position: -225px -285px;
+        }
+      }
+    }
+    .image_container {
+      display:none;
+      max-width:500px;
+      a.imagebox {
+        display:block;
+        width:100%;
+        img {
+          width:100%;
+          border-radius:10px;
+        }
+      }
+    }
+    &.open {
+      .header_container {
+        button.LS_btn .sp_selene {
+          background-position: -225px -275px;
+        }
+      }
+      .image_container {
+        display:block;
+      }
+    }
+  }
+}
+
+.LS_ogurl {
+  .message_content {
+    .header_container {
+      display: inline-block;
+      position: relative;
+      box-sizing:border-box;
+      width:100%;
+      .favicon_box {
+        position:relative;
+        line-height:18px;
+        margin-bottom:5px;
+        img {
+          position:absolute;
+          top:0;
+          left:0;
+        }
+      }
+      .site_url {
+        display:block;
+        width:100%;
+        box-sizing:border-box;
+        font-size:12px;
+        font-family: $smallfont;
+        color:$text-color2;
+        padding-left:20px;
+        @extend %ellipsis;
+      }
+      a.imagelnk {
+        display:block;
+        width:100%;
+        text-decoration: none;
+        font-size:13px;
+        font-family:$dfont;
+        color:$point-color;
+        line-height: 16px;
+        margin-bottom:3px;
+        max-width:655px;
+        font-weight:bold;
+        @extend %ellipsis;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      .imagelnk_desc {
+        display:block;
+        font-size:12px;
+        font-family:$dfont;
+        color:#000;
+        line-height:14px;
+        font-weight:bold;
+      }
+      button.LS_btn {
+        height:14px;
+        .sp_selene {
+          @include sprite-size(8px, 4px)
+          background-position: -225px -285px;
+        }
+      }
+    }
+    .image_container {
+      display:none;
+      max-width:500px;
+      margin-top:2px;
+      a.imagebox {
+        display:block;
+        width:100%;
+        img {
+          width:100%;
+          border-radius:10px;
+        }
+      }
+    }
+    .movie_container {
+      display:none;
+      position:relative;
+      height:0;
+      max-width:100%;
+      background:transparent;
+      padding-bottom:56.25%;
+      
+      > iframe {
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+      }
+    }
+    &.open {
+      .header_container {
+        button.LS_btn .sp_selene {
+          background-position: -225px -275px;
+        }
+      }
+      .image_container {
+        display:block;
+      }
+      .movie_container {
+        display:block;
+      }
+    }
+  }
+  &.wetalk {
+    .message_content {
+      position:relative;
+      padding-left: 14px;
+      margin:10px 0;
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 3px;
+        height: 100%;
+        background: #d8e3ef;
+      }
+      .image_container {
+        max-width:300px;
+        max-height:600px;
+        a.imagebox img {
+          width:auto;
+        }
+        .bgimage_item {
+          max-width:300px;
+          max-height:600px;
+          width:100%;
+          height:100%;
+          background-position:0 0;
+          background-repeat: no-repeat;
+          background-size:cover;
+        }
+      }
+    }
+  }
+}

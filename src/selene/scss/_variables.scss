@@ -1,0 +1,46 @@
+// color
+$point-color: #1c90fb;
+$error-color: #fc5356;
+$warning-color: #febc2c;
+$positive-color: #1fc47c;
+$text-color: #4a4a4a;
+$text-color2: #8d8d8d;
+$border-color: #dbdbdb;
+$table-border-color: #e5e5e5;
+$table-bt-color: #646464;
+$disable-color:#f6f6f6;
+$accurate-color:#8fe1bd;
+$ngh_bg_color : #e9f5ff;
+$hover_color: #f5f5f5;
+
+
+// sprite image url
+$sp_selene: "https://static.wehago.com/imgs/common/sp_lux.png";
+
+// font
+$smallfont: '돋움',Dotum,Helvetica,'Apple SD Gothic Neo',sans-serif !important;
+$nfont: 'Nanum Square','돋움',Dotum,Helvetica,'Apple SD Gothic Neo',sans-serif;
+$dfont: douzone,"Microsoft YaHei","PingFang SC","MS PGothic","Hiragino Kaku Gothic ProN","굴림",gulim,"Apple SD Gothic Neo",sans-serif !important;
+$malgunfont: 'Malgun Gothic','돋움',Dotum,Helvetica,'Apple SD Gothic Neo',sans-serif !important;
+
+
+// 말줄임
+%ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  word-break: break-all;
+  text-overflow: ellipsis;
+}
+
+// 아이콘
+.sp_selene.icon_datefield {
+  width:16px;
+  height:14px;
+  background-position:-175px 0;
+}
+
+.sp_selene.icon_codehelp {
+  width:14px;
+  height:14px;
+  background-position:-175px -275px
+}

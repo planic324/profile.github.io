@@ -1,0 +1,29 @@
+<svg id="ic_unit" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+    <defs>
+        <style>
+            .cls-1,.cls-2{fill:none}.cls-2{stroke:#fff;stroke-width:2px}.cls-3{stroke:none}
+        </style>
+    </defs>
+    <path id="_Transparent_Rectangle_" data-name="&lt;Transparent Rectangle&gt;" class="cls-1" d="M0 0h32v32H0z"/>
+    <g id="그룹_56719" data-name="그룹 56719" transform="translate(0 1)">
+        <g id="타원_8136" data-name="타원 8136" class="cls-2" transform="translate(9 9)">
+            <circle class="cls-3" cx="7" cy="7" r="7"/>
+            <circle class="cls-1" cx="7" cy="7" r="6"/>
+        </g>
+        <g id="타원_8137" data-name="타원 8137" class="cls-2" transform="translate(13 2)">
+            <circle class="cls-3" cx="3" cy="3" r="3"/>
+            <circle class="cls-1" cx="3" cy="3" r="2"/>
+        </g>
+        <g id="타원_8138" data-name="타원 8138" class="cls-2" transform="translate(23 20)">
+            <circle class="cls-3" cx="3" cy="3" r="3"/>
+            <circle class="cls-1" cx="3" cy="3" r="2"/>
+        </g>
+        <g id="타원_8139" data-name="타원 8139" class="cls-2" transform="translate(3 20)">
+            <circle class="cls-3" cx="3" cy="3" r="3"/>
+            <circle class="cls-1" cx="3" cy="3" r="2"/>
+        </g>
+        <path id="선_207" data-name="선 207" class="cls-2" transform="translate(16 6.5)" d="M0 0v4"/>
+        <path id="선_208" data-name="선 208" class="cls-2" transform="rotate(54.97 -13.353 20.103)" d="M0 0v4"/>
+        <path id="선_209" data-name="선 209" class="cls-2" transform="rotate(125.03 6.717 17.342)" d="M0 4V0"/>
+    </g>
+</svg>

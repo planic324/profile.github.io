@@ -1,0 +1,664 @@
+<div style="width:420px">
+
+<p class="subtitle">투표만들기_다이얼로그</p>
+<div class="LS_poll_v2">
+    <div class="LS_poll_tbl">
+        <div class="LS_table thin_bordered">
+            <table class="LStbl default v2">
+                <colgroup>
+                    <col style="width:90px">
+                    <col>
+                </colgroup>
+                <tbody>
+                <tr>
+                    <th scope="row" class="txtcnt">
+                        <div class="inbx">투표제목</div>
+                    </th>
+                    <td>
+                        <div class="inbx">
+                            <div class="LS_basic_text">
+                                <!-- 입력창에 포커스 - inpbx class="on" 추가  -->
+                                <div class="inpbx">
+                                    <input type="text" placeholder="회식장소 투표해주세요.">
+                                    <span class="sp_lux"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row" class="txtcnt">
+                        <div class="inbx">투표종류</div>
+                    </th>
+                    <td>
+                        <div class="inbx">
+                            <div class="votemake_listitem nobd">
+                                <div class="radio_item">
+                                    <div class="LS_form">
+                                        <label>
+                                            <input class="LSinput" type="radio" name="test_radio">
+                                            <span class="icon"></span>
+                                            <span class="label_text">텍스트</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="radio_item">
+                                    <div class="LS_form">
+                                        <label>
+                                            <input class="LSinput" type="radio" name="test_radio">
+                                            <span class="icon"></span>
+                                            <span class="label_text">날짜</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="votemake_listitem">
+                                <div class="LS_basic_text">
+                                    <!-- 입력창에 포커스 - inpbx class="on" 추가  -->
+                                    <div class="inpbx">
+                                        <input type="text" placeholder="이미지 첨부된 경우">
+                                        <button type="button" class="LS_btn Image calbtn"><span class="sp_selene" style="width:14px;height:14px;background-position:-176px 0">날짜선택</span></button>
+                                    </div>
+                                </div>
+                                <div class="in_inputbtn">
+                                    <button type="button" class="LS_btn Image selected_img"><span class="sp_selene" style="background-image:url(https://static.wehago.com/imgs/dummy/@city.jpg)"></span></button>
+                                </div>
+                            </div>
+                            <div class="votemake_listitem">
+                                <div class="LS_basic_text">
+                                    <!-- 입력창에 포커스 - inpbx class="on" 추가  -->
+                                    <div class="inpbx">
+                                        <input type="text" placeholder="이미지 첨부 안된 경우">
+                                        <button type="button" class="LS_btn Image calbtn"><span class="sp_selene" style="width:14px;height:14px;background-position:-176px 0">날짜선택</span></button>
+                                    </div>
+                                </div>
+                                <div class="in_inputbtn">
+                                    <div class="addpic">
+                                        <button type="button" class="LS_btn Image"><span class="sp_selene" style="width:14px;height:14px;background-position:-428px -185px">사진등록</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="votemake_listitem last">
+                                <div class="LS_basic_text">
+                                    <!-- 입력창에 포커스 - inpbx class="on" 추가  -->
+                                    <div class="inpbx">
+                                        <input type="text" placeholder="마지막 라인 삭제버튼 추가된 형태">
+                                        <button type="button" class="LS_btn Image calbtn"><span class="sp_selene" style="width:14px;height:14px;background-position:-176px 0">날짜선택</span></button>
+                                    </div>
+                                </div>
+                                <div class="in_inputbtn">
+                                    <div class="addpic">
+                                        <button type="button" class="LS_btn Image"><span class="sp_selene" style="width:14px;height:14px;background-position:-428px -185px">사진등록</span></button>
+                                    </div><!--
+                                --><button type="button" class="LS_btn Image"><span class="sp_selene" style="width:16px;height:16px;background-position:-162px -777px">항목삭제</span></button>
+                                </div>
+                            </div>
+                            <div class="votemake_listitem additem">
+                                <button type="button" class="LS_btn votemake_additem"><span class="text">항목추가</span></button>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <ul class="vote_check_list">
+        <li class="selected">
+            <strong class="option_time">마감시간설정</strong>
+            <div class="datetime_wrap">
+                <div class="LS_datepicker">
+                    <div class="datebx">
+                        <span class="inpbx">
+                            <input type="text" id="btn_date" value="2016.08.28">
+                            <label for="btn_date"></label>
+                        </span>
+                        <button type="button" class="btn"><span class="sp_selene">검색</span></button>
+                    </div>
+                </div>
+                <div class="LS_datepicker time">
+                    <div class="datebx">
+                        <span class="inpbx">
+                            <input type="text" id="btn_date" value="오전 09:00">
+                            <label for="btn_date"></label>
+                        </span>
+                        <button type="button" class="btn"><span class="sp_selene">검색</span></button>
+                    </div>
+                </div>
+            </div>
+            <span class="endtext">까지</span>
+            <div class="LS_form">
+                <label>
+                    <input type="checkbox" name="test_check" class="LSinput">
+                    <span class="icon"></span>
+                    <span class="label_text"><span class="blind">선택</span></span>
+                </label>
+            </div>
+        </li>
+        <li>
+            <strong class="option_multi">복수선택허용</strong>
+            <div class="LS_form">
+                <label>
+                    <input type="checkbox" name="test_check" class="LSinput">
+                    <span class="icon"></span>
+                    <span class="label_text"><span class="blind">선택</span></span>
+                </label>
+            </div>
+        </li>
+        <li class="selected">
+            <strong class="option_anonymous">익명투표</strong>
+            <div class="LS_form">
+                <label>
+                    <input type="checkbox" name="test_check" class="LSinput">
+                    <span class="icon"></span>
+                    <span class="label_text"><span class="blind">선택</span></span>
+                </label>
+            </div>
+        </li>
+        <li>
+            <strong class="option_add">항목추가허용</strong>
+            <div class="LS_form">
+                <label>
+                    <input type="checkbox" name="test_check" class="LSinput">
+                    <span class="icon"></span>
+                    <span class="label_text"><span class="blind">선택</span></span>
+                </label>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<p class="subtitle v2">투표하기_다이얼로그</p>
+<div class="LS_poll_v2">
+    <div class="vote_box">
+        <!-- [D] 옵션정보가 1개일 경우 option1, 2개일 경우 option2 추가 -->
+        <div class="clearfix option1">
+            <strong class="vote_option_title">회식장소 투표해주세요!회식장소 투표해주세요!회식장소 투표해주세요!회식장소 투표해주세요!회식장소 투표해주세요!회식장소 투표해주세요!회식장소 투표해주세요!회식장소 투표해주세요!회식장소 투표해주세요!회식장소 투표해주세요!회식장소 투표해주세요!</strong>
+            <div class="option_roundbox">
+                <span class="option_multi">복수선택</span>
+            </div>
+        </div>
+        <div class="vote_progressbox">
+            <p class="vote_option time">2018년 01월 05일 18시까지 진행됩니다.</p>
+            <span class="total_vote">12/20명(<em>87%</em>) 참여</span>
+        </div>
+        <ul class="vote_list voting">
+            <!-- [D] 투표인원 클릭시 .open 추가 -->
+            <li class="open">
+                <!-- [D] 1등일 경우 .toprank 추가 -->
+                <div class="vote_text_box toprank">
+                    <span class="progressbar" style="width:97%"></span>
+                    <a href="#" class="vote_name"><em>풍물생고기</em></a>
+                    <a href="#" class="count"><span class="iconwrap">8</span></a>
+                </div>
+                <ul class="participant_list">
+                    <li>김더존</li>
+                    <li>김더존</li>
+                    <li>김더존</li>
+                    <li>김더존</li>
+                    <li>김더존</li>
+                    <li>김더존</li>
+                    <li>김더존</li>
+                    <li>김더존</li>
+                    <li>김더존</li>
+                    <li>김더존</li>
+                    <li>김더존</li>
+                </ul>
+            </li>
+            <li class="selected">
+                <div class="vote_text_box">
+                    <!-- 진행율을 .progressbar 의 width값 지정 -->
+                    <span class="progressbar" style="width:50%"></span>
+                    <a href="#" class="vote_name"><em>dasddasdadasddasdadasddasdadasddasdadasddasdadasddasdadasddasdadasddasdadasddasdadasddasdadasdadasd</em></a>
+                    <a href="#" class="count"><span class="iconwrap">20</span></a>
+                </div>
+                <ul class="participant_list">
+                    <li>김더존</li>
+                    <li>김더존</li>
+                    <li>김더존</li>
+                    <li>김더존</li>
+                    <li>김더존</li>
+                    <li>김더존</li>
+                    <li>김더존</li>
+                    <li>김더존</li>
+                    <li>김더존</li>
+                    <li>김더존</li>
+                    <li>김더존</li>
+                </ul>
+            </li>
+            <li class="selected focus">
+                <div class="vote_text_box">
+                    <span class="progressbar" style="width:25%"></span>
+                    <a href="#" class="vote_name"><em>춘천한우</em></a>
+                    <a href="#" class="count"><span class="iconwrap">9999</span></a>
+                </div>
+                <ul class="participant_list">
+                    <li>김더존</li>
+                    <li>김더존</li>
+                    <li>김더존</li>
+                    <li>김더존</li>
+                    <li>김더존</li>
+                    <li>김더존</li>
+                    <li>김더존</li>
+                    <li>김더존</li>
+                    <li>김더존</li>
+                    <li>김더존</li>
+                    <li>김더존</li>
+                </ul>
+            </li>
+            <li>
+                <div class="vote_text_box">
+                    <span class="progressbar" style="width:97%"></span>
+                    <a href="#" class="vote_name"><em>투표마감</em></a>
+                    <a href="#" class="count"><span class="iconwrap">8888</span></a>
+                </div>
+                <ul class="participant_list">
+                    <li>김더존</li>
+                    <li>김더존</li>
+                    <li>김더존</li>
+                    <li>김더존</li>
+                    <li>김더존</li>
+                    <li>김더존</li>
+                    <li>김더존</li>
+                    <li>김더존</li>
+                    <li>김더존</li>
+                    <li>김더존</li>
+                    <li>김더존</li>
+                </ul>
+            </li>
+        </ul>
+        <div class="votemake_listitem last">
+            <div class="LS_basic_text">
+                <!-- 입력창에 포커스 - inpbx class="on" 추가  -->
+                <div class="inpbx">
+                    <input type="text" placeholder="항목을 입력하세요">
+                </div>
+            </div>
+            <div class="in_inputbtn">
+                <button type="button" class="LS_btn Image"><span class="sp_selene" style="width:14px;height:14px;background-position:-176px 0"></span></button><!--
+                --><div class="addpic">
+                    <button type="button" class="LS_btn Image selected_img"><span class="sp_selene" style="background-image:url(https://static.wehago.com/imgs/dummy/@city.jpg)"></span></button>
+                </div>
+            </div>
+        </div>
+        <div class="votemake_listitem last">
+            <div class="LS_basic_text">
+                <!-- 입력창에 포커스 - inpbx class="on" 추가  -->
+                <div class="inpbx">
+                    <input type="text" placeholder="항목을 입력하세요">
+                </div>
+            </div>
+            <div class="in_inputbtn">
+                <button type="button" class="LS_btn Image"><span class="sp_selene" style="width:14px;height:14px;background-position:-176px 0"></span></button>
+                <div class="addpic">
+                    <button type="button" class="LS_btn Image"><span class="sp_selene" style="width:14px;height:14px;background-position:-428px -185px"></span></button>
+                    <ul class="LS_funcbtn_list" style="display:block">
+                        <li>
+                            <a href="#">파일올리기</a>
+                        </li>
+                        <li>
+                            <a href="#">WE드라이브</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="votemake_listitem additem">
+            <button type="button" class="LS_btn votemake_additem"><span class="text">항목추가</span></button>
+        </div>
+    </div>
+</div>
+
+
+<p class="subtitle v2">투표하기_다이얼로그_사진포함</p>
+<div class="LS_poll_v2">
+    <div class="vote_box">
+        <!-- [D] 옵션정보가 1개일 경우 option1, 2개일 경우 option2 추가 -->
+        <div class="clearfix option2">
+            <strong class="vote_option_title">회식장소 투표해주세요!회식장소 투표해주세요!회식장소 투표해주세요!회식장소 투표해주세요!회식장소 투표해주세요!회식장소 투표해주세요!</strong>
+            <div class="option_roundbox">
+                <span class="option_multi">복수선택</span><span class="option_anonymous">익명투표</span>
+            </div>
+        </div>
+        <div class="vote_progressbox">
+            <p class="vote_option time">2018년 01월 05일 18시까지 진행됩니다.</p>
+            <span class="total_vote">12/20명(<em>87%</em>) 참여</span>
+        </div>
+        <ul class="vote_pic_list">
+            <li>
+                <a href="#" class="picwrap" style="background-image:url(https://static.wehago.com/imgs/dummy/@city.jpg">
+                    <div class="textbox">
+                        <strong>풍물생고기풍물생고기풍물생고기풍물생고기풍물생고기풍물생고기풍물생고기</strong>
+                        <!-- [D] 그래프의 퍼센트는 아래 width값으로 설정 -->
+                        <span class="graphbg"><span class="graphin" style="width:50%"></span></span>
+                    </div>
+                </a>
+                <button type="button" class="pic_count"><em>99+</em></button>
+            </li>
+            <li class="selected focus">
+                <!-- [D] 선택된 투표는 .selected 추가 -->
+                <a href="#" class="picwrap selected" style="background-image:url(https://static.wehago.com/imgs/dummy/@city.jpg">
+                    <!-- [D] 선택된 투표일 경우 아래 div.dmm 요소 추가 -->
+                    <div class="dmm"></div>
+                    <div class="textbox">
+                        <strong>풍물생고기</strong>
+                        <span class="graphbg"><span class="graphin" style="width:50%"></span></span>
+                    </div>
+                </a>
+                <button type="button" class="pic_count"><em>99+</em></button>
+            </li>
+        </ul>
+        <div class="votes_member">
+            <ul>
+                <li>김더존</li>
+                <li>김더존</li>
+                <li>김더존</li>
+                <li>김더존</li>
+                <li>김더존</li>
+                <li>김더존</li>
+                <li>김더존</li>
+                <li>김더존</li>
+                <li>김더존</li>
+                <li>김더존</li>
+                <li>김더존</li>
+            </ul>
+        </div>
+        <ul class="vote_pic_list">
+            <li>
+                <!-- [D] 이미지 없을 경우 .noimg 추가 -->
+                <a href="#" class="picwrap noimg">
+                    <div class="textbox">
+                        <strong>풍물생고기</strong>
+                        <span class="graphbg"><span class="graphin" style="width:100%"></span></span>
+                    </div>
+                </a>
+                <button type="button" class="pic_count"><em>99+</em></button>
+            </li>
+            <li class="selected">
+                <!-- [D] 1등인 투표는 .toprank 추가 -->
+                <a href="#" class="picwrap toprank" style="background-image:url(https://static.wehago.com/imgs/dummy/@city.jpg">
+                    <div class="textbox">
+                        <strong>내가1등이야</strong>
+                        <span class="graphbg"><span class="graphin" style="width:45%"></span></span>
+                    </div>
+                </a>
+                <button type="button" class="pic_count"><em>99+</em></button>
+            </li>
+        </ul>
+        <!-- [D] 오른쪽 이미지에 대한 참여자명단일 경우 .right_arw 추가 -->
+        <div class="votes_member right_arw">
+            <ul>
+                <li>김더존</li>
+                <li>김더존</li>
+                <li>김더존</li>
+                <li>김더존</li>
+                <li>김더존</li>
+                <li>김더존</li>
+                <li>김더존</li>
+                <li>김더존</li>
+                <li>김더존</li>
+                <li>김더존</li>
+                <li>김더존</li>
+            </ul>
+        </div>
+        <ul class="vote_pic_list">
+            <li>
+                <a href="#" class="picwrap" style="background-image:url(https://static.wehago.com/imgs/dummy/@city.jpg">
+                    <div class="textbox">
+                        <strong>풍물생고기풍물생고기풍물생고기풍물생고기풍물생고기풍물생고기풍물생고기</strong>
+                        <!-- [D] 그래프의 퍼센트는 아래 width값으로 설정 -->
+                        <span class="graphbg"><span class="graphin" style="width:50%"></span></span>
+                    </div>
+                </a>
+                <button type="button" class="pic_count"><em>99+</em></button>
+            </li>
+        </ul>
+        <div class="votemake_listitem last onebtn">
+            <div class="LS_basic_text">
+                <!-- 입력창에 포커스 - inpbx class="on" 추가  -->
+                <div class="inpbx">
+                    <input type="text" placeholder="항목을 입력하세요">
+                </div>
+            </div>
+            <button type="button" class="LS_btn Image delbtn">
+                <span class="sp_selene" style="width:16px;height:16px;background-position:-162px -777px"></span>
+            </button>
+            <div class="in_inputbtn">
+                <button type="button" class="LS_btn Image selected_img"><span class="sp_selene" style="background-image:url(https://static.wehago.com/imgs/dummy/@city.jpg)"></span></button>
+            </div>
+        </div>
+        <div class="votemake_listitem last onebtn">
+            <div class="LS_basic_text">
+                <!-- 입력창에 포커스 - inpbx class="on" 추가  -->
+                <div class="inpbx">
+                    <input type="text" placeholder="항목을 입력하세요">
+                </div>
+            </div>
+            <button type="button" class="LS_btn Image delbtn">
+                <span class="sp_selene" style="width:16px;height:16px;background-position:-162px -777px"></span>
+            </button>
+            <div class="in_inputbtn">
+                <button type="button" class="LS_btn Image selected_img"><span class="sp_selene" style="background-image:url(https://static.wehago.com/imgs/dummy/@city.jpg)"></span></button>
+            </div>
+        </div>
+        <div class="votemake_listitem additem">
+            <button type="button" class="LS_btn votemake_additem"><span class="text">항목추가</span></button>
+        </div>
+    </div>
+</div>
+
+<p class="subtitle v2">투표종료_다이얼로그</p>
+<div class="LS_poll_v2">
+    <!-- 투표 종료시 .votend 추가 -->
+    <div class="vote_box votend">
+        <div class="clearfix">
+            <strong class="vote_option_title">회식장소 투표해주세요!</strong>
+            <div class="option_roundbox">
+                <span class="option_multi">복수선택</span>
+            </div>
+        </div>
+        <div class="vote_progressbox">
+            <p class="vote_option time">2018년 01월 05일 18시까지 진행됩니다.</p>
+            <span class="total_vote">12/20명(<em>87%</em>) 참여</span>
+        </div>
+        <ul class="vote_list">
+            <!-- [D] 투표인원 클릭시 .open 추가 -->
+            <li>
+                <!-- [D] 1등일 경우 .toprank 추가 -->
+                <div class="vote_text_box toprank">
+                    <span class="progressbar" style="width:97%"></span>
+                    <a href="#" class="vote_name"><em>풍물생고기</em></a>
+                    <a href="#" class="count"><span class="iconwrap">8</span></a>
+                </div>
+            </li>
+            <li>
+                <div class="vote_text_box">
+                    <!-- 진행율을 .progressbar 의 width값 지정 -->
+                    <span class="progressbar" style="width:50%"></span>
+                    <a href="#" class="vote_name"><em>dasddasdadasddasdadasddasdadasddasdadasddasdadasddasdadasddasdadasddasdadasddasdadasddasdadasdadasd</em></a>
+                    <a href="#" class="count"><span class="iconwrap">20</span></a>
+                </div>
+            </li>
+            <li class="selected">
+                <div class="vote_text_box">
+                    <span class="progressbar" style="width:25%"></span>
+                    <a href="#" class="vote_name"><em>춘천한우</em></a>
+                    <a href="#" class="count"><span class="iconwrap">9999</span></a>
+                </div>
+            </li>
+            <li>
+                <div class="vote_text_box">
+                    <span class="progressbar" style="width:97%"></span>
+                    <a href="#" class="vote_name"><em>투표마감</em></a>
+                    <a href="#" class="count"><span class="iconwrap">8888</span></a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<p class="subtitle v2">투표하기_채팅방</p>
+<div class="LS_poll_v2">
+    <div class="chat_vote_wrap">
+        <div class="vote_title">
+            <strong>회식장소 투표해주세요!회식장소 투표해주세요!회식장소 투표해주세요!회식장소 투표해주세요!</strong><em>2017.11.20 10:21까지</em>
+        </div>
+        <ul>
+            <li>
+                <a href="#">
+                    <em>풍물생공기</em><span class="count">8</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <em>dasddasdadasddasdadasddasdadasddasdadasddasdadasddasdadasddasdadasddasdadasddasdadasddasdadasdadasd</em><span class="count">20</span>
+                </a>
+            </li>
+            <li class="selected">
+                <a href="#">
+                    <em>춘천한우</em><span class="count">9999</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <em>효돈삼겹살</em><span class="count">8</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<p class="subtitle v2">투표하기_채팅방(이미지 포함)</p>
+<div class="LS_poll_v2">
+    <!-- [D] 이미지 포함된 리스트일 경우 .has_iamge 추가 -->
+    <div class="chat_vote_wrap has_image">
+        <div class="vote_title">
+            <strong>회식장소 투표해주세요!회식장소 투표해주세요!회식장소 투표해주세요!회식장소 투표해주세요!</strong><em>2017.11.20 10:21까지</em>
+        </div>
+        <ul>
+            <li>
+                <a href="#">
+                    <div class="thumimage">
+                        <div class="image_box" style="background-image:url(https://static.wehago.com/imgs/dummy/@city.jpg)"></div>
+                    </div>
+                    <em>풍물생공기</em><span class="count">8</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="thumimage">
+                        <div class="image_box" style="background-image:url(https://static.wehago.com/imgs/dummy/@city.jpg)"></div>
+                    </div>
+                    <em>dasddasdadasddasdadasddasdadasddasdadasddasdadasddasdadasddasdadasddasdadasddasdadasddasdadasdadasd</em><span class="count">20</span>
+                </a>
+            </li>
+            <li class="selected">
+                <a href="#">
+                    <div class="thumimage">
+                        <div class="image_box" style="background-image:url(https://static.wehago.com/imgs/dummy/@city.jpg)"></div>
+                    </div>
+                    <em>춘천한우</em><span class="count">9999</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <!-- [D] 이미지 없을 경우 .noimg 추가 -->
+                    <div class="thumimage noimg">
+                        <div class="image_box"></div>
+                    </div>
+                    <em>효돈삼겹살</em><span class="count">8</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+<p class="subtitle v2">투표하기_채팅방 (투표종료)</p>
+<div class="LS_poll_v2">
+    <div class="chat_vote_wrap">
+        <div class="vote_title">
+            <strong>회식장소 투표해주세요!회식장소 투표해주세요!회식장소 투표해주세요!회식장소 투표해주세요!</strong><em>투표종료</em>
+        </div>
+        <div class="end_rank">
+            <div class="rank_header">
+                <strong>1위</strong>
+            </div>
+            <div class="rank_list_box">
+                <ul class="rank_list">
+                    <li><div class="list_item">풍물생고기</div></li>
+                </ul>
+            </div>
+        </div>
+        <!-- [D] 공통1위일 경우 .joint_toprank 추가 -->
+        <div class="end_rank joint_toprank">
+            <div class="rank_header">
+                <strong>공통1위</strong>
+            </div>
+            <div class="rank_list_box">
+                <ul class="rank_list">
+                    <li><div class="list_item">풍물생고기</div></li>
+                    <li><div class="list_item">풍물생고기풍물생고기풍물생고기풍물생고기풍물생고기풍물생고기풍물생고기풍물생고기풍물생고기</div></li>
+                    <li><div class="list_item">풍물생고기</div></li>
+                    <li><div class="list_item">풍물생고기</div></li>
+                </ul>
+            </div>
+        </div>
+        <!-- [D] 이미지 추가된 경우 .has_image 추가 -->
+        <div class="end_rank has_image">
+            <div class="rank_header">
+                <strong>1위</strong>
+            </div>
+            <div class="rank_list_box">
+                <ul class="rank_list">
+                    <li>
+                        <div class="list_item">
+                            <div class="thumimage">
+                                <div class="image_box" style="background-image:url(https://static.wehago.com/imgs/dummy/@city.jpg)"></div>
+                            </div>풍물생고기
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="end_rank joint_toprank has_image">
+            <div class="rank_header">
+                <strong>공동 1위</strong>
+            </div>
+            <div class="rank_list_box">
+                <ul class="rank_list">
+                    <li>
+                        <div class="list_item">
+                            <div class="thumimage">
+                                <div class="image_box" style="background-image:url(https://static.wehago.com/imgs/dummy/@city.jpg)"></div>
+                            </div>풍물생고기
+                        </div>
+                    </li>
+                    <li>
+                        <div class="list_item">
+                            <div class="thumimage">
+                                <div class="image_box" style="background-image:url(https://static.wehago.com/imgs/dummy/@city.jpg)"></div>
+                            </div>풍물생고기풍물생고기풍물생고기풍물생고기풍물생고기풍물생고기풍물생고기풍물생고기풍물생고기풍물생고기풍물생고기
+                        </div>
+                    </li>
+                    <li>
+                        <div class="list_item">
+                            <div class="thumimage noimg">
+                                <div class="image_box"></div>
+                            </div>풍물생고기
+                        </div>
+                    </li>
+                    <li>
+                        <div class="list_item">
+                            <div class="thumimage">
+                                <div class="image_box" style="background-image:url(https://static.wehago.com/imgs/dummy/@city.jpg)"></div>
+                            </div>풍물생고기
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta id="viewport" name="viewport" content="width=1280">
+<title>DOCC</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/docc2.css">
+</head>
+<body>
+    <div class="docc">
+        <div class="docc_header">
+            <h1>운영지표<span class="time">2021-11-16 10:25:11</span></h1>
+            <div class="right_box">
+                <div class="tab_btn_box">
+                    <!-- [D] 선택된 버튼에 .selected 추가  -->
+                    <button type="button" class="btn_item">분기별</button>
+                    <button type="button" class="btn_item">월별</button>
+                    <button type="button" class="btn_item selected">일별</button>
+                    <button type="button" class="btn_item">오늘</button>
+                </div>
+            </div>
+        </div>
+        <div class="docc_content">
+            <div class="grid_wrap v2">
+                <!-- 외래 운영현황 -->
+                <div class="grid_section">
+                    <h2 class="section_title">외래 운영현황</h2>
+                    <div class="oprchat">
+                        <div class="topboxwrap lbox dashboard_basicbox">
+                            <h3 class="box_title">외래 진행율<span>(오늘)</span></h3>
+                            <div class="countbox purple">
+                                <p><em>90</em>%<span class="ico_arrow up">상승</span></p>
+                            </div>
+                        </div>
+                        <div class="topboxwrap rbox dashboard_basicbox">
+                            <h3 class="box_title">진료 대기율<span>(오늘)</span></h3>
+                            <div class="countbox">
+                                <p><em>50</em>%</p>
+                            </div>
+                        </div>
+                        <div class="btboxwrap fbox dashboard_basicbox">
+                            <!-- [D] 개발시 인라인 스타일 제거 -->
+                            <!-- <div class="chartbox" style="background:#ccc;font-size:11px;color:#000;padding:10px">chart area</div> -->
+                            <div class="opr_barchart">
+                                <div class="y_axis">
+                                    <span class="label"><span>6,000</span></span>
+                                    <span class="label"><span>4,500</span></span>
+                                    <span class="label"><span>3,000</span></span>
+                                    <span class="label"><span>1,500</span></span>
+                                    <span class="label"><span>0명</span></span>
+                                </div>
+                                <div class="y_axis type_right">
+                                    <span class="label"><span>100</span></span>
+                                    <span class="label"><span>75</span></span>
+                                    <span class="label"><span>50</span></span>
+                                    <span class="label"><span>25</span></span>
+                                    <span class="label"><span>0%</span></span>
+                                </div>
+                                <div class="x_axis">
+                                    <div class="x_item">
+                                        <span class="label">11/22</span>
+                                        <div class="line" style="height:80%;background:#67677c"></div>
+                                        <div class="line" style="height:70%;background:#b281ff"></div>
+                                        <div class="line" style="height:60%"></div>
+                                        
+                                    </div>
+                                    <div class="x_item">
+                                        <span class="label">11/23</span>
+                                        <div class="line" style="height:25%"></div>
+                                    </div>
+                                    <div class="x_item">
+                                        <span class="label">11/24</span>
+                                        <div class="line" style="height:50%"></div>
+                                    </div>
+                                    <div class="x_item">
+                                        <span class="label">11/25</span>
+                                        <div class="line" style="height:75%"></div>
+                                        <div class="layer_box" style="top:60px">
+                                            <dl>
+                                                <div>
+                                                    <dt><span class="dot" style="background:#b281ff"></span>대기</dt>
+                                                    <dd>12명</dd>
+                                                </div>
+                                                <div>
+                                                    <dt><span class="dot" style="background:#504185"></span>완료</dt>
+                                                    <dd>9,999명</dd>
+                                                </div>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                    <div class="x_item">
+                                        <span class="label active">11/26<br><span>(오늘)</span></span>
+                                        <div class="line" style="height:100%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 병상 운영현황 -->
+                <div class="grid_section">
+                    <h2 class="section_title">병상 운영현황</h2>
+                    <div class="oprchat">
+                        <div class="topboxwrap lbox dashboard_basicbox">
+                            <h3 class="box_title">병상 가농률<span>(오늘)</span></h3>
+                            <div class="countbox skyblue">
+                                <p><em>90</em>%<span class="ico_arrow down">하락</span></p>
+                            </div>
+                        </div>
+                        <div class="topboxwrap rbox dashboard_basicbox">
+                            <h3 class="box_title">재원환자<span>(오늘)</span></h3>
+                            <div class="countbox">
+                                <p><em>100,000</em>명</p>
+                            </div>
+                        </div>
+                        <div class="btboxwrap fbox dashboard_basicbox">
+                            <!-- [D] 개발시 인라인 스타일 제거 -->
+                            <div class="chartbox" style="background:#ccc;font-size:11px;color:#000;padding:10px">chart area</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 수술 운영현황 -->
+                <div class="grid_section">
+                    <h2 class="section_title">수술 운영현황</h2>
+                    <div class="oprchat">
+                        <div class="topboxwrap lbox dashboard_basicbox">
+                            <h3 class="box_title">수술건수<span>(오늘)</span></h3>
+                            <div class="countbox lightgreen">
+                                <p><em>9,999</em>건<span class="ico_arrow up">상승</span></p>
+                            </div>
+                        </div>
+                        <div class="topboxwrap rbox dashboard_basicbox">
+                            <h3 class="box_title">로봇수술<span>(오늘)</span></h3>
+                            <div class="countbox">
+                                <p><em>99</em>건</p>
+                            </div>
+                        </div>
+                        <div class="btboxwrap fbox dashboard_basicbox">
+                            <!-- [D] 개발시 인라인 스타일 제거 -->
+                            <div class="chartbox" style="background:#ccc;font-size:11px;color:#000;padding:10px">chart area</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- CT 운영현황 -->
+                <div class="grid_section">
+                    <h2 class="section_title">CT 운영현황</h2>
+                    <div class="oprchat">
+                        <div class="topboxwrap lbox dashboard_basicbox">
+                            <h3 class="box_title">CT 검사 진행율<span>(오늘)</span></h3>
+                            <div class="countbox skyblue">
+                                <p><em>90</em>%<span class="ico_arrow up">상승</span></p>
+                            </div>
+                        </div>
+                        <div class="topboxwrap rbox dashboard_basicbox">
+                            <h3 class="box_title">검사건수<span>(오늘)</span></h3>
+                            <div class="countbox">
+                                <p><em>999</em>건</p>
+                            </div>
+                        </div>
+                        <div class="btboxwrap fbox dashboard_basicbox">
+                            <!-- [D] 개발시 인라인 스타일 제거 -->
+                            <div class="chartbox" style="background:#ccc;font-size:11px;color:#000;padding:10px">chart area</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- MRI 운영현황 -->
+                <div class="grid_section">
+                    <h2 class="section_title">MRI 운영현황</h2>
+                    <div class="oprchat">
+                        <div class="topboxwrap lbox dashboard_basicbox">
+                            <h3 class="box_title">MRI 검사 진행율<span>(오늘)</span></h3>
+                            <div class="countbox lightgreen">
+                                <p><em>90</em>%<span class="ico_arrow up">상승</span></p>
+                            </div>
+                        </div>
+                        <div class="topboxwrap rbox dashboard_basicbox">
+                            <h3 class="box_title">검사건수<span>(오늘)</span></h3>
+                            <div class="countbox">
+                                <p><em>999</em>건</p>
+                            </div>
+                        </div>
+                        <div class="btboxwrap fbox dashboard_basicbox">
+                            <!-- [D] 개발시 인라인 스타일 제거 -->
+                            <div class="chartbox" style="background:#ccc;font-size:11px;color:#000;padding:10px">chart area</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 채혈 운영현황 -->
+                <div class="grid_section">
+                    <h2 class="section_title">채혈 운영현황</h2>
+                    <div class="oprchat">
+                        <div class="topboxwrap lbox dashboard_basicbox">
+                            <h3 class="box_title">검사 환자수<span>(오늘)</span></h3>
+                            <div class="countbox purple">
+                                <p><em>1,269</em>명<span class="ico_arrow up">상승</span></p>
+                            </div>
+                        </div>
+                        <div class="topboxwrap rbox dashboard_basicbox">
+                            <h3 class="box_title">대기시간<span>(본관2층 오전평균)</span></h3>
+                            <div class="countbox">
+                                <p><em>99</em>분</p>
+                            </div>
+                        </div>
+                        <div class="btboxwrap fbox dashboard_basicbox">
+                            <!-- [D] 개발시 인라인 스타일 제거 -->
+                            <div class="chartbox" style="background:#ccc;font-size:11px;color:#000;padding:10px">chart area</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="../../js/jquery/jquery-latest.min.js"></script>
+</body>
+</html>
