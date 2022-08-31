@@ -85,7 +85,7 @@ button:active,button:focus{outline:0}
 .planic .sec__introduce .textBox .group .groupList__item--sub{font-size:16px;color:#4a4a4a}
 .planic .sec__introduce .textBox .group .groupList__item+.groupList__item{margin-top:10px}
 .planic .sec__introduce .textBox .group+.group{margin-top:20px}
-.planic .sec__introduce .snsBox{display:flex;width:200px;margin:30px auto 0;justify-content:space-between;align-items:flex-end;flex-wrap:wrap}
+.planic .sec__introduce .snsBox{display:flex;width:260px;margin:30px auto 0;justify-content:space-between;align-items:flex-end;flex-wrap:wrap}
 .planic .sec__introduce .snsBox .sns{display:block;width:60px;height:60px;border:1px solid #eaeaea;border-radius:50%;background:#fff}
 .planic .sec__introduce .snsBox .email{display:block;margin-top:20px;width:100%;font-size:16px;letter-spacing:-.65px;color:#000;text-align:center}
 .planic .sec__introduce .snsBox .email>a{color:#000}
