@@ -96,7 +96,7 @@ button:active,button:focus{outline:0}
 .planic .sec__history .historyWrap .historyTab .btn_tab{display:block;font-size:20px;line-height:1.2;color:#000;font-weight:900}
 .planic .sec__history .historyWrap .historyTab .btn_tab+.btn_tab{margin-left:15px}
 .planic .sec__history .historyWrap .historyTab .btn_tab:nth-child(1).select,.planic .sec__history .historyWrap .historyTab .btn_tab:nth-child(1):hover{color:#cd0000}
-.planic .sec__history .historyWrap .historyTab .btn_tab:nth-child(2).select,.planic .sec__history .historyWrap .historyTab .btn_tab:nth-child(2):hover{color:#f1592a}
+.planic .sec__history .historyWrap .historyTab .btn_tab:nth-child(2).select,.planic .sec__history .historyWrap .historyTab .btn_tab:nth-child(2):hover{color:#1c90fb}
 .planic .sec__history .historyWrap .historyTab .btn_tab:nth-child(3).select,.planic .sec__history .historyWrap .historyTab .btn_tab:nth-child(3):hover{color:#1c90fb}
 .planic .sec__history .historyWrap .historyBox{display:block;position:relative;width:100%;height:calc(100% - 66px)}
 .planic .sec__history .historyWrap .historyBox .group{display:block;height:100%}

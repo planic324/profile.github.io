@@ -31,7 +31,7 @@ $(document).ready(function(){
 			$(".incomms").show();
 			break;
 		case 1:
-			$(".hanwha").show();
+			$(".douzone").show();
 			break;
 		case 2:
 			$(".douzone").show();
