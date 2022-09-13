@@ -25,44 +25,40 @@
 <!-- index css -->
 <link rel="stylesheet" type="text/css" href="css/planic.css">
 
-<!-- 스크립트 로딩 영역 -->
-<script src="js/jquery/jquery-latest.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.9/fullpage.min.js"></script>
-<script src="js/slick/slick.min.js"></script>
-<script src="js/slimscroll/jquery.slimscroll.js"></script>
-<script src="js/planic.js"></script>
 </head>
 <body>
     <div id="wrap" class="planic">
 		<!-- [D] header 배경색상 변경 v2 -->
-        <div id="header" class="header">
+        <header id="header" class="header">
 			<div class="header__box">
 				<h1 ><a href="#main" data-anchor="slide0">Publisher Planic</a></h1>
 				<div class="global__menu">
+					<!-- 모바일 버튼 디자인 -->
 					<button type="button" class="btn__menu--mobile">
 						<span></span>
 						<span></span>
 						<span></span>
 					</button>
-					<div class="global__menuList">
-						<div class="global__menuList--item">
-							<a href="#introduce" data-anchor="slide1">Introduce</a>
+					<!-- //모바일 버튼 디자인 -->
+					<div class="global__menuList" role="tablist">
+						<div class="global__menuList--item" role="tab">
+							<a href="#introduce" data-anchor="slide1" role="tabpanel">Introduce</a>
 						</div>
-						<div class="global__menuList--item">
-							<a href="#spec" data-anchor="slide2">Spec</a>
+						<div class="global__menuList--item" role="tab">
+							<a href="#spec" data-anchor="slide2" role="tabpanel">Spec</a>
 						</div>
-						<div class="global__menuList--item">
-							<a href="#history" data-anchor="slide3">History</a>
+						<div class="global__menuList--item" role="tab">
+							<a href="#history" data-anchor="slide3" role="tabpanel">History</a>
 						</div>
-						<div class="global__menuList--item">
-							<a href="#skills">Skills</a>
+						<div class="global__menuList--item" role="tab">
+							<a href="#skills" role="tabpanel">Skills</a>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<div id="fullpage" class="container">
-			<div class="section sec__main">
+		</header>
+		<article id="fullpage" class="container">
+			<section class="section sec__main">
 				<div class="mix_blend_mode">
 					<video src="video/main_video.mp4" autoplay loop muted></video>
 					<div class="textWrap">
@@ -73,8 +69,8 @@
 						
 					</div>
 				</div>
-			</div>
-			<div class="section sec__introduce">
+			</section>
+			<section class="section sec__introduce">
 				<div class="imgBox">
 					<div class="item">
 						<img src="imgs/img_intro_01.jpg" alt="">
@@ -116,9 +112,8 @@
 						
 					</div>
 				</div>
-				
-			</div>
-			<div class="section sec__intro">
+			</section>
+			<section class="section sec__intro">
 				<div class="imgBox">
 					<div class="item">
 						<img src="imgs/img_incomms.svg" alt="">
@@ -163,13 +158,13 @@
 						</ul>
 					</div>
 				</div>
-			</div>
-			<div class="section sec__history">
+			</section>
+			<section class="section sec__history">
 				<div class="historyWrap">
-					<div class="historyTab">
-						<button type="button" class="btn_tab select">InComms</button>
+					<div class="historyTab" role="tablist">
+						<button type="button" class="btn_tab select" role="tab">InComms</button>
 						<!-- <button type="button" class="btn_tab">한화호텔앤드리조트</button> -->
-						<button type="button" class="btn_tab">DOUZONE</button>
+						<button type="button" class="btn_tab" role="tab">DOUZONE</button>
 					</div>
 					<div class="historyBox incomms">
 						<div class="group">
@@ -470,7 +465,6 @@
 							</ul>
 						</div>
 					</div>
-					
 					<!-- <div class="historyBox hanwha">
 						<div class="group">
 							<ul class="historyList">
@@ -514,8 +508,6 @@
 						</div>
 					</div>
  -->
-					
-
 					<div class="historyBox douzone">
 						<div class="group">
 							<ul class="historyList">
@@ -1016,9 +1008,8 @@
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="section sec__skills">
-				
+			</section>
+			<section class="section sec__skills">
 				<div class="textBox">
 					<div class="group">
 						<p class="group__Title">Language</p>
@@ -1054,16 +1045,16 @@
 					</div>
 					
 				</div>
-			</div>
-		</div>
-        
-        
+			</section>
+		</article>
     </div>
 
-
-
-
-
+<!-- 스크립트 로딩 영역 -->
+<script src="js/jquery/jquery-latest.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.9/fullpage.min.js"></script>
+<script src="js/slick/slick.min.js"></script>
+<script src="js/slimscroll/jquery.slimscroll.js"></script>
+<script src="js/planic.js"></script>
 
 </body>
 </html>
