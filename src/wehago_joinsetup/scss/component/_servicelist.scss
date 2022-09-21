@@ -14,6 +14,7 @@
             width: 100%;
             padding: 20px;
             box-sizing: border-box;
+            justify-content: center;
         }
         &:nth-child(n + 3){
             margin-top: 40px;
@@ -130,7 +131,7 @@
                 top: 50%;
                 left: 4px;
                 margin-top: -7px;
-                background: url($spUrl) no-repeat -80px 0 / $spSize;
+                @include spJoinsetup (-80px, 0);
             }
         }
     }

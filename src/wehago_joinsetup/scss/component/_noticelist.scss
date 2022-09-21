@@ -17,7 +17,7 @@
             width: 14px;
             height: 14px;
             margin-top: -7px;
-            background: url($spUrl) no-repeat -151px 0 / $spSize;
+            @include spJoinsetup(-151px, 0)
         }
     }
     .noticeList{

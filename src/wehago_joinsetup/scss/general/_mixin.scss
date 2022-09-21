@@ -6,6 +6,16 @@
   transform: translate(-50%, -50%);
 }
 
+// ::::::: Sprite Image :::::::
+// sp_joinsetup
+@mixin spJoinsetup($positionX, $positionY){
+  background: url($spUrl) no-repeat $positionX $positionY / $spSize;
+}
+// sp_icon
+@mixin commonIcon($positionX, $positionY){
+  background: url($spIcon) no-repeat $positionX $positionY / $spIconSize;
+}
+
 // ::::::: Blind :::::::
 @mixin blind {
   overflow: hidden !important;
@@ -53,7 +63,7 @@
   overflow: hidden;
 }
 
-// 미디어 쿼리
+// ::::::: media :::::::
   // PC 1024px 부터
   @mixin desktop{
     @media (min-width: 1024px) {

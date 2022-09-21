@@ -69,7 +69,7 @@
                 top: 50%;
                 left: 26px;
                 margin-top: -6px;
-                background: url($spIcon) no-repeat -95px -232px / $spIconSize;
+                @include commonIcon (-95px, -232px);
             }
         }
     }

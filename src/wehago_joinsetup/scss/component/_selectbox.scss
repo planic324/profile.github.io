@@ -40,7 +40,7 @@ div[class *= "selectBox"]{
             position: absolute;
             top: 12px;
             right: 12px;
-            background: url($spUrl) no-repeat 0 0 / $spSize;
+            @include spJoinsetup (0, 0);
         }
 
     }
@@ -76,7 +76,7 @@ div[class *= "selectBox"]{
             position: absolute;
             top: 50%;
             left: 50%;
-            background: url($spUrl) no-repeat 0 0 / $spSize;
+            @include spJoinsetup (0, 0);
             &.icon__company{
                 width: 36px;
                 height: 38px;

@@ -59,10 +59,7 @@
         position: absolute;
         right: 12px;
         top: 12px;
-        background-image: url($spUrl);
-        background-size: $spSize;
-        background-position: 0 0;
-        background-repeat: no-repeat;
+        @include spJoinsetup (0, 0);
     }
     &.select{
         box-shadow: 0 5px 10px 0 rgba(49, 54, 74, 0.15);
