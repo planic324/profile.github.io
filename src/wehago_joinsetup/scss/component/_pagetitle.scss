@@ -1,0 +1,33 @@
+.pageTitle{
+    display: block;
+    padding: 65px 0 45px;
+    text-align: center;
+    @include mobile{
+        text-align: left;
+        padding: 42px 20px 40px;
+        word-break: keep-all;
+        background-color: #fff;
+    }
+    &__main{
+        display: block;
+        font-size: 22px;
+        line-height: 28px;
+        letter-spacing: -0.22px;
+        color: #000;
+        font-family: $dztFont;
+        font-weight: 900;
+    }
+    &__sub{
+        display: block;
+        margin-top: 14px;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: -0.7px;
+        color: #4a4a4a;
+        @include mobile{
+            font-size: 12px;
+            line-height: 20px;
+            letter-spacing: -0.24px;
+        }   
+    }
+}

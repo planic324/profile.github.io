@@ -1,0 +1,76 @@
+.tabList{
+    display: flex;
+    &__item{
+        display: block;
+        @include mobile{
+            display: inline-block;
+            vertical-align: top;
+        }
+        & > button{
+            display: block;
+            min-width: 110px;
+            border: 1px solid #b4b4b4;
+            border-radius: 18px;
+            background-color: #fff;
+            font-size: 14px;
+            line-height: 18px;
+            letter-spacing: -0.7px;
+            color: #777;
+            padding: 8px 0 7px;
+        }
+        &.select > button{
+            padding: 7px 0 6px;
+            border: 2px solid $blue;
+            color: $blue;
+            font-weight: 900;
+        }
+        & + .tabList__item{
+            margin-left: 6px;
+        }
+    }
+}
+.rateTab__list{
+    display: flex;
+    @include mobile{
+        padding: 0 20px;
+    }
+    .rateTab{
+        display: block;
+        & + .rateTab{
+            margin-left: 8px;
+        }
+        & > button{
+            display: block;
+            font-size: 16px;
+            line-height: 19px;
+            letter-spacing: -0.8px;
+            color: #454646;
+            padding: 9px 18px;
+            border-radius: 19px;
+            background-color: rgba(0, 0, 0, 0.05);
+            border: 0;
+            font-weight: 900;
+            @include mobile{
+                font-size: 13px;
+            }
+        }
+        &.select > button{
+            position: relative;
+            padding-left: 44px;
+            background-color: #1a4fff;
+            box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
+            color: #fff;
+            &::before{
+                content: '';
+                display: block;
+                position: absolute;
+                width: 11px;
+                height: 8px;
+                top: 50%;
+                left: 26px;
+                margin-top: -6px;
+                background: url($spIcon) no-repeat -95px -232px / $spIconSize;
+            }
+        }
+    }
+}

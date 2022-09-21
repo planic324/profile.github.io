@@ -1,0 +1,137 @@
+.serviceList{
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    position: relative;
+    @include mobile{
+        display: block;
+    }
+    &__item{
+        display: flex;
+        align-items: center;
+        width: 50%;
+        @include mobile{
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        &:nth-child(n + 3){
+            margin-top: 40px;
+            @include mobile{
+                margin: 0;
+            }
+        }
+        .imgBox{
+            position: relative;
+            width: 80px;
+            min-width: 80px;
+            height: 80px;
+            & > img{
+                @include absolCnt;
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+        }
+        .textBox{
+            display: block;
+            margin-left: 26px;
+            position: relative;
+            @include mobile{
+                margin-left: 35px;
+            }
+            .service__title{
+                display: block;
+                margin-bottom: 10px;
+                font-size: 16px;
+                line-height: 19px;
+                letter-spacing: -0.8px;
+                color: #000;
+                font-weight: 900;
+            }
+            .service__info{
+                display: block;
+                font-size: 12px;
+                line-height: 18px;
+                letter-spacing: -0.6px;
+                color: #4a4a4a;
+            }
+        }
+
+    }
+}
+.serviceSkill{
+    display: block;
+    position: relative;
+    &__title{
+        display: block;
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: -0.9px;
+        color: #000;
+        font-weight: 900;
+        @include mobile{
+            font-size: 14px;
+            line-height: 18px;
+            letter-spacing: -0.28px;
+            color: #4a4a4a;
+        }
+    }
+    &__list{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 16px;
+        @include mobile{
+            display: block;
+        }
+        li{
+            position: relative;
+            display: block;
+            padding-left: 25px;
+            font-size: 14px;
+            line-height: 18px;
+            letter-spacing: -0.7px;
+            color: #4a4a4a;
+            @include mobile{
+                font-size: 13px;
+                line-height: 16px;
+                letter-spacing: -0.65px;
+            }
+            strong{
+                color: #000;
+                font-weight: 900;
+            }
+            em{
+                position: relative;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    bottom: 2px;
+                    left: 0;
+                    display: block;
+                    width: 100%;
+                    height: 10px;
+                    background-color: $blue;
+                    opacity: 0.15;
+                }
+            }
+            & + li{
+                margin-left: 50px;
+                @include mobile{
+                    margin: 11px 0 0 0;
+                }
+            }
+            &::before{
+                content: '';
+                display: block;
+                width: 14px;
+                height: 14px;
+                position: absolute;
+                top: 50%;
+                left: 4px;
+                margin-top: -7px;
+                background: url($spUrl) no-repeat -80px 0 / $spSize;
+            }
+        }
+    }
+}

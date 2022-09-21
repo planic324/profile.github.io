@@ -1,0 +1,149 @@
+.selectBox__title{
+    display: block;
+    margin-bottom: 18px;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: -0.9px;
+    color: #000;
+    font-weight: 900;
+    em{
+        font-weight: 700;   
+    }
+}
+div[class *= "selectBox"] + .selectBox__title{
+    margin-top: 60px;
+}
+div[class *= "selectBox"]{
+    display: flex;
+    .btn__select{
+        position: relative;
+        display: block;
+        border: 1px solid #e1e1e1;
+        border-radius: 12px;
+        box-sizing:  border-box;
+        background-color: #fff;
+        &:hover{
+            border-color: $point;
+        }
+        &.select{
+            border-color: $point;
+            box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+            &::before{
+                background-position: -50px 0;
+            }
+        }
+        &::before{
+            content: '';
+            display: block;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: url($spUrl) no-repeat 0 0 / $spSize;
+        }
+
+    }
+    &.selectBox__workspace{
+        justify-content: space-between;
+        .btn__select{
+            display: flex;
+            align-items: center;
+            width: calc(50% - 6px);
+            padding: 24px 35px;
+            box-sizing: border-box;
+            text-align: left;
+        }
+    }
+    &.selectBox__normal{
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .btn__select{
+            width: calc(25% - 6px);
+            padding: 22px 0;
+            &:nth-child(n + 5){
+                margin-top: 10px;
+            }
+        }
+    }
+    .iconBox{
+        position: relative;
+        display: block;
+        width: 48px;
+        height: 48px;
+        margin-right: 20px;
+        span[ class *="icon__"]{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            background: url($spUrl) no-repeat 0 0 / $spSize;
+            &.icon__company{
+                width: 36px;
+                height: 38px;
+                margin: -19px 0 0 -18px;
+                background-position: 0 -25px;
+            }
+            &.icon__user{
+                width: 37px;
+                height: 31px;
+                margin: -16px 0 0 -19px;
+                background-position: -41px -25px;
+            }
+        }
+
+    }
+    .textBox{
+        display: block;
+        .text__main{
+            display: block;
+            font-size: 18px;
+            line-height: 23px;
+            letter-spacing: -0.36px;
+            color: #000;
+            font-family: $dztFont;
+            font-weight: 900;
+        }
+        .text__sub{
+            display: block;
+            margin-top: 10px;
+            font-size: 13px;
+            line-height: 18px;
+            letter-spacing: -0.26px;
+            color: #777;
+        }
+    }
+    .text__userNum{
+        display: block;
+        font-size: 16px;
+        line-height: 19px;
+        font-weight: 900;
+        color: #4a4a4a;
+        em{
+            font-weight: 700;
+        }
+    }
+    .imgBox{
+        position: relative;
+        display: block;
+        width: 120px;
+        height: 120px;
+        margin: 0 auto;
+        .img__info{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-43%, -50%) scale(0.5);
+        }
+    }
+    
+    .text__basic{
+        display: block;
+        margin-top: -20px;
+        font-size: 16px;
+        line-height: 18px;
+        text-align: center;
+        color: #4a4a4a;
+        letter-spacing: -0.8px;
+        font-weight: 900;
+    }
+}

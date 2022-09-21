@@ -1,0 +1,251 @@
+.rateOption{
+    display: block;
+    position: relative;
+    & div[class *= "rateOption__item"]{
+        display: flex;
+        align-items: center;
+        dt{
+            display: flex;
+            width: 170px;
+            min-width: 170px;
+            span[class *= "ico__option"]{
+                position: relative;
+                display: block;
+                width: 24px;
+                height: 24px;
+                &::before{
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    background: url($spUrl) no-repeat 0 0 / $spSize;
+                }
+                &.ico__option--rate::before{
+                    width: 19px;
+                    height: 20px;
+                    margin: -10px 0 0 -10px;
+                    background-position: -103px 0;
+                }
+                &.ico__option--user::before{
+                    width: 19px;
+                    height: 19px;
+                    margin: -10px 0 0 -10px;
+                    background-position: -127px 0;
+                }
+                &.ico__option--arrow::before{
+                    width: 9px;
+                    height: 5px;
+                    margin: -4px 0 0 -5px;
+                    background: url($spIcon) no-repeat -193px -220px / $spIconSize;
+                }
+            }
+            .text{
+                display: block;
+                margin-left: 3px;
+                font-size: 16px;
+                line-height: 24px;
+                letter-spacing: -0.8px;
+                color: #4a4a4a;
+            }
+        }
+        dd{
+            display: flex;
+            @include mobile{
+                flex: 1;
+            }
+            .btn__option{
+                display: block;
+                width: calc(50% - 2px);
+                min-width: 60px;
+                font-size: 14px;
+                line-height: 18px;
+                padding: 6px 0 4px;
+                border: 1px solid #b4b4b4;
+                border-radius: 4px;
+                background-color: #fff;
+                &.select,
+                &:hover{
+                    border-color: $point;
+                    color: $point
+                }
+                & + .btn__option{
+                    margin-left: 4px;
+                }
+            }
+            .LUX_stepper.LUX_renewal .inpbx input:focus{
+                background: red;
+            }
+        }
+        & + .rateOption__item{
+            margin-top: 14px;
+        }
+        &.rateOption__item--promotion{
+            display: block;
+            margin-top: 20px;
+            dt .text{
+                color: #000;
+            }
+            dd{
+                width: 100%;
+                display: none !important;
+                margin-top: 8px;
+                .btn__option{
+                    margin-left: 4px;
+                    width: auto;
+                    min-width: 45px;
+                }
+            }
+        }
+        .btn__promotion{
+            display: flex;
+            border: 0;
+            background: none;
+        }
+        &.open{
+            dt .ico__option--arrow::before {
+                transform: rotate(180deg);
+            }
+            dd{
+                display: flex !important;
+                align-items: flex-start;
+            }
+        } 
+
+    }
+}
+
+.stepperBox{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 30px;
+    box-sizing: border-box;
+    & > input{
+        width: 100%;
+        display: block;
+        font-size: 14px;
+        line-height: 28px;
+        color: #4a4a4a;
+        border: 1px solid #d3d3d3;
+        border-radius: 4px;
+        padding: 0;
+        background: none;
+        padding: 0 26px 0 8px;
+        outline: 0;
+        box-sizing: border-box;
+        z-index: 10;
+        @include mobile{
+            padding: 0 30px;
+            text-align: center;
+        }
+        &:focus,
+        &:visited{
+            border: 1px solid #4a4a4a;
+        }
+    }
+    .stepper__option{
+        display: block;
+        position: absolute;
+        top: 1px;
+        right: 1px;
+        width: 26px;
+        height: 28px;
+        @include mobile{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 0;
+        }
+        button[class *= "btn__stepper"]{
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 50%;
+            border: 0;
+            background: none;
+            @include mobile{
+                position: absolute;
+                width: 30px;
+                height: 28px;
+            }
+            &::before{
+                content: '';
+                display: block;
+                width: 8px;
+                height: 5px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin: -2px 0 0  -4px;
+                background: url(https://static.wehago.com/imgs/common/sp_diana.png) no-repeat 0 0;
+            }
+            &.btn__stepper--up{
+                border: solid;
+                border-color: #d3d3d3;
+                border-width: 0 0 1px 1px;
+                @include mobile{
+                    top: 1px;
+                    right: 0;
+                    border-width: 0 0 0 1px;
+                }
+                &:before{
+                    background-position: -153px -84px;
+                    transform: rotate(180deg);
+                    @include mobile{
+                        width: 11px;
+                        height: 11px;
+                        margin: -6px 0 0 -6px;
+                        background: url($spUrl) no-repeat -170px 0 / $spSize;
+                    }
+                }
+            }
+            &.btn__stepper--down{
+                border: solid;
+                border-color: #d3d3d3;
+                border-width: 0 0 0 1px;
+                @include mobile{
+                    top: 1px;
+                    left: 0;
+                    border-width: 0 1px 0 0;
+                }
+                &:before{
+                    background-position: -153px -84px;
+                    @include mobile{
+                        width: 11px;
+                        height: 2px;
+                        margin: -1px 0 0 -6px;
+                        background: url($spUrl) no-repeat -170px -16px / $spSize;
+                    }
+                }
+            }
+            &:hover{
+                &.btn__stepper--up{
+                    &:before{
+                        background-position: -153px -94px;
+                        transform: rotate(180deg);
+                        @include mobile{
+                            width: 11px;
+                            height: 11px;
+                            margin: -6px 0 0 -6px;
+                            background: url($spUrl) no-repeat -170px 0 / $spSize;
+                        }
+                    }
+                }
+                &.btn__stepper--down{
+                    &:before{
+                        background-position: -153px -94px;
+                        @include mobile{
+                            width: 11px;
+                            height: 2px;
+                            margin: -1px 0 0 -6px;
+                            background: url($spUrl) no-repeat -170px -16px / $spSize;
+                        }
+                    }
+                }   
+            }
+        }
+
+    }
+}

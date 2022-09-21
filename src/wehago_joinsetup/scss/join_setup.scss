@@ -1,0 +1,19 @@
+.join_setup{
+    // ::::::: General Style :::::::
+    @import "general/mixin";
+    @import "general/variables";
+
+    // ::::::: Common :::::::
+    @import "general/layout";
+
+    // ::::::: Component :::::::
+    @import "component/rateplan"; // -- 요금제 박스 --
+    @import "component/tablist"; // -- 서비스 탭 --
+    @import "component/servicelist"; // -- 서비스 소개 --
+    @import "component/rateoption"; // -- 요금 옵션 --
+    @import "component/ratebill"; // -- 영수증 --
+    @import "component/noticelist"; // -- 공지사항 --
+    @import "component/pagetitle"; // -- 페이지 타이틀 --
+    @import "component/banner"; // -- 배너 --
+    @import "component/selectbox"; // -- 셀렉트 박스 --
+}

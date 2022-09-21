@@ -1,0 +1,91 @@
+.ratePlan__item{
+    position: relative;
+    display: block;
+    width: 210px;
+    padding: 22px 24px;
+    border: 1px solid #e1e1e1;
+    border-radius: 12px;
+    box-sizing: border-box;
+    background-color: #fff;
+    @include mobile{
+        display: inline-block;
+        vertical-align: top;
+        min-width: 150px;
+        width: 150px;
+        padding: 22px 20px;
+        margin-left: 10px;
+        &:first-child{
+            margin-left: 0;
+        }
+    }
+    .planName{
+        display: block;
+        font-size: 16px;
+        line-height: 20px;
+        color: #777;
+        font-family: $dztFont;
+        font-weight: 900;
+        text-align: left;
+    }
+    .planRate{
+        margin-top: 16px;
+        display: block;
+        font-size: 14px;
+        line-height: 25px;
+        letter-spacing: -0.7px;
+        color: #777;
+        font-weight: 400;
+        text-align: right;
+        @include mobile{
+            text-align: left;
+            font-size: 13px;
+        }
+        & > em{
+            margin-right: 2px;
+            font-size: 20px;
+            color: #000;
+            letter-spacing: -1px;
+            font-weight: 900;
+            @include mobile{
+                font-size: 18px;
+            }
+        }
+    }
+    &::before{
+        content: '';
+        display: block;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        right: 12px;
+        top: 12px;
+        background-image: url($spUrl);
+        background-size: $spSize;
+        background-position: 0 0;
+        background-repeat: no-repeat;
+    }
+    &.select{
+        box-shadow: 0 5px 10px 0 rgba(49, 54, 74, 0.15);
+        .planName{
+            color: #fff;
+        }
+        .planRate{
+            color: #fff;
+            & > em{
+                color: #fff;
+            }
+        } 
+        &.ratePlan__item--free{
+            background-color: $sky;
+        }
+        &.ratePlan__item--standard{
+            background-color: $blue;
+        }
+        &.ratePlan__item--premium{
+            background-color: $purple;
+        }
+        &::before{
+            background-position: -25px 0;
+        }
+    }
+}
