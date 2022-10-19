@@ -4,32 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi">
 <title>WEHAGO 2.0 회사초기설정</title>
-<link rel="stylesheet" type="text/css" href="../../../common_index.css">
+<link rel="stylesheet" type="text/css" href="../common_index.css">
 <style>
 	/* section>section{padding-left:30px;} */
-	section>.sec_h,
-	section>ul{margin-left:30px;}
-	section.group>.sec_h{margin-left:30px;}
-	section.single>.sec_h,
-	section.single>ul{margin-left:0;}
-	.flex_box{display:flex;}
-	.flex_box:after{display:block;clear:both;content:'';}
-	.flex_box .col{flex:1 1 auto;width:100%;box-sizing:border-box;}
-	.flex_box .col+.col{margin-left:15px;}
-	footer{clear:both;}
+	.sub_depth {padding:0 15px;}
+	.sub_depth .sub_h {padding:10px 0;border-bottom:1px solid #a5a5a5;font-size:0.93em;}
 	.del{text-decoration:line-through}
-
-	/* Process */
-	.prog{float:left;width:44px;height:17px;margin:-1px 6px 0 0;padding:2px 2px 1px;background:#ccc;color:#fff;font-size:12px;font-weight:bold;text-align:center;}
-	.todo{background:#415c7a;}				/* 준비중 */
-	.inprogress{background:#1c90fb;}	/* 작업중 */
-	.done{background:#1fc47c;}				/* 완료 */
-	.new{background: red;} 					/* 신규 */
-
-	@media(max-width:768px){
-		.flex_box{flex-direction:column;}
-		.flex_box .col+.col{margin-left:0;}
-	}
+	.tally{display:inline-block;margin-right:5px;padding:2px 5px;border-radius:8px;color:#fff;background:#fc5356;}
 </style>
 </head>
 <body>
