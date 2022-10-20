@@ -7,9 +7,9 @@
     overflow: hidden;
     padding: 30px;
     box-sizing: border-box;
-    background: url(/imgs/join/join_setup/bg_joinsetup_02.png) no-repeat 0 0 / 700px 208px;
+    background: url(/img/bg_joinsetup_02.png) no-repeat 0 0 / 700px 208px;
     @include mobile{
-        background: url(/imgs/join/join_setup/bg_joinsetup_03.png) no-repeat 0 0 / cover;
+        background: url(/img/bg_joinsetup_03.png) no-repeat 0 0 / cover;
         border-radius: 0;
     }
     .banner__text{
@@ -88,7 +88,7 @@
     padding: 0 25px;
     box-sizing: border-box;
     border-radius: 8px;
-    background: url(/imgs/join/join_setup/bg_joinsetup_01.png) no-repeat 0 0 / auto 64px;
+    background: url(/img/bg_joinsetup_01.png) no-repeat 0 0 / auto 64px;
     @include mobile{
         display:none;
     }
@@ -125,6 +125,6 @@
         position: absolute;
         bottom: 0;
         right: 50px;
-        background: url(/imgs/join/join_setup/banner_joinsetup_01.png) no-repeat 0 0 / 142px 87px;
+        background: url(/img/banner_joinsetup_01.png) no-repeat 0 0 / 142px 87px;
     }
 }

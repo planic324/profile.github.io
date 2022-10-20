@@ -86,7 +86,7 @@
 @media (max-width:767px) and (min-width:320px){
 .join_setup .ratePlan__item .planRate>em{font-size:18px}
 }
-.join_setup .ratePlan__item::before{content:'';display:block;width:20px;height:20px;position:absolute;right:12px;top:12px;background-image:url(/imgs/join/join_setup/sp_join_setup.png);background-size:250px 250px;background-position:0 0;background-repeat:no-repeat}
+.join_setup .ratePlan__item::before{content:'';display:block;width:20px;height:20px;position:absolute;right:12px;top:12px;background-image:url(../img/sp_join_setup.png);background-size:250px 250px;background-position:0 0;background-repeat:no-repeat}
 .join_setup .ratePlan__item.select{-webkit-box-shadow:0 5px 10px 0 rgba(49,54,74,.15);box-shadow:0 5px 10px 0 rgba(49,54,74,.15)}
 .join_setup .ratePlan__item.select .planName{color:#fff}
 .join_setup .ratePlan__item.select .planRate{color:#fff}
@@ -155,12 +155,12 @@
 @media (max-width:767px) and (min-width:320px){
 .join_setup .serviceSkill__list li+li{margin:11px 0 0 0}
 }
-.join_setup .serviceSkill__list li::before{content:'';display:block;width:14px;height:14px;position:absolute;top:50%;left:4px;margin-top:-7px;background:url(/imgs/join/join_setup/sp_join_setup.png) no-repeat -80px 0/250px 250px}
+.join_setup .serviceSkill__list li::before{content:'';display:block;width:14px;height:14px;position:absolute;top:50%;left:4px;margin-top:-7px;background:url(../img/sp_join_setup.png) no-repeat -80px 0/250px 250px}
 .join_setup .rateOption{display:block;position:relative}
 .join_setup .rateOption div[class*=rateOption__item]{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 .join_setup .rateOption div[class*=rateOption__item] dt{display:-webkit-box;display:-ms-flexbox;display:flex;width:170px;min-width:170px}
 .join_setup .rateOption div[class*=rateOption__item] dt span[class*=ico__option]{position:relative;display:block;width:24px;height:24px}
-.join_setup .rateOption div[class*=rateOption__item] dt span[class*=ico__option]::before{content:'';display:block;position:absolute;top:50%;left:50%;background:url(/imgs/join/join_setup/sp_join_setup.png) no-repeat 0 0/250px 250px}
+.join_setup .rateOption div[class*=rateOption__item] dt span[class*=ico__option]::before{content:'';display:block;position:absolute;top:50%;left:50%;background:url(../img/sp_join_setup.png) no-repeat 0 0/250px 250px}
 .join_setup .rateOption div[class*=rateOption__item] dt span[class*=ico__option].ico__option--rate::before{width:19px;height:20px;margin:-10px 0 0 -10px;background-position:-103px 0}
 .join_setup .rateOption div[class*=rateOption__item] dt span[class*=ico__option].ico__option--user::before{width:19px;height:19px;margin:-10px 0 0 -10px;background-position:-127px 0}
 .join_setup .rateOption div[class*=rateOption__item] dt span[class*=ico__option].ico__option--arrow::before{width:9px;height:5px;margin:-4px 0 0 -5px;background:url(https://static.wehago.com/imgs/common/sp_icon.png) no-repeat -193px -220px/500px 1000px}
@@ -202,7 +202,7 @@
 }
 .join_setup .stepperBox .stepper__option button[class*=btn__stepper].btn__stepper--up:before{background-position:-153px -84px;-webkit-transform:rotate(180deg);-ms-transform:rotate(180deg);transform:rotate(180deg)}
 @media (max-width:767px) and (min-width:320px){
-.join_setup .stepperBox .stepper__option button[class*=btn__stepper].btn__stepper--up:before{width:11px;height:11px;margin:-6px 0 0 -6px;background:url(/imgs/join/join_setup/sp_join_setup.png) no-repeat -170px 0/250px 250px}
+.join_setup .stepperBox .stepper__option button[class*=btn__stepper].btn__stepper--up:before{width:11px;height:11px;margin:-6px 0 0 -6px;background:url(../img/sp_join_setup.png) no-repeat -170px 0/250px 250px}
 }
 .join_setup .stepperBox .stepper__option button[class*=btn__stepper].btn__stepper--down{border:solid;border-color:#d3d3d3;border-width:0 0 0 1px}
 @media (max-width:767px) and (min-width:320px){
@@ -210,15 +210,15 @@
 }
 .join_setup .stepperBox .stepper__option button[class*=btn__stepper].btn__stepper--down:before{background-position:-153px -84px}
 @media (max-width:767px) and (min-width:320px){
-.join_setup .stepperBox .stepper__option button[class*=btn__stepper].btn__stepper--down:before{width:11px;height:2px;margin:-1px 0 0 -6px;background:url(/imgs/join/join_setup/sp_join_setup.png) no-repeat -170px -16px/250px 250px}
+.join_setup .stepperBox .stepper__option button[class*=btn__stepper].btn__stepper--down:before{width:11px;height:2px;margin:-1px 0 0 -6px;background:url(../img/sp_join_setup.png) no-repeat -170px -16px/250px 250px}
 }
 .join_setup .stepperBox .stepper__option button[class*=btn__stepper]:hover.btn__stepper--up:before{background-position:-153px -94px;-webkit-transform:rotate(180deg);-ms-transform:rotate(180deg);transform:rotate(180deg)}
 @media (max-width:767px) and (min-width:320px){
-.join_setup .stepperBox .stepper__option button[class*=btn__stepper]:hover.btn__stepper--up:before{width:11px;height:11px;margin:-6px 0 0 -6px;background:url(/imgs/join/join_setup/sp_join_setup.png) no-repeat -170px 0/250px 250px}
+.join_setup .stepperBox .stepper__option button[class*=btn__stepper]:hover.btn__stepper--up:before{width:11px;height:11px;margin:-6px 0 0 -6px;background:url(../img/sp_join_setup.png) no-repeat -170px 0/250px 250px}
 }
 .join_setup .stepperBox .stepper__option button[class*=btn__stepper]:hover.btn__stepper--down:before{background-position:-153px -94px}
 @media (max-width:767px) and (min-width:320px){
-.join_setup .stepperBox .stepper__option button[class*=btn__stepper]:hover.btn__stepper--down:before{width:11px;height:2px;margin:-1px 0 0 -6px;background:url(/imgs/join/join_setup/sp_join_setup.png) no-repeat -170px -16px/250px 250px}
+.join_setup .stepperBox .stepper__option button[class*=btn__stepper]:hover.btn__stepper--down:before{width:11px;height:2px;margin:-1px 0 0 -6px;background:url(../img/sp_join_setup.png) no-repeat -170px -16px/250px 250px}
 }
 .join_setup .rateBill{display:block;position:relative}
 .join_setup .rateBill [class*=rateBill__item]{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
@@ -234,7 +234,7 @@
 .join_setup .rateBill [class*=rateBill__item].rateBill__item--total dd em{font-size:26px;line-height:32px;letter-spacing:-.26px;color:#1a4fff;-webkit-transform:translateY(2px);-ms-transform:translateY(2px);transform:translateY(2px)}
 .join_setup .rateNotice{position:relative}
 .join_setup .rateNotice__title{position:relative;display:block;padding-left:20px;font-size:12px;line-height:18px;color:#777;font-weight:900}
-.join_setup .rateNotice__title::before{content:'';display:block;position:absolute;left:2px;top:50%;width:14px;height:14px;margin-top:-7px;background:url(/imgs/join/join_setup/sp_join_setup.png) no-repeat -151px 0/250px 250px}
+.join_setup .rateNotice__title::before{content:'';display:block;position:absolute;left:2px;top:50%;width:14px;height:14px;margin-top:-7px;background:url(../img/sp_join_setup.png) no-repeat -151px 0/250px 250px}
 .join_setup .rateNotice .noticeList{display:block;margin-top:7px}
 .join_setup .rateNotice .noticeList li{position:relative;display:block;padding-left:9px;font-size:11px;line-height:18px;letter-spacing:-.55px;color:#909090}
 .join_setup .rateNotice .noticeList li::before{content:'·';display:block;position:absolute;top:0;left:3px;color:#c6c6c6}
@@ -247,9 +247,9 @@
 @media (max-width:767px) and (min-width:320px){
 .join_setup .pageTitle__sub{font-size:12px;line-height:20px;letter-spacing:-.24px}
 }
-.join_setup .joinsetup__banner{position:relative;display:block;width:100%;height:208px;border-radius:8px;overflow:hidden;padding:30px;-webkit-box-sizing:border-box;box-sizing:border-box;background:url(/imgs/join/join_setup/bg_joinsetup_02.png) no-repeat 0 0/700px 208px}
+.join_setup .joinsetup__banner{position:relative;display:block;width:100%;height:208px;border-radius:8px;overflow:hidden;padding:30px;-webkit-box-sizing:border-box;box-sizing:border-box;background:url(../img/bg_joinsetup_02.png) no-repeat 0 0/700px 208px}
 @media (max-width:767px) and (min-width:320px){
-.join_setup .joinsetup__banner{background:url(/imgs/join/join_setup/bg_joinsetup_03.png) no-repeat 0 0/cover;border-radius:0}
+.join_setup .joinsetup__banner{background:url(../img/bg_joinsetup_03.png) no-repeat 0 0/cover;border-radius:0}
 }
 .join_setup .joinsetup__banner .banner__text{display:block;position:relative;font-size:18px;line-height:26px;letter-spacing:-.9px;color:#082a53}
 @media (max-width:767px) and (min-width:320px){
@@ -274,7 +274,7 @@
 @media (max-width:767px) and (min-width:320px){
 .join_setup .joinsetup__banner .banner__list li+li{margin-left:10px}
 }
-.join_setup .basicBox__banner{position:relative;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:100%;height:64px;padding:0 25px;-webkit-box-sizing:border-box;box-sizing:border-box;border-radius:8px;background:url(/imgs/join/join_setup/bg_joinsetup_01.png) no-repeat 0 0/auto 64px}
+.join_setup .basicBox__banner{position:relative;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:100%;height:64px;padding:0 25px;-webkit-box-sizing:border-box;box-sizing:border-box;border-radius:8px;background:url(../img/bg_joinsetup_01.png) no-repeat 0 0/auto 64px}
 @media (max-width:767px) and (min-width:320px){
 .join_setup .basicBox__banner{display:none}
 }
@@ -282,7 +282,7 @@
 .join_setup .basicBox__banner p strong{font-weight:900}
 .join_setup .basicBox__banner p em{position:relative;font-weight:900}
 .join_setup .basicBox__banner p em::before{content:'';display:block;position:absolute;width:100%;height:10px;left:0;bottom:0;background-color:#00f;opacity:.12}
-.join_setup .basicBox__banner::before{content:'';display:block;width:142px;height:87px;position:absolute;bottom:0;right:50px;background:url(/imgs/join/join_setup/banner_joinsetup_01.png) no-repeat 0 0/142px 87px}
+.join_setup .basicBox__banner::before{content:'';display:block;width:142px;height:87px;position:absolute;bottom:0;right:50px;background:url(../img/banner_joinsetup_01.png) no-repeat 0 0/142px 87px}
 .join_setup .selectBox__title{display:block;margin-bottom:18px;font-size:18px;line-height:22px;letter-spacing:-.9px;color:#000;font-weight:900}
 .join_setup .selectBox__title em{font-weight:700}
 .join_setup div[class*=selectBox]+.selectBox__title{margin-top:60px}
@@ -291,14 +291,14 @@
 .join_setup div[class*=selectBox] .btn__select:hover{border-color:#1c90fb}
 .join_setup div[class*=selectBox] .btn__select.select{border-color:#1c90fb;-webkit-box-shadow:0 5px 10px 0 rgba(0,0,0,.1);box-shadow:0 5px 10px 0 rgba(0,0,0,.1)}
 .join_setup div[class*=selectBox] .btn__select.select::before{background-position:-50px 0}
-.join_setup div[class*=selectBox] .btn__select::before{content:'';display:block;width:20px;height:20px;position:absolute;top:12px;right:12px;background:url(/imgs/join/join_setup/sp_join_setup.png) no-repeat 0 0/250px 250px}
+.join_setup div[class*=selectBox] .btn__select::before{content:'';display:block;width:20px;height:20px;position:absolute;top:12px;right:12px;background:url(../img/sp_join_setup.png) no-repeat 0 0/250px 250px}
 .join_setup div[class*=selectBox].selectBox__workspace{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
 .join_setup div[class*=selectBox].selectBox__workspace .btn__select{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:calc(50% - 6px);padding:24px 35px;-webkit-box-sizing:border-box;box-sizing:border-box;text-align:left}
 .join_setup div[class*=selectBox].selectBox__normal{-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
 .join_setup div[class*=selectBox].selectBox__normal .btn__select{width:calc(25% - 6px);padding:22px 0}
 .join_setup div[class*=selectBox].selectBox__normal .btn__select:nth-child(n+5){margin-top:10px}
 .join_setup div[class*=selectBox] .iconBox{position:relative;display:block;width:48px;height:48px;margin-right:20px}
-.join_setup div[class*=selectBox] .iconBox span[class*=icon__]{position:absolute;top:50%;left:50%;background:url(/imgs/join/join_setup/sp_join_setup.png) no-repeat 0 0/250px 250px}
+.join_setup div[class*=selectBox] .iconBox span[class*=icon__]{position:absolute;top:50%;left:50%;background:url(../img/sp_join_setup.png) no-repeat 0 0/250px 250px}
 .join_setup div[class*=selectBox] .iconBox span[class*=icon__].icon__company{width:36px;height:38px;margin:-19px 0 0 -18px;background-position:0 -25px}
 .join_setup div[class*=selectBox] .iconBox span[class*=icon__].icon__user{width:37px;height:31px;margin:-16px 0 0 -19px;background-position:-41px -25px}
 .join_setup div[class*=selectBox] .textBox{display:block}
