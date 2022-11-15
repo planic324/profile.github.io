@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: nanum_square_round;
   src: local("NanumSquareRoundOTFL"), url(../font/nanum-square-round/NanumSquareRoundOTFL.otf) format("otf"), url(../font/nanum-square-round/NanumSquareRoundL.ttf) format("truetype");
@@ -293,55 +294,59 @@ button:active {
   background-color: #f0f2f7;
 }
 .planic .sec__main {
-  display: block;
-  background-color: #000;
-}
-.planic .sec__main .mix_blend_mode {
   position: relative;
-  display: block;
-  width: 100%;
-  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000 !important;
 }
-.planic .sec__main .mix_blend_mode video {
+.planic .sec__main .textBox {
   display: block;
-  width: 100%;
-  height: 100%;
+}
+.planic .sec__main .textBox .textBox__text--main {
+  position: relative;
+  font-size: 46px;
+  line-height: 1.2;
+  color: #fff;
+  white-space: nowrap;
+  font-weight: 900;
+}
+.planic .sec__main .textBox .textBox__text--main::before {
+  content: "WEB PUBLISHER 노은찬";
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  object-fit: cover;
-}
-.planic .sec__main .mix_blend_mode .textWrap {
-  display: block;
-  position: relative;
   width: 100%;
-  height: 100%;
-  background-color: #000;
-  color: #fff;
-  mix-blend-mode: multiply;
-  text-align: center;
+  border-right: 3px solid greenyellow;
+  color: greenyellow;
+  animation: animaition_effect 5s linear infinite;
+  overflow: hidden;
+  white-space: nowrap;
+  padding-right: 5px;
+  white-space: nowrap;
   font-weight: 900;
-  box-sizing: border-box;
 }
-.planic .sec__main .mix_blend_mode .textWrap .textBox {
-  display: inline-block;
-  vertical-align: top;
-  padding: 40px;
+.planic .sec__main .textBox .textBox__text--sub {
   position: absolute;
-  top: 50%;
+  bottom: 40px;
   left: 50%;
-  transform: translate(-50%, -50%);
-  border: 50px solid #fff;
-}
-.planic .sec__main .mix_blend_mode .textWrap .textBox__main {
-  font-size: 80px;
+  transform: translateX(-50%);
+  font-size: 24px;
   line-height: 1.2;
+  color: #fff;
+  font-weight: 900;
 }
-.planic .sec__main .mix_blend_mode .textWrap .textBox__sub {
-  font-size: 70px;
-  line-height: 1.2;
+.planic .sec__main .textBox .textBox__text--sub::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 50%;
+  transform: translate(-50%) rotate(135deg);
+  width: 10px;
+  height: 10px;
+  border: solid #fff;
+  border-width: 2px 2px 0 0;
 }
 .planic .sec__intro {
   background: #fff;
@@ -848,6 +853,14 @@ button:active {
   line-height: 1.4;
 }
 
+@keyframes animaition_effect {
+  0%, 100% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+}
 @media (max-width: 750px) {
   .fp-viewing-main .planic .header {
     height: 40px;
@@ -956,14 +969,18 @@ button:active {
   .planic .section {
     padding-top: 40px;
   }
-  .planic .sec__main .mix_blend_mode .textWrap .textBox {
+  .planic .sec__main .textBox {
     max-width: 90%;
   }
-  .planic .sec__main .mix_blend_mode .textWrap .textBox__main {
-    font-size: 7vw;
-  }
-  .planic .sec__main .mix_blend_mode .textWrap .textBox__sub {
+  .planic .sec__main .textBox .textBox__text--main {
     font-size: 7.2vw;
+  }
+  .planic .sec__main .textBox .textBox__text--sub {
+    font-size: 4vw;
+  }
+  .planic .sec__main .textBox .textBox__text--sub::before {
+    width: 2vw;
+    height: 2vw;
   }
   .planic .sec__introduce {
     flex-direction: column;

@@ -115,13 +115,17 @@
             padding-top: 40px;
         }
         .sec__main{
-            .mix_blend_mode .textWrap .textBox{
+            .textBox{
                 max-width: 90%;
-                &__main{
-                    font-size: 7vw;
-                }
-                &__sub{
+                .textBox__text--main{
                     font-size: 7.2vw;
+                }
+                .textBox__text--sub{
+                    font-size: 4vw;
+                    &::before{
+                        width: 2vw;
+                        height: 2vw;
+                    }
                 }
             }
         }
