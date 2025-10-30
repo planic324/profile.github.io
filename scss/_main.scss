@@ -7,7 +7,7 @@
             height: 80px;
             background-color: #fff;
             z-index: 10;
-            
+
             &__box{
                 display: flex;
                 justify-content: space-between;
@@ -16,7 +16,7 @@
                 max-width: 1100px;
                 height: 90px;
                 margin: 0 auto;
-    
+
                 h1{
                     display: block;
                     position: relative;
@@ -66,10 +66,10 @@
                                         width: 100%;
                                         background: #000;
                                         transition: width .25s cubic-bezier(0.51, 0.18, 0, 0.88) .1s
-                                    } 
+                                    }
                                 }
                             }
-                            
+
                         }
                         &:before,
                         &:after{
@@ -77,13 +77,13 @@
                             display: block;
                         }
                     }
-                    
-                    
+
+
                 }
             }
         }
     }
-    
+
 }
 .planic{
     display: block;
@@ -155,10 +155,10 @@
                                     width: 100%;
                                     background: #fff;
                                     transition: width .25s cubic-bezier(0.51, 0.18, 0, 0.88) .1s
-                                } 
+                                }
                             }
                         }
-                        
+
                     }
                     &:before,
                     &:after{
@@ -166,12 +166,12 @@
                         display: block;
                     }
                 }
-                
-                
+
+
             }
         }
     }
-    
+
     // section 영역
     .container{
         display: block;
@@ -345,7 +345,7 @@
                 }
             }
         }
-        
+
         .imgBox{
             position: relative;
             display: block;
@@ -371,7 +371,7 @@
         }
         .textBox{
             display: block;
-            
+
             margin-left: 150px;
             .group{
                 display: block;
@@ -514,8 +514,9 @@
                         height: 100%;
                         .item{
                             position: relative;
-                            display: block;
-                            padding: 0 20px;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 60px;
                             height: 100%;
                             box-sizing: border-box;
                             .service__title{
@@ -540,11 +541,8 @@
                             }
                             .itemList{
                                 display: block;
-                                width: 40%;
+                                width: 100%;
                                 position: relative;
-                                margin-top: 15px;
-                                min-height: 400px;
-                                
                                 .dl_item{
                                     display: flex;
                                     font-size: 16px;
@@ -584,13 +582,10 @@
                                             & + p{
                                                 margin-top: 10px;
                                             }
-                                            
+
                                         }
                                     }
                                 }
-                            }
-                            .view__box--btn{
-                                display: none;
                             }
                         }
                         .slick-list{
@@ -602,16 +597,16 @@
                             .slick-track{
                                 display: flex;
                                 height: 100%;
-                                
+
                             }
-                            
+
                         }
                         .slick-arrow{
                             display: block;
                             position: absolute;
                             top: 50%;
-                            width: 40px;
-                            height: 40px;
+                            width: 50px;
+                            height: 50px;
                             border-radius: 50%;
                             background: #fff;
                             margin-top: -20px;
@@ -627,7 +622,7 @@
                                 &:before{
                                     transform: rotate(180deg);
                                     margin-left: -8px
-                                }    
+                                }
                             }
                             &.slick-next{
                                 right: 0;
@@ -680,16 +675,12 @@
                 }
             }
             .viewList{
-                display:flex;
-                flex-wrap: wrap;
+                flex: 1;
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
                 align-items: center;
                 gap: 20px;
-                position: absolute;
-                top: 0;
-                right: 10%;
-                bottom: 0;
-                width: 45%;
-                padding: 0 10px;
+                padding: 10px;
                 box-sizing: border-box;
                 overflow-y: auto;
                 -ms-overflow-style: none;
@@ -700,7 +691,7 @@
                     display: flex;
                     flex-direction: column;
                     gap: 8px;
-                    width: calc(50% - 10px);
+                    width: 100%;
                     height: fit-content;
                     box-shadow: 0 4px 12px 0 rgba(0,0,0,.1);
                     border-radius: 16px;
@@ -723,9 +714,6 @@
                             width: 100%;
                             margin: 0 auto;
                         }
-                    }
-                    &:nth-child(odd){
-                        transform: translateY(50px);
                     }
                 }
             }
@@ -771,7 +759,7 @@
     0%,100%{
         width: 0;
     }
-    
+
     50%{
         width: 100%;
     }

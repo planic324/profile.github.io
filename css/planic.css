@@ -102,12 +102,12 @@ button:active,button:focus{outline:0}
 .planic .sec__history .historyWrap .historyBox{display:block;position:relative;width:100%;height:calc(100% - 66px)}
 .planic .sec__history .historyWrap .historyBox .group{display:block;height:100%}
 .planic .sec__history .historyWrap .historyBox .group .historyList{display:block;position:relative;width:100%;height:100%}
-.planic .sec__history .historyWrap .historyBox .group .historyList .item{position:relative;display:block;padding:0 20px;height:100%;box-sizing:border-box}
+.planic .sec__history .historyWrap .historyBox .group .historyList .item{position:relative;display:flex;flex-direction:column;gap:60px;height:100%;box-sizing:border-box}
 .planic .sec__history .historyWrap .historyBox .group .historyList .item .service__title{display:block;font-size:24px;line-height:1.4;font-weight:900}
 .planic .sec__history .historyWrap .historyBox .group .historyList .item .service__title--logo{display:inline-block;vertical-align:top;width:24px;height:auto;object-fit:cover;margin-top:2px}
 .planic .sec__history .historyWrap .historyBox .group .historyList .item .service__title--link{color:#1c90fb}
 .planic .sec__history .historyWrap .historyBox .group .historyList .item .service__title--link:hover{text-decoration:underline}
-.planic .sec__history .historyWrap .historyBox .group .historyList .item .itemList{display:block;width:40%;position:relative;margin-top:15px;min-height:400px}
+.planic .sec__history .historyWrap .historyBox .group .historyList .item .itemList{display:block;width:100%;position:relative}
 .planic .sec__history .historyWrap .historyBox .group .historyList .item .itemList .dl_item{display:flex;font-size:16px;line-height:1.3}
 .planic .sec__history .historyWrap .historyBox .group .historyList .item .itemList .dl_item+.dl_item{margin-top:10px}
 .planic .sec__history .historyWrap .historyBox .group .historyList .item .itemList .dl_item dt{display:block;width:150px;min-width:150px;font-weight:900;color:#000;word-break:keep-all}
@@ -118,10 +118,9 @@ button:active,button:focus{outline:0}
 .planic .sec__history .historyWrap .historyBox .group .historyList .item .itemList .dl_item dd p .linkText,.planic .sec__history .historyWrap .historyBox .group .historyList .item .itemList .dl_item dd span .linkText{color:#1c90fb;cursor:pointer}
 .planic .sec__history .historyWrap .historyBox .group .historyList .item .itemList .dl_item dd p+span,.planic .sec__history .historyWrap .historyBox .group .historyList .item .itemList .dl_item dd span+span{margin-top:10px}
 .planic .sec__history .historyWrap .historyBox .group .historyList .item .itemList .dl_item dd p+p,.planic .sec__history .historyWrap .historyBox .group .historyList .item .itemList .dl_item dd span+p{margin-top:10px}
-.planic .sec__history .historyWrap .historyBox .group .historyList .item .view__box--btn{display:none}
 .planic .sec__history .historyWrap .historyBox .group .historyList .slick-list{display:block;position:relative;width:100%;height:100%;overflow:hidden}
 .planic .sec__history .historyWrap .historyBox .group .historyList .slick-list .slick-track{display:flex;height:100%}
-.planic .sec__history .historyWrap .historyBox .group .historyList .slick-arrow{display:block;position:absolute;top:50%;width:40px;height:40px;border-radius:50%;background:#fff;margin-top:-20px;font-size:0;line-height:0;color:transparent;text-indent:-10000px;border:1px solid #e1e1e1;background-color:#fff;z-index:100}
+.planic .sec__history .historyWrap .historyBox .group .historyList .slick-arrow{display:block;position:absolute;top:50%;width:50px;height:50px;border-radius:50%;background:#fff;margin-top:-20px;font-size:0;line-height:0;color:transparent;text-indent:-10000px;border:1px solid #e1e1e1;background-color:#fff;z-index:100}
 .planic .sec__history .historyWrap .historyBox .group .historyList .slick-arrow.slick-prev{left:0}
 .planic .sec__history .historyWrap .historyBox .group .historyList .slick-arrow.slick-prev:before{transform:rotate(180deg);margin-left:-8px}
 .planic .sec__history .historyWrap .historyBox .group .historyList .slick-arrow.slick-next{right:0}
@@ -131,13 +130,12 @@ button:active,button:focus{outline:0}
 .planic .sec__history .historyWrap .historyBox .group .historyList .slick-dots>li{display:inline-block;vertical-align:top;width:6px;height:6px;margin:0 5px}
 .planic .sec__history .historyWrap .historyBox .group .historyList .slick-dots>li.slick-active>button{background-color:#000}
 .planic .sec__history .historyWrap .historyBox .group .historyList .slick-dots>li>button{display:block;font-size:0;color:transparent;text-indent:-10000px;width:100%;height:100%;border-radius:50%;background-color:rgba(0,0,0,.3)}
-.planic .sec__history .historyWrap .viewList{display:flex;flex-wrap:wrap;align-items:center;gap:20px;position:absolute;top:0;right:10%;bottom:0;width:45%;padding:0 10px;box-sizing:border-box;overflow-y:auto;-ms-overflow-style:none}
+.planic .sec__history .historyWrap .viewList{flex:1;display:grid;grid-template-columns:repeat(auto-fill,minmax(30%,1fr));align-items:center;gap:20px;padding:10px;box-sizing:border-box;overflow-y:auto;-ms-overflow-style:none}
 .planic .sec__history .historyWrap .viewList.viewList::-webkit-scrollbar{display:none}
-.planic .sec__history .historyWrap .viewList__item{display:flex;flex-direction:column;gap:8px;width:calc(50% - 10px);height:fit-content;box-shadow:0 4px 12px 0 rgba(0,0,0,.1);border-radius:16px;padding:8px;box-sizing:border-box}
+.planic .sec__history .historyWrap .viewList__item{display:flex;flex-direction:column;gap:8px;width:100%;height:fit-content;box-shadow:0 4px 12px 0 rgba(0,0,0,.1);border-radius:16px;padding:8px;box-sizing:border-box}
 .planic .sec__history .historyWrap .viewList__item--title{display:block;font-size:16px;line-height:20px;font-weight:700;color:#000;text-align:center}
 .planic .sec__history .historyWrap .viewList__item--img{display:block;width:100%;height:auto}
 .planic .sec__history .historyWrap .viewList__item--img img{display:block;width:100%;margin:0 auto}
-.planic .sec__history .historyWrap .viewList__item:nth-child(odd){transform:translateY(50px)}
 .planic .sec__skills{display:flex;justify-content:center;align-items:center;position:relative}
 .planic .sec__skills .textBox{display:block;position:relative}
 .planic .sec__skills .textBox .group{display:flex;position:relative}
